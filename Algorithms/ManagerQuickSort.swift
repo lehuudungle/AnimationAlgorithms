@@ -74,7 +74,6 @@ class ManagerQuickSort{
     }
     
     @objc func run(sender: UIButton) {
-        btnRun1.setTitle("\u{f28c}", for: .normal)
                 
         animate = AnimationQuick(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelMark: self.arrayLabelMark, arrayAction: self.arrayAction, graph: self.quickGraph)
         animate.loop()

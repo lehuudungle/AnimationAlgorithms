@@ -77,11 +77,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addBtnReset() {
         
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnReset.layer.backgroundColor = GREEN_COLOR.cgColor
-        btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
-        btnReset.setTitle("\u{f021}", for: .normal)
-        btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
-        btnReset.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnReset.layer.backgroundColor = UIColor(red: 102/255, green: 205/255, blue: 255/255, alpha: 1).cgColor
+        btnReset.setImage(#imageLiteral(resourceName: "reload_32"), for: .normal)
         btnReset.titleLabel?.adjustsFontSizeToFitWidth = true
         btnReset.titleLabel?.numberOfLines = 0
         btnReset.titleLabel?.minimumScaleFactor = 0.2
@@ -118,8 +115,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func addBtnRun() {
         
+
         btnRun = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnRun1 = btnRun
         btnRun.layer.backgroundColor = GREEN_COLOR.cgColor
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnRun.setTitle("\u{f144}", for: .normal)

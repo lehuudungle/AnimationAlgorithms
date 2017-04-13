@@ -20,7 +20,7 @@ class MainScreen: UITableViewController {
         self.navigationItem.rightBarButtonItem = barButoonItem
         
         self.tableView.contentInset = UIEdgeInsetsMake(20,0,0,0)
-        self.navigationController?.navigationBar.barTintColor = UIColor.yellow
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
         
     }
     
@@ -107,11 +107,11 @@ class MainScreen: UITableViewController {
 
             let navDetail = UINavigationController(rootViewController: detailScreen)
            
-            var list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
-            var img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            let img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
-            detailScreen.navigationController?.navigationBar.barTintColor = UIColor.yellow
+            detailScreen.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
 
 //            revealViewController().rightViewRevealWidth = 300
 

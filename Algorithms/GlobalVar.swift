@@ -26,13 +26,13 @@ let GRAY_COLOR = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)
 let GOLD_COLOR = UIColor(red: 1, green: 215/255, blue: 0, alpha: 1)
 let GREEN_COLOR = UIColor(red: 0, green: 1, blue: 0, alpha: 0.4)
 
+let DARK_ORCHID = UIColor(red: 153/255, green: 50/255, blue: 204/255, alpha: 0.7)
 let SLATEGRAY_COLOR = UIColor(red: 112/255, green: 128/255, blue: 144/255, alpha: 1)
 
 var RECTSIZE: CGFloat = 0
 
 var yMax: CGFloat = 0
 
-var btnRun1: UIButton!
 var btnStep1: UIButton!
 
 var DISPLAY_FONT_MIN: CGFloat = 10

@@ -1,19 +1,19 @@
 //
-//  BubbleSortIVC.swift
+//  HeapSortIVC.swift
 //  Algorithms
 //
-//  Created by Loc Tran on 4/10/17.
+//  Created by Loc Tran on 4/13/17.
 //  Copyright © 2017 LocTran. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class BubbleSortIVC: InputVC{
+class HeapSortIVC: InputVC{
     
     var MORE_THAN_ONE_ELE: Bool!
     var HAVE_GRAPH: Bool!
-    var managerSort: ManagerBubbleSort!
+    var managerSort: ManagerHeapSort!
     var arrayInput = [Int]()
     
     override func viewDidLoad() {
@@ -22,14 +22,14 @@ class BubbleSortIVC: InputVC{
         
         MORE_THAN_ONE_ELE = false
         HAVE_GRAPH = false
-        self.view.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 1)
-        self.managerSort = ManagerBubbleSort()
+        
+        self.managerSort = ManagerHeapSort()
         
         self.hideKeyboardWhenTappedAround()
         
         btnRun.addTarget(self, action: #selector(run(sender:)), for: .touchUpInside)
         
-        btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
+//        btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
         
@@ -86,7 +86,7 @@ class BubbleSortIVC: InputVC{
                     arrayView.text = textField.text
                     arrayInput.append(Int(textField.text!)!)
                     
-                }else if (arrayInput.count == 9){
+                }else if (arrayInput.count == 7){
                     addAlert(message: "Array can contain only 9 numbers for better visualization")
                     
                 }else {
@@ -95,7 +95,7 @@ class BubbleSortIVC: InputVC{
                     btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
                     arrayView.text = arrayView.text! + ", " + textField.text!
                     arrayInput.append(Int(textField.text!)!)
-
+                    
                 }
             }else{
                 
@@ -113,5 +113,5 @@ class BubbleSortIVC: InputVC{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

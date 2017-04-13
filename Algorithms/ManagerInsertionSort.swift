@@ -74,7 +74,6 @@ class ManagerInsertionSort {
     }
     
     @objc func run(sender: UIButton) {
-        btnRun1.setTitle("\u{f28c}", for: .normal)
         
         animate = AnimationInsertion(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
@@ -83,7 +82,6 @@ class ManagerInsertionSort {
     
     @objc func step(sender: UIButton) {
         
-        btnRun1.isUserInteractionEnabled = false
         btnStep1.isUserInteractionEnabled = false
         animateStep.next()
     }

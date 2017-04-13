@@ -113,7 +113,6 @@ class StudyVC: UIViewController {
     func addBtnRun() {
         
         btnRun = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnRun1 = btnRun
         btnRun.layer.backgroundColor = GREEN_COLOR.cgColor
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnRun.setTitle("\u{f144}", for: .normal)

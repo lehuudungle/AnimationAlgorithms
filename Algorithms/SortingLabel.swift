@@ -1,0 +1,81 @@
+//
+//  SortingLabel.swift
+//  Algorithms
+//
+//  Created by Loc Tran on 3/23/17.
+//  Copyright © 2017 LocTran. All rights reserved.
+//
+import Foundation
+import UIKit
+class SortingLabel: UILabel {
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError(".....")
+    }
+    
+    override func layoutSubviews() {
+        font = fontoFitHeight()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        
+    }
+    
+    
+    init(frame: CGRect, color: UIColor, value: String) {
+        super.init(frame: frame)
+        
+        self.backgroundColor = color
+        self.text = value
+        self.textColor = UIColor.white
+        
+        self.textAlignment = NSTextAlignment.center
+        self.layer.cornerRadius = frame.width/2
+        self.clipsToBounds = true
+        self.alpha = DEFAULT_ALPHA
+        
+        self.adjustsFontSizeToFitWidth = true
+        self.numberOfLines = 0
+        self.baselineAdjustment = .alignBaselines
+        self.minimumScaleFactor = 0.2
+        
+        
+    }
+    
+    func fontoFitHeight()->UIFont{
+        var minFontsize: CGFloat = DISPLAY_FONT_MIN
+        var maxFontsize: CGFloat = DISPLAY_FONT_MAX
+        var fontSizeAverage: CGFloat = 0
+        var textandLabelHeight: CGFloat = 0
+        while(minFontsize<=maxFontsize){
+            fontSizeAverage = (maxFontsize-minFontsize)/2 + minFontsize
+            let text = self.text
+            guard (text?.characters.count)!>0 else {
+                break
+            }
+            if let  labelText: NSString = text as NSString?{
+                let labelHeight = self.frame.height-5
+                
+                let textHeight = labelText.size(attributes: [NSFontAttributeName:self.font.withSize(fontSizeAverage)]).height
+                textandLabelHeight = labelHeight - textHeight
+                if(fontSizeAverage==minFontsize || fontSizeAverage==maxFontsize){
+                    if(textandLabelHeight<0){
+                        return self.font.withSize(fontSizeAverage-1)
+                    }
+                    return self.font.withSize(fontSizeAverage)
+                }
+                if(textandLabelHeight<0){
+                    maxFontsize = fontSizeAverage-1
+                }else if(textandLabelHeight>0){
+                    minFontsize = fontSizeAverage+1
+                }else{
+                    return self.font.withSize(fontSizeAverage)
+                }
+            }
+        }
+        return self.font.withSize(fontSizeAverage)
+        
+    }
+}

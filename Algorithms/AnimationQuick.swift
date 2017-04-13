@@ -182,6 +182,116 @@ class AnimationQuick {
 
 
     }
+    
+    func animationStep() {
+        
+        UIView.animate(withDuration: 1, animations: {
+            if(self.currentStep.act=="newPivot"){
+                
+                if(self.colSolution>0){
+                    self.arrayLabel[self.arrayAction[self.colSolution-1].pivot].alpha = DEFAULT_ALPHA
+                    self.removeSuperTrace()
+                }
+                
+                self._layer = self.graph.drawBrace(bearing: self.currentStep.left+1, countCell: (self.currentStep.right-self.currentStep.left+1))
+                self.iniPosition_Mark(currentStep: self.currentStep)
+            }else if(self.currentStep.act=="pauseLeft"){
+                self.setPosition(traceLabel: self.traceLeft, _setPosition: self.currentStep.left)
+                
+            }else if(self.currentStep.act=="moveRight"){
+                self.setPosition(traceLabel: self.traceRight, _setPosition: self.currentStep.right)
+            }else if(self.currentStep.act=="pauseRight"){
+                self.setPosition(traceLabel: self.traceRight, _setPosition: self.currentStep.right)
+                
+            }else if(self.currentStep.act=="moveLeft"){
+                self.setPosition(traceLabel: self.traceLeft, _setPosition: self.currentStep.left)
+            }else if(self.currentStep.act=="swap"){
+                
+                self.arrayLabel[self.currentStep.left].backgroundColor = SWAP_COLOR
+                self.arrayLabel[self.currentStep.right].backgroundColor = SWAP_COLOR
+                self.arrayLabel[self.currentStep.left].center = CGPoint(x: self.arrayLabelAbove[self.currentStep.left+1].center.x, y: self.arrayLabelAbove[self.currentStep.left+1].frame.origin.y-RECTSIZE)
+                self.arrayLabel[self.currentStep.right].center = CGPoint(x: self.arrayLabelAbove[self.currentStep.right+1].center.x, y: self.arrayLabelAbove[self.currentStep.right+1].frame.origin.y-RECTSIZE)
+                
+            }else if(self.currentStep.act=="moveBoth"){
+                self.setPosition(traceLabel: self.traceLeft, _setPosition: self.currentStep.left)
+                self.setPosition(traceLabel: self.traceRight, _setPosition: self.currentStep.right)
+            }else if(self.currentStep.act=="outLeft"){
+                self.setPosition(traceLabel: self.traceRight, _setPosition: self.currentStep.right)
+                
+            }else if(self.currentStep.act=="outRight"){
+                self.setPosition(traceLabel: self.traceLeft, _setPosition: self.currentStep.left)
+                
+            }
+            
+            
+        }){_ in // ket thuc
+            if(self.currentStep.act=="newPivot"){
+                UIView.animate(withDuration: 0.5, animations: {
+                    
+                    self.arrayLabel[self.currentStep.pivot].alpha = ANIMATION_ALPHA
+                    self.tracePivot.isHidden = false
+                    
+                }){_ in
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.traceLeft.isHidden = false
+                        self.traceRight.isHidden = false
+                        
+                    }){_ in
+                        
+                        self.continueAnimationStep()
+                    }
+                    
+                }
+            }else if(self.currentStep.act=="pauseLeft"){
+                UIView.animate(withDuration: 1, animations: {
+                    self.traceLeft.backgroundColor = SLATEGRAY_COLOR
+                    
+                }){_ in
+                    self.continueAnimationStep()
+                    
+                }
+            }else if(self.currentStep.act=="moveRight"){
+                self.continueAnimationStep()
+            }else if(self.currentStep.act=="pauseRight"){
+                UIView.animate(withDuration: 1, animations: {
+                    self.traceRight.backgroundColor = SLATEGRAY_COLOR
+                }){_ in
+                    self.continueAnimationStep()
+                }
+            }else if(self.currentStep.act=="moveLeft"){
+                self.continueAnimationStep()
+            }else if(self.currentStep.act=="swap"){
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.setPivot(traceLabel: self.tracePivot, _setPivot: self.currentStep.pivot)
+                    self.swapLabel(i: self.currentStep.left, j: self.currentStep.right)
+                    
+                }){_ in
+                    UIView.animate(withDuration: 1, animations: {
+                        self.arrayLabel[self.currentStep.left].center = self.arrayLabelMiddle[self.currentStep.left+1].center
+                        self.arrayLabel[self.currentStep.right].center = self.arrayLabelMiddle[self.currentStep.right+1].center
+                    }){_ in
+                        self.arrayLabel[self.currentStep.left].backgroundColor = DEFAULT_COLOR
+                        self.arrayLabel[self.currentStep.right].backgroundColor = DEFAULT_COLOR
+                        self.traceRight.backgroundColor = UIColor.red
+                        self.traceLeft.backgroundColor = UIColor.blue
+                        self.continueAnimationStep()
+                    }
+                    
+                }
+            }else if(self.currentStep.act=="moveBoth"){
+                self.continueAnimationStep()
+                
+            }else if(self.currentStep.act=="outLeft"){
+                self.continueAnimationStep()
+            }else if(self.currentStep.act=="outRight"){
+                self.continueAnimationStep()
+            }
+            
+        }
+        
+        
+    }
+
 
     func swapLabel(i: Int, j: Int){
         let temp = self.arrayLabel[i].center
@@ -214,6 +324,18 @@ class AnimationQuick {
         self.currentStep = self.arrayAction[self.colSolution]
         self.animation()
     }
+    
+    func continueAnimationStep(){
+        self.colSolution += 1
+        
+        if (self.colSolution == self.arrayAction.count) {
+            removeSuperTrace()
+            return
+        }
+        self.currentStep = self.arrayAction[self.colSolution]
+        btnStepTmp.isUserInteractionEnabled = true
+    }
+
     func removeSuperTrace(){
         let label = self.arrayLabel[self.arrayAction[self.colSolution-1].pivot]
         label.alpha = DEFAULT_ALPHA
@@ -227,6 +349,12 @@ class AnimationQuick {
     func loop(){
         currentStep = self.arrayAction[self.colSolution]
         animation()
+
+    }
+    
+    func next(){
+        currentStep = self.arrayAction[self.colSolution]
+        animationStep()
 
     }
     

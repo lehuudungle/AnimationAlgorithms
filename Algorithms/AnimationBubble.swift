@@ -101,10 +101,8 @@ class AnimationBubble {
     }
     
     func animationStep() {
-        
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 0.3, animations: {
-            
             if (self.currentStep.act == "compare") {
                 self.compareCount = self.compareCount + 1                     //
                 self.arrayLabel[self.currentStep.i].backgroundColor = COMPARE_COLOR

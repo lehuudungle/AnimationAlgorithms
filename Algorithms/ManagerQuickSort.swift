@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ManagerQuickSort{
-    
+    var animationStep: AnimationQuick!
     var animate: AnimationQuick!
     var viewcontroller: UIViewController!
     
@@ -62,6 +62,9 @@ class ManagerQuickSort{
         self.arrayLabelMark = self.quickGraph.arrayLabelMark
         self.arrayLabelAbove = self.quickGraph.arrayLabelAbove
         
+        animationStep = AnimationQuick(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelMark: self.arrayLabelMark, arrayAction: self.arrayAction, graph: self.quickGraph)
+        
+        
     }
     
     func getArrayAction(array: [Int]) -> [QuickStep] {
@@ -79,4 +82,12 @@ class ManagerQuickSort{
         animate.loop()
         
     }
+    
+    @objc func step(sender: UIButton) {
+        
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.isUserInteractionEnabled = false
+        animationStep.next()
+    }
+
 }

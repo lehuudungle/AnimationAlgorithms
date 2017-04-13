@@ -36,11 +36,7 @@ class MergeSortIVC: InputVC{
         btnAdd.addTarget(self, action:  #selector(add(sender:)), for: .touchUpInside)
         
     }
-    
-    func info(sender:UIButton){
-        let vc = BubbleSortSVC()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+
     
     func reset(sender:UIButton){
         

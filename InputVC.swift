@@ -20,6 +20,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     var btnReset:UIButton!
     var btnInfo:UIButton!
     var btnStep:UIButton!
+    var btnStepCheck:UIButton!
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!
@@ -41,6 +42,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         addBtnReset()
         addBtnStep()
+        addBtnStepCheck()
         addBtnRun()
         addBtnAdd()
         addTextField()
@@ -48,6 +50,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
 //        btnAdd.isEnabled = true
         textField.delegate = self
+        
+        btnStep.isHidden = true
         
         
     }
@@ -96,7 +100,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addBtnStep() {
         
         btnStep = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnStep1 = btnStep
+//        btnStepTmp = btnStep
         btnStep.layer.backgroundColor = GREEN_COLOR.cgColor
         btnStep.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStep.setTitle("\u{f051}", for: .normal)
@@ -115,6 +119,30 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         view.addSubview(btnStep)
     }
+    
+    func addBtnStepCheck() {
+        
+        btnStepCheck = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        //        btnStepTmp = btnStep
+        btnStepCheck.layer.backgroundColor = GREEN_COLOR.cgColor
+        btnStepCheck.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnStepCheck.setTitle("\u{f051}", for: .normal)
+        
+        btnStepCheck.titleLabel?.textColor = UIColor.white
+        btnStepCheck.titleLabel?.font = UIFont.fontAwesome(ofSize: btnStep.fontoFitHeight())
+        btnStepCheck.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnStepCheck.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnStepCheck.titleLabel?.numberOfLines = 0
+        btnStepCheck.titleLabel?.minimumScaleFactor = 0.2
+        btnStepCheck.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        
+        btnStepCheck.titleLabel?.baselineAdjustment = .alignCenters
+        btnStepCheck.titleLabel?.textAlignment = .center
+        btnStepCheck.layer.cornerRadius = 10
+        
+        view.addSubview(btnStepCheck)
+    }
+
     
     func addBtnRun() {
         

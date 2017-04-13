@@ -52,6 +52,8 @@ class InsertionSortIVC: InputVC{
         MORE_THAN_ONE_ELE = false
         
         btnRun.setTitle("\u{f144}", for: .normal)
+        btnRun.isUserInteractionEnabled = true
+
         
         self.arrayInput = []
         arrayView.text = ""
@@ -67,6 +69,7 @@ class InsertionSortIVC: InputVC{
             self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
             
             HAVE_GRAPH = true
+            btnRun.isUserInteractionEnabled = false
             
             btnAdd.isHidden = true
             textField.isHidden = true

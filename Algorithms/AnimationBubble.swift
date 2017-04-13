@@ -38,7 +38,7 @@ class AnimationBubble {
     func animation() {
         
         UIView.setAnimationsEnabled(true)
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             if (self.currentStep.act == "compare") {
                 self.compareCount = self.compareCount + 1                     //
                 self.arrayLabel[self.currentStep.i].backgroundColor = COMPARE_COLOR
@@ -72,15 +72,15 @@ class AnimationBubble {
             }
             else
             {
-                UIView.animate(withDuration: 0.5, animations: {
+                UIView.animate(withDuration: 0.3, animations: {
                     self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelAbove[self.currentStep.i])
                     self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelBelow[self.currentStep.j])
                 }){_ in
-                    UIView.animate(withDuration: 0.5, animations: {
+                    UIView.animate(withDuration: 0.3, animations: {
                         self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelAbove[self.currentStep.j])
                         self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelBelow[self.currentStep.i])
                     }){_ in
-                        UIView.animate(withDuration: 0.5, animations: {
+                        UIView.animate(withDuration: 0.3, animations: {
                             self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelMiddle[self.currentStep.j])
                             self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelMiddle[self.currentStep.i])
                         }){_ in
@@ -132,16 +132,14 @@ class AnimationBubble {
                     
                     self.arrayLabel[self.currentStep.i].backgroundColor = DEFAULT_COLOR
                     self.arrayLabel[self.currentStep.j].backgroundColor = DEFAULT_COLOR
-                    
-//                    self.continueAnimation()
-                    
+                                        
                     self.colSolution += 1
                     
                     if (self.colSolution == self.arrayAction.count) {
                         return
                     }
                     self.currentStep = self.arrayAction[self.colSolution]
-                    btnStep1.isUserInteractionEnabled = true
+                    btnStepTmp.isUserInteractionEnabled = true
                 }
             }
             else
@@ -174,7 +172,7 @@ class AnimationBubble {
                                 return
                             }
                             self.currentStep = self.arrayAction[self.colSolution]
-                            btnStep1.isUserInteractionEnabled = true
+                            btnStepTmp.isUserInteractionEnabled = true
                         }
                     }
                 }

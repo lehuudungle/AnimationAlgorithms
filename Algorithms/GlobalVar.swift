@@ -32,7 +32,8 @@ var RECTSIZE: CGFloat = 0
 
 var yMax: CGFloat = 0
 
-var btnStep1: UIButton!
+var btnStepTmp: UIButton!
+var btnRunTmp: UIButton!
 
 var DISPLAY_FONT_MIN: CGFloat = 10
 var DISPLAY_FONT_MAX: CGFloat = 60

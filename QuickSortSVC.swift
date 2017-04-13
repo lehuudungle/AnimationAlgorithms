@@ -24,13 +24,21 @@ class QuickSortSVC: StudyVC {
         
         btnRun.addTarget(self.managerSort, action: #selector(ManagerQuickSort.run(sender:)), for: .touchUpInside)
         
-//        btnInfo.addTarget(self, action: #selector(info(sender:)), for: .touchUpInside)
+        btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
+
         
     }
     
     func info(sender:UIButton){
         let vc = BubbleSortSVC()
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func reset(sender:UIButton){
+        self.managerSort.graph.removeFromSuperview()
+        btnRun.isUserInteractionEnabled = true
+        btnStep.isUserInteractionEnabled = true
+        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,1,9,6,9])
     }
     
     override func didReceiveMemoryWarning() {

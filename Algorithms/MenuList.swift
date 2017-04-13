@@ -28,7 +28,7 @@ class MenuList: NSObject {
     class func boot(window:UIWindow){
 
         let basic = MenuSection(section: "Sort", menus:[
-            Menu(title: "Bubble Sort", viewClass: "BubbleSortSVC",inputClass: SelectionSortIVC() ),
+            Menu(title: "Bubble Sort", viewClass: "BubbleSortSVC",inputClass: BubbleSortIVC() ),
             Menu(title: "Selection Sort", viewClass: "SelectionSortSVC",inputClass: SelectionSortIVC()),
             Menu(title: "Insertion Sort", viewClass: "InsertionSortSVC",inputClass: SelectionSortIVC()),
 

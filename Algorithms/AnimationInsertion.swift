@@ -145,7 +145,7 @@ class AnimationInsertion {
             }
             self.currentStep = self.arrayAction[self.colSolution]
             
-            btnStep1.isUserInteractionEnabled = true
+            btnStepTmp.isUserInteractionEnabled = true
 
         }
     }

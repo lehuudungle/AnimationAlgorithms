@@ -38,7 +38,6 @@ class StudyVC: UIViewController {
         x = 2*spacing + btnSizeWidth
         
         addBtnReset()
-//        addBtnInfo()
         addBtnStep()
         addBtnRun()
         
@@ -59,37 +58,16 @@ class StudyVC: UIViewController {
         btnReset.titleLabel?.textAlignment = .center
         btnReset.layer.cornerRadius = 10
 
-
-
-
         view.addSubview(btnReset)
     }
     
-//    func addBtnInfo() {
-//        
-//        btnInfo = UIButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-//        btnInfo.backgroundColor = UIColor.green.withAlphaComponent(0.5)
-//        btnInfo.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        btnInfo.setTitle("\u{f05a}", for: .normal)
-//        btnInfo.titleLabel?.textColor = UIColor.white
-//        btnInfo.titleLabel?.font = UIFont.fontAwesome(ofSize: btnInfo.fontoFitHeight())
-//        btnInfo.setTitleColor(BUTTON_COLOR, for: .normal)
-//        btnInfo.titleLabel?.adjustsFontSizeToFitWidth = true
-//        btnInfo.titleLabel?.numberOfLines = 0
-//        btnInfo.titleLabel?.minimumScaleFactor = 0.2
-//        btnInfo.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-//        btnInfo.titleLabel?.baselineAdjustment = .alignCenters
-//        btnInfo.titleLabel?.textAlignment = .center
-//        btnInfo.layer.cornerRadius = 10
-//
-//        
-//        view.addSubview(btnInfo)
-//    }
     
     func addBtnStep() {
         
         btnStep = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnStep1 = btnStep
+        
+        btnStepTmp = btnStep
+        
         btnStep.layer.backgroundColor = GREEN_COLOR.cgColor
         btnStep.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStep.setTitle("\u{f051}", for: .normal)
@@ -112,6 +90,9 @@ class StudyVC: UIViewController {
     func addBtnRun() {
         
         btnRun = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        
+        btnRunTmp = btnRun
+        
         btnRun.layer.backgroundColor = GREEN_COLOR.cgColor
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnRun.setTitle("\u{f144}", for: .normal)

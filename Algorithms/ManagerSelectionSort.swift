@@ -82,7 +82,7 @@ class ManagerSelectionSort {
     
     @objc func step(sender: UIButton) {
         
-        btnStep1.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
         animateStep.next()
     }
     

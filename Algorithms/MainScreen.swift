@@ -70,8 +70,6 @@ class MainScreen: UITableViewController {
     }
     
     
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menuSection: MenuSection = self.menu[indexPath.section]
         let menuItems = menuSection.menus

@@ -33,7 +33,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
                         cellData(nameText: "Enter_Number",image:#imageLiteral(resourceName: "enter_number"))
         ]
-        var nib = UINib(nibName: "MenuCell", bundle: nil)
+        let nib = UINib(nibName: "MenuCell", bundle: nil)
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor.green.cgColor
         imgProfile.layer.cornerRadius = 50

@@ -31,7 +31,6 @@ class MenuList: NSObject {
             Menu(title: "Bubble Sort", viewClass: "BubbleSortSVC",inputClass: BubbleSortIVC() ),
             Menu(title: "Selection Sort", viewClass: "SelectionSortSVC",inputClass: SelectionSortIVC() ),
             Menu(title: "Insertion Sort", viewClass: "InsertionSortSVC",inputClass: InsertionSortIVC() ),
-
             Menu(title: "Merge Sort", viewClass: "MergeSortSVC",inputClass: MergeSortIVC() ),
             Menu(title: "Quick Sort", viewClass: "QuickSortSVC",inputClass: QuickSortIVC() ),
             Menu(title: "Heap Sort", viewClass: "HeapSortSVC",inputClass: HeapSortIVC() )
@@ -54,7 +53,7 @@ class MenuList: NSObject {
         mainScreen.about = "KLTD Team"
 
         let startView = StartVC()
-        let nav = UINavigationController(rootViewController: startView)
+        let nav = UINavigationController(rootViewController: mainScreen)
 
         window.rootViewController = nav
         rootWindow = window

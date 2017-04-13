@@ -50,19 +50,20 @@ class BubbleSortIVC: InputVC{
         
         MORE_THAN_ONE_ELE = false
         
-        btnRun.setTitle("\u{f144}", for: .normal)
+//        btnRun.setTitle("\u{f144}", for: .normal)
         
         btnRun.isUserInteractionEnabled = true
         btnStepCheck.isUserInteractionEnabled = true
+        btnStep.isUserInteractionEnabled = true
         
         self.arrayInput = []
         arrayView.text = ""
         btnAdd.isHidden = false
         textField.isHidden = false
         arrayView.isHidden = false
+
         btnStep.isHidden = true
         btnStepCheck.isHidden = false
-        
     }
     
     func run(sender:UIButton){
@@ -129,13 +130,14 @@ class BubbleSortIVC: InputVC{
             HAVE_GRAPH = true
             }
             
+            
             btnAdd.isHidden = true
             textField.isHidden = true
             arrayView.isHidden = true
-            
             btnRun.isUserInteractionEnabled = false
             
-        }else {
+        }
+    else {
             addAlert(message: "Please add more number")
         }
     }

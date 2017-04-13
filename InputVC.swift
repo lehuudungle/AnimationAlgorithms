@@ -47,6 +47,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         addTextField()
         addTextView()
         
+        
 //        btnAdd.isEnabled = true
         textField.delegate = self
         
@@ -77,7 +78,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func addBtnReset() {
+    func addBtnReset() {                                                            //
         
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
         btnReset.layer.backgroundColor = UIColor(red: 102/255, green: 205/255, blue: 255/255, alpha: 1).cgColor
@@ -159,6 +160,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         view.addSubview(btnRun)
     }
+    
+   
     
     func addBtnAdd() {
         btnAdd = KDPulseButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))

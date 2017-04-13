@@ -27,12 +27,7 @@ class InsertionSortSVC: StudyVC {
         
     }
     
-    func info(sender:UIButton){
-        let vc = SelectionSortSVC()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func reset(sender:UIButton){
+       func reset(sender:UIButton){
         self.managerSort.graph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true

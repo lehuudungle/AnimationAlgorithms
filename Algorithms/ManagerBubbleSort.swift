@@ -81,6 +81,7 @@ class ManagerBubbleSort {
         
         animate = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
+
         btnRunTmp.isUserInteractionEnabled = false
         btnStepTmp.isUserInteractionEnabled = false
 

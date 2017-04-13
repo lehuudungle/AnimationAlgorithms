@@ -22,7 +22,7 @@ class BubbleSortIVC: InputVC{
         
         MORE_THAN_ONE_ELE = false
         HAVE_GRAPH = false
-        self.view.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 1)
+        
         self.managerSort = ManagerBubbleSort()
         
         self.hideKeyboardWhenTappedAround()

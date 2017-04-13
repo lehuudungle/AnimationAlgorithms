@@ -118,7 +118,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addBtnRun() {
         
         btnRun = UIButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnRun1 = btnRun
         btnRun.backgroundColor = UIColor.green.withAlphaComponent(0.5)
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnRun.setTitle("\u{f144}", for: .normal)

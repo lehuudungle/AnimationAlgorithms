@@ -84,7 +84,6 @@ class ManagerMergeSort {
     }
     
     @objc func run(sender: UIButton) {
-        btnRun1.setTitle("\u{f28c}", for: .normal)
         
         animate = AnimationMerge(arrayLabel: self.arrayLabel, arrayLabelOne: self.arrayLabelOne, arrayLabelTwo: self.arrayLabelTwo, arrayLabelThree: self.arrayLabelThree, arrayLabelFour: self.arrayLabelFour, arrayAction: self.arrayAction, graphMerge: graph)
         animate.loop()

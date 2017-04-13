@@ -44,8 +44,6 @@ class BubbleSortIVC: InputVC{
     
     func reset(sender:UIButton){
         
-        print("reset")
-        
         if HAVE_GRAPH == true{
             self.managerSort.graph.removeFromSuperview()
             HAVE_GRAPH = false
@@ -64,11 +62,8 @@ class BubbleSortIVC: InputVC{
     
     func run(sender:UIButton){
         
-        print("run")
-        
         if MORE_THAN_ONE_ELE == true {
             
-            print("true")
             self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
             
             HAVE_GRAPH = true
@@ -79,7 +74,6 @@ class BubbleSortIVC: InputVC{
             
         }else {
             
-            print("false")
             addAlert(message: "Please add more number")
         }
     }
@@ -109,10 +103,8 @@ class BubbleSortIVC: InputVC{
             }
         }else{
             addAlert(message: "Please enter a number")
-//            btnAdd.isUserInteractionEnabled = false
         }
         
-//        btnAdd.isUserInteractionEnabled = true
         textField.text = ""
         
     }

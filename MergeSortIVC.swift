@@ -11,7 +11,8 @@ import UIKit
 
 class MergeSortIVC: InputVC{
     
-    var count:Int!
+    var MORE_THAN_ONE_ELE: Bool!
+    var HAVE_GRAPH: Bool!
     var managerSort: ManagerMergeSort!
     var arrayInput = [Int]()
     
@@ -19,11 +20,12 @@ class MergeSortIVC: InputVC{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        count = 0
+        MORE_THAN_ONE_ELE = false
+        HAVE_GRAPH = false
+        
         self.managerSort = ManagerMergeSort()
         
         self.hideKeyboardWhenTappedAround()
-        
         
         btnRun.addTarget(self, action: #selector(run(sender:)), for: .touchUpInside)
         
@@ -32,10 +34,7 @@ class MergeSortIVC: InputVC{
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
         
         btnAdd.addTarget(self, action:  #selector(add(sender:)), for: .touchUpInside)
-        btnRun1.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
-        btnRun.isUserInteractionEnabled = false
         
-        btnRun1 = btnRun
     }
     
     func info(sender:UIButton){
@@ -44,13 +43,15 @@ class MergeSortIVC: InputVC{
     }
     
     func reset(sender:UIButton){
-        self.managerSort.graph.removeFromSuperview()
+        
+        if HAVE_GRAPH == true{
+            self.managerSort.graph.removeFromSuperview()
+            HAVE_GRAPH = false
+        }
+        
+        MORE_THAN_ONE_ELE = false
         
         btnRun.setTitle("\u{f144}", for: .normal)
-        btnRun.isUserInteractionEnabled = false
-        btnStep.isUserInteractionEnabled = true
-        
-        count = 0
         
         self.arrayInput = []
         arrayView.text = ""
@@ -61,55 +62,49 @@ class MergeSortIVC: InputVC{
     
     func run(sender:UIButton){
         
-        if arrayInput.count > 1 {
-            btnRun.isUserInteractionEnabled = true
+        if MORE_THAN_ONE_ELE == true {
+            
             self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
+            
+            HAVE_GRAPH = true
             
             btnAdd.isHidden = true
             textField.isHidden = true
             arrayView.isHidden = true
-        }else if(arrayInput.count == 1){
-            print("count = 1")
-            print(arrayInput.count)
-        }else{
-            self.managerSort.initSortWith(viewcontroller: self, arrayInput: [0,1])
-            reset(sender: sender)
+            
+        }else {
+            
+            addAlert(message: "Please add more number")
         }
-        
     }
     
     func add(sender:UIButton){
-        count = count + 1
         
         if(textField.text != "" && textField.text != nil){
-            
             if (Int(textField.text!)! <= 99){
-                
                 if (arrayInput.count == 0 ){
                     arrayView.text = textField.text
                     arrayInput.append(Int(textField.text!)!)
-                    if count > 1{
-                        btnRun.isUserInteractionEnabled = true
-                    }
                     
                 }else if (arrayInput.count == 8){
-                    btnAdd.isUserInteractionEnabled = false
+                    addAlert(message: "Array can contain only 9 numbers for better visualization")
                     
                 }else {
+                    
+                    MORE_THAN_ONE_ELE = true
+                    btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
                     arrayView.text = arrayView.text! + ", " + textField.text!
                     arrayInput.append(Int(textField.text!)!)
-                    if count > 1{
-                        btnRun.isUserInteractionEnabled = true
-                    }
+                    
                 }
             }else{
-                btnAdd.isUserInteractionEnabled = false
+                
+                addAlert(message: "Cannot input 3-digit interger")
             }
         }else{
-            btnAdd.isUserInteractionEnabled = false
+            addAlert(message: "Please enter a number")
         }
         
-        btnAdd.isUserInteractionEnabled = true
         textField.text = ""
         
     }

@@ -1,19 +1,19 @@
 //
-//  InsertionSortIVC.swift
+//  HeapSortIVC.swift
 //  Algorithms
 //
-//  Created by Loc Tran on 4/12/17.
+//  Created by Loc Tran on 4/13/17.
 //  Copyright © 2017 LocTran. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class InsertionSortIVC: InputVC{
+class HeapSortIVC: InputVC{
     
     var MORE_THAN_ONE_ELE: Bool!
     var HAVE_GRAPH: Bool!
-    var managerSort: ManagerInsertionSort!
+    var managerSort: ManagerHeapSort!
     var arrayInput = [Int]()
     
     override func viewDidLoad() {
@@ -23,13 +23,13 @@ class InsertionSortIVC: InputVC{
         MORE_THAN_ONE_ELE = false
         HAVE_GRAPH = false
         
-        self.managerSort = ManagerInsertionSort()
+        self.managerSort = ManagerHeapSort()
         
         self.hideKeyboardWhenTappedAround()
         
         btnRun.addTarget(self, action: #selector(run(sender:)), for: .touchUpInside)
         
-        btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
+//        btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
         
@@ -86,7 +86,7 @@ class InsertionSortIVC: InputVC{
                     arrayView.text = textField.text
                     arrayInput.append(Int(textField.text!)!)
                     
-                }else if (arrayInput.count == 9){
+                }else if (arrayInput.count == 7){
                     addAlert(message: "Array can contain only 9 numbers for better visualization")
                     
                 }else {

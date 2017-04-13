@@ -41,7 +41,7 @@ class AnimationMerge:NSObject {
         self.arrayLabelFour = arrayLabelFour
         self.arrayAction = arrayAction
         self.graphMerge = graphMerge
-        var ele = 0
+        _ = 0
         
         bodyRect = [UIView]()
         bodyLine = [CALayer]()

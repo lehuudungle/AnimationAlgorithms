@@ -29,11 +29,11 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 //        let button = KDPulseButton(frame: <#T##CGRect#>)
 
 
-        arrayCellData = [cellData(nameText: "Home",image:#imageLiteral(resourceName: "house")),
-                        cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
-                        cellData(nameText: "Enter_Number",image:#imageLiteral(resourceName: "enter_number"))
+        arrayCellData = [cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
+                        cellData(nameText: "Enter_Number",image:#imageLiteral(resourceName: "pencils_32")),
+                        cellData(nameText: "Info",image:#imageLiteral(resourceName: "info_32"))
         ]
-        var nib = UINib(nibName: "MenuCell", bundle: nil)
+        let nib = UINib(nibName: "MenuCell", bundle: nil)
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor.green.cgColor
         imgProfile.layer.cornerRadius = 50
@@ -77,8 +77,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.backgroundColor = UIColor.red
         cell.selectedBackgroundView?.backgroundColor = UIColor.red
         print("title ne: \(revealviewcontroller)")
-        if(cell.titleCell.text! == "Home"){
-            dismiss(animated: true, completion: nil)
+        if(cell.titleCell.text! == "Info"){
+           // khong lam gi
         }
         else if (cell.titleCell.text! == "Study"){
 

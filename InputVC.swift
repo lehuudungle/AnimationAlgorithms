@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import KDPulseButton
 
 class InputVC: UIViewController, UITextFieldDelegate {
     
@@ -79,8 +80,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func addBtnReset() {                                                            //
         
-        btnReset = UIButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnReset.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btnReset.layer.backgroundColor = GREEN_COLOR.cgColor
         btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnReset.setTitle("\u{f021}", for: .normal)
         btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
@@ -98,9 +99,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func addBtnStep() {
         
-        btnStep = UIButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btnStep = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
         btnStep1 = btnStep
-        btnStep.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        btnStep.layer.backgroundColor = GREEN_COLOR.cgColor
         btnStep.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStep.setTitle("\u{f051}", for: .normal)
         
@@ -121,9 +122,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     func addBtnRun() {
         
-        btnRun = UIButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnRun1 = btnRun
-        btnRun.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+
+        btnRun = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btnRun.layer.backgroundColor = GREEN_COLOR.cgColor
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnRun.setTitle("\u{f144}", for: .normal)
         btnRun.setTitleColor(BUTTON_COLOR, for: .normal)
@@ -161,8 +162,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
 
     
     func addBtnAdd() {
-        btnAdd = UIButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
-        btnAdd.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        btnAdd = KDPulseButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
+        btnAdd.layer.backgroundColor = GREEN_COLOR.cgColor
         btnAdd.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnAdd.setTitle("\u{23CE}", for: .normal)
         btnAdd.setTitleColor(BUTTON_COLOR, for: .normal)

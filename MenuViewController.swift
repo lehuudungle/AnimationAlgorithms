@@ -26,7 +26,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let button = KDPulseButton(frame: <#T##CGRect#>)
+
 
 
         arrayCellData = [cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
@@ -41,7 +41,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         imgProfile.layer.masksToBounds = false
         imgProfile.clipsToBounds = true
         tableView.register(nib, forCellReuseIdentifier: "MenuCell")
-        viewMenu.backgroundColor = UIColor.cyan
+        
         
     }
 
@@ -63,9 +63,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.titleCell.text = arrayCellData[indexPath.row].nameText
         cell.titleCell.font = UIFont(name: "Helvetica Neue", size: 18)
         cell.titleCell.textColor = UIColor.orange
-        
 
-        print("height: \(cell.frame.height)")
         return cell
 
     }

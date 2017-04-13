@@ -41,7 +41,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fCX-kC-sGW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="IWL-DH-cvF"/>
                 <constraint firstItem="YM8-fX-L53" firstAttribute="top" secondItem="fCX-kC-sGW" secondAttribute="bottom" constant="20" id="P2d-zo-p8d"/>

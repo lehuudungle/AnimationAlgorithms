@@ -103,24 +103,35 @@ class MainScreen: UITableViewController {
             DETAIL = detailScreen
             
 
-            let navDetail = UINavigationController(rootViewController: detailScreen)
-           
+//            let navDetail = UINavigationController(rootViewController: detailScreen)
+/*
             let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
             let img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             detailScreen.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
 
-//            revealViewController().rightViewRevealWidth = 300
+*/
 
-
-            let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
+            let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: detailScreen)
+            navigationController?.revealViewController()
             revel?.rightViewController = menuVC
-
-            present(revel!, animated: true, completion: nil)
             revel?.rightViewRevealWidth = 180
+             let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+//            revel?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revel, action: #selector(revel?.rightRevealToggle(_:)))
+//            let navDetail = UINavigationController(rootViewController: revel!)
 
-//            dismiss(animated: true, completion: nil)
+            let navDetail = UINavigationController(rootViewController: revel!)
+            revel?.frontViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revel, action: #selector(revel?.rightRevealToggle(_:)))
+            navigationController?.pushViewController(revel!, animated: true)
+
+//            navigationController?.setNavigationBarHidden(true, animated: false)
+
+
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+
+
+
 
         }else{
             let alert = UIAlertController.init(title: "Warning",
@@ -132,7 +143,7 @@ class MainScreen: UITableViewController {
             alert.addAction(defaultAction)
             self.present(alert, animated: true, completion: nil)
         }
-        
+
     }
     func backHOME(sender: UIBarButtonItem){
 

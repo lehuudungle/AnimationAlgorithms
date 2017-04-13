@@ -22,7 +22,7 @@ class BubbleSortIVC: InputVC{
         
         MORE_THAN_ONE_ELE = false
         HAVE_GRAPH = false
-        self.view.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 1)
+        
         self.managerSort = ManagerBubbleSort()
         
         self.hideKeyboardWhenTappedAround()
@@ -82,8 +82,13 @@ class BubbleSortIVC: InputVC{
             btnRun.isUserInteractionEnabled = false
             btnStep.isUserInteractionEnabled = false
             btnStepCheck.isUserInteractionEnabled = false
+<<<<<<< HEAD
             
             
+=======
+            
+            
+>>>>>>> 80bfea0a3352885d5497dc450987473063cde576
         }else {
             addAlert(message: "Please add more number")
         }

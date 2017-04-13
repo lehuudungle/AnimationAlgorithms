@@ -80,8 +80,13 @@ class BubbleSortIVC: InputVC{
             btnRun.isUserInteractionEnabled = false
             btnStep.isUserInteractionEnabled = false
             btnStepCheck.isUserInteractionEnabled = false
+<<<<<<< HEAD
             
             
+=======
+            
+            
+>>>>>>> 80bfea0a3352885d5497dc450987473063cde576
         }else {
             addAlert(message: "Please add more number")
         }

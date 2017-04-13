@@ -21,6 +21,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     var btnStep:UIButton!
     var btnRun:UIButton!
     var btnAdd:UIButton!
+    var btnPause:UIButton!
     var textField:UITextField!
     var arrayView:UILabel!
     
@@ -44,6 +45,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
         addBtnAdd()
         addTextField()
         addTextView()
+        addBtnPause()
+        
+        btnPause.isHidden = true
         
 //        btnAdd.isEnabled = true
         textField.delegate = self
@@ -73,7 +77,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func addBtnReset() {
+    func addBtnReset() {                                                            //
         
         btnReset = UIButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
         btnReset.backgroundColor = UIColor.green.withAlphaComponent(0.5)
@@ -134,6 +138,27 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         view.addSubview(btnRun)
     }
+    
+    func addBtnPause() {
+        
+        btnPause = UIButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btnPause1 = btnPause
+        btnPause.backgroundColor = UIColor.green.withAlphaComponent(0.5)
+        btnPause.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnPause.setTitle("\u{f28c}", for: .normal)
+        btnPause.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnPause.titleLabel?.font = UIFont.fontAwesome(ofSize: btnRun.fontoFitHeight())
+        btnPause.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnPause.titleLabel?.numberOfLines = 0
+        btnPause.titleLabel?.minimumScaleFactor = 0.2
+        btnPause.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        btnPause.titleLabel?.baselineAdjustment = .alignCenters
+        btnPause.titleLabel?.textAlignment = .center
+        btnPause.layer.cornerRadius = 10
+        
+        view.addSubview(btnPause)
+    }
+
     
     func addBtnAdd() {
         btnAdd = UIButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))

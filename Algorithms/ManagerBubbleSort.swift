@@ -77,13 +77,11 @@ class ManagerBubbleSort {
     }
     
     @objc func run(sender: UIButton) {
-        btnRun1.setTitle("\u{f28c}", for: .normal)
         
         animate = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
-        btnRun1.isUserInteractionEnabled = false
         btnStep1.isUserInteractionEnabled = false
-                
+        btnRun1.isHidden = true                                     //
         animate.loop()
     }
     

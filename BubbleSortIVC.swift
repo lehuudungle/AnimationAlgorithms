@@ -53,13 +53,16 @@ class BubbleSortIVC: InputVC{
         
         MORE_THAN_ONE_ELE = false
         
-        btnRun.setTitle("\u{f144}", for: .normal)
+//        btnRun.setTitle("\u{f144}", for: .normal)
         
         self.arrayInput = []
         arrayView.text = ""
         btnAdd.isHidden = false
         textField.isHidden = false
         arrayView.isHidden = false
+        btnRun.isHidden = false
+        btnPause.isHidden = true
+        
     }
     
     func run(sender:UIButton){
@@ -76,6 +79,8 @@ class BubbleSortIVC: InputVC{
             btnAdd.isHidden = true
             textField.isHidden = true
             arrayView.isHidden = true
+            btnRun.isHidden = true
+            btnPause.isHidden = false
             
         }else {
             

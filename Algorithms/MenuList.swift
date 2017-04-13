@@ -54,7 +54,7 @@ class MenuList: NSObject {
         mainScreen.about = "KLTD Team"
 
         let startView = StartVC()
-        let nav = UINavigationController(rootViewController: startView)
+        let nav = UINavigationController(rootViewController: mainScreen)
 
         window.rootViewController = nav
         rootWindow = window

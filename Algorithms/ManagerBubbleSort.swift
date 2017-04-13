@@ -78,14 +78,20 @@ class ManagerBubbleSort {
     
     @objc func run(sender: UIButton) {
         
+        
         animate = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
+
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+
         animate.loop()
     }
     
     @objc func step(sender: UIButton) {
         
-        btnStep1.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.isUserInteractionEnabled = false
         animateStep.next()
     }
     

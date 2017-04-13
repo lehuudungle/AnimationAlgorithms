@@ -20,9 +20,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
     var btnReset:UIButton!
     var btnInfo:UIButton!
     var btnStep:UIButton!
+    var btnStepCheck:UIButton!
     var btnRun:UIButton!
     var btnAdd:UIButton!
-    var btnPause:UIButton!
     var textField:UITextField!
     var arrayView:UILabel!
     
@@ -42,16 +42,17 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         addBtnReset()
         addBtnStep()
+        addBtnStepCheck()
         addBtnRun()
         addBtnAdd()
         addTextField()
         addTextView()
-        addBtnPause()
         
-        btnPause.isHidden = true
         
 //        btnAdd.isEnabled = true
         textField.delegate = self
+        
+        btnStep.isHidden = true
         
         
     }
@@ -81,11 +82,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addBtnReset() {                                                            //
         
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnReset.layer.backgroundColor = GREEN_COLOR.cgColor
-        btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
-        btnReset.setTitle("\u{f021}", for: .normal)
-        btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
-        btnReset.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnReset.layer.backgroundColor = UIColor(red: 102/255, green: 205/255, blue: 255/255, alpha: 1).cgColor
+        btnReset.setImage(#imageLiteral(resourceName: "reload_32"), for: .normal)
         btnReset.titleLabel?.adjustsFontSizeToFitWidth = true
         btnReset.titleLabel?.numberOfLines = 0
         btnReset.titleLabel?.minimumScaleFactor = 0.2
@@ -100,7 +98,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addBtnStep() {
         
         btnStep = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnStep1 = btnStep
+//        btnStepTmp = btnStep
         btnStep.layer.backgroundColor = GREEN_COLOR.cgColor
         btnStep.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStep.setTitle("\u{f051}", for: .normal)
@@ -119,6 +117,30 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         view.addSubview(btnStep)
     }
+    
+    func addBtnStepCheck() {
+        
+        btnStepCheck = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        //        btnStepTmp = btnStep
+        btnStepCheck.layer.backgroundColor = GREEN_COLOR.cgColor
+        btnStepCheck.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnStepCheck.setTitle("\u{f051}", for: .normal)
+        
+        btnStepCheck.titleLabel?.textColor = UIColor.white
+        btnStepCheck.titleLabel?.font = UIFont.fontAwesome(ofSize: btnStep.fontoFitHeight())
+        btnStepCheck.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnStepCheck.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnStepCheck.titleLabel?.numberOfLines = 0
+        btnStepCheck.titleLabel?.minimumScaleFactor = 0.2
+        btnStepCheck.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        
+        btnStepCheck.titleLabel?.baselineAdjustment = .alignCenters
+        btnStepCheck.titleLabel?.textAlignment = .center
+        btnStepCheck.layer.cornerRadius = 10
+        
+        view.addSubview(btnStepCheck)
+    }
+
     
     func addBtnRun() {
         
@@ -140,26 +162,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         view.addSubview(btnRun)
     }
     
-    func addBtnPause() {
-        
-        btnPause = UIButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnPause1 = btnPause
-        btnPause.backgroundColor = UIColor.green.withAlphaComponent(0.5)
-        btnPause.setTitleColor(UIColor.white, for: UIControlState.normal)
-        btnPause.setTitle("\u{f28c}", for: .normal)
-        btnPause.setTitleColor(BUTTON_COLOR, for: .normal)
-        btnPause.titleLabel?.font = UIFont.fontAwesome(ofSize: btnRun.fontoFitHeight())
-        btnPause.titleLabel?.adjustsFontSizeToFitWidth = true
-        btnPause.titleLabel?.numberOfLines = 0
-        btnPause.titleLabel?.minimumScaleFactor = 0.2
-        btnPause.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-        btnPause.titleLabel?.baselineAdjustment = .alignCenters
-        btnPause.titleLabel?.textAlignment = .center
-        btnPause.layer.cornerRadius = 10
-        
-        view.addSubview(btnPause)
-    }
-
+   
     
     func addBtnAdd() {
         btnAdd = KDPulseButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))

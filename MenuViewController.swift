@@ -63,46 +63,38 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.titleCell.text = arrayCellData[indexPath.row].nameText
         cell.titleCell.font = UIFont(name: "Helvetica Neue", size: 18)
         cell.titleCell.textColor = UIColor.orange
-
+        
 
         print("height: \(cell.frame.height)")
         return cell
 
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let revealviewcontroller:SWRevealViewController = self.revealViewController()
-        
+        let revealviewcontroller:SWRevealViewController = self.revealViewController()
 
-        let cell: MenuCell = tableView.cellForRow(at: indexPath) as! MenuCell
-        cell.backgroundColor = UIColor.red
-        cell.selectedBackgroundView?.backgroundColor = UIColor.red
-        print("title ne: \(revealviewcontroller)")
-        if(cell.titleCell.text! == "Info"){
-           // khong lam gi
-        }
-        else if (cell.titleCell.text! == "Study"){
+        if (indexPath.row == 0){
 
             let newFontController = UINavigationController.init(rootViewController: DETAIL)
-            DETAIL.navigationController?.navigationBar.barTintColor = UIColor.yellow
-            // tai sao newFontController.navigationController.navigationBar ko doi mau ???
+            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
 
-            let menuVC = MenuViewController(nibName: "MenuViewController", bundle: nil)
-            revealviewcontroller.rightViewController = menuVC
 
-        }else{
 
+        }else if(indexPath.row == 1){
+            print("nhap so")
             let newFontController = UINavigationController.init(rootViewController: INPUT_XIB_CLASS)
+            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
 
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-            INPUT_XIB_CLASS.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
+            INPUT_XIB_CLASS.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))
+
             img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
-            newFontController.navigationController?.navigationBar.barTintColor = UIColor.yellow
 
-
+        }else{
+            print("khong lam gi")
         }
 
     }

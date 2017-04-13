@@ -69,7 +69,7 @@ class AnimationSelection {
                     return
                 }
                 self.currentStep = self.arrayAction[self.colSolution]
-                btnStep1.isUserInteractionEnabled = true
+                btnStepTmp.isUserInteractionEnabled = true
 
             
             }else
@@ -82,7 +82,7 @@ class AnimationSelection {
                         return
                     }
                     self.currentStep = self.arrayAction[self.colSolution]
-                    btnStep1.isUserInteractionEnabled = true
+                    btnStepTmp.isUserInteractionEnabled = true
 
                 }else
                     if(self.currentStep.act=="swap"){
@@ -104,7 +104,7 @@ class AnimationSelection {
                                     return
                                 }
                                 self.currentStep = self.arrayAction[self.colSolution]
-                                btnStep1.isUserInteractionEnabled = true
+                                btnStepTmp.isUserInteractionEnabled = true
 
                             }
                         }
@@ -119,7 +119,7 @@ class AnimationSelection {
                             return
                         }
                         self.currentStep = self.arrayAction[self.colSolution]
-                        btnStep1.isUserInteractionEnabled = true
+                        btnStepTmp.isUserInteractionEnabled = true
 
             }
         }

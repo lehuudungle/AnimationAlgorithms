@@ -329,11 +329,14 @@ class AnimationQuick {
         self.colSolution += 1
         
         if (self.colSolution == self.arrayAction.count) {
+            btnStepTmp.isUserInteractionEnabled = false
             removeSuperTrace()
             return
+        }else{
+            btnStepTmp.isUserInteractionEnabled = true
+
         }
         self.currentStep = self.arrayAction[self.colSolution]
-        btnStepTmp.isUserInteractionEnabled = true
     }
 
     func removeSuperTrace(){

@@ -154,10 +154,13 @@ class AnimationHeap {
         self.colSolution += 1
         
         if (self.colSolution == self.arrayAction.count) {
+            btnStepTmp.isUserInteractionEnabled = false
             return
+        }else{
+            btnStepTmp.isUserInteractionEnabled = true
+
         }
         self.currentStep = self.arrayAction[self.colSolution]
-        btnStepTmp.isUserInteractionEnabled = true
     }
 
     func continueAnimation(){

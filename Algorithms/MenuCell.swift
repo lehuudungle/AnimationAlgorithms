@@ -21,9 +21,10 @@ class MenuCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         if selected {
-            backgroundColor = .red
+            backgroundColor = UIColor(red: 255/255, green: 204/255, blue: 255/255, alpha: 1)
+
         }else{
-            backgroundColor = UIColor(red: 252/255, green: 182/255, blue: 193/255, alpha: 0.2)
+            backgroundColor = UIColor(red: 255/255, green: 204/255, blue: 255/255, alpha: 0.3)
         }
         // Configure the view for the selected state
     }

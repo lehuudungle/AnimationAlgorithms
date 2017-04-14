@@ -17,7 +17,7 @@ class InsertionSortSVC: StudyVC {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.managerSort = ManagerInsertionSort()
-        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,1,9,6,9])
+        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,9,6])
         
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         
@@ -31,7 +31,7 @@ class InsertionSortSVC: StudyVC {
         self.managerSort.graph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
-        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,1,9,6,9])
+        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,9,6])
     }
     
     override func didReceiveMemoryWarning() {

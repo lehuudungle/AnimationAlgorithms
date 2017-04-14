@@ -77,7 +77,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if (indexPath.row == 0){
 
             let newFontController = UINavigationController.init(rootViewController: DETAIL)
-            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 153/255, blue: 153/255, alpha: 1)
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             _ = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
 
@@ -85,7 +85,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         }else if(indexPath.row == 1){
             let newFontController = UINavigationController.init(rootViewController: INPUT_XIB_CLASS)
-            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 153/255, blue: 153/255, alpha: 1)
             INPUT_XIB_CLASS.title = DETAIL.title
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)

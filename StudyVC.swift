@@ -45,7 +45,7 @@ class StudyVC: UIViewController {
     
     func addBtnReset() {
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnReset.layer.backgroundColor = GREEN_COLOR.cgColor
+        btnReset.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
         btnReset.setTitle("\u{f021}", for: .normal)
         btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
@@ -56,6 +56,8 @@ class StudyVC: UIViewController {
         btnReset.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
         btnReset.titleLabel?.baselineAdjustment = .alignCenters
         btnReset.titleLabel?.textAlignment = .center
+        btnReset.layer.borderWidth = 2
+        btnReset.layer.borderColor = BUTTON_COLOR.cgColor
         btnReset.layer.cornerRadius = 10
 
         view.addSubview(btnReset)
@@ -68,7 +70,7 @@ class StudyVC: UIViewController {
         
         btnStepTmp = btnStep
         
-        btnStep.layer.backgroundColor = GREEN_COLOR.cgColor
+        btnStep.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
         btnStep.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStep.setTitle("\u{f051}", for: .normal)
         
@@ -82,7 +84,10 @@ class StudyVC: UIViewController {
         
         btnStep.titleLabel?.baselineAdjustment = .alignCenters
         btnStep.titleLabel?.textAlignment = .center
+        btnStep.layer.borderWidth = 2
+        btnStep.layer.borderColor = BUTTON_COLOR.cgColor
         btnStep.layer.cornerRadius = 10
+
 
         view.addSubview(btnStep)
     }
@@ -93,7 +98,7 @@ class StudyVC: UIViewController {
         
         btnRunTmp = btnRun
         
-        btnRun.layer.backgroundColor = GREEN_COLOR.cgColor
+        btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnRun.setTitle("\u{f144}", for: .normal)
         btnRun.setTitleColor(BUTTON_COLOR, for: .normal)
@@ -104,7 +109,10 @@ class StudyVC: UIViewController {
         btnRun.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
         btnRun.titleLabel?.baselineAdjustment = .alignCenters
         btnRun.titleLabel?.textAlignment = .center
+        btnRun.layer.borderWidth = 2
+        btnRun.layer.borderColor = BUTTON_COLOR.cgColor
         btnRun.layer.cornerRadius = 10
+
 
         view.addSubview(btnRun)
     }

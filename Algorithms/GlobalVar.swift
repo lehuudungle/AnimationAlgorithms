@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-let DEFAULT_COLOR = UIColor.gray
-let COMPARE_COLOR = UIColor.blue
-let SWAP_COLOR = UIColor.red
-let KEY_COLOR = UIColor.green
-let SORT_END = UIColor.cyan
+let DEFAULT_COLOR = UIColor(red: 102/255, green: 102/255, blue: 0/255, alpha: 1)
+let COMPARE_COLOR = UIColor(red: 51/255, green: 153/255, blue: 255/255, alpha: 1)
+let SWAP_COLOR = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1)
+let KEY_COLOR = UIColor(red: 51/255, green: 255/255, blue: 51/255, alpha: 1)
+let SORT_END = UIColor(red: 0/255, green: 255/255, blue: 51/255, alpha: 1)
+
 
 let DEFAULT_ALPHA: CGFloat = 1
 let ANIMATION_ALPHA: CGFloat = 0.5

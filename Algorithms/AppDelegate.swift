@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.navController!.pushViewController(selectionSortIVC, animated: false)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navController
+               
+        print("height : \(navController?.navigationBar.frame.height)")
         
         MenuList.boot(window: self.window!)
         self.window?.makeKeyAndVisible()

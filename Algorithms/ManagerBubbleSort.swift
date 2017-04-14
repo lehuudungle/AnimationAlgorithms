@@ -94,6 +94,12 @@ class ManagerBubbleSort {
         btnRunTmp.isUserInteractionEnabled = false
         animateStep.next()
     }
+    @objc func back(sender: UIButton) {
+
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.isUserInteractionEnabled = false
+        animateStep.back()
+    }
     
     
 }

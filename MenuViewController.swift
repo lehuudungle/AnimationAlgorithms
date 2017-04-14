@@ -27,6 +27,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
 
 
+//       self.view.backgroundColor = UIColor.white
+//        self.view.backgroundColo
 
 
         arrayCellData = [cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
@@ -41,8 +43,15 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         imgProfile.layer.masksToBounds = false
         imgProfile.clipsToBounds = true
         tableView.register(nib, forCellReuseIdentifier: "MenuCell")
-        
-        
+
+        print("rong: \(tableView.frame.width)")
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y:0 , width: 270, height: 44+UIApplication.shared.statusBarFrame.height))
+
+
+        let navItem = UINavigationItem(title: "Menu")
+        navBar.setItems([navItem], animated: false)
+
+        self.view.addSubview(navBar)
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class QuickGraph: UILabel {
+class QuickGraph: UIView {
 
     let widthRatio = 2
     var arrayLabel: [SortingLabel]!
@@ -25,12 +25,14 @@ class QuickGraph: UILabel {
         self.arrayLabelMiddle = [SortingLabel]()
         self.arrayLabelMark = [SortingLabel]()
         self.drawGraph(arrayDisplay: arrayDisplay, colors: colors)
-        //        self.actionTrace()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
 
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError(".....")
+
+    }
+    
     private func drawGraph(arrayDisplay: [Int], colors: [UIColor]) {
 
         let spacing = frame.width/CGFloat(self.widthRatio * ptu + ptu + 1)

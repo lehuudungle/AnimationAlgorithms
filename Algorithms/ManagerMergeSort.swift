@@ -57,11 +57,12 @@ class ManagerMergeSort {
             self.arrayColor.append(SWAP_COLOR)
         }
         
-        graph = MergeGraph(frame: CGRect(x: 0, y: 100,
-                                         width: viewcontroller.view.bounds.size.width,
-                                         height: viewcontroller.view.bounds.size.height),
-                           arrayDisplay: self.arrayDisplay,
-                           colors: self.arrayColor)
+        graph = MergeGraph(frame: CGRect(x: 0,
+                                    y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
+                                    width: viewcontroller.view.bounds.size.width,
+                                    height: viewcontroller.view.bounds.size.height/2),
+                      arrayDisplay: self.arrayDisplay,
+                      colors: self.arrayColor)
         
         
         

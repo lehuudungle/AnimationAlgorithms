@@ -43,7 +43,6 @@ class ManagerBubbleSort {
         self.arrayLabelAbove = []
         self.arrayLabelMiddle = []
         self.arrayLabelBelow = []
-        
         self.arrayColor = []
         
         for index in 0..<arrayInput.count {
@@ -51,13 +50,15 @@ class ManagerBubbleSort {
             self.arrayColor.append(DEFAULT_COLOR)
         }
         
-        graph = Graph(frame: CGRect(x: 0, y: viewcontroller.view.bounds.size.height/2,
+        graph = Graph(frame: CGRect(x: 0,
+                                    y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
                                     width: viewcontroller.view.bounds.size.width,
-                                    height: viewcontroller.view.bounds.size.height),
+                                    height: viewcontroller.view.bounds.size.height/2),
                       arrayDisplay: self.arrayDisplay,
                       colors: self.arrayColor)
         
         viewcontroller.view.addSubview(graph)
+        
         
         
         self.arrayLabel = self.graph.arrayLabel

@@ -21,7 +21,6 @@ class MergeSortSVC: StudyVC {
         
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         
-//        btnInfo.addTarget(self, action: #selector(info(sender:)), for: .touchUpInside)
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
 
     }

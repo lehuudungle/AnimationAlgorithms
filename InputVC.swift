@@ -76,9 +76,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Find out what the text field will be after adding the current edit
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-        
-        print(text)
-        
+                
         if Int(text) != nil {
             
             // Text field converted to an Int

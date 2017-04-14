@@ -46,6 +46,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         viewMenu.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 0.8)
 
         let navBar = UINavigationBar(frame: CGRect(x: 0, y:0 , width: 270, height: 44+UIApplication.shared.statusBarFrame.height))
+        
+        navBar.barTintColor = UIColor(red: 153/255, green: 0/255, blue: 102/255, alpha: 0.6)
 
         let navItem = UINavigationItem(title: "Menu")
         navBar.setItems([navItem], animated: false)
@@ -60,7 +62,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("so count: \(arrayCellData.count)")
         return arrayCellData.count
 
     }

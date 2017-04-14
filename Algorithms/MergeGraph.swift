@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MergeGraph: UILabel {
+class MergeGraph: UIView {
     
     let widthRatio = 2
     var arrayLabel: [SortingLabel]!

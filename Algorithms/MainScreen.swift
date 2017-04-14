@@ -77,7 +77,6 @@ class MainScreen: UITableViewController {
         let item: Menu = menuItems[indexPath.row]
         INPUT_XIB_CLASS = item.inputClass
         
-        print("row section: \(ROW_MENU_SECTION)")
         let xibClass = item.viewClass
         
         let detailScreen: UIViewController!

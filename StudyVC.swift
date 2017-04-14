@@ -23,6 +23,7 @@ class StudyVC: UIViewController {
     var btnAdd:UIButton!
     var textField:UITextField!
     var arrayView:UILabel!
+
     
     var y: CGFloat!
     
@@ -40,6 +41,8 @@ class StudyVC: UIViewController {
         addBtnReset()
         addBtnStep()
         addBtnRun()
+
+        
         
     }
     
@@ -62,6 +65,8 @@ class StudyVC: UIViewController {
 
         view.addSubview(btnReset)
     }
+
+
     
     
     func addBtnStep() {

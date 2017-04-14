@@ -12,7 +12,7 @@ import UIKit
 
 //Used by BubbleSort, SelectionSort, InsertionSort
 
-class Graph: UILabel {
+class Graph: UIView {
       
     let widthRatio = 2
     var arrayLabel: [SortingLabel]!

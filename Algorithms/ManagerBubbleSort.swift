@@ -16,6 +16,7 @@ class ManagerBubbleSort {
     
     var animate: AnimationBubble!
     var animateStep: AnimationBubble!
+    var animateBack: AnimationBubble!
     var viewcontroller: UIViewController!
     
     var arrayInput: [Int]!
@@ -51,11 +52,12 @@ class ManagerBubbleSort {
             self.arrayColor.append(DEFAULT_COLOR)
         }
         
-        graph = Graph(frame: CGRect(x: 0, y: viewcontroller.view.bounds.size.height/2,
+        graph = Graph(frame: CGRect(x: 0, y: viewcontroller.view.bounds.size.height*1/3,
                                     width: viewcontroller.view.bounds.size.width,
                                     height: viewcontroller.view.bounds.size.height),
                       arrayDisplay: self.arrayDisplay,
                       colors: self.arrayColor)
+        graph.backgroundColor = UIColor.white
         
         viewcontroller.view.addSubview(graph)
         
@@ -66,7 +68,13 @@ class ManagerBubbleSort {
         self.arrayLabelAbove = self.graph.arrayLabelAbove
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
-        
+        animateBack = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
+        var ele = 0
+        for a in arrayAction{
+            print("\(ele)__\(a)")
+            ele+=1
+        }
+
     }
     
     func getArrayAction(array: [Int]) -> [Step] {
@@ -94,12 +102,7 @@ class ManagerBubbleSort {
         btnRunTmp.isUserInteractionEnabled = false
         animateStep.next()
     }
-    @objc func back(sender: UIButton) {
-
-        btnStepTmp.isUserInteractionEnabled = false
-        btnRunTmp.isUserInteractionEnabled = false
-        animateStep.back()
-    }
+    
     
     
 }

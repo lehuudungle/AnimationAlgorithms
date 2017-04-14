@@ -124,13 +124,7 @@ class AnimationBubble {
                     self.arrayLabel[self.currentStep.i].backgroundColor = DEFAULT_COLOR
                     self.arrayLabel[self.currentStep.j].backgroundColor = DEFAULT_COLOR
                                         
-                    self.colSolution += 1
-                    
-                    if (self.colSolution == self.arrayAction.count) {
-                        return
-                    }
-                    self.currentStep = self.arrayAction[self.colSolution]
-                    btnStepTmp.isUserInteractionEnabled = true
+                    self.continueAnimationStep()
                 }
             }
             else
@@ -159,13 +153,8 @@ class AnimationBubble {
                             
 //                            self.continueAnimation()
                             
-                            self.colSolution += 1
-                            
-                            if (self.colSolution == self.arrayAction.count) {
-                                return
-                            }
-                            self.currentStep = self.arrayAction[self.colSolution]
-                            btnStepTmp.isUserInteractionEnabled = true
+                            self.continueAnimationStep()
+
                         }
                     }
                 }
@@ -249,6 +238,19 @@ class AnimationBubble {
         }
         self.currentStep = self.arrayAction[self.colSolution]
         self.animation()
+    }
+    
+    func continueAnimationStep(){
+        self.colSolution += 1
+        
+        if (self.colSolution == self.arrayAction.count) {
+            btnStepTmp.isUserInteractionEnabled = false
+            return
+        }else{
+            btnStepTmp.isUserInteractionEnabled = true
+
+        }
+        self.currentStep = self.arrayAction[self.colSolution]
     }
     
     func loop(){

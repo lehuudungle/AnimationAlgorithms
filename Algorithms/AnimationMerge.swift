@@ -329,10 +329,12 @@ class AnimationMerge:NSObject {
         self.colSolution += 1
         if (self.colSolution == self.arrayAction.count) {
             deleteBody()
+            btnStepTmp.isUserInteractionEnabled = false
             return
+        }else{
+            btnStepTmp.isUserInteractionEnabled = true
         }
         self.currentStep = self.arrayAction[self.colSolution]
-        btnStepTmp.isUserInteractionEnabled = true
     }
     
     func deleteBody(){

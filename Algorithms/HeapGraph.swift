@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HeapGraph: UILabel {
+class HeapGraph: UIView {
     
     let widthRatio = 2
     var arrayLabel: [SortingLabel]!

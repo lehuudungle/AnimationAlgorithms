@@ -85,7 +85,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             print("nhap so")
             let newFontController = UINavigationController.init(rootViewController: INPUT_XIB_CLASS)
             newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
-
+            INPUT_XIB_CLASS.title = DETAIL.title
+            print("title : \(INPUT_XIB_CLASS.title)")
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))

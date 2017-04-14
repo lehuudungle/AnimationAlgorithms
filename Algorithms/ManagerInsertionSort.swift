@@ -77,12 +77,16 @@ class ManagerInsertionSort {
         
         animate = AnimationInsertion(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+        
         animate.loop()
     }
     
     @objc func step(sender: UIButton) {
         
         btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.isUserInteractionEnabled = false
         animateStep.next()
     }
     

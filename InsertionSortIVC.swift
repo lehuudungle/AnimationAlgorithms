@@ -31,15 +31,14 @@ class InsertionSortIVC: InputVC{
         
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         
+        btnStepCheck.addTarget(self, action: #selector(step(sender:)), for: .touchUpInside)
+        
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
         
         btnAdd.addTarget(self, action:  #selector(add(sender:)), for: .touchUpInside)
         
-    }
-    
-    func info(sender:UIButton){
-        let vc = BubbleSortSVC()
-        self.navigationController?.pushViewController(vc, animated: true)
+                btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
+        
     }
     
     func reset(sender:UIButton){
@@ -51,15 +50,20 @@ class InsertionSortIVC: InputVC{
         
         MORE_THAN_ONE_ELE = false
         
-        btnRun.setTitle("\u{f144}", for: .normal)
+        //        btnRun.setTitle("\u{f144}", for: .normal)
+        
         btnRun.isUserInteractionEnabled = true
-
+        btnStepCheck.isUserInteractionEnabled = true
+        btnStep.isUserInteractionEnabled = true
         
         self.arrayInput = []
         arrayView.text = ""
         btnAdd.isHidden = false
         textField.isHidden = false
         arrayView.isHidden = false
+        
+        btnStep.isHidden = true
+        btnStepCheck.isHidden = false
     }
     
     func run(sender:UIButton){
@@ -69,14 +73,16 @@ class InsertionSortIVC: InputVC{
             self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
             
             HAVE_GRAPH = true
-            btnRun.isUserInteractionEnabled = false
             
             btnAdd.isHidden = true
             textField.isHidden = true
             arrayView.isHidden = true
             
-        }else {
+            btnRun.isUserInteractionEnabled = false
+            btnStep.isUserInteractionEnabled = false
+            btnStepCheck.isUserInteractionEnabled = false
             
+        }else {
             addAlert(message: "Please add more number")
         }
     }
@@ -96,6 +102,8 @@ class InsertionSortIVC: InputVC{
                     
                     MORE_THAN_ONE_ELE = true
                     btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
+                    
+                    btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
                     arrayView.text = arrayView.text! + ", " + textField.text!
                     arrayInput.append(Int(textField.text!)!)
                     
@@ -110,6 +118,28 @@ class InsertionSortIVC: InputVC{
         
         textField.text = ""
         
+    }
+    
+    func step(sender: UIButton){
+        
+        if MORE_THAN_ONE_ELE == true {
+            if HAVE_GRAPH == false{
+                self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
+                btnStepCheck.isHidden = true
+                btnStep.isHidden = false
+                HAVE_GRAPH = true
+            }
+            
+            
+            btnAdd.isHidden = true
+            textField.isHidden = true
+            arrayView.isHidden = true
+            btnRun.isUserInteractionEnabled = false
+            
+        }
+        else {
+            addAlert(message: "Please add more number")
+        }
     }
     
     override func didReceiveMemoryWarning() {

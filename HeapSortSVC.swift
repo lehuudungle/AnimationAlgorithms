@@ -20,16 +20,10 @@ class HeapSortSVC: StudyVC {
         self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,1,9,6])
         
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
-        
+        btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
 
     }
-    
-    func info(sender:UIButton){
-        let vc = HeapSortSVC()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
     func reset(sender:UIButton){
         self.managerSort.graph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true

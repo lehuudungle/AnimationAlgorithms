@@ -26,12 +26,6 @@ class BubbleSortSVC: StudyVC {
                 
     }
     
-    
-    func info(sender:UIButton){
-        let vc = BubbleSortSVC()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
     func reset(sender:UIButton){
         self.managerSort.graph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true

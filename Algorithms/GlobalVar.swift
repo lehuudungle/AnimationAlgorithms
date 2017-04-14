@@ -33,6 +33,7 @@ var RECTSIZE: CGFloat = 0
 
 var yMax: CGFloat = 0
 
+
 var btnStepTmp: UIButton!
 var btnRunTmp: UIButton!
 

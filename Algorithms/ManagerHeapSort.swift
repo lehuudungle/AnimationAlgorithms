@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ManagerHeapSort {
-    
+    var animationStep: AnimationHeap!
     var animate: AnimationHeap!
     var viewcontroller: UIViewController!
     
@@ -62,6 +62,7 @@ class ManagerHeapSort {
         self.arrayLabelBehind = self.graph.arrayLabelBehind
         self.arrayPosition = self.graph.arrayPosition
         
+        animationStep = AnimationHeap(arrayLabel: self.arrayLabel,  arrayLabelBehind: self.arrayLabelBehind, arrayPosition: self.arrayPosition, arrayAction: self.arrayAction, graphHeap: graph)
     }
     
     func getArrayAction(array: [Int]) -> [HeapStep] {
@@ -74,9 +75,22 @@ class ManagerHeapSort {
     @objc func run(sender: UIButton) {
         
         animate = AnimationHeap(arrayLabel: self.arrayLabel,  arrayLabelBehind: self.arrayLabelBehind, arrayPosition: self.arrayPosition, arrayAction: self.arrayAction, graphHeap: graph)
+       
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+        
         animate.loop()
         
     }
+    
+    @objc func step(sender: UIButton) {
+        
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.isUserInteractionEnabled = false
+        
+        animationStep.next()
+    }
+
 
     
 }

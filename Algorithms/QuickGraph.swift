@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class QuickGraph: UILabel {
+class QuickGraph: UIView {
 
     let widthRatio = 2
     var arrayLabel: [SortingLabel]!
@@ -25,12 +25,14 @@ class QuickGraph: UILabel {
         self.arrayLabelMiddle = [SortingLabel]()
         self.arrayLabelMark = [SortingLabel]()
         self.drawGraph(arrayDisplay: arrayDisplay, colors: colors)
-        //        self.actionTrace()
-    }
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
 
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError(".....")
+
+    }
+    
     private func drawGraph(arrayDisplay: [Int], colors: [UIColor]) {
 
         let spacing = frame.width/CGFloat(self.widthRatio * ptu + ptu + 1)
@@ -58,11 +60,13 @@ class QuickGraph: UILabel {
                                            color: SWAP_COLOR,
                                            value: "0")
             labelMiddle.isHidden = true
+            
             let labelAbove = SortingLabel(frame: CGRect(x: x, y: 0 - rectSize - spacing,
                                                         width: rectSize, height: rectSize),
                                           color: DEFAULT_COLOR,
                                           value: "0")
             labelAbove.isHidden = true
+            
             let labelMark = SortingLabel(frame: CGRect(x: x, y: rectSize + 6,
                                                        width: rectSize, height: rectSize),
                                          color: DEFAULT_COLOR,
@@ -122,10 +126,8 @@ class QuickGraph: UILabel {
             line.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, -1.0)
         }
         if(textLR=="L"){
-
             label.backgroundColor = UIColor.blue
-
-
+            
         }else if(textLR=="R"){
             label.backgroundColor = UIColor.red
 

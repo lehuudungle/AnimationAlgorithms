@@ -41,9 +41,9 @@ class AnimationQuick {
         self.arrayLabelMiddle = arrayLabelMiddle
         self.graph = graph
         iniTrace()
-//        tracePivot 
 
     }
+    
     func iniTrace(){
         traceLeft = self.graph.drawMark(textLR: "L")
         traceRight = self.graph.drawMark(textLR: "R")
@@ -60,8 +60,6 @@ class AnimationQuick {
         traceRight.isHidden = true
         tracePivot.isHidden = true
 
-        
-        
         
     }
 
@@ -305,7 +303,7 @@ class AnimationQuick {
 
 
     func setPivot(traceLabel: UILabel,_setPivot: Int){
-        let point = CGPoint(x: self.arrayLabelMiddle[self.currentStep.pivot+1].frame.origin.x, y: self.arrayLabelMiddle[self.currentStep.pivot+1].frame.origin.y - CGFloat(10) - RECTSIZE)
+        let point = CGPoint(x: self.arrayLabelMiddle[self.currentStep.pivot+1].frame.origin.x+5, y: self.arrayLabelMiddle[self.currentStep.pivot+1].frame.origin.y - CGFloat(10) - RECTSIZE)
         tracePivot.frame.origin = CGPoint(x: point.x, y: point.y)
     }
     func setPosition(traceLabel: UILabel,_setPosition: Int){
@@ -329,11 +327,14 @@ class AnimationQuick {
         self.colSolution += 1
         
         if (self.colSolution == self.arrayAction.count) {
+            btnStepTmp.isUserInteractionEnabled = false
             removeSuperTrace()
             return
+        }else{
+            btnStepTmp.isUserInteractionEnabled = true
+
         }
         self.currentStep = self.arrayAction[self.colSolution]
-        btnStepTmp.isUserInteractionEnabled = true
     }
 
     func removeSuperTrace(){

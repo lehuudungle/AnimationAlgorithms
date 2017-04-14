@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ManagerMergeSort {
-    
+    var animationStep: AnimationMerge!
     var animate: AnimationMerge!
     var viewcontroller: UIViewController!
     
@@ -57,11 +57,12 @@ class ManagerMergeSort {
             self.arrayColor.append(SWAP_COLOR)
         }
         
-        graph = MergeGraph(frame: CGRect(x: 0, y: 100,
-                                         width: viewcontroller.view.bounds.size.width,
-                                         height: viewcontroller.view.bounds.size.height),
-                           arrayDisplay: self.arrayDisplay,
-                           colors: self.arrayColor)
+        graph = MergeGraph(frame: CGRect(x: 0,
+                                    y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
+                                    width: viewcontroller.view.bounds.size.width,
+                                    height: viewcontroller.view.bounds.size.height/2),
+                      arrayDisplay: self.arrayDisplay,
+                      colors: self.arrayColor)
         
         
         
@@ -73,6 +74,8 @@ class ManagerMergeSort {
         self.arrayLabelTwo = self.graph.arrayLabelTwo
         self.arrayLabelThree = self.graph.arrayLabelThree
         self.arrayLabelFour = self.graph.arrayLabelFour
+        
+        animationStep = AnimationMerge(arrayLabel: self.arrayLabel, arrayLabelOne: self.arrayLabelOne, arrayLabelTwo: self.arrayLabelTwo, arrayLabelThree: self.arrayLabelThree, arrayLabelFour: self.arrayLabelFour, arrayAction: self.arrayAction, graphMerge: graph)
         
     }
     
@@ -88,5 +91,12 @@ class ManagerMergeSort {
         animate = AnimationMerge(arrayLabel: self.arrayLabel, arrayLabelOne: self.arrayLabelOne, arrayLabelTwo: self.arrayLabelTwo, arrayLabelThree: self.arrayLabelThree, arrayLabelFour: self.arrayLabelFour, arrayAction: self.arrayAction, graphMerge: graph)
         animate.loop()
         
+    }
+    @objc func step(sender: UIButton) {
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.isUserInteractionEnabled = false
+        
+        animationStep.next()
+
     }
 }

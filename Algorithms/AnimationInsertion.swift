@@ -138,14 +138,7 @@ class AnimationInsertion {
                 self.arrayLabel[self.currentStep.key].backgroundColor = DEFAULT_COLOR
         
             }
-            self.colSolution += 1
-            
-            if (self.colSolution == self.arrayAction.count) {
-                return
-            }
-            self.currentStep = self.arrayAction[self.colSolution]
-            
-            btnStepTmp.isUserInteractionEnabled = true
+            self.continueAnimationStep()
 
         }
     }
@@ -160,6 +153,18 @@ class AnimationInsertion {
         self.currentStep = self.arrayAction[self.colSolution]
         self.animation()
     }
+    func continueAnimationStep(){
+        self.colSolution += 1
+        
+        if (self.colSolution == self.arrayAction.count) {
+            btnStepTmp.isUserInteractionEnabled  = false
+            return
+        }else{
+            btnStepTmp.isUserInteractionEnabled = true
+        }
+        self.currentStep = self.arrayAction[self.colSolution]
+    }
+
     
     func loop(){
         currentStep = self.arrayAction[self.colSolution]

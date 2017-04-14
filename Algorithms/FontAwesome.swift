@@ -34,7 +34,6 @@ public extension UIFont {
     /// - returns: A UIFont object of FontAwesome.
     
     public class func fontAwesome(ofSize fontSize: CGFloat) -> UIFont {
-        print("goi den func nay")
         let name = "FontAwesome"
         if UIFont.fontNames(forFamilyName: name).isEmpty {
             FontLoader.loadFont(name)

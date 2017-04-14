@@ -42,22 +42,22 @@ class Graph: UIView {
     
         for index in 0..<arrayDisplay.count {
             
-            let sortingLabel = SortingLabel(frame: CGRect(x: x, y: 0,
+            let sortingLabel = SortingLabel(frame: CGRect(x: x, y:  0 + rectSize + spacing,
                                                    width: rectSize, height: rectSize),
                                      color: colors[index],
                                      value: String(arrayDisplay[index]))
 
-            let labelMiddle = SortingLabel(frame: CGRect(x: x, y: 0,
+            let labelMiddle = SortingLabel(frame: CGRect(x: x, y: 0 + rectSize + spacing,
                                                           width: rectSize, height: rectSize),
                                             color: DEFAULT_COLOR,
                                             value: "0")
             labelMiddle.isHidden = true
-            let labelAbove = SortingLabel(frame: CGRect(x: x, y: 0 - rectSize - spacing,
+            let labelAbove = SortingLabel(frame: CGRect(x: x, y: 0,
                                                           width: rectSize, height: rectSize),
                                           color: DEFAULT_COLOR,
                                           value: "0")
             labelAbove.isHidden = true
-            let labelBelow = SortingLabel(frame: CGRect(x: x, y: rectSize + spacing,
+            let labelBelow = SortingLabel(frame: CGRect(x: x, y: 0 + 2*rectSize + 2*spacing,
                                                           width: rectSize, height: rectSize),
                                             color: colors[index],
                                             value: String(arrayDisplay[index]))

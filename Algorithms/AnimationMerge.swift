@@ -134,6 +134,95 @@ class AnimationMerge:NSObject {
         }
     }
     
+    func animationStep(){
+        UIView.animate(withDuration: 1, animations: {
+            if(self.currentStep.act=="eleSplit"){
+                switch self.currentStep.level{
+                case 2: self.traceLevelTwo = self.currentStep.left.count - 1 // danh dau vi tri in ra
+                // ve khung trai
+                for tran in 0..<self.currentStep.left.count{
+                    self.moveLabel(from: self.arrayLabel[self.currentStep.left[tran]], to: self.arrayLabelTwo[self.currentStep.left[tran]])
+                }
+                self.borderRect(bearingPoint: (self.arrayLabel.first?.frame.origin)!, countCell: self.currentStep.left.count)
+                // ve khung phai
+                self.traceLevelTwo = self.traceLevelTwo + 1
+                for tran in 0..<self.currentStep.right.count{
+                    self.moveLabel(from: self.arrayLabel[self.currentStep.right[tran]], to: self.arrayLabelTwo[self.currentStep.right[tran]])
+                }
+                self.borderRect(bearingPoint: self.arrayLabel[self.traceLevelTwo].frame.origin, countCell: self.currentStep.right.count)
+                case 3:
+                    // ve khung trai
+                    for tran in 0..<self.currentStep.left.count{
+                        self.moveLabel(from: self.arrayLabel[self.currentStep.left[tran]], to: self.arrayLabelThree[self.currentStep.left[tran]])
+                    }
+                    self.borderRect(bearingPoint: (self.arrayLabel[self.traceLevelThree].frame.origin), countCell: self.currentStep.left.count)
+                    // ve khung phai
+                    self.traceLevelThree = self.traceLevelThree + self.currentStep.left.count
+                    for tran in 0..<self.currentStep.right.count{
+                        self.moveLabel(from: self.arrayLabel[self.currentStep.right[tran]], to: self.arrayLabelThree[self.currentStep.right[tran]])
+                    }
+                    self.borderRect(bearingPoint: (self.arrayLabel[self.traceLevelThree].frame.origin), countCell: self.currentStep.right.count)
+                    // cong them do dai left ben trai de cho doi xung
+                    
+                    self.traceLevelThree = self.traceLevelThree + self.currentStep.right.count
+                case 4:
+                    // ve khung trai
+                    for tran in 0..<self.currentStep.left.count{
+                        self.moveLabel(from: self.arrayLabel[self.currentStep.left[tran]], to: self.arrayLabelFour[self.currentStep.left[tran]])
+                    }
+                    self.borderRect(bearingPoint: (self.arrayLabel[self.currentStep.left[0]].frame.origin), countCell: self.currentStep.left.count)
+                    // ve khung phai
+                    self.traceLevelFour = self.traceLevelFour + self.currentStep.left.count
+                    for tran in 0..<self.currentStep.right.count{
+                        self.moveLabel(from: self.arrayLabel[self.currentStep.right[tran]], to: self.arrayLabelFour[self.currentStep.right[tran]])
+                    }
+                    self.borderRect(bearingPoint: (self.arrayLabel[self.currentStep.right[0]].frame.origin), countCell: self.currentStep.right.count)
+                    self.traceLevelFour = self.traceLevelFour + self.currentStep.right.count
+                default: break
+                }
+            }
+            else{
+                switch self.currentStep.level{
+                case 1:
+                    self._countStep = 0
+                    self.moveLabel(from: self.arrayLabel[self.currentStep.merge[0]], to: self.arrayLabelOne[self.traceMergeOne])
+                    self.traceMergeOne = self.traceMergeOne + 1
+                case 2:
+                    self._countStep=0
+                    self.moveLabel(from: self.arrayLabel[self.currentStep.merge[0]], to: self.arrayLabelTwo[self.traceMergeTwo])
+                    self.traceMergeTwo = self.traceMergeTwo + 1
+                case 3:
+                    self._countStep=0
+                    let eleMerge = self.currentStep.merge[0]
+                    self._stepBackSplit = self.arrayAction[self.currentStep.stepSplit]
+                    self.moveLabel(from: self.arrayLabel[eleMerge], to: self.arrayLabelThree[self._stepBackSplit.merge[self._countStep]])
+                    // thuc hien ve label xong dung traceMergeThree de danh dau vi tri ve label tiep theo
+                    self.traceMergeThree = self.traceMergeThree + 1
+                default: break
+                }
+            }
+        }){_ in
+            if(self.currentStep.act=="eleMerge"){
+                
+                switch self.currentStep.level{
+                case 1:
+                    self._countStep = 1
+                    self.animationMergetoLevelStep(_countStep: self._countStep, from: self.arrayLabel[self.currentStep.merge[self._countStep]], to: self.arrayLabelOne[self.traceMergeOne])
+                case 2:
+                    self._countStep = 1
+                    self.animationMergetoLevelStep(_countStep: self._countStep, from: self.arrayLabel[self.currentStep.merge[self._countStep]], to: self.arrayLabelTwo[self.traceMergeTwo])
+                case 3:
+                    self._countStep = 1
+                    self.animationMergetoLevelStep(_countStep: self._countStep, from: self.arrayLabel[self.currentStep.merge[self._countStep]], to: self.arrayLabelThree[self._stepBackSplit.merge[self._countStep]])
+                default: break
+                }
+            }else{
+                self.continueAnimationStep()
+            }
+        }
+    }
+
+    
     func animationMergetoLevel(_countStep: Int,from: SortingLabel,to: SortingLabel){
         UIView.animate(withDuration: 1, animations: {
             self.moveLabel(from: from, to: to)
@@ -169,11 +258,54 @@ class AnimationMerge:NSObject {
         }
     }
     
+    func animationMergetoLevelStep(_countStep: Int,from: SortingLabel,to: SortingLabel){
+        UIView.animate(withDuration: 1, animations: {
+            self.moveLabel(from: from, to: to)
+        }){_ in
+            var _tranSortingLabel = UILabel()
+            switch self.currentStep.level{
+            case 1:
+                self.traceMergeOne = self.traceMergeOne + 1
+                // co dieu kien nay do thang traceMergeOne co the bi ra ngoai truoc khi co dieu kien kiem tra _countSTep
+                if(self.traceMergeOne<self.arrayLabel.count){
+                    _tranSortingLabel = self.arrayLabelOne[self.traceMergeOne]
+                }
+            case 2:
+                self.traceMergeTwo  = self.traceMergeTwo + 1
+                if(self.traceMergeTwo<self.arrayLabel.count){
+                    _tranSortingLabel = self.arrayLabelTwo[self.traceMergeTwo]
+                }
+                break
+            case 3:
+                self.traceMergeThree = self.traceMergeThree + 1
+                if(self.traceMergeThree<self.arrayLabel.count){
+                    _tranSortingLabel = self.arrayLabelThree[self.traceMergeThree]
+                }
+            default:break
+            }
+            
+            if(_countStep==self.currentStep.merge.count-1){
+                self.continueAnimationStep()
+                return
+            }
+            self._countStep+=1
+            self.animationMergetoLevelStep(_countStep: _countStep+1, from: self.arrayLabel[self.currentStep.merge[_countStep+1]], to:_tranSortingLabel as! SortingLabel)
+        }
+    }
+
+    
     func loop(){
         self.currentStep = self.arrayAction[self.colSolution]
         self.borderRect(bearingPoint: (self.arrayLabelOne.first?.frame.origin)!, countCell: self.arrayLabel.count)
         self.animation()
     }
+    
+    func next(){
+        self.currentStep = self.arrayAction[self.colSolution]
+        self.borderRect(bearingPoint: (self.arrayLabelOne.first?.frame.origin)!, countCell: self.arrayLabel.count)
+        self.animationStep()
+    }
+
     func swapLabel(i: Int, j: Int) {
         let temp = arrayLabel[i]
         arrayLabel[i] = arrayLabel[j]
@@ -191,6 +323,18 @@ class AnimationMerge:NSObject {
         }
         self.currentStep = self.arrayAction[self.colSolution]
         self.animation()
+    }
+    
+    func continueAnimationStep(){
+        self.colSolution += 1
+        if (self.colSolution == self.arrayAction.count) {
+            deleteBody()
+            btnStepTmp.isUserInteractionEnabled = false
+            return
+        }else{
+            btnStepTmp.isUserInteractionEnabled = true
+        }
+        self.currentStep = self.arrayAction[self.colSolution]
     }
     
     func deleteBody(){

@@ -93,7 +93,7 @@ class HeapSortIVC: InputVC{
                     arrayView.text = textField.text
                     arrayInput.append(Int(textField.text!)!)
                     
-                }else if (arrayInput.count == 9){
+                }else if (arrayInput.count == 7){
                     addAlert(message: "Array can contain only 9 numbers for better visualization")
                     
                 }else {

@@ -47,6 +47,10 @@ class InputVC: UIViewController, UITextFieldDelegate {
         addTextField()
         addTextView()
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(InputVC.tapaction))
+        tapGesture.numberOfTapsRequired = 1
+        btnStep.addGestureRecognizer(tapGesture)
+        
         
 //        btnAdd.isEnabled = true
         textField.delegate = self
@@ -56,23 +60,36 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    @IBAction func tapaction()
+    {
+        btnStep.isEnabled = false
+        //Delay function to enable your button
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(InputVC.enablefunc), userInfo: nil, repeats: false)
+    }
+    
+    func enablefunc()
+    {
+        btnStep.isEnabled = true
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Find out what the text field will be after adding the current edit
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         
         print(text)
         
-//        if Int(text) != nil {
-//            
-//            print("!= nil")
-//            // Text field converted to an Int
-//            
-//            btnAdd.isEnabled = true
-//        } else {
-//            print("xoa")
-//            // Text field is not an Int
-//            btnAdd.isEnabled = false
-//        }
+        if Int(text) != nil {
+            
+            print("!= nil")
+            // Text field converted to an Int
+            
+            btnAdd.isEnabled = true
+        } else {
+            print("xoa")
+            // Text field is not an Int
+            btnAdd.isEnabled = false
+        }
         
         // Return true so the text field will be changed
         return true

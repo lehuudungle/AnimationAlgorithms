@@ -47,9 +47,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
         addTextField()
         addTextView()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(InputVC.tapaction))
-        tapGesture.numberOfTapsRequired = 1
-        btnStep.addGestureRecognizer(tapGesture)
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(InputVC.tapaction))
+//        tapGesture.numberOfTapsRequired = 1
+//        btnStep.addGestureRecognizer(tapGesture)
         
         
 //        btnAdd.isEnabled = true
@@ -61,17 +61,17 @@ class InputVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func tapaction()
-    {
-        btnStep.isEnabled = false
-        //Delay function to enable your button
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(InputVC.enablefunc), userInfo: nil, repeats: false)
-    }
-    
-    func enablefunc()
-    {
-        btnStep.isEnabled = true
-    }
+//    @IBAction func tapaction()
+//    {
+//        btnStep.isEnabled = false
+//        //Delay function to enable your button
+//        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(InputVC.enablefunc), userInfo: nil, repeats: false)
+//    }
+//    
+//    func enablefunc()
+//    {
+//        btnStep.isEnabled = true
+//    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Find out what the text field will be after adding the current edit
@@ -99,7 +99,10 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
         btnReset.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
-        btnReset.setImage(#imageLiteral(resourceName: "reload_32"), for: .normal)
+        btnReset.setTitle("\u{f021}", for: .normal)
+        btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
+        btnReset.setTitleColor(BUTTON_COLOR, for: .normal)
         btnReset.titleLabel?.adjustsFontSizeToFitWidth = true
         btnReset.titleLabel?.numberOfLines = 0
         btnReset.titleLabel?.minimumScaleFactor = 0.2
@@ -109,7 +112,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
         btnReset.layer.borderWidth = 2
         btnReset.layer.borderColor = BUTTON_COLOR.cgColor
         btnReset.layer.cornerRadius = 10
-
         
         view.addSubview(btnReset)
     }

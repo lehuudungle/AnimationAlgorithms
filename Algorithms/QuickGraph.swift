@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class QuickGraph: UIView {
+class QuickGraph: UILabel {
 
     let widthRatio = 2
     var arrayLabel: [SortingLabel]!

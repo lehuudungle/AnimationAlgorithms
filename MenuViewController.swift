@@ -92,6 +92,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
             
+
             INPUT_XIB_CLASS.title = DETAIL.title
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)

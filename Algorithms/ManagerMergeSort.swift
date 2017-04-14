@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ManagerMergeSort {
-    
+    var animationStep: AnimationMerge!
     var animate: AnimationMerge!
     var viewcontroller: UIViewController!
     
@@ -75,6 +75,8 @@ class ManagerMergeSort {
         self.arrayLabelThree = self.graph.arrayLabelThree
         self.arrayLabelFour = self.graph.arrayLabelFour
         
+        animationStep = AnimationMerge(arrayLabel: self.arrayLabel, arrayLabelOne: self.arrayLabelOne, arrayLabelTwo: self.arrayLabelTwo, arrayLabelThree: self.arrayLabelThree, arrayLabelFour: self.arrayLabelFour, arrayAction: self.arrayAction, graphMerge: graph)
+        
     }
     
     func getArrayAction(array: [Int]) -> [MergeStep] {
@@ -89,5 +91,12 @@ class ManagerMergeSort {
         animate = AnimationMerge(arrayLabel: self.arrayLabel, arrayLabelOne: self.arrayLabelOne, arrayLabelTwo: self.arrayLabelTwo, arrayLabelThree: self.arrayLabelThree, arrayLabelFour: self.arrayLabelFour, arrayAction: self.arrayAction, graphMerge: graph)
         animate.loop()
         
+    }
+    @objc func step(sender: UIButton) {
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.isUserInteractionEnabled = false
+        
+        animationStep.next()
+
     }
 }

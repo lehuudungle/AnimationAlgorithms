@@ -20,7 +20,7 @@ class MergeSortSVC: StudyVC {
         self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,9,6])
         
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
-        
+        btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
 
     }

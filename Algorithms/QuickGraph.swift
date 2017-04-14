@@ -60,11 +60,13 @@ class QuickGraph: UIView {
                                            color: SWAP_COLOR,
                                            value: "0")
             labelMiddle.isHidden = true
+            
             let labelAbove = SortingLabel(frame: CGRect(x: x, y: 0 - rectSize - spacing,
                                                         width: rectSize, height: rectSize),
                                           color: DEFAULT_COLOR,
                                           value: "0")
             labelAbove.isHidden = true
+            
             let labelMark = SortingLabel(frame: CGRect(x: x, y: rectSize + 6,
                                                        width: rectSize, height: rectSize),
                                          color: DEFAULT_COLOR,
@@ -124,10 +126,8 @@ class QuickGraph: UIView {
             line.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, -1.0)
         }
         if(textLR=="L"){
-
             label.backgroundColor = UIColor.blue
-
-
+            
         }else if(textLR=="R"){
             label.backgroundColor = UIColor.red
 

@@ -78,20 +78,20 @@ class HeapGraph: UILabel {
 
         for _ in 0..<7{
             
-            FloorOne = SortingLabel(frame: CGRect(x: xFrame!, y: 100 + rectSize + spacing,
+            FloorOne = SortingLabel(frame: CGRect(x: xFrame!, y: rectSize*2 + spacing,
                                                   width: rectSizeFrame, height: rectSizeFrame),
                                     color: DEFAULT_COLOR,
                                     value: "0")
             
             FloorOne.isHidden = true
             
-            FloorTwo = SortingLabel(frame: CGRect(x: xFrame!, y: 100 + rectSize*2 + spacing*2,
+            FloorTwo = SortingLabel(frame: CGRect(x: xFrame!, y: rectSize*3 + spacing*2,
                                                   width: rectSizeFrame, height: rectSizeFrame),
                                     color: DEFAULT_COLOR,
                                     value: "0")
             FloorTwo.isHidden = true
             
-            FloorThree = SortingLabel(frame: CGRect(x: xFrame!, y: 100 + rectSize*3 + spacing*3,
+            FloorThree = SortingLabel(frame: CGRect(x: xFrame!, y: rectSize*4 + spacing*3,
                                                     width: rectSizeFrame, height: rectSizeFrame),
                                       color: DEFAULT_COLOR,
                                       value: "0")
@@ -120,12 +120,12 @@ class HeapGraph: UILabel {
         
         for index in 0..<arrayDisplay.count {
             
-            sortingLabel = SortingLabel(frame: CGRect(x: x!, y: 100,
+            sortingLabel = SortingLabel(frame: CGRect(x: x!, y: rectSize,
                                                           width: rectSize, height: rectSize),
                                             color: colors[index],
                                             value: String(arrayDisplay[index]))
             
-            FloorBehind = SortingLabel(frame: CGRect(x: x!, y: 100,
+            FloorBehind = SortingLabel(frame: CGRect(x: x!, y: rectSize,
                                                       width: rectSize, height: rectSize),
                                         color: DEFAULT_COLOR,
                                         value: "0")

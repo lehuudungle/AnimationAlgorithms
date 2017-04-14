@@ -41,9 +41,9 @@ class AnimationQuick {
         self.arrayLabelMiddle = arrayLabelMiddle
         self.graph = graph
         iniTrace()
-//        tracePivot 
 
     }
+    
     func iniTrace(){
         traceLeft = self.graph.drawMark(textLR: "L")
         traceRight = self.graph.drawMark(textLR: "R")
@@ -60,8 +60,6 @@ class AnimationQuick {
         traceRight.isHidden = true
         tracePivot.isHidden = true
 
-        
-        
         
     }
 

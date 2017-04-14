@@ -54,11 +54,12 @@ class ManagerQuickSort{
         }
         
         quickGraph = QuickGraph(frame: CGRect(x: 0,
-                                              y: 250,
+                                              y:viewcontroller.view.bounds.size.height/3,
                                               width: viewcontroller.view.bounds.size.width,
-                                              height: viewcontroller.view.bounds.size.height-100),
+                                              height: viewcontroller.view.bounds.size.height/2),
                                 arrayDisplay: self.arrayDisplay,
                                 colors: self.arrayColor)
+        
         viewcontroller.view.addSubview(quickGraph)
         
         

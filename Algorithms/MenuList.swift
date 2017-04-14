@@ -44,7 +44,7 @@ class MenuList: NSObject {
         
         let advance = MenuSection(section: "advance", menus:[
             Menu(title: "Rock", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
-            Menu(title: "Home", viewClass: "ClassVC",inputClass: SelectionSortIVC())
+            Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC())
             ])
 
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)
@@ -54,6 +54,7 @@ class MenuList: NSObject {
 
         let startView = StartVC()
         let nav = UINavigationController(rootViewController: mainScreen)
+        
 
         window.rootViewController = nav
         rootWindow = window

@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.navController!.pushViewController(selectionSortIVC, animated: false)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navController
-        
+               
         MenuList.boot(window: self.window!)
         self.window?.makeKeyAndVisible()
         return true

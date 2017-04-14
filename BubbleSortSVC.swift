@@ -18,11 +18,12 @@ class BubbleSortSVC: StudyVC {
         
         
         self.managerSort = ManagerBubbleSort()
+
         self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,9,6])
-        
+
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
-        btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
+        btnReset.addTarget(self.managerSort, action:  #selector(managerSort.back(sender:)), for: .touchUpInside)
                 
     }
     
@@ -31,6 +32,7 @@ class BubbleSortSVC: StudyVC {
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
         managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,9,6])
+
     }
     
     override func didReceiveMemoryWarning() {

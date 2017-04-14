@@ -54,6 +54,7 @@ class MenuList: NSObject {
 
         let startView = StartVC()
         let nav = UINavigationController(rootViewController: mainScreen)
+        
 
         window.rootViewController = nav
         rootWindow = window

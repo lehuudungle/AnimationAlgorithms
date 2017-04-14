@@ -81,12 +81,10 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         if Int(text) != nil {
             
-            print("!= nil")
             // Text field converted to an Int
             
             btnAdd.isEnabled = true
         } else {
-            print("xoa")
             // Text field is not an Int
             btnAdd.isEnabled = false
         }

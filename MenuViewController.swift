@@ -26,7 +26,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let button = KDPulseButton(frame: <#T##CGRect#>)
+
+//       self.view.backgroundColor = UIColor.white
+//        self.view.backgroundColo
 
 
         arrayCellData = [cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
@@ -43,8 +45,12 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         tableView.register(nib, forCellReuseIdentifier: "MenuCell")
         viewMenu.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 0.8)
 
-        
-        
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y:0 , width: 270, height: 44+UIApplication.shared.statusBarFrame.height))
+
+        let navItem = UINavigationItem(title: "Menu")
+        navBar.setItems([navItem], animated: false)
+
+        self.view.addSubview(navBar)
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,9 +71,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.titleCell.text = arrayCellData[indexPath.row].nameText
         cell.titleCell.font = UIFont(name: "Helvetica Neue", size: 18)
         cell.titleCell.textColor = UIColor.orange
-        
 
-        print("height: \(cell.frame.height)")
         return cell
 
     }
@@ -77,7 +81,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if (indexPath.row == 0){
 
             let newFontController = UINavigationController.init(rootViewController: DETAIL)
-            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 153/255, blue: 153/255, alpha: 1)
+            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             _ = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
 
@@ -85,7 +89,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
         }else if(indexPath.row == 1){
             let newFontController = UINavigationController.init(rootViewController: INPUT_XIB_CLASS)
-            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 153/255, blue: 153/255, alpha: 1)
+            
+            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+            
             INPUT_XIB_CLASS.title = DETAIL.title
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)

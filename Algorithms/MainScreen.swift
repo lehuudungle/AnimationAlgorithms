@@ -84,9 +84,9 @@ class MainScreen: UITableViewController {
         
         
         let appName =  Bundle.main.infoDictionary!["CFBundleName"] as! String
-
+        
         // check if class exits
-
+        
         if let aClass = NSClassFromString("\(appName).\(xibClass)") as? UIViewController.Type {
             
             if (Bundle.main.path(forResource: xibClass, ofType: "nib") == nil){
@@ -96,32 +96,30 @@ class MainScreen: UITableViewController {
                 detailScreen = aClass.init(nibName:xibClass,bundle:nil) as UIViewController
                 
             }
-
+            
             let menuVC = MenuViewController(nibName: "MenuViewController", bundle: nil)
-           
+            
             detailScreen.title = item.title
             DETAIL = detailScreen
             
-
-            let navDetail = UINavigationController(rootViewController: detailScreen)
-           
             let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
             let img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
-            detailScreen.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
-
-//            revealViewController().rightViewRevealWidth = 300
-
-
+            
+            
+            let navDetail = UINavigationController(rootViewController: detailScreen)
+            navDetail.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
             let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
             revel?.rightViewController = menuVC
-
+            
+            //            revel?.modalTransitionStyle = .partialCurl
             present(revel!, animated: true, completion: nil)
             revel?.rightViewRevealWidth = 180
-
-//            dismiss(animated: true, completion: nil)
-
+            
+            
+            
+            
         }else{
             let alert = UIAlertController.init(title: "Warning",
                                                message: "Thuật toán cần thêm \(xibClass)",
@@ -135,7 +133,7 @@ class MainScreen: UITableViewController {
         
     }
     func backHOME(sender: UIBarButtonItem){
-
+        
         
         dismiss(animated: true, completion: nil)
         

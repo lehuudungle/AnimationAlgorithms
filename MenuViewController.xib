@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="32" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fCX-kC-sGW">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fCX-kC-sGW">
                     <rect key="frame" x="0.0" y="47" width="375" height="192"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -41,9 +41,10 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="0.88251616379310349" colorSpace="calibratedRGB"/>
+            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
             <constraints>
-                <constraint firstItem="fCX-kC-sGW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="IWL-DH-cvF"/>
+                <constraint firstItem="fCX-kC-sGW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="IWL-DH-cvF"/>
                 <constraint firstItem="YM8-fX-L53" firstAttribute="top" secondItem="fCX-kC-sGW" secondAttribute="bottom" constant="20" id="P2d-zo-p8d"/>
                 <constraint firstItem="fCX-kC-sGW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nT2-sw-FqO"/>
                 <constraint firstAttribute="trailing" secondItem="fCX-kC-sGW" secondAttribute="trailing" id="u62-pw-QDN"/>

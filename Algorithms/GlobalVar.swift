@@ -24,7 +24,7 @@ var SPACING: CGFloat = 0
 var DISTANCEROW: CGFloat = 0
 
 let GRAY_COLOR = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)
-let GOLD_COLOR = UIColor(red: 1, green: 215/255, blue: 0, alpha: 1)
+let GOLD_COLOR = UIColor(red: 102/255, green: 102/255, blue: 1, alpha: 1)
 let GREEN_COLOR = UIColor(red: 0, green: 1, blue: 0, alpha: 0.4)
 
 let DARK_ORCHID = UIColor(red: 153/255, green: 50/255, blue: 204/255, alpha: 0.7)

@@ -9,31 +9,31 @@
 import UIKit
 
 class MainScreen: UITableViewController {
-    var about: String!
+//    var about: String!
     
     var menu: [MenuSection]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let barButoonItem = UIBarButtonItem(title: "About", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MainScreen.onAbout))
-        self.navigationItem.rightBarButtonItem = barButoonItem
+//        let barButoonItem = UIBarButtonItem(title: "About", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MainScreen.onAbout))
+//        self.navigationItem.rightBarButtonItem = barButoonItem
         
         self.tableView.contentInset = UIEdgeInsetsMake(20,0,0,0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
         
     }
     
-    func onAbout(){
-        let alert = UIAlertController.init(title: "Info",
-                                           message: about,
-                                           preferredStyle: .alert)
-        
-        let defaultAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
-        
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
-    }
+//    func onAbout(){
+//        let alert = UIAlertController.init(title: "Info",
+//                                           message: about,
+//                                           preferredStyle: .alert)
+//        
+//        let defaultAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+//        
+//        alert.addAction(defaultAction)
+//        self.present(alert, animated: true, completion: nil)
+//    }
     
     
     

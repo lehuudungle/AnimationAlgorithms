@@ -78,10 +78,12 @@ class ManagerSelectionSort {
             ele = ele + 1
         }
         
-        textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
+        textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                            y: graph.frame.origin.y+graph.frame.height,
+                                            width: graph.frame.width - UIApplication.shared.statusBarFrame.height*2,
+                                            height: yMax-(graph.frame.origin.y+graph.frame.height)))
         textStudy.backgroundColor = UIColor.yellow
         viewcontroller.view.addSubview(textStudy)
-        textStudy.numberOfLines = 3
         textStudy.text = "Selection sort is a sorting algorithm, specifically an in-place comparison sort."
         var path: String = ""
         path = Bundle.main.path(forResource:"SelectionSort", ofType: "plist")!

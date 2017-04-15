@@ -211,7 +211,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addTextField(){
         textField = UITextField(frame: CGRect(x: view.bounds.size.width/2 - spacing/2 - btnSizeWidth, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         
-        textField.placeholder = ".........."
+        textField.placeholder = "........................."
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.autocorrectionType = UITextAutocorrectionType.no
@@ -219,7 +219,14 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField.returnKeyType = UIReturnKeyType.done
         textField.clearButtonMode = UITextFieldViewMode.whileEditing
         textField.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        textField.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        
         textField.layer.cornerRadius = 10
+        
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = BUTTON_COLOR.cgColor
+        textField.layer.masksToBounds = true
+        
         self.view.addSubview(textField)
     }
     

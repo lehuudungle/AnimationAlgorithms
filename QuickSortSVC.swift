@@ -19,7 +19,7 @@ class QuickSortSVC: StudyVC {
         
         
         self.managerSort = ManagerQuickSort()
-        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,9,6])
+        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5,3,6])
         
         
         btnRun.addTarget(self.managerSort, action: #selector(ManagerQuickSort.run(sender:)), for: .touchUpInside)
@@ -33,7 +33,11 @@ class QuickSortSVC: StudyVC {
         self.managerSort.quickGraph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
-        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,9,6])
+        btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnStep.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnRun.setNeedsDisplay()
+        btnStep.setNeedsDisplay()
+        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5,3,6])
     }
     
     override func didReceiveMemoryWarning() {

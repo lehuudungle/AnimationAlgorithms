@@ -37,22 +37,21 @@ class MenuList: NSObject {
 
             ])
 
-        let inter = MenuSection(section: "inter", menus:[
-            Menu(title: "Rock", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
-            Menu(title: "Home", viewClass: "ClassVC",inputClass: SelectionSortIVC())
-            ])
+//        let inter = MenuSection(section: "inter", menus:[
+//            Menu(title: "Rock", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
+//            Menu(title: "Home", viewClass: "ClassVC",inputClass: SelectionSortIVC())
+//            ])
         
-        let advance = MenuSection(section: "advance", menus:[
-            Menu(title: "Rock", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
+        let advance = MenuSection(section: "Other", menus:[
+            Menu(title: "About", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
             Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC())
             ])
 
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)
-        mainScreen.menu = [basic,inter,advance]
+        mainScreen.menu = [basic,advance]
         mainScreen.title = "Algorithms"
-        mainScreen.about = "KLTD Team"
+//        mainScreen.about = "KLTD Team"
 
-        let startView = StartVC()
         let nav = UINavigationController(rootViewController: mainScreen)
         
 

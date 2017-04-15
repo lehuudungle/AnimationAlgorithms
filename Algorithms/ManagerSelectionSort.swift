@@ -87,7 +87,6 @@ class ManagerSelectionSort {
             print("sap xep : \(arrayKeys)")
         }
         
-        
     }
     
     func getArrayAction(array: [Int]) -> [Step] {

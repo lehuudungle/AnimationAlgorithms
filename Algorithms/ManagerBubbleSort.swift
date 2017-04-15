@@ -81,7 +81,7 @@ class ManagerBubbleSort {
             textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
 
-            textStudy.text = ""
+            textStudy.text = "Sắp xếp nổi bọt (tiếng Anh: bubble sort) là một thuật toán sắp xếp đơn giản, với thao tác cơ bản là so sánh hai phần tử kề nhau, nếu chúng chưa đứng đúng thứ tự thì đổi chỗ (swap)."
             var path: String = ""
             path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

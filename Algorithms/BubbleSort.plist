@@ -2,28 +2,42 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>0.1</key>
-	<real>0</real>
-	<key>0.2</key>
-	<real>0</real>
-	<key>1</key>
-	<integer>0</integer>
-	<key>2</key>
-	<integer>0</integer>
-	<key>3</key>
-	<string>Thực hiện so sanh vi tri 1 và vị trí 2</string>
-	<key>4</key>
-	<string>Thực hiện so sánh 2 và 3</string>
-	<key>3.1</key>
-	<string>Kiểm tra đúng chưa các bạn</string>
-	<key>5</key>
-	<string>Đổi vị trí 2 và 3</string>
-	<key>6</key>
-	<string>So sánh 0 và 1</string>
-	<key>7</key>
-	<string>Thực hiện so sánh 1 và 2</string>
-	<key>8</key>
-	<string>Thực hiện so sánh 0 và 1</string>
+	<key>10.1</key>
+	<string>Sắp xếp nổi bọt (tiếng Anh: bubble sort) là một thuật toán sắp xếp đơn giản, với thao tác cơ bản là so sánh hai phần tử kề nhau, nếu chúng chưa đứng đúng thứ tự thì đổi chỗ (swap).</string>
+	<key>10.2</key>
+	<string>Có thể tiến hành từ trên xuống (bên trái sang) hoặc từ dưới lên (bên phải sang). Sắp xếp nổi bọt còn có tên là sắp xếp bằng so sánh trực tiếp. Nó sử dụng phép so sánh các phần tử nên là một giải thuật sắp xếp kiểu so sánh.</string>
+	<key>11</key>
+	<string>Execute compare 4 and 1</string>
+	<key>12</key>
+	<string>Thực hiện đổi 2 số 4 với 1</string>
+	<key>13</key>
+	<string>Thực hiên so sánh số 4 với só 9, 4 không lớn hơn 9 nên không đổi vị trí 2 số</string>
+	<key>14</key>
+	<string>Thực hiện so sánh so sanh 9 với 2</string>
+	<key>15</key>
+	<string>Số 9 lớn hơn số 2 ta đổi chỗ 2 số</string>
+	<key>16</key>
+	<string>So sánh 9 và 5</string>
+	<key>17</key>
+	<string>Đổi chổ 2 số 9 và 5</string>
+	<key>17.1</key>
+	<string>Sau khi so sanh và đổi vị trí cho đên vị trí số cuối cùng, ta tìm được 9 là số lớn nhất trong dãy</string>
+	<key>17.2</key>
+	<string>Bước tiếp theo ta so sanh lại từ đầu dãy số và thực hiên đổi 2 số nếu số sau bé hơn só đứng trươc</string>
+	<key>18</key>
+	<string>So sánh số 1 và 4</string>
+	<key>19</key>
+	<string>So sánh số 4 và 2</string>
+	<key>20</key>
+	<string>Đổi chỗ 2 số 4 và 2</string>
+	<key>21</key>
+	<string>Cứ tiếp như trên</string>
+	<key>22</key>
+	<string>Cứ tiếp như trên</string>
+	<key>23</key>
+	<string>Cứ tiếp như trên</string>
+	<key>24</key>
+	<string>Cứ tiếp như trên</string>
 	<key>end</key>
 	<string></string>
 </dict>

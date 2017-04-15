@@ -212,7 +212,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField = UITextField(frame: CGRect(x: view.bounds.size.width/2 - spacing/2 - btnSizeWidth, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         
         textField.placeholder = "........................."
+
         textField.font = UIFont.boldSystemFont(ofSize: 15)
+
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.autocorrectionType = UITextAutocorrectionType.no
         textField.keyboardType = UIKeyboardType.numberPad
@@ -228,6 +230,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField.layer.masksToBounds = true
         
         self.view.addSubview(textField)
+//        textField.font = UIFont(name: "Helvetica Neue", size: textField.fontoFitHeight())
     }
     
     func addTextView() {
@@ -277,4 +280,8 @@ extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+
+
+
+
 }

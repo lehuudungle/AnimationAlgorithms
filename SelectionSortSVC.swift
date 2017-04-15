@@ -18,6 +18,7 @@ class SelectionSortSVC: StudyVC {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.managerSort = ManagerSelectionSort()
+
         self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5,3,6])
         
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)

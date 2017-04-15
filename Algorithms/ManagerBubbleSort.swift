@@ -74,20 +74,26 @@ class ManagerBubbleSort {
         self.arrayLabelAbove = self.graph.arrayLabelAbove
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
-        
+
         ele = 0
         
         textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
         textStudy.backgroundColor = UIColor.yellow
         viewcontroller.view.addSubview(textStudy)
         textStudy.numberOfLines = 3
-        textStudy.text = "xin chao toi la chu cua face nguyen thi ngoc ngai , ai quan tam den dieu nay xin lien voi chung toi qua chu ca thong doi khong quan tam khi nao ha ban"
+        textStudy.text = ""
         var path: String = ""
         path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
         dictData = NSDictionary(contentsOfFile: path)!
         arrayKeys = dictData.allKeys as! [String]
         ele = 0
-        arrayKeys = arrayKeys.sorted()
+        arrayKeys = arrayKeys.sorted(by: {$0 < $1})
+        print("sap xep : \(arrayKeys)")
+        var elem = 1
+        for a in self.arrayAction{
+            print("ele: \(elem)__\(a)")
+            elem = elem + 1
+        }
 
 
     }
@@ -127,7 +133,7 @@ class ManagerBubbleSort {
             textStudy.text = data as! String?
             animateStep.next()
         }else if(arrayKeys[ele]=="end"){
-            textStudy.text = "ket thuc roi nhin cai gi ma nhin"
+            textStudy.text = "The list is fully sorted"
             btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
             btnStepTmp.setNeedsDisplay()
             btnStepTmp.isUserInteractionEnabled = false

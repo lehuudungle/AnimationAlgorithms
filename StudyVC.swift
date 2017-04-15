@@ -18,11 +18,12 @@ class StudyVC: UIViewController {
     var x:CGFloat!
     var btnReset:UIButton!
     var btnInfo:UIButton!
-    var btnStep:UIButton!
+    var btnStep:KDPulseButton!
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!
     var arrayView:UILabel!
+
     
     var y: CGFloat!
     
@@ -40,8 +41,7 @@ class StudyVC: UIViewController {
         addBtnReset()
         addBtnStep()
         addBtnRun()
-        addLabelStudy()
-        
+
     }
     
     func addBtnReset() {
@@ -63,6 +63,8 @@ class StudyVC: UIViewController {
 
         view.addSubview(btnReset)
     }
+
+
     
     
     func addBtnStep() {
@@ -72,8 +74,10 @@ class StudyVC: UIViewController {
         btnStepTmp = btnStep
         
         btnStep.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        
         btnStep.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStep.setTitle("\u{f051}", for: .normal)
+        
         
         btnStep.titleLabel?.textColor = UIColor.white
         btnStep.titleLabel?.font = UIFont.fontAwesome(ofSize: btnStep.fontoFitHeight())
@@ -85,6 +89,7 @@ class StudyVC: UIViewController {
         
         btnStep.titleLabel?.baselineAdjustment = .alignCenters
         btnStep.titleLabel?.textAlignment = .center
+
         btnStep.layer.borderWidth = 2
         btnStep.layer.borderColor = BUTTON_COLOR.cgColor
         btnStep.layer.cornerRadius = 10

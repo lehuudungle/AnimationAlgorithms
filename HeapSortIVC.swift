@@ -11,7 +11,7 @@ import UIKit
 
 class HeapSortIVC: InputVC{
     
-    var MORE_THAN_ONE_ELE: Bool!
+    var MORE_THAN_TWO_ELE: Bool!
     var HAVE_GRAPH: Bool!
     var managerSort: ManagerHeapSort!
     var arrayInput = [Int]()
@@ -20,7 +20,7 @@ class HeapSortIVC: InputVC{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        MORE_THAN_ONE_ELE = false
+        MORE_THAN_TWO_ELE = false
         HAVE_GRAPH = false
         
         self.managerSort = ManagerHeapSort()
@@ -46,7 +46,7 @@ class HeapSortIVC: InputVC{
             HAVE_GRAPH = false
         }
         
-        MORE_THAN_ONE_ELE = false
+        MORE_THAN_TWO_ELE = false
         
         //        btnRun.setTitle("\u{f144}", for: .normal)
         
@@ -66,7 +66,7 @@ class HeapSortIVC: InputVC{
     
     func run(sender:UIButton){
         
-        if MORE_THAN_ONE_ELE == true {
+        if MORE_THAN_TWO_ELE == true {
             
             self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
             
@@ -93,12 +93,16 @@ class HeapSortIVC: InputVC{
                     arrayView.text = textField.text
                     arrayInput.append(Int(textField.text!)!)
                     
+                }else if (arrayInput.count == 1){
+                    arrayView.text = arrayView.text! + ", " + textField.text!
+                    arrayInput.append(Int(textField.text!)!)
+                    
                 }else if (arrayInput.count == 7){
                     addAlert(message: "Array can contain only 9 numbers for better visualization")
                     
                 }else {
                     
-                    MORE_THAN_ONE_ELE = true
+                    MORE_THAN_TWO_ELE = true
                     btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
                     
                     btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
@@ -120,7 +124,7 @@ class HeapSortIVC: InputVC{
     
     func step(sender: UIButton){
         
-        if MORE_THAN_ONE_ELE == true {
+        if MORE_THAN_TWO_ELE == true {
             if HAVE_GRAPH == false{
                 self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
                 btnStepCheck.isHidden = true

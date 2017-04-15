@@ -112,7 +112,6 @@ class MainScreen: UITableViewController {
             let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
             revel?.rightViewController = menuVC
             
-            //            revel?.modalTransitionStyle = .partialCurl
             present(revel!, animated: true, completion: nil)
             revel?.rightViewRevealWidth = 180
             

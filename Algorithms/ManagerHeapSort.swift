@@ -47,13 +47,12 @@ class ManagerHeapSort {
             self.arrayColor.append(DEFAULT_COLOR)
         }
         
-        graph = HeapGraph(frame: CGRect(x: 0, y: 100,
-                                         width: viewcontroller.view.bounds.size.width,
-                                         height: viewcontroller.view.bounds.size.height),
-                           arrayDisplay: self.arrayDisplay,
-                           colors: self.arrayColor)
-        
-        
+        graph = HeapGraph(frame: CGRect(x: 0,
+                                        y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
+                                        width: viewcontroller.view.bounds.size.width,
+                                        height: viewcontroller.view.bounds.size.height/2),
+                          arrayDisplay: self.arrayDisplay,
+                          colors: self.arrayColor)
         
         viewcontroller.view.addSubview(graph)
         

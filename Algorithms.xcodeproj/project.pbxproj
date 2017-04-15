@@ -12,6 +12,8 @@
 		0507FA4B1E9C987200E00354 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507FA491E9C987200E00354 /* MenuViewController.xib */; };
 		0507FA4E1E9CC2EE00E00354 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */; };
 		0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */; };
+		0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572FF491EA123AB00B36562 /* TextStudy.swift */; };
+		0572FF4D1EA127B800B36562 /* BubbleSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0572FF4C1EA127B800B36562 /* BubbleSort.plist */; };
 		058904BD1E9E85450083F53C /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058904BC1E9E85450083F53C /* StartVC.swift */; };
 		059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 059876251E99EEB800DEDA21 /* FontAwesome.otf */; };
 		059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876261E99EEB800DEDA21 /* FontAwesome.swift */; };
@@ -75,6 +77,8 @@
 		0507FA491E9C987200E00354 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = ../MenuViewController.xib; sourceTree = "<group>"; };
 		0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		0572FF491EA123AB00B36562 /* TextStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStudy.swift; sourceTree = "<group>"; };
+		0572FF4C1EA127B800B36562 /* BubbleSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleSort.plist; sourceTree = "<group>"; };
 		058904BC1E9E85450083F53C /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		059876241E99EEB800DEDA21 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
 		059876251E99EEB800DEDA21 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -145,6 +149,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0572FF481EA1227300B36562 /* TextStudty */ = {
+			isa = PBXGroup;
+			children = (
+				0572FF491EA123AB00B36562 /* TextStudy.swift */,
+			);
+			name = TextStudty;
+			sourceTree = "<group>";
+		};
+		0572FF4B1EA1278300B36562 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0572FF4C1EA127B800B36562 /* BubbleSort.plist */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
 		059876231E99EE8B00DEDA21 /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +271,8 @@
 		198A34781E80D9DF009E2B96 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				0572FF4B1EA1278300B36562 /* DataSource */,
+				0572FF481EA1227300B36562 /* TextStudty */,
 				0507FA411E9C973100E00354 /* SWRevealViewController.h */,
 				0507FA421E9C973100E00354 /* SWRevealViewController.m */,
 				1987C64F1E95E6A3005795B8 /* AppDelegate.swift */,
@@ -398,6 +420,7 @@
 				0507FA4B1E9C987200E00354 /* MenuViewController.xib in Resources */,
 				059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */,
 				198A347F1E80D9DF009E2B96 /* Main.storyboard in Resources */,
+				0572FF4D1EA127B800B36562 /* BubbleSort.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +516,7 @@
 				05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */,
 				0507FA431E9C973100E00354 /* SWRevealViewController.m in Sources */,
 				1987C6621E963DDE005795B8 /* ManagerHeapSort.swift in Sources */,
+				0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */,
 				192C75851E8D057A00EE8027 /* ManagerMergeSort.swift in Sources */,
 				1962B22D1E841F3400012936 /* SortingLabel.swift in Sources */,
 				193E45A51E8A5C1200A6395C /* ManagerBubbleSort.swift in Sources */,

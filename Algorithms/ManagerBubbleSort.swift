@@ -30,6 +30,7 @@ class ManagerBubbleSort {
     
     var graph: Graph!
     var sort: BubbleSort!
+    var count:Int!
     
     
     func initSortWith(viewcontroller: UIViewController, arrayInput: [Int]) {
@@ -44,6 +45,7 @@ class ManagerBubbleSort {
         self.arrayLabelMiddle = []
         self.arrayLabelBelow = []
         self.arrayColor = []
+        count = 0
         
         for index in 0..<arrayInput.count {
             self.arrayDisplay.append(arrayInput[index])
@@ -90,10 +92,19 @@ class ManagerBubbleSort {
     }
     
     @objc func step(sender: UIButton) {
+        if count == 0{
+            arrayViewTmp.text = "Giới thiệu phần mở đầu"
+            count = 1
+        }
+        else if count == 1{
+            arrayViewTmp.text = "Giới thiệu tiếp"
+            count = 2
+        }else{
         
         btnStepTmp.isUserInteractionEnabled = false
         btnRunTmp.isUserInteractionEnabled = false
         animateStep.next()
+        }
     }
     @objc func back(sender: UIButton) {
 

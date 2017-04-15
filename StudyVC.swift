@@ -40,6 +40,7 @@ class StudyVC: UIViewController {
         addBtnReset()
         addBtnStep()
         addBtnRun()
+        addLabelStudy()
         
     }
     
@@ -115,6 +116,16 @@ class StudyVC: UIViewController {
 
 
         view.addSubview(btnRun)
+    }
+    
+    func addLabelStudy(){
+        arrayView = UILabel(frame: CGRect(x: spacing, y: view.bounds.size.height*2/3, width: view.bounds.size.width - 2*spacing, height: CGFloat(100)))
+        arrayView.numberOfLines = 2
+        arrayViewTmp = arrayView
+
+        
+        view.addSubview(arrayView)
+
     }
 
     override func didReceiveMemoryWarning() {

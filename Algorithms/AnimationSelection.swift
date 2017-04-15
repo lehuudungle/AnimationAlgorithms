@@ -110,7 +110,7 @@ class AnimationSelection {
                         }
                     }else{
                         if(self.colSolution==self.arrayAction.count-1){
-                            self.arrayLabel[self.currentStep.i+1].backgroundColor = UIColor.cyan
+                            self.arrayLabel[self.currentStep.i+1].backgroundColor = SORT_END
                             self.arrayLabel[self.currentStep.i+1].alpha = 1
                         }
                         self.checkTime()

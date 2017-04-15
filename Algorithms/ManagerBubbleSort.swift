@@ -74,12 +74,9 @@ class ManagerBubbleSort {
         self.arrayLabelAbove = self.graph.arrayLabelAbove
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
-        animateBack = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
+        
         ele = 0
-        for a in arrayAction{
-            print("\(ele)__\(a)")
-            ele = ele + 1
-        }
+        
         textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
         textStudy.backgroundColor = UIColor.yellow
         viewcontroller.view.addSubview(textStudy)
@@ -150,6 +147,7 @@ class ManagerBubbleSort {
 
     
 }
+
 extension String {
     var isNumber:Bool{
         get{

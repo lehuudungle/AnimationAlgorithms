@@ -8,43 +8,44 @@
 
 import UIKit
 
-//extension UITextField{
-//    
-//    
-//    func fontoFitHeight()->CGFloat{
-//        
-//        var minFontsize: CGFloat = DISPLAY_FONT_MIN
-//        var maxFontsize: CGFloat = DISPLAY_FONT_MAX
-//        var fontSizeAverage: CGFloat = 0
-//        var textandLabelHeight: CGFloat = 0
-//        while(minFontsize<=maxFontsize){
-//            fontSizeAverage = (maxFontsize-minFontsize)/2 + minFontsize
-//            
-//            
-//            if let  labelText: NSString = text as NSString?{
-//                let labelHeight = self.frame.height-5
-//                
-//                let textHeight = labelText.size(attributes: [NSFontAttributeName:self.titleLabel?.font.withSize(fontSizeAverage) as Any]).height
-//                
-//                textandLabelHeight = labelHeight - textHeight
-//                if(fontSizeAverage==minFontsize || fontSizeAverage==maxFontsize){
-//                    if(textandLabelHeight<0){
-//                        return fontSizeAverage-1
-//                    }
-//                    return fontSizeAverage
-//                }
-//                if(textandLabelHeight<0){
-//                    maxFontsize = fontSizeAverage-1
-//                }else if(textandLabelHeight>0){
-//                    minFontsize = fontSizeAverage+1
-//                }else{
-//                    return fontSizeAverage
-//                }
-//            }
-//        }
-//        return fontSizeAverage
-//    }
-//}
+extension UITextField{
+    
+    
+    func fontoFitHeight()->CGFloat{
+        
+        var minFontsize: CGFloat = DISPLAY_FONT_MIN
+        var maxFontsize: CGFloat = DISPLAY_FONT_MAX
+        var fontSizeAverage: CGFloat = 0
+        var textandLabelHeight: CGFloat = 0
+        while(minFontsize<=maxFontsize){
+            fontSizeAverage = (maxFontsize-minFontsize)/2 + minFontsize
+            
+            
+            if let  labelText: NSString = text as NSString?{
+                let labelHeight = self.frame.height-5
+                
+                let textHeight = labelText.size(attributes: [NSFontAttributeName:self.font?.withSize(fontSizeAverage) as Any]).height
+                
+                textandLabelHeight = labelHeight - textHeight
+                if(fontSizeAverage==minFontsize || fontSizeAverage==maxFontsize){
+                    if(textandLabelHeight<0){
+                        return fontSizeAverage-1
+                    }
+                    return fontSizeAverage
+                }
+                if(textandLabelHeight<0){
+                    maxFontsize = fontSizeAverage-1
+                }else if(textandLabelHeight>0){
+                    minFontsize = fontSizeAverage+1
+                }else{
+                    return fontSizeAverage
+                }
+            }
+        }
+        return fontSizeAverage
+    }
+}
+
 
 extension UIButton{
 

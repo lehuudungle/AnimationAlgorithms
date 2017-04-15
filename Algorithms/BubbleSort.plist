@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>0.1</key>
-	<string>Sắp xếp nổi bọt (tiếng Anh: bubble sort) là một thuật toán sắp xếp đơn giản, với thao tác cơ bản là so sánh hai phần tử kề nhau, nếu chúng chưa đứng đúng thứ tự thì đổi chỗ (swap). Có thể tiến hành từ trên xuống (bên trái sang) hoặc từ dưới lên (bên phải sang)</string>
+	<real>0</real>
 	<key>0.2</key>
-	<string>Có thể tiến hành từ trên xuống (bên trái sang) hoặc từ dưới lên (bên phải sang). Sắp xếp nổi bọt còn có tên là sắp xếp bằng so sánh trực tiếp. Nó sử dụng phép so sánh các phần tử nên là một giải thuật sắp xếp kiểu so sánh.</string>
+	<real>0</real>
 	<key>1</key>
-	<string>Thực hiện so sanh vi tri 0 và vị trí 1</string>
+	<integer>0</integer>
 	<key>2</key>
-	<string>Đổi vị tri 0 và 1</string>
+	<integer>0</integer>
 	<key>3</key>
 	<string>Thực hiện so sanh vi tri 1 và vị trí 2</string>
 	<key>4</key>

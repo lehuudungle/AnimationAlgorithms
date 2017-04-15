@@ -211,8 +211,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addTextField(){
         textField = UITextField(frame: CGRect(x: view.bounds.size.width/2 - spacing/2 - btnSizeWidth, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         
-        textField.placeholder = "Number"
-        textField.clearsOnInsertion = true
+        textField.placeholder = ".........."
         textField.font = UIFont.boldSystemFont(ofSize: 15)
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.autocorrectionType = UITextAutocorrectionType.no

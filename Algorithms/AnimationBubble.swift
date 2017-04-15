@@ -244,7 +244,7 @@ class AnimationBubble {
         self.colSolution += 1
         
         if (self.colSolution == self.arrayAction.count) {
-            btnStepTmp.isUserInteractionEnabled = false
+            btnStepTmp.isUserInteractionEnabled = true
             return
         }else{
             btnStepTmp.isUserInteractionEnabled = true
@@ -264,7 +264,7 @@ class AnimationBubble {
     }
     func back(){
         currentStep = self.arrayAction[self.colSolution-1]
-        animationStep()
+        animationBack()
 
     }
     

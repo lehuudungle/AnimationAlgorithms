@@ -36,6 +36,7 @@ var yMax: CGFloat = 0
 
 
 var btnStepTmp: UIButton!
+var btnBackTmp: UIButton!
 var btnRunTmp: UIButton!
 
 var DISPLAY_FONT_MIN: CGFloat = 10

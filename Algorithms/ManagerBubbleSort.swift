@@ -16,6 +16,7 @@ class ManagerBubbleSort {
     
     var animate: AnimationBubble!
     var animateStep: AnimationBubble!
+    var animateBack: AnimationBubble!
     var viewcontroller: UIViewController!
     
     var arrayInput: [Int]!
@@ -30,6 +31,10 @@ class ManagerBubbleSort {
     
     var graph: Graph!
     var sort: BubbleSort!
+    var textStudy: TextStudy!
+    var dictData = NSDictionary()
+    var arrayKeys = [String]()
+    var ele: Int!
     
     
     func initSortWith(viewcontroller: UIViewController, arrayInput: [Int]) {
@@ -50,12 +55,14 @@ class ManagerBubbleSort {
             self.arrayColor.append(DEFAULT_COLOR)
         }
         
-        graph = Graph(frame: CGRect(x: 0,
+
+        graph = Graph(frame: CGRect(x: UIApplication.shared.statusBarFrame.height,
                                     y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
-                                    width: viewcontroller.view.bounds.size.width,
+                                    width: viewcontroller.view.bounds.size.width-2*UIApplication.shared.statusBarFrame.height,
                                     height: viewcontroller.view.bounds.size.height/2),
                       arrayDisplay: self.arrayDisplay,
                       colors: self.arrayColor)
+        graph.backgroundColor = UIColor.white
         
         viewcontroller.view.addSubview(graph)
         
@@ -67,14 +74,32 @@ class ManagerBubbleSort {
         self.arrayLabelAbove = self.graph.arrayLabelAbove
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
-        
+        animateBack = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
+        ele = 0
+        for a in arrayAction{
+            print("\(ele)__\(a)")
+            ele = ele + 1
+        }
+        textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
+        textStudy.backgroundColor = UIColor.yellow
+        viewcontroller.view.addSubview(textStudy)
+        textStudy.numberOfLines = 3
+        textStudy.text = "xin chao toi la chu cua face nguyen thi ngoc ngai , ai quan tam den dieu nay xin lien voi chung toi qua chu ca thong doi khong quan tam khi nao ha ban"
+        var path: String = ""
+        path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
+        dictData = NSDictionary(contentsOfFile: path)!
+        arrayKeys = dictData.allKeys as! [String]
+        ele = 0
+        arrayKeys = arrayKeys.sorted()
+
+
     }
     
     func getArrayAction(array: [Int]) -> [Step] {
         
         sort = BubbleSort(arrayInput: array)
         return sort.arrayAction
-        
+
     }
     
     @objc func run(sender: UIButton) {
@@ -90,17 +115,46 @@ class ManagerBubbleSort {
     }
     
     @objc func step(sender: UIButton) {
-        
-        btnStepTmp.isUserInteractionEnabled = false
-        btnRunTmp.isUserInteractionEnabled = false
-        animateStep.next()
-    }
-    @objc func back(sender: UIButton) {
 
-        btnStepTmp.isUserInteractionEnabled = false
+        if(ele==arrayKeys.count){
+            textStudy.text = ""
+            return
+        }
         btnRunTmp.isUserInteractionEnabled = false
-        animateStep.back()
+        btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
+        btnRunTmp.setNeedsDisplay()
+
+        if(arrayKeys[ele].isNumber){
+            btnStepTmp.isUserInteractionEnabled = false
+            let data = dictData[arrayKeys[ele]]
+            textStudy.text = data as! String?
+            animateStep.next()
+        }else if(arrayKeys[ele]=="end"){
+            textStudy.text = "ket thuc roi nhin cai gi ma nhin"
+            btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
+            btnStepTmp.setNeedsDisplay()
+            btnStepTmp.isUserInteractionEnabled = false
+
+        }else{
+            let data = dictData[arrayKeys[ele]]
+            textStudy.text = data as! String?
+            
+            btnStepTmp.isUserInteractionEnabled = true
+
+        }
+        ele = ele + 1
+        
+
+
     }
+
     
-    
+}
+extension String {
+    var isNumber:Bool{
+        get{
+           return !self.isEmpty && self.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+
+        }
+    }
 }

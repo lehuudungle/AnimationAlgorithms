@@ -19,7 +19,7 @@ class BubbleSortSVC: StudyVC {
         
         self.managerSort = ManagerBubbleSort()
 
-        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,6])
+        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
 
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)

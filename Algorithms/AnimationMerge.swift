@@ -45,6 +45,7 @@ class AnimationMerge:NSObject {
         
         bodyRect = [UIView]()
         bodyLine = [CALayer]()
+        fistDraw = false // khoi tao cai nay de chi ve lan dau duong line
     }
     func animation(){
         UIView.animate(withDuration: 1, animations: {
@@ -302,6 +303,7 @@ class AnimationMerge:NSObject {
     
     func next(){
         self.currentStep = self.arrayAction[self.colSolution]
+        print("gia tri : \(fistDraw)")
         self.borderRect(bearingPoint: (self.arrayLabelOne.first?.frame.origin)!, countCell: self.arrayLabel.count)
         self.animationStep()
     }
@@ -347,9 +349,9 @@ class AnimationMerge:NSObject {
     }
     func borderRect(bearingPoint: CGPoint, countCell: Int){
         // khoi tao diem ve rectangle
-        let originPoint = CGPoint(x: bearingPoint.x - PADDING/2, y: bearingPoint.y - PADDING)
+        let originPoint = CGPoint(x: bearingPoint.x - PADDING/2, y: bearingPoint.y - PADDING/2)
         let widthRect: CGFloat = CGFloat(countCell)*2*SPACING + CGFloat((countCell-1))*SPACING + 2*PADDING/2
-        let heightRect : CGFloat = 2*SPACING + 2*PADDING
+        let heightRect : CGFloat = 2*SPACING + 1*PADDING
         let drect = CGRect(origin: originPoint, size: CGSize(width: widthRect, height: heightRect))
         let Slayer = CAShapeLayer()
         Slayer.path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: widthRect, height: heightRect)).cgPath

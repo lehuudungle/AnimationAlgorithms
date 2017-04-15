@@ -74,7 +74,7 @@ class ManagerBubbleSort {
         self.arrayLabelAbove = self.graph.arrayLabelAbove
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
-        animateBack = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
+
         ele = 0
         for a in arrayAction{
             print("\(ele)__\(a)")
@@ -84,13 +84,14 @@ class ManagerBubbleSort {
         textStudy.backgroundColor = UIColor.yellow
         viewcontroller.view.addSubview(textStudy)
         textStudy.numberOfLines = 3
-        textStudy.text = "xin chao toi la chu cua face nguyen thi ngoc ngai , ai quan tam den dieu nay xin lien voi chung toi qua chu ca thong doi khong quan tam khi nao ha ban"
+        textStudy.text = ""
         var path: String = ""
         path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
         dictData = NSDictionary(contentsOfFile: path)!
         arrayKeys = dictData.allKeys as! [String]
         ele = 0
-        arrayKeys = arrayKeys.sorted()
+        arrayKeys = arrayKeys.sorted(by: {$0 < $1})
+        print("sap xep : \(arrayKeys)")
 
 
     }

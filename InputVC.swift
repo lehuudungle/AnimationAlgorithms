@@ -211,9 +211,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addTextField(){
         textField = UITextField(frame: CGRect(x: view.bounds.size.width/2 - spacing/2 - btnSizeWidth, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         
-        textField.placeholder = "Number"
+        textField.placeholder = "Enter Number"
+        textField.adjustsFontSizeToFitWidth = true
+//        textField.placeholder
         textField.clearsOnInsertion = true
-        textField.font = UIFont.boldSystemFont(ofSize: 15)
+        textField.font = UIFont.boldSystemFont(ofSize: textField.fontoFitHeight())
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.autocorrectionType = UITextAutocorrectionType.no
         textField.keyboardType = UIKeyboardType.numberPad
@@ -222,6 +224,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         textField.layer.cornerRadius = 10
         self.view.addSubview(textField)
+//        textField.font = UIFont(name: "Helvetica Neue", size: textField.fontoFitHeight())
     }
     
     func addTextView() {
@@ -271,4 +274,42 @@ extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+}
+
+extension UITextField{
+    func fontoFitHeight()->CGFloat{
+        var minFontsize: CGFloat = DISPLAY_FONT_MIN
+        var maxFontsize: CGFloat = DISPLAY_FONT_MAX
+        var fontSizeAverage: CGFloat = 0
+        var textandLabelHeight: CGFloat = 0
+        while(minFontsize<=maxFontsize){
+            fontSizeAverage = (maxFontsize-minFontsize)/2 + minFontsize
+            let text = self.text
+            guard (text?.characters.count)!>0 else {
+                break
+            }
+            if let  labelText: NSString = text as NSString?{
+                let labelHeight = self.frame.width-5
+
+                let textHeight = labelText.size(attributes: [NSFontAttributeName:self.font?.withSize(fontSizeAverage)]).width
+                textandLabelHeight = labelHeight - textHeight
+                if(fontSizeAverage==minFontsize || fontSizeAverage==maxFontsize){
+                    if(textandLabelHeight<0){
+                        return fontSizeAverage-1
+                    }
+                    return fontSizeAverage
+                }
+                if(textandLabelHeight<0){
+                    maxFontsize = fontSizeAverage-1
+                }else if(textandLabelHeight>0){
+                    minFontsize = fontSizeAverage+1
+                }else{
+                    return fontSizeAverage
+                }
+            }
+        }
+        return fontSizeAverage
+
+    }
+
 }

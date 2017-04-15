@@ -47,5 +47,6 @@ var DETAIL: UIViewController!
 var ROW_MENU_SECTION: Int!
 var ROW_MENU_CELL: Int!
 var INPUT_XIB_CLASS: UIViewController!
+var VIEW_CHOSEN: String!
 
 

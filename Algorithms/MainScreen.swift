@@ -114,7 +114,8 @@ class MainScreen: UITableViewController {
             
             present(revel!, animated: true, completion: nil)
             revel?.rightViewRevealWidth = 180
-            
+            VIEW_CHOSEN = "study"
+
             
             
             

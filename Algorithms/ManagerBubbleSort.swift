@@ -89,6 +89,11 @@ class ManagerBubbleSort {
         ele = 0
         arrayKeys = arrayKeys.sorted(by: {$0 < $1})
         print("sap xep : \(arrayKeys)")
+        var elem = 1
+        for a in self.arrayAction{
+            print("ele: \(elem)__\(a)")
+            elem = elem + 1
+        }
 
 
     }
@@ -128,7 +133,7 @@ class ManagerBubbleSort {
             textStudy.text = data as! String?
             animateStep.next()
         }else if(arrayKeys[ele]=="end"){
-            textStudy.text = "ket thuc roi nhin cai gi ma nhin"
+            textStudy.text = "The list is fully sorted"
             btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
             btnStepTmp.setNeedsDisplay()
             btnStepTmp.isUserInteractionEnabled = false

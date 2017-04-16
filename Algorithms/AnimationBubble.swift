@@ -40,7 +40,7 @@ class AnimationBubble {
             if (self.currentStep.act == "compare") {
                 self.arrayLabel[self.currentStep.i].backgroundColor = COMPARE_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = COMPARE_COLOR
-                arrayViewTmp.text = "So sánh 2 số ở vị trí \(Int(self.currentStep.i+1)) và vị trí \(Int(self.currentStep.j+1))"
+              
 
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
@@ -49,14 +49,13 @@ class AnimationBubble {
             {
                 self.arrayLabel[self.currentStep.i].backgroundColor = SWAP_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = SWAP_COLOR
-                arrayViewTmp.text = " Giá trị số của vị trị thứ \(Int(self.currentStep.i+1)) nhỏ hơn số vị trí \(Int(self.currentStep.j+1))"
+                
 
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
             }
         }){(finished) in
             if (self.currentStep.act == "compare") {
-//                arrayViewTmp.text = " Giá trị số của vị trị thứ \(Int(self.currentStep.i+1)) Lớn hơn số vị trí \(Int(self.currentStep.j+1))"
 
                 UIView.animate(withDuration: 1, animations: {
                     self.arrayLabel[self.currentStep.i].alpha = DEFAULT_ALPHA
@@ -65,7 +64,6 @@ class AnimationBubble {
                     
                     self.arrayLabel[self.currentStep.i].backgroundColor = DEFAULT_COLOR
                     self.arrayLabel[self.currentStep.j].backgroundColor = DEFAULT_COLOR
-//                    arrayViewTmp.text = "Giữ Nguyên Vị Trí"
 
                     self.continueAnimation()
                 }
@@ -81,7 +79,6 @@ class AnimationBubble {
                         self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelBelow[self.currentStep.i])
                     }){_ in
                         UIView.animate(withDuration: 1, animations: {
-                            arrayViewTmp.text = "Chuyển 2 số vị trí \(Int(self.currentStep.i+1)) và vị trí \(Int(self.currentStep.j+1))"
 
                             self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelMiddle[self.currentStep.j])
                             self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelMiddle[self.currentStep.i])
@@ -108,7 +105,7 @@ class AnimationBubble {
             if (self.currentStep.act == "compare") {
                 self.arrayLabel[self.currentStep.i].backgroundColor = COMPARE_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = COMPARE_COLOR
-                arrayViewTmp.text = "So sánh 2 số ở vị trí \(Int(self.currentStep.i+1)) và vị trí \(Int(self.currentStep.j+1))"
+              
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
             }
@@ -117,7 +114,7 @@ class AnimationBubble {
                 
                 self.arrayLabel[self.currentStep.i].backgroundColor = SWAP_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = SWAP_COLOR
-                arrayViewTmp.text = " Giá trị số của vị trị thứ \(Int(self.currentStep.i+1)) nhỏ hơn số vị trí \(Int(self.currentStep.j+1))"
+               
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
             }

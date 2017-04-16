@@ -66,6 +66,7 @@
 		AEE519CEA9558464871E3E2A /* Pods_Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */; };
 		C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415B1E8ABC3B008472E6 /* MenuList.swift */; };
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
+		C7B363A01EA1D5AF0003D88C /* InsertionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B3639F1EA1D5AF0003D88C /* InsertionSort.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +136,7 @@
 		BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C714415B1E8ABC3B008472E6 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		C7B3639F1EA1D5AF0003D88C /* InsertionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InsertionSort.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				0572FF4C1EA127B800B36562 /* BubbleSort.plist */,
+				C7B3639F1EA1D5AF0003D88C /* InsertionSort.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -271,7 +274,6 @@
 		198A34781E80D9DF009E2B96 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				0572FF4B1EA1278300B36562 /* DataSource */,
 				0572FF481EA1227300B36562 /* TextStudty */,
 				0507FA411E9C973100E00354 /* SWRevealViewController.h */,
 				0507FA421E9C973100E00354 /* SWRevealViewController.m */,
@@ -283,6 +285,7 @@
 				C71441611E8ABE4E008472E6 /* ViewControllers */,
 				C714415A1E8ABBFD008472E6 /* MenuList */,
 				193E45A11E8A4A7B00A6395C /* Manager */,
+				0572FF4B1EA1278300B36562 /* DataSource */,
 				193E459A1E8A01BA00A6395C /* Animation */,
 				19C253F91E8962E8008C614C /* Graph */,
 				1962B2301E84FE6400012936 /* Sort */,
@@ -414,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B363A01EA1D5AF0003D88C /* InsertionSort.plist in Resources */,
 				0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */,
 				198A34871E80D9DF009E2B96 /* LaunchScreen.storyboard in Resources */,
 				198A34841E80D9DF009E2B96 /* Assets.xcassets in Resources */,

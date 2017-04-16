@@ -50,7 +50,6 @@ class ManagerBubbleSort {
         self.arrayLabelMiddle = []
         self.arrayLabelBelow = []
         self.arrayColor = []
-        count = 0
         
         for index in 0..<arrayInput.count {
             self.arrayDisplay.append(arrayInput[index])
@@ -76,7 +75,6 @@ class ManagerBubbleSort {
         self.arrayLabelAbove = self.graph.arrayLabelAbove
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
-        animateBack = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         ele = 0
         for a in arrayAction{
             print("\(ele)__\(a)")

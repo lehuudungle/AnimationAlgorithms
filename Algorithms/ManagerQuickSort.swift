@@ -106,7 +106,7 @@ class ManagerQuickSort{
     }
     
     @objc func run(sender: UIButton) {
-                
+        
         animate = AnimationQuick(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelMark: self.arrayLabelMark, arrayAction: self.arrayAction, graph: self.quickGraph)
         btnRunTmp.isUserInteractionEnabled = false
         btnStepTmp.isUserInteractionEnabled = false
@@ -153,5 +153,5 @@ class ManagerQuickSort{
             animationStep.next()
         }
     }
-
+    
 }

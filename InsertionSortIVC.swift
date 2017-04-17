@@ -37,7 +37,7 @@ class InsertionSortIVC: InputVC{
         
         btnAdd.addTarget(self, action:  #selector(add(sender:)), for: .touchUpInside)
         
-                btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
+        btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         
     }
     

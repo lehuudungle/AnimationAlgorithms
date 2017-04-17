@@ -22,9 +22,9 @@ class MergeSortSVC: StudyVC {
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
-
+        
     }
-       func reset(sender:UIButton){
+    func reset(sender:UIButton){
         self.managerSort.graph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true

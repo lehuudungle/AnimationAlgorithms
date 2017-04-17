@@ -32,8 +32,8 @@ class ManagerSelectionSort {
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele: Int!
-
-
+    
+    
     
     func initSortWith(viewcontroller: UIViewController, arrayInput: [Int]) {
         
@@ -41,10 +41,6 @@ class ManagerSelectionSort {
         
         self.arrayInput = arrayInput
         self.arrayAction = getArrayAction(array: arrayInput)
-        
-        for index in 0..<arrayAction.count{
-            print("\(index + 1) - \(arrayAction[index])")
-        }
         
         self.arrayDisplay = []
         self.arrayLabelAbove = []
@@ -78,13 +74,14 @@ class ManagerSelectionSort {
         if(VIEW_CHOSEN=="study"){
             
             ele = 0
+            
             textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))
             
             viewcontroller.view.addSubview(textStudy)
-
+            
             textStudy.text = "Selection sort is a sorting algorithm, specifically an in-place comparison sort.The algorithm divides the input list into two parts: the sublist of items already sorted and the sublist of items remaining to be sorted."
             var path: String = ""
             path = Bundle.main.path(forResource:"SelectionSort", ofType: "plist")!
@@ -105,7 +102,7 @@ class ManagerSelectionSort {
     @objc func run(sender: UIButton) {
         
         animate = AnimationSelection(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
-               
+        
         animate.loop()
     }
     
@@ -119,7 +116,7 @@ class ManagerSelectionSort {
             btnRunTmp.isUserInteractionEnabled = false
             btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
             btnRunTmp.setNeedsDisplay()
-
+            
             if(arrayKeys[ele].isNumber){
                 btnStepTmp.isUserInteractionEnabled = false
                 let data = dictData[arrayKeys[ele]]
@@ -130,23 +127,20 @@ class ManagerSelectionSort {
                 btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
                 btnStepTmp.setNeedsDisplay()
                 btnStepTmp.isUserInteractionEnabled = false
-
+                
             }else{
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?
-
+                
                 btnStepTmp.isUserInteractionEnabled = true
-
+                
             }
             ele = ele + 1
-
+            
         }else{
             btnStepTmp.isUserInteractionEnabled = false
             btnRunTmp.isUserInteractionEnabled = false
             animateStep.next()
         }
     }
-    
-    
-
 }

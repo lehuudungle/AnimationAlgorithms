@@ -30,7 +30,7 @@ class ManagerHeapSort {
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele: Int!
-
+    
     
     func initSortWith(viewcontroller: UIViewController, arrayInput: [Int]) {
         
@@ -75,10 +75,10 @@ class ManagerHeapSort {
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))
-            textStudy.backgroundColor = UIColor.yellow
+
             viewcontroller.view.addSubview(textStudy)
             
-            textStudy.text = " Heapsort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region."
+            textStudy.text = "Heapsort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region."
             var path: String = ""
             path = Bundle.main.path(forResource:"HeapSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
@@ -86,7 +86,7 @@ class ManagerHeapSort {
             ele = 0
             arrayKeys = arrayKeys.sorted()
         }
-
+        
     }
     
     func getArrayAction(array: [Int]) -> [HeapStep] {
@@ -99,7 +99,7 @@ class ManagerHeapSort {
     @objc func run(sender: UIButton) {
         
         animate = AnimationHeap(arrayLabel: self.arrayLabel,  arrayLabelBehind: self.arrayLabelBehind, arrayPosition: self.arrayPosition, arrayAction: self.arrayAction, graphHeap: graph)
-       
+        
         btnRunTmp.isUserInteractionEnabled = false
         btnStepTmp.isUserInteractionEnabled = false
         

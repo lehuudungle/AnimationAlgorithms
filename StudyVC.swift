@@ -10,7 +10,7 @@ import UIKit
 import KDPulseButton
 
 class StudyVC: UIViewController {
-
+    
     var spacing:CGFloat!
     var widthRatio = 3
     var btnSizeWidth:CGFloat!
@@ -22,14 +22,14 @@ class StudyVC: UIViewController {
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!
-
+    
     
     var y: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 1)
-
+        
         spacing = view.bounds.size.width/CGFloat(widthRatio*3 + 4)
         btnSizeWidth = spacing*CGFloat(widthRatio)
         btnSizeHeight = btnSizeWidth*3/5
@@ -40,7 +40,7 @@ class StudyVC: UIViewController {
         addBtnReset()
         addBtnStep()
         addBtnRun()
-
+        
     }
     
     func addBtnReset() {
@@ -59,11 +59,11 @@ class StudyVC: UIViewController {
         btnReset.layer.borderWidth = 2
         btnReset.layer.borderColor = BUTTON_COLOR.cgColor
         btnReset.layer.cornerRadius = 10
-
+        
         view.addSubview(btnReset)
     }
-
-
+    
+    
     
     
     func addBtnStep() {
@@ -88,12 +88,12 @@ class StudyVC: UIViewController {
         
         btnStep.titleLabel?.baselineAdjustment = .alignCenters
         btnStep.titleLabel?.textAlignment = .center
-
+        
         btnStep.layer.borderWidth = 2
         btnStep.layer.borderColor = BUTTON_COLOR.cgColor
         btnStep.layer.cornerRadius = 10
-
-
+        
+        
         view.addSubview(btnStep)
     }
     
@@ -118,13 +118,13 @@ class StudyVC: UIViewController {
         btnRun.layer.borderWidth = 2
         btnRun.layer.borderColor = BUTTON_COLOR.cgColor
         btnRun.layer.cornerRadius = 10
-
-
+        
+        
         view.addSubview(btnRun)
     }
     
-  
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

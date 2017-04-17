@@ -9,31 +9,31 @@
 import UIKit
 
 class MainScreen: UITableViewController {
-//    var about: String!
+    //    var about: String!
     
     var menu: [MenuSection]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let barButoonItem = UIBarButtonItem(title: "About", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MainScreen.onAbout))
-//        self.navigationItem.rightBarButtonItem = barButoonItem
+        //        let barButoonItem = UIBarButtonItem(title: "About", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MainScreen.onAbout))
+        //        self.navigationItem.rightBarButtonItem = barButoonItem
         
         self.tableView.contentInset = UIEdgeInsetsMake(20,0,0,0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
         
     }
     
-//    func onAbout(){
-//        let alert = UIAlertController.init(title: "Info",
-//                                           message: about,
-//                                           preferredStyle: .alert)
-//        
-//        let defaultAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
-//        
-//        alert.addAction(defaultAction)
-//        self.present(alert, animated: true, completion: nil)
-//    }
+    //    func onAbout(){
+    //        let alert = UIAlertController.init(title: "Info",
+    //                                           message: about,
+    //                                           preferredStyle: .alert)
+    //
+    //        let defaultAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+    //
+    //        alert.addAction(defaultAction)
+    //        self.present(alert, animated: true, completion: nil)
+    //    }
     
     
     
@@ -51,7 +51,7 @@ class MainScreen: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 25
+        return 15
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let menuSection: MenuSection = self.menu[section]
@@ -108,7 +108,7 @@ class MainScreen: UITableViewController {
             detailScreen.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             
             let navDetail = UINavigationController(rootViewController: detailScreen)
-
+            
             navDetail.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
             let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
             revel?.rightViewController = menuVC
@@ -116,7 +116,7 @@ class MainScreen: UITableViewController {
             present(revel!, animated: true, completion: nil)
             revel?.rightViewRevealWidth = 180
             VIEW_CHOSEN = "study"
-
+            
             
             
             
@@ -132,27 +132,12 @@ class MainScreen: UITableViewController {
         }
         
     }
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
 
-//        view.backgroundColor = GOLD_COLOR
-        let img = UIImage(named: "az_32")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        let imgview = UIImageView(image: img)
-        imgview.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        let label = UILabel(frame: CGRect(x: 30, y: 0, width: 40, height: 25))
-        label.text = self.menu[section].section
-        label.textColor = UIColor.gray
-        label.adjustsFontSizeToFitWidth = true
-        label.numberOfLines = 1
-        view.addSubview(imgview)
-        view.addSubview(label)
-        return view
-    }
     func backHOME(sender: UIBarButtonItem){
         
         
         dismiss(animated: true, completion: nil)
-
+        
         
     }
     

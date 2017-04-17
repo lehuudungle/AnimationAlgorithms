@@ -21,8 +21,8 @@ class InputVC: UIViewController, UITextFieldDelegate {
     var btnInfo:UIButton!
     var btnStep:UIButton!
     var btnStepCheck:UIButton!
-   
-
+    
+    
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!
@@ -33,7 +33,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 1)
-
+        
         spacing = view.bounds.size.width/CGFloat(widthRatio*3 + 4)
         btnSizeWidth = spacing*CGFloat(widthRatio)
         btnSizeHeight = btnSizeWidth*3/5
@@ -60,7 +60,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Find out what the text field will be after adding the current edit
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-                
+        
         if Int(text) != nil {
             
             // Text field converted to an Int
@@ -144,11 +144,11 @@ class InputVC: UIViewController, UITextFieldDelegate {
         
         view.addSubview(btnStepCheck)
     }
-
+    
     
     func addBtnRun() {
         
-
+        
         btnRun = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
         btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
@@ -168,7 +168,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         view.addSubview(btnRun)
     }
     
-   
+    
     
     func addBtnAdd() {
         btnAdd = KDPulseButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
@@ -194,9 +194,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField = UITextField(frame: CGRect(x: view.bounds.size.width/2 - spacing/2 - btnSizeWidth, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         
         textField.placeholder = "........................."
-
+        
         textField.font = UIFont.boldSystemFont(ofSize: 15)
-
+        
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.autocorrectionType = UITextAutocorrectionType.no
         textField.keyboardType = UIKeyboardType.numberPad
@@ -212,7 +212,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField.layer.masksToBounds = true
         
         self.view.addSubview(textField)
-//        textField.font = UIFont(name: "Helvetica Neue", size: textField.fontoFitHeight())
+        //        textField.font = UIFont(name: "Helvetica Neue", size: textField.fontoFitHeight())
     }
     
     func addTextView() {
@@ -223,7 +223,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         arrayView.layer.masksToBounds = true
         
         arrayView.font = UIFont.boldSystemFont(ofSize: 15)
-
+        
         arrayView.backgroundColor = UIColor.white
         arrayView.textAlignment = .center
         arrayView.layer.cornerRadius = 10
@@ -262,8 +262,8 @@ extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-
-
-
-
+    
+    
+    
+    
 }

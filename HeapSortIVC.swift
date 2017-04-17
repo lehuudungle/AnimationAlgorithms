@@ -31,7 +31,7 @@ class HeapSortIVC: InputVC{
         
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         
-         btnStepCheck.addTarget(self, action: #selector(step(sender:)), for: .touchUpInside)
+        btnStepCheck.addTarget(self, action: #selector(step(sender:)), for: .touchUpInside)
         
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
         

@@ -9,7 +9,7 @@
 import UIKit
 
 class InsertionSortSVC: StudyVC {
-
+    
     var managerSort: ManagerInsertionSort!
     
     override func viewDidLoad() {
@@ -27,8 +27,9 @@ class InsertionSortSVC: StudyVC {
         
     }
     
-       func reset(sender:UIButton){
+    func reset(sender:UIButton){
         self.managerSort.graph.removeFromSuperview()
+        self.managerSort.textStudy.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
         btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
@@ -42,5 +43,5 @@ class InsertionSortSVC: StudyVC {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

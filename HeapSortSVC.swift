@@ -22,10 +22,11 @@ class HeapSortSVC: StudyVC {
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
-
+        
     }
     func reset(sender:UIButton){
         self.managerSort.graph.removeFromSuperview()
+        self.managerSort.textStudy.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
         btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor

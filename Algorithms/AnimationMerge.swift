@@ -222,7 +222,7 @@ class AnimationMerge:NSObject {
             }
         }
     }
-
+    
     
     func animationMergetoLevel(_countStep: Int,from: SortingLabel,to: SortingLabel){
         UIView.animate(withDuration: 1, animations: {
@@ -293,7 +293,7 @@ class AnimationMerge:NSObject {
             self.animationMergetoLevelStep(_countStep: _countStep+1, from: self.arrayLabel[self.currentStep.merge[_countStep+1]], to:_tranSortingLabel as! SortingLabel)
         }
     }
-
+    
     
     func loop(){
         self.currentStep = self.arrayAction[self.colSolution]
@@ -307,7 +307,7 @@ class AnimationMerge:NSObject {
         self.borderRect(bearingPoint: (self.arrayLabelOne.first?.frame.origin)!, countCell: self.arrayLabel.count)
         self.animationStep()
     }
-
+    
     func swapLabel(i: Int, j: Int) {
         let temp = arrayLabel[i]
         arrayLabel[i] = arrayLabel[j]

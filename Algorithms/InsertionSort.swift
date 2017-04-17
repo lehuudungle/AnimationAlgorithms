@@ -44,7 +44,7 @@ class InsertionSort {
         }
     }
     
- 
+    
     func swap(i: Int, j: Int) {
         let temp = self.arrayInput[i];
         self.arrayInput[i] = self.arrayInput[j]

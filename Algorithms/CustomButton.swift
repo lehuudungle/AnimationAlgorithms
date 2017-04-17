@@ -9,26 +9,26 @@
 import UIKit
 
 extension UIButton{
-
-
+    
+    
     func fontoFitHeight()->CGFloat{
-
+        
         var minFontsize: CGFloat = DISPLAY_FONT_MIN
         var maxFontsize: CGFloat = DISPLAY_FONT_MAX
         var fontSizeAverage: CGFloat = 0
         var textandLabelHeight: CGFloat = 0
         while(minFontsize<=maxFontsize){
             fontSizeAverage = (maxFontsize-minFontsize)/2 + minFontsize
-
+            
             let text = self.titleLabel?.text
             guard (text?.characters.count)!>0 else {
                 break
             }
             if let  labelText: NSString = text as NSString?{
                 let labelHeight = self.frame.height-5
-
+                
                 let textHeight = labelText.size(attributes: [NSFontAttributeName:self.titleLabel?.font.withSize(fontSizeAverage) as Any]).height
-
+                
                 textandLabelHeight = labelHeight - textHeight
                 if(fontSizeAverage==minFontsize || fontSizeAverage==maxFontsize){
                     if(textandLabelHeight<0){

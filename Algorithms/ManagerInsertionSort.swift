@@ -72,23 +72,20 @@ class ManagerInsertionSort {
         
         if(VIEW_CHOSEN=="study"){
             ele = 0
-            for a in arrayAction{
-                print("\(ele)__\(a)")
-                ele = ele + 1
-            }
+            
             textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))
-            textStudy.backgroundColor = UIColor.yellow
+
             viewcontroller.view.addSubview(textStudy)
-            textStudy.text = "    Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. "
-        var path: String = ""
-        path = Bundle.main.path(forResource:"InsertionSort", ofType: "plist")!
-        dictData = NSDictionary(contentsOfFile: path)!
-        arrayKeys = dictData.allKeys as! [String]
-        ele = 0
-        arrayKeys = arrayKeys.sorted()
+            textStudy.text = "Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. "
+            var path: String = ""
+            path = Bundle.main.path(forResource:"InsertionSort", ofType: "plist")!
+            dictData = NSDictionary(contentsOfFile: path)!
+            arrayKeys = dictData.allKeys as! [String]
+            ele = 0
+            arrayKeys = arrayKeys.sorted()
         }
         
     }
@@ -111,40 +108,42 @@ class ManagerInsertionSort {
     }
     
     @objc func step(sender: UIButton) {
-        if(VIEW_CHOSEN=="study"){
-
-        if(ele==arrayKeys.count){
-            textStudy.text = ""
-            return
-        }
-        btnRunTmp.isUserInteractionEnabled = false
-        btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
-        btnRunTmp.setNeedsDisplay()
         
-        if(arrayKeys[ele].isNumber){
-            btnStepTmp.isUserInteractionEnabled = false
-            let data = dictData[arrayKeys[ele]]
-            textStudy.text = data as! String?
-            animateStep.next()
-        }else if(arrayKeys[ele]=="end"){
-            textStudy.text = "The list is fully sorted"
-            btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
-            btnStepTmp.setNeedsDisplay()
-            btnStepTmp.isUserInteractionEnabled = false
+        if(VIEW_CHOSEN=="study"){
+            if(ele==arrayKeys.count){
+                textStudy.text = ""
+                return
+            }
+            btnRunTmp.isUserInteractionEnabled = false
+            btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
+            btnRunTmp.setNeedsDisplay()
             
-        }else{
-            let data = dictData[arrayKeys[ele]]
-            textStudy.text = data as! String?
+            if(arrayKeys[ele].isNumber){
+                btnStepTmp.isUserInteractionEnabled = false
+                let data = dictData[arrayKeys[ele]]
+                textStudy.text = data as! String?
+                animateStep.next()
+            }else if(arrayKeys[ele]=="end"){
+                textStudy.text = "The list is fully sorted"
+                btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
+                btnStepTmp.setNeedsDisplay()
+                btnStepTmp.isUserInteractionEnabled = false
+                
+            }else{
+                let data = dictData[arrayKeys[ele]]
+                textStudy.text = data as! String?
+                
+                btnStepTmp.isUserInteractionEnabled = true
+                
+            }
+            ele = ele + 1
             
-            btnStepTmp.isUserInteractionEnabled = true
-            
-        }
-        ele = ele + 1
         }else{
             btnStepTmp.isUserInteractionEnabled = false
             btnRunTmp.isUserInteractionEnabled = false
             animateStep.next()
         }
+
     }
     
 }

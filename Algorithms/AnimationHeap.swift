@@ -41,7 +41,7 @@ class AnimationHeap {
     
     func animation() {
         
-//        UIView.setAnimationsEnabled(true)
+        //        UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 1, animations: {
             if (self.currentStep.act == "start"){
                 
@@ -55,7 +55,7 @@ class AnimationHeap {
                 
                 self.arrayLabel[self.currentStep.i].backgroundColor = SWAP_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = SWAP_COLOR
-
+                
                 
                 self.swapLabel(i: self.currentStep.i, j: self.currentStep.j)
                 
@@ -63,7 +63,7 @@ class AnimationHeap {
             }else if (self.currentStep.act == "moveEndUp"){
                 
                 self.arrayLabel[self.currentStep.end].backgroundColor = GOLD_COLOR
-
+                
                 self.moveLabel(from: self.arrayLabel[self.currentStep.end], to: self.arrayLabelBehind[self.currentStep.end])
                 
                 self.graphHeap.removeLine()
@@ -82,7 +82,7 @@ class AnimationHeap {
                 
                 self.arrayLabel[self.currentStep.i].backgroundColor = DEFAULT_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = DEFAULT_COLOR
-
+                
                 self.continueAnimation()
             }else{
                 
@@ -142,7 +142,7 @@ class AnimationHeap {
             }
         }
     }
-
+    
     
     func swapLabel(i: Int, j: Int) {
         let temp = arrayLabel[i]
@@ -162,11 +162,11 @@ class AnimationHeap {
             return
         }else{
             btnStepTmp.isUserInteractionEnabled = true
-
+            
         }
         self.currentStep = self.arrayAction[self.colSolution]
     }
-
+    
     func continueAnimation(){
         self.colSolution += 1
         

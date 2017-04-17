@@ -61,6 +61,8 @@
 		198A34951E822A13009E2B96 /* GlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A34941E822A13009E2B96 /* GlobalVar.swift */; };
 		198A34971E826619009E2B96 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A34961E826619009E2B96 /* BubbleSort.swift */; };
 		198A34BA1E828A5D009E2B96 /* ManagerInsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A34B91E828A5D009E2B96 /* ManagerInsertionSort.swift */; };
+		198AEC251EA4A93F006DE4D4 /* HeapSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 198AEC241EA4A93F006DE4D4 /* HeapSort.plist */; };
+		198AEC271EA4A94A006DE4D4 /* InsertionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */; };
 		19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */; };
 		19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D41EF51EA087B000C8CE4D /* ShareVC.swift */; };
 		19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */; };
@@ -72,7 +74,6 @@
 		AEE519CEA9558464871E3E2A /* Pods_Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */; };
 		C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415B1E8ABC3B008472E6 /* MenuList.swift */; };
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
-		C7D50B2E1EA3CF7E002D9CEE /* HeapSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D50B2D1EA3CF7E002D9CEE /* HeapSort.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,8 @@
 		198A34941E822A13009E2B96 /* GlobalVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVar.swift; sourceTree = "<group>"; };
 		198A34961E826619009E2B96 /* BubbleSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleSort.swift; sourceTree = "<group>"; };
 		198A34B91E828A5D009E2B96 /* ManagerInsertionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerInsertionSort.swift; sourceTree = "<group>"; };
+		198AEC241EA4A93F006DE4D4 /* HeapSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HeapSort.plist; sourceTree = "<group>"; };
+		198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InsertionSort.plist; sourceTree = "<group>"; };
 		19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMerge.swift; sourceTree = "<group>"; };
 		19D41EF51EA087B000C8CE4D /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SelectionSort.plist; sourceTree = "<group>"; };
@@ -148,7 +151,6 @@
 		BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C714415B1E8ABC3B008472E6 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
-		C7D50B2D1EA3CF7E002D9CEE /* HeapSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HeapSort.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +176,9 @@
 		0572FF4B1EA1278300B36562 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				198AEC241EA4A93F006DE4D4 /* HeapSort.plist */,
 				051085461EA1F8F0007CDEC6 /* BubbleSort.plist */,
+				198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */,
 				19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */,
 			);
 			name = DataSource;
@@ -434,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198AEC271EA4A94A006DE4D4 /* InsertionSort.plist in Resources */,
 				19FE70BE1EA46A8600B24317 /* SelectionSortDocument.pdf in Resources */,
 				19FE70B61EA46A6700B24317 /* BubbleSortDocument.pdf in Resources */,
 				19FE70BA1EA46A7700B24317 /* MergeSortDocument.pdf in Resources */,
@@ -441,8 +446,8 @@
 				0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */,
 				198A34871E80D9DF009E2B96 /* LaunchScreen.storyboard in Resources */,
 				198A34841E80D9DF009E2B96 /* Assets.xcassets in Resources */,
-				C7D50B2E1EA3CF7E002D9CEE /* HeapSort.plist in Resources */,
 				19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */,
+				198AEC251EA4A93F006DE4D4 /* HeapSort.plist in Resources */,
 				0507FA4B1E9C987200E00354 /* MenuViewController.xib in Resources */,
 				059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */,
 				19FE70BC1EA46A7F00B24317 /* QuickSortDocument.pdf in Resources */,

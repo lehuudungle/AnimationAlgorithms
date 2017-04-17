@@ -111,7 +111,8 @@ class ManagerInsertionSort {
     }
     
     @objc func step(sender: UIButton) {
-        
+        if(VIEW_CHOSEN=="study"){
+
         if(ele==arrayKeys.count){
             textStudy.text = ""
             return
@@ -139,6 +140,11 @@ class ManagerInsertionSort {
             
         }
         ele = ele + 1
+        }else{
+            btnStepTmp.isUserInteractionEnabled = false
+            btnRunTmp.isUserInteractionEnabled = false
+            animateStep.next()
+        }
     }
     
 }

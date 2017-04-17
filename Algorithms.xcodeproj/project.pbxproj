@@ -74,6 +74,8 @@
 		AEE519CEA9558464871E3E2A /* Pods_Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */; };
 		C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415B1E8ABC3B008472E6 /* MenuList.swift */; };
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
+		C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */; };
+		C7CBF4911EA5216300FBE5B3 /* MergeSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +153,8 @@
 		BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C714415B1E8ABC3B008472E6 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuickSort.plist; sourceTree = "<group>"; };
+		C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MergeSort.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 				051085461EA1F8F0007CDEC6 /* BubbleSort.plist */,
 				19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */,
 				198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */,
+				C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */,
+				C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */,
 				198AEC241EA4A93F006DE4D4 /* HeapSort.plist */,
 			);
 			name = DataSource;
@@ -446,12 +452,14 @@
 				0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */,
 				198A34871E80D9DF009E2B96 /* LaunchScreen.storyboard in Resources */,
 				198A34841E80D9DF009E2B96 /* Assets.xcassets in Resources */,
+				C7CBF4911EA5216300FBE5B3 /* MergeSort.plist in Resources */,
 				19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */,
 				198AEC251EA4A93F006DE4D4 /* HeapSort.plist in Resources */,
 				0507FA4B1E9C987200E00354 /* MenuViewController.xib in Resources */,
 				059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */,
 				19FE70BC1EA46A7F00B24317 /* QuickSortDocument.pdf in Resources */,
 				051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */,
+				C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */,
 				198A347F1E80D9DF009E2B96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

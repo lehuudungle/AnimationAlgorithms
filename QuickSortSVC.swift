@@ -17,7 +17,7 @@ class QuickSortSVC: StudyVC {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.managerSort = ManagerQuickSort()
-        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
+        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,3,2,5,6])
         
         btnRun.addTarget(self.managerSort, action: #selector(ManagerQuickSort.run(sender:)), for: .touchUpInside)
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
@@ -33,7 +33,7 @@ class QuickSortSVC: StudyVC {
         btnStep.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
         btnRun.setNeedsDisplay()
         btnStep.setNeedsDisplay()
-        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
+        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,3,2,5,6])
     }
     
     override func didReceiveMemoryWarning() {

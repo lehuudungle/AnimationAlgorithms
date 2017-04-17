@@ -56,7 +56,7 @@ class ManagerQuickSort{
         }
         
         quickGraph = QuickGraph(frame: CGRect(x: 0,
-                                              y:viewcontroller.view.bounds.size.height/3,
+                                              y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 6,
                                               width: viewcontroller.view.bounds.size.width,
                                               height: viewcontroller.view.bounds.size.height/2),
                                 arrayDisplay: self.arrayDisplay,
@@ -84,9 +84,9 @@ class ManagerQuickSort{
             textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
         
-            textStudy.text = " Heapsort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region."
+            textStudy.text = " Quicksort, also known as part sort, is a sorting algorithm that needs to be sorted into two equally sized sub-lists, with indexes standing in the middle of the list."
             var path: String = ""
-            path = Bundle.main.path(forResource:"HeapSort", ofType: "plist")!
+            path = Bundle.main.path(forResource:"QuickSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
             ele = 0

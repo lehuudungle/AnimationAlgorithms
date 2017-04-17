@@ -135,7 +135,7 @@ class MainScreen: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
 
-        view.backgroundColor = GOLD_COLOR
+//        view.backgroundColor = GOLD_COLOR
         let img = UIImage(named: "az_32")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         let imgview = UIImageView(image: img)
         imgview.frame = CGRect(x: 0, y: 0, width: 25, height: 25)

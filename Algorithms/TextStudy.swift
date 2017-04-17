@@ -19,8 +19,6 @@ class TextStudy: UILabel {
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
         self.numberOfLines = 5
-
-        
         
     }
     

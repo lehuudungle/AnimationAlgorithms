@@ -55,18 +55,14 @@ class ManagerBubbleSort {
             self.arrayColor.append(DEFAULT_COLOR)
         }
         
-
-        graph = Graph(frame: CGRect(x: UIApplication.shared.statusBarFrame.height,
+        graph = Graph(frame: CGRect(x: 0,
                                     y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
-                                    width: viewcontroller.view.bounds.size.width-2*UIApplication.shared.statusBarFrame.height,
+                                    width: viewcontroller.view.bounds.size.width,
                                     height: viewcontroller.view.bounds.size.height/2),
                       arrayDisplay: self.arrayDisplay,
                       colors: self.arrayColor)
-        graph.backgroundColor = UIColor.white
         
         viewcontroller.view.addSubview(graph)
-        
-        
         
         self.arrayLabel = self.graph.arrayLabel
         self.arrayLabelMiddle = self.graph.arrayLabelMiddle
@@ -75,9 +71,12 @@ class ManagerBubbleSort {
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
 
-        ele = 0
         
-        textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
+        textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                            y: graph.frame.origin.y+graph.frame.height,
+                                            width: graph.frame.width - UIApplication.shared.statusBarFrame.height*2,
+                                            height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            
         textStudy.backgroundColor = UIColor.yellow
         viewcontroller.view.addSubview(textStudy)
         textStudy.numberOfLines = 3
@@ -86,14 +85,7 @@ class ManagerBubbleSort {
         path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
         dictData = NSDictionary(contentsOfFile: path)!
         arrayKeys = dictData.allKeys as! [String]
-        ele = 0
         arrayKeys = arrayKeys.sorted(by: {$0 < $1})
-        print("sap xep : \(arrayKeys)")
-        var elem = 1
-        for a in self.arrayAction{
-            print("ele: \(elem)__\(a)")
-            elem = elem + 1
-        }
 
 
     }

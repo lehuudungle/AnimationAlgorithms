@@ -72,12 +72,7 @@ class ManagerSelectionSort {
         animateStep = AnimationSelection(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
         
-        ele = 1
-        for a in arrayAction{
-            print("\(ele)__\(a)")
-            ele = ele + 1
-        }
-        
+        ele = 0
         textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                             y: graph.frame.origin.y+graph.frame.height,
                                             width: graph.frame.width - UIApplication.shared.statusBarFrame.height*2,
@@ -91,7 +86,6 @@ class ManagerSelectionSort {
         arrayKeys = dictData.allKeys as! [String]
         ele = 0
         arrayKeys = arrayKeys.sorted()
-        print(arrayKeys)
         
     }
     

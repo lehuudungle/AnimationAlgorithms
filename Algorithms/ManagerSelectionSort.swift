@@ -146,7 +146,4 @@ class ManagerSelectionSort {
             animateStep.next()
         }
     }
-    
-    
-
 }

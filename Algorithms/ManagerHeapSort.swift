@@ -71,11 +71,14 @@ class ManagerHeapSort {
                 print("\(ele)__\(a)")
                 ele = ele + 1
             }
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                y: graph.frame.origin.y+graph.frame.height,
+                                                width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                height: yMax-(graph.frame.origin.y+graph.frame.height)))
             textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
             
-            textStudy.text = "   Heapsort can be thought of as an improved selection sort: like that algorithm, it divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region."
+            textStudy.text = " Heapsort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region."
             var path: String = ""
             path = Bundle.main.path(forResource:"HeapSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

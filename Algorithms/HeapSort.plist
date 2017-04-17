@@ -16,6 +16,32 @@
 	<string>    Add the element to the bottom level of the heap.
 </string>
 	<key>05</key>
+	<string>    Transfer that element to the standard array</string>
+	<key>06</key>
+	<string>    Continue compare the element with its parent</string>
+	<key>07</key>
+	<string>    if they are in the correct order, stop. If not, swap the element with its parent</string>
+	<key>08</key>
+	<string>    Add the element to the bottom level of the heap.</string>
+	<key>09</key>
+	<string>    Transfer that element to the standard array</string>
+	<key>10</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>11</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>12</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>13</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>14</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>15</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>16</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>17</key>
+	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>end</key>
 	<string></string>
 </dict>
 </plist>

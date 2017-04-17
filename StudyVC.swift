@@ -22,7 +22,6 @@ class StudyVC: UIViewController {
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!
-    var arrayView:UILabel!
 
     
     var y: CGFloat!
@@ -42,8 +41,6 @@ class StudyVC: UIViewController {
         addBtnStep()
         addBtnRun()
 
-        
-        
     }
     
     func addBtnReset() {
@@ -125,6 +122,8 @@ class StudyVC: UIViewController {
 
         view.addSubview(btnRun)
     }
+    
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

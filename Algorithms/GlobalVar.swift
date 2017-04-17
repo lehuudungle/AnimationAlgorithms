@@ -37,6 +37,7 @@ var yMax: CGFloat = 0
 var btnStepTmp: UIButton!
 var btnBackTmp: UIButton!
 var btnRunTmp: UIButton!
+var arrayViewTmp: UILabel!
 
 var DISPLAY_FONT_MIN: CGFloat = 10
 var DISPLAY_FONT_MAX: CGFloat = 60

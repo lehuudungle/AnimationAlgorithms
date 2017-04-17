@@ -36,11 +36,12 @@ class AnimationBubble {
     func animation() {
         
         UIView.setAnimationsEnabled(true)
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 1, animations: {
             if (self.currentStep.act == "compare") {
                 self.arrayLabel[self.currentStep.i].backgroundColor = COMPARE_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = COMPARE_COLOR
-                
+              
+
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
             }
@@ -49,33 +50,36 @@ class AnimationBubble {
                 self.arrayLabel[self.currentStep.i].backgroundColor = SWAP_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = SWAP_COLOR
                 
+
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
             }
         }){(finished) in
             if (self.currentStep.act == "compare") {
-                UIView.animate(withDuration: 0.5, animations: {
+
+                UIView.animate(withDuration: 1, animations: {
                     self.arrayLabel[self.currentStep.i].alpha = DEFAULT_ALPHA
                     self.arrayLabel[self.currentStep.j].alpha = DEFAULT_ALPHA
                 }) {_ in
                     
                     self.arrayLabel[self.currentStep.i].backgroundColor = DEFAULT_COLOR
                     self.arrayLabel[self.currentStep.j].backgroundColor = DEFAULT_COLOR
-                    
+
                     self.continueAnimation()
                 }
             }
             else
             {
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 1, animations: {
                     self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelAbove[self.currentStep.i])
                     self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelBelow[self.currentStep.j])
                 }){_ in
-                    UIView.animate(withDuration: 0.3, animations: {
+                    UIView.animate(withDuration: 1, animations: {
                         self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelAbove[self.currentStep.j])
                         self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelBelow[self.currentStep.i])
                     }){_ in
-                        UIView.animate(withDuration: 0.3, animations: {
+                        UIView.animate(withDuration: 1, animations: {
+
                             self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelMiddle[self.currentStep.j])
                             self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelMiddle[self.currentStep.i])
                         }){_ in
@@ -101,7 +105,7 @@ class AnimationBubble {
             if (self.currentStep.act == "compare") {
                 self.arrayLabel[self.currentStep.i].backgroundColor = COMPARE_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = COMPARE_COLOR
-                
+              
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
             }
@@ -110,7 +114,7 @@ class AnimationBubble {
                 
                 self.arrayLabel[self.currentStep.i].backgroundColor = SWAP_COLOR
                 self.arrayLabel[self.currentStep.j].backgroundColor = SWAP_COLOR
-                
+               
                 self.arrayLabel[self.currentStep.i].alpha = 0.95
                 self.arrayLabel[self.currentStep.j].alpha = 0.95
             }
@@ -123,12 +127,11 @@ class AnimationBubble {
                     
                     self.arrayLabel[self.currentStep.i].backgroundColor = DEFAULT_COLOR
                     self.arrayLabel[self.currentStep.j].backgroundColor = DEFAULT_COLOR
-                                        
+                    
                     self.continueAnimationStep()
                 }
             }
-            else
-            {
+            else{
                 UIView.animate(withDuration: 0.5, animations: {
                     self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelAbove[self.currentStep.i])
                     self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelBelow[self.currentStep.j])

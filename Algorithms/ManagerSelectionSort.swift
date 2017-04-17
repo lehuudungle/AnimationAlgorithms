@@ -72,12 +72,17 @@ class ManagerSelectionSort {
         animateStep = AnimationSelection(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
         if(VIEW_CHOSEN=="study"){
+            
             ele = 0
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                y: graph.frame.origin.y+graph.frame.height,
+                                                width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            
             textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
 
-            textStudy.text = ""
+            textStudy.text = "Selection sort is a sorting algorithm, specifically an in-place comparison sort"
             var path: String = ""
             path = Bundle.main.path(forResource:"SelectionSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

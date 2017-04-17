@@ -56,7 +56,7 @@ class ManagerBubbleSort {
         }
 
 
-        graph = Graph(frame: CGRect(x: UIApplication.shared.statusBarFrame.height,
+        graph = Graph(frame: CGRect(x: 0,
                                     y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
                                     width: viewcontroller.view.bounds.size.width,
                                     height: viewcontroller.view.bounds.size.height/2),
@@ -76,7 +76,12 @@ class ManagerBubbleSort {
 
         if(VIEW_CHOSEN=="study"){
             ele = 0
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            
+            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                y: graph.frame.origin.y+graph.frame.height,
+                                                width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            
             textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
 

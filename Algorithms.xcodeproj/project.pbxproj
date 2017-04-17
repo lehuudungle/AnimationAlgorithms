@@ -12,8 +12,8 @@
 		0507FA4B1E9C987200E00354 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507FA491E9C987200E00354 /* MenuViewController.xib */; };
 		0507FA4E1E9CC2EE00E00354 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */; };
 		0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */; };
+		051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051085461EA1F8F0007CDEC6 /* BubbleSort.plist */; };
 		0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572FF491EA123AB00B36562 /* TextStudy.swift */; };
-		0572FF4D1EA127B800B36562 /* BubbleSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0572FF4C1EA127B800B36562 /* BubbleSort.plist */; };
 		058904BD1E9E85450083F53C /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058904BC1E9E85450083F53C /* StartVC.swift */; };
 		059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 059876251E99EEB800DEDA21 /* FontAwesome.otf */; };
 		059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876261E99EEB800DEDA21 /* FontAwesome.swift */; };
@@ -63,10 +63,12 @@
 		198A34BA1E828A5D009E2B96 /* ManagerInsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198A34B91E828A5D009E2B96 /* ManagerInsertionSort.swift */; };
 		19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */; };
 		19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D41EF51EA087B000C8CE4D /* ShareVC.swift */; };
+		19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */; };
 		AEE519CEA9558464871E3E2A /* Pods_Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */; };
 		C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415B1E8ABC3B008472E6 /* MenuList.swift */; };
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
 		C7B363A01EA1D5AF0003D88C /* InsertionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7B3639F1EA1D5AF0003D88C /* InsertionSort.plist */; };
+		C7D50B2E1EA3CF7E002D9CEE /* HeapSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D50B2D1EA3CF7E002D9CEE /* HeapSort.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,8 +80,8 @@
 		0507FA491E9C987200E00354 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuViewController.xib; path = ../MenuViewController.xib; sourceTree = "<group>"; };
 		0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		051085461EA1F8F0007CDEC6 /* BubbleSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleSort.plist; sourceTree = "<group>"; };
 		0572FF491EA123AB00B36562 /* TextStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStudy.swift; sourceTree = "<group>"; };
-		0572FF4C1EA127B800B36562 /* BubbleSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleSort.plist; sourceTree = "<group>"; };
 		058904BC1E9E85450083F53C /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		059876241E99EEB800DEDA21 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
 		059876251E99EEB800DEDA21 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -132,11 +134,13 @@
 		198A34B91E828A5D009E2B96 /* ManagerInsertionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerInsertionSort.swift; sourceTree = "<group>"; };
 		19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMerge.swift; sourceTree = "<group>"; };
 		19D41EF51EA087B000C8CE4D /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
+		19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SelectionSort.plist; sourceTree = "<group>"; };
 		9EFEAA5216F7A5BC89F47ABC /* Pods-Algorithms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algorithms.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algorithms/Pods-Algorithms.release.xcconfig"; sourceTree = "<group>"; };
 		BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C714415B1E8ABC3B008472E6 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		C7B3639F1EA1D5AF0003D88C /* InsertionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InsertionSort.plist; sourceTree = "<group>"; };
+		C7D50B2D1EA3CF7E002D9CEE /* HeapSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HeapSort.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +166,10 @@
 		0572FF4B1EA1278300B36562 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				0572FF4C1EA127B800B36562 /* BubbleSort.plist */,
 				C7B3639F1EA1D5AF0003D88C /* InsertionSort.plist */,
+				19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */,
+				051085461EA1F8F0007CDEC6 /* BubbleSort.plist */,
+				C7D50B2D1EA3CF7E002D9CEE /* HeapSort.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 		1987C6671E964F82005795B8 /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				19D41EF51EA087B000C8CE4D /* ShareVC.swift */,
 			);
 			name = Info;
 			sourceTree = "<group>";
@@ -274,7 +281,6 @@
 		198A34781E80D9DF009E2B96 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				0572FF481EA1227300B36562 /* TextStudty */,
 				0507FA411E9C973100E00354 /* SWRevealViewController.h */,
 				0507FA421E9C973100E00354 /* SWRevealViewController.m */,
 				1987C64F1E95E6A3005795B8 /* AppDelegate.swift */,
@@ -282,6 +288,7 @@
 				0507FA491E9C987200E00354 /* MenuViewController.xib */,
 				058904BC1E9E85450083F53C /* StartVC.swift */,
 				198A34941E822A13009E2B96 /* GlobalVar.swift */,
+				0572FF481EA1227300B36562 /* TextStudty */,
 				C71441611E8ABE4E008472E6 /* ViewControllers */,
 				C714415A1E8ABBFD008472E6 /* MenuList */,
 				193E45A11E8A4A7B00A6395C /* Manager */,
@@ -347,7 +354,6 @@
 				05A2AC4D1E9F2D85005C9310 /* Input */,
 				05BEA8CB1E9DC8D200B2F04C /* Study */,
 				1987C6671E964F82005795B8 /* Info */,
-				19D41EF51EA087B000C8CE4D /* ShareVC.swift */,
 			);
 			name = ViewControllers;
 			path = ..;
@@ -388,7 +394,7 @@
 				TargetAttributes = {
 					198A34751E80D9DE009E2B96 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = D6F4345AL3;
+						DevelopmentTeam = 7MRXJH2RYW;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -421,10 +427,12 @@
 				0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */,
 				198A34871E80D9DF009E2B96 /* LaunchScreen.storyboard in Resources */,
 				198A34841E80D9DF009E2B96 /* Assets.xcassets in Resources */,
+				C7D50B2E1EA3CF7E002D9CEE /* HeapSort.plist in Resources */,
+				19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */,
 				0507FA4B1E9C987200E00354 /* MenuViewController.xib in Resources */,
 				059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */,
+				051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */,
 				198A347F1E80D9DF009E2B96 /* Main.storyboard in Resources */,
-				0572FF4D1EA127B800B36562 /* BubbleSort.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = D6F4345AL3;
+				DEVELOPMENT_TEAM = 7MRXJH2RYW;
 				INFOPLIST_FILE = Algorithms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmaster.Algorithms;
@@ -675,7 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = D6F4345AL3;
+				DEVELOPMENT_TEAM = 7MRXJH2RYW;
 				INFOPLIST_FILE = Algorithms/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmaster.Algorithms;

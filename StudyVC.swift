@@ -114,6 +114,7 @@ class StudyVC: UIViewController {
         btnRun.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
         btnRun.titleLabel?.baselineAdjustment = .alignCenters
         btnRun.titleLabel?.textAlignment = .center
+        
         btnRun.layer.borderWidth = 2
         btnRun.layer.borderColor = BUTTON_COLOR.cgColor
         btnRun.layer.cornerRadius = 10

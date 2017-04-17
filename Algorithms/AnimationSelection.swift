@@ -66,6 +66,11 @@ class AnimationSelection {
                 self.checkTime()
                 self.colSolution += 1
                 if (self.colSolution == self.arrayAction.count) {
+                    if(VIEW_CHOSEN=="study"){
+                        btnStepTmp.isUserInteractionEnabled = true
+                    }else{
+                        btnStepTmp.isUserInteractionEnabled = false
+                    }
                     return
                 }
                 self.currentStep = self.arrayAction[self.colSolution]
@@ -79,6 +84,11 @@ class AnimationSelection {
                     self.checkTime()
                     self.colSolution += 1
                     if (self.colSolution == self.arrayAction.count) {
+                        if(VIEW_CHOSEN=="study"){
+                            btnStepTmp.isUserInteractionEnabled = true
+                        }else{
+                            btnStepTmp.isUserInteractionEnabled = false
+                        }
                         return
                     }
                     self.currentStep = self.arrayAction[self.colSolution]
@@ -101,6 +111,11 @@ class AnimationSelection {
                                 self.checkTime()
                                 self.colSolution += 1
                                 if (self.colSolution == self.arrayAction.count) {
+                                    if(VIEW_CHOSEN=="study"){
+                                        btnStepTmp.isUserInteractionEnabled = true
+                                    }else{
+                                        btnStepTmp.isUserInteractionEnabled = false
+                                    }
                                     return
                                 }
                                 self.currentStep = self.arrayAction[self.colSolution]
@@ -110,12 +125,17 @@ class AnimationSelection {
                         }
                     }else{
                         if(self.colSolution==self.arrayAction.count-1){
-                            self.arrayLabel[self.currentStep.i+1].backgroundColor = UIColor.cyan
+                            self.arrayLabel[self.currentStep.i+1].backgroundColor = SORT_END
                             self.arrayLabel[self.currentStep.i+1].alpha = 1
                         }
                         self.checkTime()
                         self.colSolution += 1
                         if (self.colSolution == self.arrayAction.count) {
+                            if(VIEW_CHOSEN=="study"){
+                                btnStepTmp.isUserInteractionEnabled = true
+                            }else{
+                                btnStepTmp.isUserInteractionEnabled = false
+                            }
                             return
                         }
                         self.currentStep = self.arrayAction[self.colSolution]

@@ -15,7 +15,6 @@ let SWAP_COLOR = UIColor(red: 255/255, green: 102/255, blue: 102/255, alpha: 1)
 let KEY_COLOR = UIColor(red: 51/255, green: 255/255, blue: 51/255, alpha: 1)
 let SORT_END = UIColor(red: 0/255, green: 255/255, blue: 51/255, alpha: 1)
 
-
 let DEFAULT_ALPHA: CGFloat = 1
 let ANIMATION_ALPHA: CGFloat = 0.5
 
@@ -45,9 +44,10 @@ var DISPLAY_FONT_MAX: CGFloat = 60
 
 let BUTTON_COLOR = UIColor(red: 1, green: 165/255, blue: 0, alpha: 1)
 
-var  DETAIL: UIViewController!
+var DETAIL: UIViewController!
 var ROW_MENU_SECTION: Int!
 var ROW_MENU_CELL: Int!
 var INPUT_XIB_CLASS: UIViewController!
+var VIEW_CHOSEN: String!
 
 

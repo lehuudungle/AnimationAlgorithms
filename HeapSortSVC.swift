@@ -17,7 +17,7 @@ class HeapSortSVC: StudyVC {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.managerSort = ManagerHeapSort()
-        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,1,9,6])
+        self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
         
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
@@ -28,7 +28,11 @@ class HeapSortSVC: StudyVC {
         self.managerSort.graph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
-        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,3,2,1,1,9,6])
+        btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnStep.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnRun.setNeedsDisplay()
+        btnStep.setNeedsDisplay()
+        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
     }
     
     override func didReceiveMemoryWarning() {

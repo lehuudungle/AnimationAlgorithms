@@ -70,23 +70,26 @@ class ManagerInsertionSort {
         
         animateStep = AnimationInsertion(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
-        ele = 0
-        for a in arrayAction{
-            print("\(ele)__\(a)")
-            ele = ele + 1
-        }
-        textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x, y: graph.frame.origin.y+graph.frame.height, width: graph.frame.width, height: yMax-(graph.frame.origin.y+graph.frame.height)))
-        textStudy.backgroundColor = UIColor.yellow
-        viewcontroller.view.addSubview(textStudy)
-        textStudy.numberOfLines = 3
-        textStudy.text = "    Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. "
+        if(VIEW_CHOSEN=="study"){
+            ele = 0
+            for a in arrayAction{
+                print("\(ele)__\(a)")
+                ele = ele + 1
+            }
+            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                y: graph.frame.origin.y+graph.frame.height,
+                                                width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            textStudy.backgroundColor = UIColor.yellow
+            viewcontroller.view.addSubview(textStudy)
+            textStudy.text = "    Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. "
         var path: String = ""
         path = Bundle.main.path(forResource:"InsertionSort", ofType: "plist")!
         dictData = NSDictionary(contentsOfFile: path)!
         arrayKeys = dictData.allKeys as! [String]
         ele = 0
         arrayKeys = arrayKeys.sorted()
-
+        }
         
     }
     
@@ -123,7 +126,7 @@ class ManagerInsertionSort {
             textStudy.text = data as! String?
             animateStep.next()
         }else if(arrayKeys[ele]=="end"){
-            textStudy.text = "ket thuc roi nhin cai gi ma nhin"
+            textStudy.text = "The list is fully sorted"
             btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
             btnStepTmp.setNeedsDisplay()
             btnStepTmp.isUserInteractionEnabled = false

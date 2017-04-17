@@ -42,10 +42,6 @@ class ManagerSelectionSort {
         self.arrayInput = arrayInput
         self.arrayAction = getArrayAction(array: arrayInput)
         
-        for index in 0..<arrayAction.count{
-            print("\(index + 1) - \(arrayAction[index])")
-        }
-        
         self.arrayDisplay = []
         self.arrayLabelAbove = []
         self.arrayLabelMiddle = []
@@ -78,6 +74,7 @@ class ManagerSelectionSort {
         if(VIEW_CHOSEN=="study"){
             
             ele = 0
+            
             textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,

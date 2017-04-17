@@ -3,51 +3,51 @@
 <plist version="1.0">
 <dict>
 	<key>00.1</key>
-	<string>     Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list</string>
+	<string>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list</string>
 	<key>00.2</key>
-	<string>     Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there</string>
+	<string>Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there</string>
 	<key>00.3</key>
-	<string>     It repeats until no input elements remain.</string>
+	<string>It repeats until no input elements remain.</string>
 	<key>00.4</key>
-	<string>     Consider the values ​​in pairs from left to right</string>
+	<string>Consider the values ​​in pairs from left to right</string>
 	<key>01</key>
-	<string>     Compare numerical values ​​in first place and second place </string>
+	<string>Compare numerical values ​​in first place and second place </string>
 	<key>02</key>
-	<string>     The first digit is less than the second</string>
+	<string>The first digit is less than the second</string>
 	<key>02.1</key>
-	<string>     Keep the position of two numbers</string>
+	<string>Keep the position of two numbers</string>
 	<key>03</key>
-	<string>     Continue to compare the numbers in the array from left to right</string>
+	<string>Continue to compare the numbers in the array from left to right</string>
 	<key>04</key>
-	<string>     The second digit is greater than the third</string>
+	<string>The second digit is greater than the third</string>
 	<key>05</key>
-	<string>     Swap positions between the two numbers</string>
+	<string>Swap positions between the two numbers</string>
 	<key>06</key>
-	<string>     Continue to compare with the number behind</string>
+	<string>Continue to compare with the number behind</string>
 	<key>07</key>
-	<string>     If the value is less than that, it will change the position of the two numbers</string>
+	<string>If the value is less than that, it will change the position of the two numbers</string>
 	<key>08</key>
-	<string>     Continue to compare for until there are no valid numbers smaller than it</string>
+	<string>Continue to compare for until there are no valid numbers smaller than it</string>
 	<key>09</key>
-	<string>     Then, compare the numerical values ​​from the fourth position</string>
+	<string>Then, compare the numerical values ​​from the fourth position</string>
 	<key>10</key>
-	<string>     If the value is less than that, it will change the position of the two numbers</string>
+	<string>If the value is less than that, it will change the position of the two numbers</string>
 	<key>11</key>
-	<string>     Continue to compare with values number behind</string>
+	<string>Continue to compare with values number behind</string>
 	<key>12</key>
-	<string>     That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
 	<key>13</key>
-	<string>     That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
 	<key>14</key>
-	<string>     Then, compare the numerical values ​​from the fiveth position</string>
+	<string>Then, compare the numerical values ​​from the fiveth position</string>
 	<key>15</key>
-	<string>     If the value is less than that, it will change the position of the two numbers</string>
+	<string>If the value is less than that, it will change the position of the two numbers</string>
 	<key>16</key>
-	<string>     Continue to compare with values number behind</string>
+	<string>Continue to compare with values number behind</string>
 	<key>17</key>
-	<string>     That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
 	<key>18</key>
-	<string>     That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
 	<key>end</key>
 	<string></string>
 </dict>

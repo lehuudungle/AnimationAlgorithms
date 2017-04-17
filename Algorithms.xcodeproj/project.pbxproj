@@ -65,6 +65,7 @@
 		19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */; };
 		19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D41EF51EA087B000C8CE4D /* ShareVC.swift */; };
 		19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EAC29A1EA4BF130060C6B8 /* PDFViewController.swift */; };
+		19EAC29D1EA4CB190060C6B8 /* UIBorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EAC29C1EA4CB190060C6B8 /* UIBorderedLabel.swift */; };
 		19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */; };
 		19FE70B61EA46A6700B24317 /* BubbleSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19FE70B51EA46A6700B24317 /* BubbleSortDocument.pdf */; };
 		19FE70B81EA46A7200B24317 /* InsertionSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19FE70B71EA46A7200B24317 /* InsertionSortDocument.pdf */; };
@@ -141,6 +142,7 @@
 		19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMerge.swift; sourceTree = "<group>"; };
 		19D41EF51EA087B000C8CE4D /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		19EAC29A1EA4BF130060C6B8 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		19EAC29C1EA4CB190060C6B8 /* UIBorderedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBorderedLabel.swift; sourceTree = "<group>"; };
 		19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SelectionSort.plist; sourceTree = "<group>"; };
 		19FE70B51EA46A6700B24317 /* BubbleSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BubbleSortDocument.pdf; sourceTree = "<group>"; };
 		19FE70B71EA46A7200B24317 /* InsertionSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = InsertionSortDocument.pdf; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				0572FF491EA123AB00B36562 /* TextStudy.swift */,
+				19EAC29C1EA4CB190060C6B8 /* UIBorderedLabel.swift */,
 			);
 			name = TextStudty;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				05A2AC571E9F2DF2005C9310 /* MergeSortIVC.swift in Sources */,
 				198A34951E822A13009E2B96 /* GlobalVar.swift in Sources */,
 				19304E001E9F62B200C0AC02 /* HeapSortIVC.swift in Sources */,
+				19EAC29D1EA4CB190060C6B8 /* UIBorderedLabel.swift in Sources */,
 				05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */,
 				192C75831E8CFCFD00EE8027 /* MergeGraph.swift in Sources */,
 				1987C6521E95EA11005795B8 /* QuickSort.swift in Sources */,

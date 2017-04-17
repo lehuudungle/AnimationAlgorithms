@@ -136,7 +136,6 @@ class AnimationBubble {
                     self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelAbove[self.currentStep.i])
                     self.moveLabel(from: self.arrayLabel[self.currentStep.j], to: self.arrayLabelBelow[self.currentStep.j])
                     
-                    print("we compare \(self.currentStep.i)")
                 }){_ in
                     UIView.animate(withDuration: 0.5, animations: {
                         self.moveLabel(from: self.arrayLabel[self.currentStep.i], to: self.arrayLabelAbove[self.currentStep.j])

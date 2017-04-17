@@ -87,9 +87,11 @@ class ManagerBubbleSort {
             
             textStudy.text = "Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order."
             var path: String = ""
+            
             path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
+            ele = 0
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})
         }
         
@@ -116,6 +118,7 @@ class ManagerBubbleSort {
     }
     
     @objc func step(sender: UIButton) {
+        
         if(VIEW_CHOSEN=="study"){
             if(ele==arrayKeys.count){
                 textStudy.text = ""

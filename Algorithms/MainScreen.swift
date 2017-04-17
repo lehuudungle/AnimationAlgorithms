@@ -76,7 +76,7 @@ class MainScreen: UITableViewController {
         
         let item: Menu = menuItems[indexPath.row]
         INPUT_XIB_CLASS = item.inputClass
-        
+        PDF_TITLE = item.infoTitle
         let xibClass = item.viewClass
         
         let detailScreen: UIViewController!
@@ -100,6 +100,7 @@ class MainScreen: UITableViewController {
             
             detailScreen.title = item.title
             DETAIL = detailScreen
+            
             
             let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))

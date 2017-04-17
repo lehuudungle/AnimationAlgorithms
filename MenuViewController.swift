@@ -105,7 +105,40 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             VIEW_CHOSEN = "input"
 
         }else{
+            var yes: Bool = true
+            let pdfTitle = PDF_TITLE
+            
+            let url = Bundle.main.url(forResource: pdfTitle, withExtension: "pdf")
+            
+            let webView = UIWebView(frame: self.view.frame)
+            let urlRequest = URLRequest(url: url!)
+            
+            webView.loadRequest(urlRequest as URLRequest)
+            webView.scalesPageToFit = yes
+            
+            let pdfVC = UIViewController()
+            let PDF_INFO = pdfVC
+            pdfVC.view.addSubview(webView)
+            pdfVC.title = pdfTitle
+
+
+            let newFontController = UINavigationController.init(rootViewController: pdfVC)
+            
+            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+            
+            
+            PDF_INFO.title = DETAIL.title
+            revealviewcontroller.pushFrontViewController(newFontController, animated: true)
+            var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            PDF_INFO.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))
+            
+            img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            PDF_INFO.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
+            VIEW_CHOSEN = "Info"
+
             print("khong lam gi")
+         
+
         }
 
     }

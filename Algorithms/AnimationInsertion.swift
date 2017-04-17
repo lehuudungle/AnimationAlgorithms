@@ -136,13 +136,13 @@ class AnimationInsertion {
             if (self.currentStep.act == "end"){
                 self.arrayLabel[self.currentStep.j].backgroundColor = DEFAULT_COLOR
                 self.arrayLabel[self.currentStep.key].backgroundColor = DEFAULT_COLOR
-        
+                
             }
             self.continueAnimationStep()
-
+            
         }
     }
-
+    
     
     func continueAnimation(){
         self.colSolution += 1
@@ -171,7 +171,7 @@ class AnimationInsertion {
         }
         self.currentStep = self.arrayAction[self.colSolution]
     }
-
+    
     
     func loop(){
         currentStep = self.arrayAction[self.colSolution]

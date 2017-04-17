@@ -83,12 +83,12 @@ class ManagerInsertionSort {
             textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
             textStudy.text = "    Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. "
-        var path: String = ""
-        path = Bundle.main.path(forResource:"InsertionSort", ofType: "plist")!
-        dictData = NSDictionary(contentsOfFile: path)!
-        arrayKeys = dictData.allKeys as! [String]
-        ele = 0
-        arrayKeys = arrayKeys.sorted()
+            var path: String = ""
+            path = Bundle.main.path(forResource:"InsertionSort", ofType: "plist")!
+            dictData = NSDictionary(contentsOfFile: path)!
+            arrayKeys = dictData.allKeys as! [String]
+            ele = 0
+            arrayKeys = arrayKeys.sorted()
         }
         
     }

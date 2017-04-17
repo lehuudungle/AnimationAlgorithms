@@ -9,25 +9,25 @@
 import UIKit
 
 class BubbleSortSVC: StudyVC {
-
+    
     var managerSort: ManagerBubbleSort!
     
-    override func viewDidLoad() { 
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         
         self.managerSort = ManagerBubbleSort()
-
-
+        
+        
         self.managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
-
+        
         btnRun.addTarget(self.managerSort, action: #selector(managerSort.run(sender:)), for: .touchUpInside)
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
-
+        
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
-    
-                
+        
+        
     }
     
     func reset(sender:UIButton){
@@ -39,13 +39,13 @@ class BubbleSortSVC: StudyVC {
         btnRun.setNeedsDisplay()
         btnStep.setNeedsDisplay()
         managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
-
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 

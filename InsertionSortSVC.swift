@@ -9,7 +9,7 @@
 import UIKit
 
 class InsertionSortSVC: StudyVC {
-
+    
     var managerSort: ManagerInsertionSort!
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class InsertionSortSVC: StudyVC {
         
     }
     
-       func reset(sender:UIButton){
+    func reset(sender:UIButton){
         self.managerSort.graph.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
@@ -42,5 +42,5 @@ class InsertionSortSVC: StudyVC {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

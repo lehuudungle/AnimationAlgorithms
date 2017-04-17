@@ -28,7 +28,7 @@ class MenuList: NSObject {
     static var rootWindow: UIWindow!
     static var main: MainScreen!
     class func boot(window:UIWindow){
-
+        
         let basic = MenuSection(section: "Sort", menus:[
             Menu(title: "Bubble Sort", viewClass: "BubbleSortSVC",inputClass: BubbleSortIVC(), infoTitle: "BubbleSortDocument" ),
             Menu(title: "Selection Sort", viewClass: "SelectionSortSVC",inputClass: SelectionSortIVC(), infoTitle: "SelectionSortDocument" ),
@@ -36,35 +36,35 @@ class MenuList: NSObject {
             Menu(title: "Merge Sort", viewClass: "MergeSortSVC",inputClass: MergeSortIVC(), infoTitle: "MergeSortDocument" ),
             Menu(title: "Quick Sort", viewClass: "QuickSortSVC",inputClass: QuickSortIVC(), infoTitle: "QuickSortDocument" ),
             Menu(title: "Heap Sort", viewClass: "HeapSortSVC",inputClass: HeapSortIVC(), infoTitle: "BubbleSortDocument" )
-
+            
             ])
-
-//        let inter = MenuSection(section: "inter", menus:[
-//            Menu(title: "Rock", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
-//            Menu(title: "Home", viewClass: "ClassVC",inputClass: SelectionSortIVC())
-//            ])
+        
+        //        let inter = MenuSection(section: "inter", menus:[
+        //            Menu(title: "Rock", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
+        //            Menu(title: "Home", viewClass: "ClassVC",inputClass: SelectionSortIVC())
+        //            ])
         
         let advance = MenuSection(section: "Other", menus:[
             Menu(title: "About", viewClass: "ClassVC",inputClass: SelectionSortIVC(), infoTitle: "A" ),
             Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC(), infoTitle: "A" )
             ])
-
+        
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)
         mainScreen.menu = [basic,advance]
         mainScreen.title = "Algorithms"
-//        mainScreen.about = "KLTD Team"
-
+        //        mainScreen.about = "KLTD Team"
+        
         let nav = UINavigationController(rootViewController: mainScreen)
         
-
+        
         window.rootViewController = nav
         rootWindow = window
         main = mainScreen
-
+        
     }
     class func nextView(){
         rootWindow.rootViewController = UINavigationController(rootViewController: main)
-
-
+        
+        
     }
 }

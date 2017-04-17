@@ -13,7 +13,7 @@ import UIKit
 //Used by BubbleSort, SelectionSort, InsertionSort
 
 class Graph: UIView {
-      
+    
     let widthRatio = 2
     var arrayLabel: [SortingLabel]!
     var arrayLabelAbove: [SortingLabel]!
@@ -39,28 +39,28 @@ class Graph: UIView {
         let spacing = frame.width/CGFloat(self.widthRatio * arrayDisplay.count + arrayDisplay.count + 1)
         let rectSize = CGFloat(widthRatio) * spacing
         var x = spacing
-    
+        
         for index in 0..<arrayDisplay.count {
             
             let sortingLabel = SortingLabel(frame: CGRect(x: x, y:  0 + rectSize + spacing,
-                                                   width: rectSize, height: rectSize),
-                                     color: colors[index],
-                                     value: String(arrayDisplay[index]))
-
-            let labelMiddle = SortingLabel(frame: CGRect(x: x, y: 0 + rectSize + spacing,
                                                           width: rectSize, height: rectSize),
-                                            color: DEFAULT_COLOR,
-                                            value: "0")
+                                            color: colors[index],
+                                            value: String(arrayDisplay[index]))
+            
+            let labelMiddle = SortingLabel(frame: CGRect(x: x, y: 0 + rectSize + spacing,
+                                                         width: rectSize, height: rectSize),
+                                           color: DEFAULT_COLOR,
+                                           value: "0")
             labelMiddle.isHidden = true
             let labelAbove = SortingLabel(frame: CGRect(x: x, y: 0,
-                                                          width: rectSize, height: rectSize),
+                                                        width: rectSize, height: rectSize),
                                           color: DEFAULT_COLOR,
                                           value: "0")
             labelAbove.isHidden = true
             let labelBelow = SortingLabel(frame: CGRect(x: x, y: 0 + 2*rectSize + 2*spacing,
-                                                          width: rectSize, height: rectSize),
-                                            color: colors[index],
-                                            value: String(arrayDisplay[index]))
+                                                        width: rectSize, height: rectSize),
+                                          color: colors[index],
+                                          value: String(arrayDisplay[index]))
             labelBelow.isHidden = true
             
             self.arrayLabel.append(sortingLabel)

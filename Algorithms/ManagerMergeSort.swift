@@ -58,17 +58,17 @@ class ManagerMergeSort {
         }
         
         graph = MergeGraph(frame: CGRect(x: 0,
-                                    y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
-                                    width: viewcontroller.view.bounds.size.width,
-                                    height: viewcontroller.view.bounds.size.height/2),
-                      arrayDisplay: self.arrayDisplay,
-                      colors: self.arrayColor)
+                                         y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
+                                         width: viewcontroller.view.bounds.size.width,
+                                         height: viewcontroller.view.bounds.size.height/2),
+                           arrayDisplay: self.arrayDisplay,
+                           colors: self.arrayColor)
         
         
         
         viewcontroller.view.addSubview(graph)
-                
-
+        
+        
         self.arrayLabel = self.graph.arrayLabel
         self.arrayLabelOne = self.graph.arrayLabelOne
         self.arrayLabelTwo = self.graph.arrayLabelTwo
@@ -97,6 +97,6 @@ class ManagerMergeSort {
         btnRunTmp.isUserInteractionEnabled = false
         
         animationStep.next()
-
+        
     }
 }

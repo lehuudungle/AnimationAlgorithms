@@ -75,8 +75,8 @@ class AnimationSelection {
                 }
                 self.currentStep = self.arrayAction[self.colSolution]
                 btnStepTmp.isUserInteractionEnabled = true
-
-            
+                
+                
             }else
                 if(self.currentStep.act=="compare"){
                     self.arrayLabel[self.currentStep.j].alpha = 1
@@ -93,7 +93,7 @@ class AnimationSelection {
                     }
                     self.currentStep = self.arrayAction[self.colSolution]
                     btnStepTmp.isUserInteractionEnabled = true
-
+                    
                 }else
                     if(self.currentStep.act=="swap"){
                         UIView.animate(withDuration: 0.5, animations: {
@@ -120,7 +120,7 @@ class AnimationSelection {
                                 }
                                 self.currentStep = self.arrayAction[self.colSolution]
                                 btnStepTmp.isUserInteractionEnabled = true
-
+                                
                             }
                         }
                     }else{
@@ -140,7 +140,7 @@ class AnimationSelection {
                         }
                         self.currentStep = self.arrayAction[self.colSolution]
                         btnStepTmp.isUserInteractionEnabled = true
-
+                        
             }
         }
     }

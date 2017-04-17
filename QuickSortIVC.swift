@@ -35,7 +35,7 @@ class QuickSortIVC: InputVC{
         
         btnAdd.addTarget(self, action:  #selector(add(sender:)), for: .touchUpInside)
         btnStepCheck.addTarget(self, action: #selector(step(sender:)), for: .touchUpInside)
-
+        
         
     }
     

@@ -38,7 +38,7 @@ class MergeSortIVC: InputVC{
         btnAdd.addTarget(self, action:  #selector(add(sender:)), for: .touchUpInside)
         
     }
-
+    
     
     func reset(sender:UIButton){
         

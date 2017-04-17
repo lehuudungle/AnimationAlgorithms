@@ -35,7 +35,7 @@ class HeapGraph: UIView {
     var rectSize: CGFloat!
     
     var yFloor: CGFloat!
-
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError(".....")
@@ -61,7 +61,7 @@ class HeapGraph: UIView {
         
         self.drawGraph(arrayDisplay: arrayDisplay, colors: colors)
         self.drawFrame()
-
+        
         self.arrayPosition.append(self.arrayLabelOne[3])
         self.arrayPosition.append(self.arrayLabelTwo[1])
         self.arrayPosition.append(self.arrayLabelTwo[5])
@@ -73,9 +73,9 @@ class HeapGraph: UIView {
     }
     
     private func drawFrame(){
-     
+        
         var xFrame = spacingFrame
-
+        
         for _ in 0..<7{
             
             FloorOne = SortingLabel(frame: CGRect(x: xFrame!, y: rectSize*2 + spacing,
@@ -109,8 +109,8 @@ class HeapGraph: UIView {
             xFrame = xFrame! + spacingFrame + rectSizeFrame
             
         }
-
-
+        
+        
     }
     
     private func drawGraph(arrayDisplay: [Int], colors: [UIColor]) {
@@ -121,14 +121,14 @@ class HeapGraph: UIView {
         for index in 0..<arrayDisplay.count {
             
             sortingLabel = SortingLabel(frame: CGRect(x: x!, y: rectSize,
-                                                          width: rectSize, height: rectSize),
-                                            color: colors[index],
-                                            value: String(arrayDisplay[index]))
+                                                      width: rectSize, height: rectSize),
+                                        color: colors[index],
+                                        value: String(arrayDisplay[index]))
             
             FloorBehind = SortingLabel(frame: CGRect(x: x!, y: rectSize,
-                                                      width: rectSize, height: rectSize),
-                                        color: DEFAULT_COLOR,
-                                        value: "0")
+                                                     width: rectSize, height: rectSize),
+                                       color: DEFAULT_COLOR,
+                                       value: "0")
             
             FloorBehind.isHidden = true
             
@@ -139,7 +139,7 @@ class HeapGraph: UIView {
             self.addSubview(FloorBehind)
             
             x = x! + spacing + rectSize
-
+            
         }
         
     }
@@ -173,7 +173,7 @@ class HeapGraph: UIView {
         self.arrayLine.removeLast()
         
     }
-
+    
     
     
 }

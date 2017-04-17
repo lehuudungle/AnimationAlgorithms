@@ -14,7 +14,6 @@
 		0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */; };
 		051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051085461EA1F8F0007CDEC6 /* BubbleSort.plist */; };
 		0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572FF491EA123AB00B36562 /* TextStudy.swift */; };
-		058904BD1E9E85450083F53C /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058904BC1E9E85450083F53C /* StartVC.swift */; };
 		059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 059876251E99EEB800DEDA21 /* FontAwesome.otf */; };
 		059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876261E99EEB800DEDA21 /* FontAwesome.swift */; };
 		0598762A1E99F03F00DEDA21 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876291E99F03F00DEDA21 /* CustomButton.swift */; };
@@ -65,6 +64,7 @@
 		198AEC271EA4A94A006DE4D4 /* InsertionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */; };
 		19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */; };
 		19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D41EF51EA087B000C8CE4D /* ShareVC.swift */; };
+		19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EAC29A1EA4BF130060C6B8 /* PDFViewController.swift */; };
 		19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */; };
 		19FE70B61EA46A6700B24317 /* BubbleSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19FE70B51EA46A6700B24317 /* BubbleSortDocument.pdf */; };
 		19FE70B81EA46A7200B24317 /* InsertionSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19FE70B71EA46A7200B24317 /* InsertionSortDocument.pdf */; };
@@ -87,7 +87,6 @@
 		0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		051085461EA1F8F0007CDEC6 /* BubbleSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleSort.plist; sourceTree = "<group>"; };
 		0572FF491EA123AB00B36562 /* TextStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStudy.swift; sourceTree = "<group>"; };
-		058904BC1E9E85450083F53C /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
 		059876241E99EEB800DEDA21 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
 		059876251E99EEB800DEDA21 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		059876261E99EEB800DEDA21 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
@@ -141,6 +140,7 @@
 		198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InsertionSort.plist; sourceTree = "<group>"; };
 		19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMerge.swift; sourceTree = "<group>"; };
 		19D41EF51EA087B000C8CE4D /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
+		19EAC29A1EA4BF130060C6B8 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SelectionSort.plist; sourceTree = "<group>"; };
 		19FE70B51EA46A6700B24317 /* BubbleSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BubbleSortDocument.pdf; sourceTree = "<group>"; };
 		19FE70B71EA46A7200B24317 /* InsertionSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = InsertionSortDocument.pdf; sourceTree = "<group>"; };
@@ -265,6 +265,7 @@
 		1987C6671E964F82005795B8 /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				19EAC29A1EA4BF130060C6B8 /* PDFViewController.swift */,
 				19FE70B51EA46A6700B24317 /* BubbleSortDocument.pdf */,
 				19FE70B71EA46A7200B24317 /* InsertionSortDocument.pdf */,
 				19FE70B91EA46A7700B24317 /* MergeSortDocument.pdf */,
@@ -300,7 +301,6 @@
 				1987C64F1E95E6A3005795B8 /* AppDelegate.swift */,
 				0507FA481E9C987200E00354 /* MenuViewController.swift */,
 				0507FA491E9C987200E00354 /* MenuViewController.xib */,
-				058904BC1E9E85450083F53C /* StartVC.swift */,
 				198A34941E822A13009E2B96 /* GlobalVar.swift */,
 				0572FF481EA1227300B36562 /* TextStudty */,
 				C71441611E8ABE4E008472E6 /* ViewControllers */,
@@ -514,6 +514,7 @@
 				1962B22F1E84FE5E00012936 /* SelectionSort.swift in Sources */,
 				193E45A71E8A5CDA00A6395C /* ManagerSelectionSort.swift in Sources */,
 				198A34931E8176AC009E2B96 /* Graph.swift in Sources */,
+				19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */,
 				1987C65E1E963205005795B8 /* HeapSort.swift in Sources */,
 				19304DFE1E9F624600C0AC02 /* QuickSortIVC.swift in Sources */,
 				19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */,
@@ -532,7 +533,6 @@
 				05A2AC551E9F2DF2005C9310 /* SelectionSortIVC.swift in Sources */,
 				19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */,
 				198A348F1E810906009E2B96 /* AnimationBubble.swift in Sources */,
-				058904BD1E9E85450083F53C /* StartVC.swift in Sources */,
 				05A2AC571E9F2DF2005C9310 /* MergeSortIVC.swift in Sources */,
 				198A34951E822A13009E2B96 /* GlobalVar.swift in Sources */,
 				19304E001E9F62B200C0AC02 /* HeapSortIVC.swift in Sources */,

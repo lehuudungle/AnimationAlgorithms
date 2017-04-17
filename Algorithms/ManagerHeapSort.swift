@@ -30,7 +30,7 @@ class ManagerHeapSort {
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele: Int!
-
+    
     
     func initSortWith(viewcontroller: UIViewController, arrayInput: [Int]) {
         
@@ -86,7 +86,7 @@ class ManagerHeapSort {
             ele = 0
             arrayKeys = arrayKeys.sorted()
         }
-
+        
     }
     
     func getArrayAction(array: [Int]) -> [HeapStep] {
@@ -99,7 +99,7 @@ class ManagerHeapSort {
     @objc func run(sender: UIButton) {
         
         animate = AnimationHeap(arrayLabel: self.arrayLabel,  arrayLabelBehind: self.arrayLabelBehind, arrayPosition: self.arrayPosition, arrayAction: self.arrayAction, graphHeap: graph)
-       
+        
         btnRunTmp.isUserInteractionEnabled = false
         btnStepTmp.isUserInteractionEnabled = false
         

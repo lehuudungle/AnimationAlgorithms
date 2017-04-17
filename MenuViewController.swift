@@ -85,6 +85,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             _ = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            VIEW_CHOSEN = "study"
 
 
 
@@ -101,6 +102,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
             img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
+            VIEW_CHOSEN = "input"
 
         }else{
             print("khong lam gi")

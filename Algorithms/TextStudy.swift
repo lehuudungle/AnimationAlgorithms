@@ -12,19 +12,14 @@ class TextStudy: UILabel {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.textAlignment = .center
-        self.layer.borderColor = BUTTON_COLOR.cgColor
-        self.layer.cornerRadius = 10
-        self.layer.masksToBounds = true
-        self.numberOfLines = 5
-
         
+        self.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.5)
         self.textAlignment = .center
-        self.layer.borderWidth = 2
         self.layer.borderColor = BUTTON_COLOR.cgColor
         self.layer.cornerRadius = 10
+        self.numberOfLines = 6
+        self.layer.borderWidth = 2
         self.layer.masksToBounds = true
-        self.numberOfLines = 5
         
     }
     

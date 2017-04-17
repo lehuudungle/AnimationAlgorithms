@@ -46,12 +46,10 @@ class SelectionSortIVC: InputVC{
         
         MORE_THAN_ONE_ELE = false
         
-        //        btnRun.setTitle("\u{f144}", for: .normal)
-        
         btnRun.isUserInteractionEnabled = true
         btnStepCheck.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
-
+        
         
         self.arrayInput = []
         arrayView.text = ""
@@ -77,7 +75,7 @@ class SelectionSortIVC: InputVC{
             btnAdd.isHidden = true
             textField.isHidden = true
             arrayView.isHidden = true
-
+            
             btnRun.isUserInteractionEnabled = false
             btnStep.isUserInteractionEnabled = false
             btnStepCheck.isUserInteractionEnabled = false
@@ -125,7 +123,6 @@ class SelectionSortIVC: InputVC{
         if MORE_THAN_ONE_ELE == true {
             if HAVE_GRAPH == false{
                 self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
-                self.managerSort.textStudy.isHidden = true
                 btnStepCheck.isHidden = true
                 btnStep.isHidden = false
                 HAVE_GRAPH = true

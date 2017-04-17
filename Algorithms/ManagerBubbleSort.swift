@@ -85,7 +85,7 @@ class ManagerBubbleSort {
             
             viewcontroller.view.addSubview(textStudy)
 
-            textStudy.text = "Sắp xếp nổi bọt (tiếng Anh: bubble sort) là một thuật toán sắp xếp đơn giản, với thao tác cơ bản là so sánh hai phần tử kề nhau, nếu chúng chưa đứng đúng thứ tự thì đổi chỗ (swap)."
+            textStudy.text = "Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order."
             var path: String = ""
             path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

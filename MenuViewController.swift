@@ -35,13 +35,14 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         cellData(nameText: "Enter_Number",image:#imageLiteral(resourceName: "pencils_32")),
                         cellData(nameText: "Info",image:#imageLiteral(resourceName: "info_32"))
         ]
-        let nib = UINib(nibName: "MenuCell", bundle: nil)
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor.green.cgColor
         imgProfile.layer.cornerRadius = 50
 
         imgProfile.layer.masksToBounds = false
         imgProfile.clipsToBounds = true
+        
+        let nib = UINib(nibName: "MenuCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "MenuCell")
         viewMenu.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 0.8)
 
@@ -109,8 +110,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let pdfTitle = PDF_TITLE
             
             let url = Bundle.main.url(forResource: pdfTitle, withExtension: "pdf")
+            print("width: \(self.view.frame)")
             
-            let webView = UIWebView(frame: self.view.frame)
+            let webView = UIWebView(frame: DETAIL.view.frame)
             let urlRequest = URLRequest(url: url!)
             
             webView.loadRequest(urlRequest as URLRequest)

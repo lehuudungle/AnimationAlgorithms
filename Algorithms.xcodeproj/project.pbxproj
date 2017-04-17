@@ -176,10 +176,10 @@
 		0572FF4B1EA1278300B36562 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				198AEC241EA4A93F006DE4D4 /* HeapSort.plist */,
 				051085461EA1F8F0007CDEC6 /* BubbleSort.plist */,
-				198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */,
 				19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */,
+				198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */,
+				198AEC241EA4A93F006DE4D4 /* HeapSort.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";

@@ -105,7 +105,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             VIEW_CHOSEN = "input"
 
         }else{
-            var yes: Bool = true
+            let yes: Bool = true
             let pdfTitle = PDF_TITLE
             
             let url = Bundle.main.url(forResource: pdfTitle, withExtension: "pdf")

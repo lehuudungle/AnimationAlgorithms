@@ -28,6 +28,12 @@ class ManagerQuickSort{
     var sort: QuickSort!
     var quickGraph: QuickGraph!
     
+    var textStudy: TextStudy!
+    var dictData = NSDictionary()
+    var arrayKeys = [String]()
+    var ele: Int!
+
+    
     
     func initSortWith(viewcontroller: UIViewController, arrayInput: [Int]) {
         
@@ -35,10 +41,6 @@ class ManagerQuickSort{
         
         self.arrayInput = arrayInput
         self.arrayAction = getArrayAction(array: arrayInput)
-        var  ele = 0
-        for _ in self.arrayAction{
-            ele  = ele + 1
-        }
         
         
         self.arrayDisplay = []
@@ -69,9 +71,30 @@ class ManagerQuickSort{
         self.arrayLabelAbove = self.quickGraph.arrayLabelAbove
         
         animationStep = AnimationQuick(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelMark: self.arrayLabelMark, arrayAction: self.arrayAction, graph: self.quickGraph)
+        if(VIEW_CHOSEN=="study"){
+            ele = 0
+            for a in arrayAction{
+                print("\(ele)__\(a)")
+                ele = ele + 1
+            }
+            textStudy = TextStudy(frame: CGRect(x: quickGraph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                y: quickGraph.frame.origin.y+quickGraph.frame.height,
+                                                width: quickGraph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                height: yMax-(quickGraph.frame.origin.y+quickGraph.frame.height)))
+            textStudy.backgroundColor = UIColor.yellow
+            viewcontroller.view.addSubview(textStudy)
         
+            textStudy.text = " Heapsort divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region."
+            var path: String = ""
+            path = Bundle.main.path(forResource:"HeapSort", ofType: "plist")!
+            dictData = NSDictionary(contentsOfFile: path)!
+            arrayKeys = dictData.allKeys as! [String]
+            ele = 0
+            arrayKeys = arrayKeys.sorted()
+        }
         
     }
+
     
     func getArrayAction(array: [Int]) -> [QuickStep] {
         
@@ -85,15 +108,50 @@ class ManagerQuickSort{
     @objc func run(sender: UIButton) {
                 
         animate = AnimationQuick(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelMark: self.arrayLabelMark, arrayAction: self.arrayAction, graph: self.quickGraph)
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+        
         animate.loop()
+
         
     }
     
     @objc func step(sender: UIButton) {
         
-        btnStepTmp.isUserInteractionEnabled = false
-        btnRunTmp.isUserInteractionEnabled = false
-        animationStep.next()
+        if(VIEW_CHOSEN=="study"){
+            if(ele==arrayKeys.count){
+                textStudy.text = ""
+                return
+            }
+            btnRunTmp.isUserInteractionEnabled = false
+            btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
+            btnRunTmp.setNeedsDisplay()
+            
+            if(arrayKeys[ele].isNumber){
+                btnStepTmp.isUserInteractionEnabled = false
+                let data = dictData[arrayKeys[ele]]
+                textStudy.text = data as! String?
+                animationStep.next()
+            }else if(arrayKeys[ele]=="end"){
+                textStudy.text = "The list is fully sorted"
+                btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
+                btnStepTmp.setNeedsDisplay()
+                btnStepTmp.isUserInteractionEnabled = false
+                
+            }else{
+                let data = dictData[arrayKeys[ele]]
+                textStudy.text = data as! String?
+                
+                btnStepTmp.isUserInteractionEnabled = true
+                
+            }
+            ele = ele + 1
+            
+        }else{
+            btnStepTmp.isUserInteractionEnabled = false
+            btnRunTmp.isUserInteractionEnabled = false
+            animationStep.next()
+        }
     }
 
 }

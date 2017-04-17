@@ -13,6 +13,8 @@ struct Menu {
     var title: String
     var viewClass: String
     var inputClass: UIViewController
+    var infoTitle: String
+    
 };
 
 struct MenuSection {
@@ -28,12 +30,12 @@ class MenuList: NSObject {
     class func boot(window:UIWindow){
 
         let basic = MenuSection(section: "Sort", menus:[
-            Menu(title: "Bubble Sort", viewClass: "BubbleSortSVC",inputClass: BubbleSortIVC() ),
-            Menu(title: "Selection Sort", viewClass: "SelectionSortSVC",inputClass: SelectionSortIVC() ),
-            Menu(title: "Insertion Sort", viewClass: "InsertionSortSVC",inputClass: InsertionSortIVC() ),
-            Menu(title: "Merge Sort", viewClass: "MergeSortSVC",inputClass: MergeSortIVC() ),
-            Menu(title: "Quick Sort", viewClass: "QuickSortSVC",inputClass: QuickSortIVC() ),
-            Menu(title: "Heap Sort", viewClass: "HeapSortSVC",inputClass: HeapSortIVC() )
+            Menu(title: "Bubble Sort", viewClass: "BubbleSortSVC",inputClass: BubbleSortIVC(), infoTitle: "BubbleSortDocument" ),
+            Menu(title: "Selection Sort", viewClass: "SelectionSortSVC",inputClass: SelectionSortIVC(), infoTitle: "SelectionSortDocument" ),
+            Menu(title: "Insertion Sort", viewClass: "InsertionSortSVC",inputClass: InsertionSortIVC(), infoTitle: "InsertionSortDocument" ),
+            Menu(title: "Merge Sort", viewClass: "MergeSortSVC",inputClass: MergeSortIVC(), infoTitle: "MergeSortDocument" ),
+            Menu(title: "Quick Sort", viewClass: "QuickSortSVC",inputClass: QuickSortIVC(), infoTitle: "QuickSortDocument" ),
+            Menu(title: "Heap Sort", viewClass: "HeapSortSVC",inputClass: HeapSortIVC(), infoTitle: "BubbleSortDocument" )
 
             ])
 
@@ -43,8 +45,8 @@ class MenuList: NSObject {
 //            ])
         
         let advance = MenuSection(section: "Other", menus:[
-            Menu(title: "About", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
-            Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC())
+            Menu(title: "About", viewClass: "ClassVC",inputClass: SelectionSortIVC(), infoTitle: "A" ),
+            Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC(), infoTitle: "A" )
             ])
 
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)

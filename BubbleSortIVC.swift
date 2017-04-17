@@ -49,7 +49,7 @@ class BubbleSortIVC: InputVC{
         }
         
         MORE_THAN_ONE_ELE = false
-                
+        
         btnRun.isUserInteractionEnabled = true
         btnStepCheck.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
@@ -59,7 +59,7 @@ class BubbleSortIVC: InputVC{
         btnAdd.isHidden = false
         textField.isHidden = false
         arrayView.isHidden = false
-
+        
         btnStep.isHidden = true
         btnStepCheck.isHidden = false
     }
@@ -79,7 +79,7 @@ class BubbleSortIVC: InputVC{
             btnRun.isUserInteractionEnabled = false
             btnStep.isUserInteractionEnabled = false
             btnStepCheck.isUserInteractionEnabled = false
-
+            
         }else {
             addAlert(message: "Please add more number")
         }
@@ -104,7 +104,7 @@ class BubbleSortIVC: InputVC{
                     btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
                     arrayView.text = arrayView.text! + ", " + textField.text!
                     arrayInput.append(Int(textField.text!)!)
-
+                    
                 }
             }else{
                 
@@ -122,10 +122,10 @@ class BubbleSortIVC: InputVC{
         
         if MORE_THAN_ONE_ELE == true {
             if HAVE_GRAPH == false{
-            self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
-               btnStepCheck.isHidden = true
+                self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
+                btnStepCheck.isHidden = true
                 btnStep.isHidden = false
-            HAVE_GRAPH = true
+                HAVE_GRAPH = true
             }
             
             
@@ -135,7 +135,7 @@ class BubbleSortIVC: InputVC{
             btnRun.isUserInteractionEnabled = false
             
         }
-    else {
+        else {
             addAlert(message: "Please add more number")
         }
     }
@@ -144,5 +144,5 @@ class BubbleSortIVC: InputVC{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

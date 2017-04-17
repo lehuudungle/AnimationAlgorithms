@@ -31,6 +31,7 @@ class ManagerBubbleSort {
 
     var graph: Graph!
     var sort: BubbleSort!
+
     var textStudy: TextStudy!
     var dictData = NSDictionary()
     var arrayKeys = [String]()

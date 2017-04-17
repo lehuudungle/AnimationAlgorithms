@@ -51,7 +51,7 @@ class MainScreen: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15.0
+        return 25
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let menuSection: MenuSection = self.menu[section]
@@ -131,13 +131,33 @@ class MainScreen: UITableViewController {
         }
         
     }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+
+        view.backgroundColor = GOLD_COLOR
+        let img = UIImage(named: "az_32")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        let imgview = UIImageView(image: img)
+        imgview.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        let label = UILabel(frame: CGRect(x: 30, y: 0, width: 40, height: 25))
+        label.text = self.menu[section].section
+        label.textColor = UIColor.gray
+        label.adjustsFontSizeToFitWidth = true
+        label.numberOfLines = 1
+        view.addSubview(imgview)
+        view.addSubview(label)
+        return view
+    }
     func backHOME(sender: UIBarButtonItem){
         
         
         dismiss(animated: true, completion: nil)
+
         
     }
     
 }
+
+
+
 
 

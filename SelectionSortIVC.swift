@@ -70,6 +70,8 @@ class SelectionSortIVC: InputVC{
             
             self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
             
+            self.managerSort.textStudy.isHidden = true
+            
             HAVE_GRAPH = true
             
             btnAdd.isHidden = true
@@ -123,6 +125,7 @@ class SelectionSortIVC: InputVC{
         if MORE_THAN_ONE_ELE == true {
             if HAVE_GRAPH == false{
                 self.managerSort.initSortWith(viewcontroller: self, arrayInput: self.arrayInput)
+                self.managerSort.textStudy.isHidden = true
                 btnStepCheck.isHidden = true
                 btnStep.isHidden = false
                 HAVE_GRAPH = true

@@ -49,9 +49,7 @@ class BubbleSortIVC: InputVC{
         }
         
         MORE_THAN_ONE_ELE = false
-        
-//        btnRun.setTitle("\u{f144}", for: .normal)
-        
+                
         btnRun.isUserInteractionEnabled = true
         btnStepCheck.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true

@@ -110,8 +110,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let pdfTitle = PDF_TITLE
             
             let url = Bundle.main.url(forResource: pdfTitle, withExtension: "pdf")
+            print("width: \(self.view.frame)")
             
-            let webView = UIWebView(frame: self.view.frame)
+            let webView = UIWebView(frame: DETAIL.view.frame)
             let urlRequest = URLRequest(url: url!)
             
             webView.loadRequest(urlRequest as URLRequest)

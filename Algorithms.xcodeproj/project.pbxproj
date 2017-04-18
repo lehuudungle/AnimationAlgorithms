@@ -13,6 +13,8 @@
 		0507FA4E1E9CC2EE00E00354 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */; };
 		0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */; };
 		051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051085461EA1F8F0007CDEC6 /* BubbleSort.plist */; };
+		052116281EA5D3B3006ED15C /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 052116261EA5D3B3006ED15C /* AboutVC.xib */; };
+		0521162A1EA5D3D0006ED15C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052116291EA5D3D0006ED15C /* AboutVC.swift */; };
 		0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572FF491EA123AB00B36562 /* TextStudy.swift */; };
 		059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 059876251E99EEB800DEDA21 /* FontAwesome.otf */; };
 		059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876261E99EEB800DEDA21 /* FontAwesome.swift */; };
@@ -94,6 +96,8 @@
 		0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		051085461EA1F8F0007CDEC6 /* BubbleSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleSort.plist; sourceTree = "<group>"; };
+		052116261EA5D3B3006ED15C /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
+		052116291EA5D3D0006ED15C /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		0572FF491EA123AB00B36562 /* TextStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStudy.swift; sourceTree = "<group>"; };
 		059876241E99EEB800DEDA21 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
 		059876251E99EEB800DEDA21 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -327,6 +331,8 @@
 		198A34781E80D9DF009E2B96 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				052116291EA5D3D0006ED15C /* AboutVC.swift */,
+				052116261EA5D3B3006ED15C /* AboutVC.xib */,
 				0507FA411E9C973100E00354 /* SWRevealViewController.h */,
 				1916EE0E1EA5C7B300FF239A /* ImageAbout */,
 				0507FA421E9C973100E00354 /* SWRevealViewController.m */,
@@ -471,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				198AEC271EA4A94A006DE4D4 /* InsertionSort.plist in Resources */,
+				052116281EA5D3B3006ED15C /* AboutVC.xib in Resources */,
 				1916EDF81EA5AF9200FF239A /* InsertionSortDocument.pdf in Resources */,
 				1916EE0D1EA5C7A900FF239A /* tung.png in Resources */,
 				1916EE0B1EA5C7A900FF239A /* dung.png in Resources */,
@@ -598,6 +605,7 @@
 				1962B2321E850BBE00012936 /* InsertionSort.swift in Sources */,
 				059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */,
 				198A34821E80D9DF009E2B96 /* Algorithms.xcdatamodeld in Sources */,
+				0521162A1EA5D3D0006ED15C /* AboutVC.swift in Sources */,
 				05A2AC541E9F2DF2005C9310 /* BubbleSortIVC.swift in Sources */,
 				198A34971E826619009E2B96 /* BubbleSort.swift in Sources */,
 				05BEA8DC1E9DC9C800B2F04C /* SelectionSortSVC.swift in Sources */,

@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AboutVC.swift">
-   </FileRef>
-   <FileRef
-      location = "group:AboutVC.xib">
-   </FileRef>
-   <FileRef
       location = "group:Algorithms.xcodeproj">
    </FileRef>
    <FileRef

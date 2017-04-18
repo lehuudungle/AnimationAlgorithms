@@ -143,7 +143,7 @@ class ManagerInsertionSort {
             btnRunTmp.isUserInteractionEnabled = false
             animateStep.next()
         }
-        
+
     }
     
 }

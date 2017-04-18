@@ -26,9 +26,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arrayCellData = [cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
-                         cellData(nameText: "Enter_Number",image:#imageLiteral(resourceName: "pencils_32")),
-                         cellData(nameText: "Info",image:#imageLiteral(resourceName: "info_32"))
+        arrayCellData = [cellData(nameText: "Study",image: #imageLiteral(resourceName: "learning")),
+                         cellData(nameText: "Customize",image: #imageLiteral(resourceName: "pencils")),
+                         cellData(nameText: "Reading",image: #imageLiteral(resourceName: "reading"))
         ]
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor.green.cgColor
@@ -99,6 +99,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             VIEW_CHOSEN = "input"
+
             
         }else{
             

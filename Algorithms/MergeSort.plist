@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>01</key>
+	<string>Split the element in the array into two child arrays</string>
+	<key>02</key>
+	<string>Continue to divide the elements in the array into sub-arrays, until the number of elements in the array is one</string>
+	<key>03</key>
+	<string>Continue to divide the elements in the array into sub-arrays, until the number of elements in the array is one</string>
+	<key>04</key>
+	<string>When the number of elements in the array is one, each element in the array is pushed upward by their value from small to large.</string>
+	<key>05</key>
+	<string>Continue to divide the elements in the array into sub-arrays, until the number of elements in the array is one</string>
+	<key>06</key>
+	<string>When the number of elements in the array is one, each element in the array is pushed upward by their value from small to large.</string>
+	<key>07</key>
+	<string>When the number of elements in the array is one, each element in the array is pushed upward by their value from small to large.</string>
+	<key>08</key>
+	<string>Continue to divide the elements in the array into sub-arrays, until the number of elements in the array is one</string>
+	<key>09</key>
+	<string>Continue to divide the elements in the array into sub-arrays, until the number of elements in the array is one</string>
+	<key>10</key>
+	<string>When the number of elements in the array is one, each element in the array is pushed upward by their value from small to large.</string>
+	<key>11</key>
+	<string>When the number of elements in the array is one, each element in the array is pushed upward by their value from small to large.</string>
+	<key>12</key>
+	<string>The list is fully sorted</string>
+	<key>end</key>
+	<string></string>
+</dict>
+</plist>

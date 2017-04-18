@@ -10,13 +10,19 @@ import UIKit
 
 class AboutVC: UIViewController {
 
-    @IBOutlet weak var LocLabel: UIBorderedLabel!
-    @IBOutlet weak var TungLabel: UIBorderedLabel!
-    @IBOutlet weak var KhanhLabel: UIBorderedLabel!
-    @IBOutlet weak var DungLabel: UIBorderedLabel!
+    
+    @IBOutlet weak var locTxtView: UITextView!
+    
+    @IBOutlet weak var tungTxtView: UITextView!
+    
+    @IBOutlet weak var khanhTxtView: UITextView!
+    
+    @IBOutlet weak var dungTxtView: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 1)
         addLabel()
         // Do any additional setup after loading the view.
     }
@@ -27,28 +33,23 @@ class AboutVC: UIViewController {
     }
     
     func addLabel(){
-        LocLabel.numberOfLines = 6
-        TungLabel.numberOfLines = 6
-        KhanhLabel.numberOfLines = 6
-        DungLabel.numberOfLines = 6
         
-        LocLabel.text = "Loc Tran \n https://www.linkedin.com/in/loc-tran-cs/"
-        TungLabel.text = "Thanh Tung Nguyen \n https://www.linkedin.com/in/nguyen-thanh-tung-0b1664124/"
-        KhanhLabel.text = "Khanh Nguyen \n nguyenphuckhanh91@gmail.com"
-        DungLabel.text = "Huu Dung \n huudung95d@gmail.com"
+        locTxtView.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.3)
         
+        tungTxtView.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.3)
+        
+        dungTxtView.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.3)
+        
+        khanhTxtView.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.3)
+        
+        
+        locTxtView.text = "Loc Tran \nhttps://www.linkedin.com/in/loc-tran-cs/"
+        
+        tungTxtView.text = "Tung Nguyen \nhttps://www.linkedin.com/in/nguyen-thanh-tung-0b1664124/"
+        
+        khanhTxtView.text = "Khanh Nguyen \nnguyenphuckhanh91@gmail.com"
+        
+        dungTxtView.text = "Dung Le \nhuudung95d@gmail.com"
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

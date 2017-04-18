@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum TypeSection: String{
+    case Sort="Sort",Other = "Other"
+}
+
 class MainScreen: UITableViewController {
     //    var about: String!
     
@@ -100,10 +104,20 @@ class MainScreen: UITableViewController {
             
             detailScreen.title = item.title
             DETAIL = detailScreen
-            
-            
-            let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-            detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
+
+            let typeSection = menuSection.section
+
+            switch typeSection {
+            case TypeSection.Other.rawValue: break
+
+            case TypeSection.Sort.rawValue:
+                let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+                detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
+
+            default:
+                break
+            }
+
             let img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             

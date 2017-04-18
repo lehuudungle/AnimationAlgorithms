@@ -99,6 +99,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             VIEW_CHOSEN = "input"
+
             
         }else{
             

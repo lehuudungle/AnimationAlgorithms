@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>01</key>
+	<string>Quickly divide it into two lists by comparing each element of the list with a selected element called a key element</string>
+	<key>02</key>
+	<string>Elements smaller than or equal to the latch element are moved forward and in the first child list</string>
+	<key>03</key>
+	<string>Elements smaller than or equal to the latch element are moved forward and in the first child list</string>
+	<key>04</key>
+	<string>Elements smaller than or equal to the latch element are moved forward and in the first child list</string>
+	<key>05</key>
+	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<key>06</key>
+	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<key>07</key>
+	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<key>08</key>
+	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<key>09</key>
+	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<key>10</key>
+	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<key>11</key>
+	<string>Continue to get the pivot position and split the array in both the front and back of the pivot position</string>
+	<key>12</key>
+	<string>Continue to get the pivot position and split the array in both the front and back of the pivot position</string>
+	<key>13</key>
+	<string>Continue to get the pivot position and split the array in both the front and back of the pivot position</string>
+	<key>14</key>
+	<string>Elements smaller than or equal to the latch element are moved forward and in the first child list</string>
+	<key>15</key>
+	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<key>16</key>
+	<string>Elements smaller than or equal to the latch element are moved forward and in the first child list</string>
+	<key>17</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>18</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>19</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>20</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>21</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>22</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>23</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>24</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>25</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>26</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>27</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>28</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>29</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>30</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>31</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>32</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>33</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>34</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>35</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>36</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>37</key>
+	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<key>end</key>
+	<string></string>
+</dict>
+</plist>

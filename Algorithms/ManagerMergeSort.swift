@@ -30,7 +30,10 @@ class ManagerMergeSort {
     
     var ptu:Int!
     
-    var btnStart: UIButton!
+    var textStudy: TextStudy!
+    var dictData = NSDictionary()
+    var arrayKeys = [String]()
+    var ele: Int!
     
     
     func initSortWith(viewcontroller: UIViewController, arrayInput: [Int]) {
@@ -77,6 +80,29 @@ class ManagerMergeSort {
         
         animationStep = AnimationMerge(arrayLabel: self.arrayLabel, arrayLabelOne: self.arrayLabelOne, arrayLabelTwo: self.arrayLabelTwo, arrayLabelThree: self.arrayLabelThree, arrayLabelFour: self.arrayLabelFour, arrayAction: self.arrayAction, graphMerge: graph)
         
+        if(VIEW_CHOSEN=="study"){
+            ele = 0
+            for a in arrayAction{
+                print("\(ele)__\(a)")
+                ele = ele + 1
+            }
+            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                y: graph.frame.origin.y+graph.frame.height,
+                                                width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            textStudy.backgroundColor = UIColor.yellow
+            viewcontroller.view.addSubview(textStudy)
+            
+            textStudy.text = " Merge Sort is an arrangement algorithm for sorting lists (or any data structure that can be accessed sequentially, eg. the file stream) in a certain order."
+            var path: String = ""
+            path = Bundle.main.path(forResource:"MergeSort", ofType: "plist")!
+            dictData = NSDictionary(contentsOfFile: path)!
+            arrayKeys = dictData.allKeys as! [String]
+            ele = 0
+            arrayKeys = arrayKeys.sorted()
+        }
+
+        
     }
     
     func getArrayAction(array: [Int]) -> [MergeStep] {
@@ -89,14 +115,46 @@ class ManagerMergeSort {
     @objc func run(sender: UIButton) {
         
         animate = AnimationMerge(arrayLabel: self.arrayLabel, arrayLabelOne: self.arrayLabelOne, arrayLabelTwo: self.arrayLabelTwo, arrayLabelThree: self.arrayLabelThree, arrayLabelFour: self.arrayLabelFour, arrayAction: self.arrayAction, graphMerge: graph)
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+        
         animate.loop()
         
     }
     @objc func step(sender: UIButton) {
-        btnStepTmp.isUserInteractionEnabled = false
-        btnRunTmp.isUserInteractionEnabled = false
-        
-        animationStep.next()
-        
+        if(VIEW_CHOSEN=="study"){
+            if(ele==arrayKeys.count){
+                textStudy.text = ""
+                return
+            }
+            btnRunTmp.isUserInteractionEnabled = false
+            btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
+            btnRunTmp.setNeedsDisplay()
+            
+            if(arrayKeys[ele].isNumber){
+                btnStepTmp.isUserInteractionEnabled = false
+                let data = dictData[arrayKeys[ele]]
+                textStudy.text = data as! String?
+                animationStep.next()
+            }else if(arrayKeys[ele]=="end"){
+                textStudy.text = "The list is fully sorted"
+                btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
+                btnStepTmp.setNeedsDisplay()
+                btnStepTmp.isUserInteractionEnabled = false
+                
+            }else{
+                let data = dictData[arrayKeys[ele]]
+                textStudy.text = data as! String?
+                
+                btnStepTmp.isUserInteractionEnabled = true
+                
+            }
+            ele = ele + 1
+            
+        }else{
+            btnStepTmp.isUserInteractionEnabled = false
+            btnRunTmp.isUserInteractionEnabled = false
+            animationStep.next()
+        }
     }
 }

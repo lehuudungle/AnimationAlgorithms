@@ -77,7 +77,6 @@ class ManagerBubbleSort {
         
         if(VIEW_CHOSEN=="study"){
             ele = 0
-            
             textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
@@ -91,6 +90,7 @@ class ManagerBubbleSort {
             path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
+
             ele = 0
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})
         }
@@ -157,8 +157,7 @@ class ManagerBubbleSort {
         
         
     }
-    
-    
+        
 }
 
 extension String {

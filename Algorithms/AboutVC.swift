@@ -1,15 +1,16 @@
 //
 //  AboutVC.swift
+
 //  Algorithms
 //
 //  Created by Loc Tran on 4/18/17.
 //  Copyright © 2017 LocTran. All rights reserved.
+
 //
 
 import UIKit
 
 class AboutVC: UIViewController {
-
     
     @IBOutlet weak var locTxtView: UITextView!
     
@@ -32,6 +33,7 @@ class AboutVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     func addLabel(){
         
         locTxtView.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.3)

@@ -13,6 +13,8 @@
 		0507FA4E1E9CC2EE00E00354 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */; };
 		0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */; };
 		051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051085461EA1F8F0007CDEC6 /* BubbleSort.plist */; };
+		0521162A1EA5D3D0006ED15C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052116291EA5D3D0006ED15C /* AboutVC.swift */; };
+		0521162C1EA5D4DC006ED15C /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0521162B1EA5D4DC006ED15C /* AboutVC.xib */; };
 		0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572FF491EA123AB00B36562 /* TextStudy.swift */; };
 		059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 059876251E99EEB800DEDA21 /* FontAwesome.otf */; };
 		059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876261E99EEB800DEDA21 /* FontAwesome.swift */; };
@@ -36,8 +38,6 @@
 		1916EDF91EA5AF9200FF239A /* MergeSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1916EDF31EA5AF9200FF239A /* MergeSortDocument.pdf */; };
 		1916EDFA1EA5AF9200FF239A /* QuickSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1916EDF41EA5AF9200FF239A /* QuickSortDocument.pdf */; };
 		1916EDFB1EA5AF9200FF239A /* SelectionSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1916EDF51EA5AF9200FF239A /* SelectionSortDocument.pdf */; };
-		1916EE041EA5C5AD00FF239A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1916EE021EA5C5AD00FF239A /* AboutVC.swift */; };
-		1916EE051EA5C5AD00FF239A /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1916EE031EA5C5AD00FF239A /* AboutVC.xib */; };
 		1916EE0A1EA5C7A900FF239A /* aKhanh.png in Resources */ = {isa = PBXBuildFile; fileRef = 1916EE061EA5C7A900FF239A /* aKhanh.png */; };
 		1916EE0B1EA5C7A900FF239A /* dung.png in Resources */ = {isa = PBXBuildFile; fileRef = 1916EE071EA5C7A900FF239A /* dung.png */; };
 		1916EE0C1EA5C7A900FF239A /* loc.png in Resources */ = {isa = PBXBuildFile; fileRef = 1916EE081EA5C7A900FF239A /* loc.png */; };
@@ -96,6 +96,8 @@
 		0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		051085461EA1F8F0007CDEC6 /* BubbleSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleSort.plist; sourceTree = "<group>"; };
+		052116291EA5D3D0006ED15C /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		0521162B1EA5D4DC006ED15C /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
 		0572FF491EA123AB00B36562 /* TextStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStudy.swift; sourceTree = "<group>"; };
 		059876241E99EEB800DEDA21 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
 		059876251E99EEB800DEDA21 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -120,8 +122,6 @@
 		1916EDF31EA5AF9200FF239A /* MergeSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MergeSortDocument.pdf; sourceTree = "<group>"; };
 		1916EDF41EA5AF9200FF239A /* QuickSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = QuickSortDocument.pdf; sourceTree = "<group>"; };
 		1916EDF51EA5AF9200FF239A /* SelectionSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SelectionSortDocument.pdf; sourceTree = "<group>"; };
-		1916EE021EA5C5AD00FF239A /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
-		1916EE031EA5C5AD00FF239A /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutVC.xib; sourceTree = "<group>"; };
 		1916EE061EA5C7A900FF239A /* aKhanh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aKhanh.png; sourceTree = "<group>"; };
 		1916EE071EA5C7A900FF239A /* dung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dung.png; sourceTree = "<group>"; };
 		1916EE081EA5C7A900FF239A /* loc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loc.png; sourceTree = "<group>"; };
@@ -331,6 +331,8 @@
 		198A34781E80D9DF009E2B96 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				052116291EA5D3D0006ED15C /* AboutVC.swift */,
+				0521162B1EA5D4DC006ED15C /* AboutVC.xib */,
 				0507FA411E9C973100E00354 /* SWRevealViewController.h */,
 				0507FA421E9C973100E00354 /* SWRevealViewController.m */,
 				1987C64F1E95E6A3005795B8 /* AppDelegate.swift */,
@@ -402,8 +404,6 @@
 			isa = PBXGroup;
 			children = (
 				19D41EF51EA087B000C8CE4D /* ShareVC.swift */,
-				1916EE021EA5C5AD00FF239A /* AboutVC.swift */,
-				1916EE031EA5C5AD00FF239A /* AboutVC.xib */,
 				05A2AC4D1E9F2D85005C9310 /* Input */,
 				05BEA8CB1E9DC8D200B2F04C /* Study */,
 				1987C6671E964F82005795B8 /* Info */,
@@ -477,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				198AEC271EA4A94A006DE4D4 /* InsertionSort.plist in Resources */,
+				0521162C1EA5D4DC006ED15C /* AboutVC.xib in Resources */,
 				1916EDF81EA5AF9200FF239A /* InsertionSortDocument.pdf in Resources */,
 				1916EE0D1EA5C7A900FF239A /* tung.png in Resources */,
 				1916EE0B1EA5C7A900FF239A /* dung.png in Resources */,
@@ -498,7 +499,6 @@
 				1916EDF61EA5AF9200FF239A /* BubbleSortDocument.pdf in Resources */,
 				C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */,
 				198A347F1E80D9DF009E2B96 /* Main.storyboard in Resources */,
-				1916EE051EA5C5AD00FF239A /* AboutVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +591,6 @@
 				193E459C1E8A020E00A6395C /* AnimationInsertion.swift in Sources */,
 				0598762A1E99F03F00DEDA21 /* CustomButton.swift in Sources */,
 				05A2AC591E9F2E36005C9310 /* HeapGraph.swift in Sources */,
-				1916EE041EA5C5AD00FF239A /* AboutVC.swift in Sources */,
 				05BEA8D81E9DC9C800B2F04C /* InsertionSortSVC.swift in Sources */,
 				05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */,
 				0507FA431E9C973100E00354 /* SWRevealViewController.m in Sources */,
@@ -606,6 +605,7 @@
 				1962B2321E850BBE00012936 /* InsertionSort.swift in Sources */,
 				059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */,
 				198A34821E80D9DF009E2B96 /* Algorithms.xcdatamodeld in Sources */,
+				0521162A1EA5D3D0006ED15C /* AboutVC.swift in Sources */,
 				05A2AC541E9F2DF2005C9310 /* BubbleSortIVC.swift in Sources */,
 				198A34971E826619009E2B96 /* BubbleSort.swift in Sources */,
 				05BEA8DC1E9DC9C800B2F04C /* SelectionSortSVC.swift in Sources */,

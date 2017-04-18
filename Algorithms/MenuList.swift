@@ -35,7 +35,7 @@ class MenuList: NSObject {
             Menu(title: "Insertion Sort", viewClass: "InsertionSortSVC",inputClass: InsertionSortIVC(), infoTitle: "InsertionSortDocument" ),
             Menu(title: "Merge Sort", viewClass: "MergeSortSVC",inputClass: MergeSortIVC(), infoTitle: "MergeSortDocument" ),
             Menu(title: "Quick Sort", viewClass: "QuickSortSVC",inputClass: QuickSortIVC(), infoTitle: "QuickSortDocument" ),
-            Menu(title: "Heap Sort", viewClass: "HeapSortSVC",inputClass: HeapSortIVC(), infoTitle: "BubbleSortDocument" )
+            Menu(title: "Heap Sort", viewClass: "HeapSortSVC",inputClass: HeapSortIVC(), infoTitle: "HeapSortDocument" )
             
             ])
         
@@ -45,14 +45,13 @@ class MenuList: NSObject {
         //            ])
         
         let advance = MenuSection(section: "Other", menus:[
-            Menu(title: "About", viewClass: "ClassVC",inputClass: SelectionSortIVC(), infoTitle: "A" ),
+            Menu(title: "About", viewClass: "AboutVC",inputClass: SelectionSortIVC(), infoTitle: "A" ),
             Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC(), infoTitle: "A" )
             ])
         
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)
         mainScreen.menu = [basic,advance]
         mainScreen.title = "Algorithms"
-        //        mainScreen.about = "KLTD Team"
         
         let nav = UINavigationController(rootViewController: mainScreen)
         

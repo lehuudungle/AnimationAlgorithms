@@ -208,7 +208,7 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField.layer.cornerRadius = 10
         
         textField.layer.borderWidth = 2
-        textField.layer.borderColor = BUTTON_COLOR.cgColor
+        textField.layer.borderColor = UIColor.black.cgColor
         textField.layer.masksToBounds = true
         
         self.view.addSubview(textField)

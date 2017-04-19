@@ -8,9 +8,9 @@
 	<string>This time, for convenience, the middle number is chosen as the pivot.</string>
 	<key>01.2</key>
 	<string>A left marker is placed on the leftmost number, and a right marker is placed on the right most number of the list.</string>
-	<key>02</key>
+	<key>01.3</key>
 	<string>The left marker keeps moving to the right until it reaches a number greater than or equal to the pivot number.</string>
-	<key>02.1</key>
+	<key>02</key>
 	<string>In this case, the left marker is already pointed at number &quot;4&quot; which is greater than the pivot &quot;3&quot;, so it stops moving.</string>
 	<key>03</key>
 	<string>Then, it is the turn for the right marker to move left. </string>
@@ -21,13 +21,13 @@
 	<key>05.1</key>
 	<string>Now, both left and right markers have stopped moving.</string>
 	<key>06</key>
-	<string>The two numbers, that are pointed by the two markers, are swapped.</string>
+	<string>The two numbers, that are pointed by the left and right markers, are swapped.</string>
 	<key>07</key>
-	<string>After swapping, the left marker moves to next number to the right, and the right marker moves to next number to the left.</string>
+	<string>After swapping, the left marker moves to the next right number, and the right marker moves to the next left number.</string>
 	<key>08</key>
-	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<string>Then, the left marker starts moving again to the right to find the number greater than or equal to the pivot number.</string>
 	<key>09</key>
-	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<string>&quot;3&quot;</string>
 	<key>10</key>
 	<string>Larger pieces of latch are brought back and are on the list behind</string>
 	<key>11</key>

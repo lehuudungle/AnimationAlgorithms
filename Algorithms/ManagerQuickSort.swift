@@ -82,10 +82,9 @@ class ManagerQuickSort{
                                                 y: quickGraph.frame.origin.y+quickGraph.frame.height,
                                                 width: quickGraph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(quickGraph.frame.origin.y+quickGraph.frame.height)))
-            textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
         
-            textStudy.text = " Quicksort, also known as part sort, is a sorting algorithm that needs to be sorted into two equally sized sub-lists, with indexes standing in the middle of the list."
+            textStudy.text = "Quicksort, also known as part sort, is a sorting algorithm that needs to be sorted into two equally sized sub-lists, with indexes standing in the middle of the list."
             var path: String = ""
             path = Bundle.main.path(forResource:"QuickSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

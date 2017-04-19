@@ -103,7 +103,7 @@ class GameManager: UIView
     func addBtnMove(toView view: UIView)
     {
         btnStart = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnStart.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnStart.layer.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1).cgColor
         btnStart.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStart.setTitle("\u{f144}", for: .normal)
         btnStart.titleLabel?.font = UIFont.fontAwesome(ofSize: btnStart.fontoFitHeight())
@@ -123,7 +123,7 @@ class GameManager: UIView
     @objc func move(sender: UIButton)
     {
         self.btnNext.isUserInteractionEnabled = false
-        self.btnReset.isHidden = true
+        self.btnReset.isUserInteractionEnabled = false
         self.btnStart.isHidden = true
         self.btnPauseAction.isHidden = false
         moveQueen()
@@ -134,7 +134,7 @@ class GameManager: UIView
     }
     func addReset(toView view: UIView){
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnReset.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnReset.layer.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1).cgColor
         btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnReset.setTitle("\u{f021}", for: .normal)
         btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
@@ -170,7 +170,7 @@ class GameManager: UIView
     func btnPause(toView view: UIView){
         
         btnPauseAction = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnPauseAction.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnPauseAction.layer.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1).cgColor
         btnPauseAction.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnPauseAction.setTitle("Pause", for: .normal)
         
@@ -211,7 +211,7 @@ class GameManager: UIView
     
     func addBtnNext(toView view: UIView){
         btnNext = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btnNext.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnNext.layer.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1).cgColor
         btnNext.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnNext.setTitle("\u{f051}", for: .normal)
         btnNext.setTitleColor(BUTTON_COLOR, for: .normal)

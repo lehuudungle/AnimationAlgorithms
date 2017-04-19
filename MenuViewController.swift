@@ -26,9 +26,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        arrayCellData = [cellData(nameText: "Study",image:#imageLiteral(resourceName: "learning")),
-                         cellData(nameText: "Enter_Number",image:#imageLiteral(resourceName: "pencils_32")),
-                         cellData(nameText: "Info",image:#imageLiteral(resourceName: "info_32"))
+        arrayCellData = [cellData(nameText: "Study",image: #imageLiteral(resourceName: "learning")),
+                         cellData(nameText: "Customize",image: #imageLiteral(resourceName: "pencils")),
+                         cellData(nameText: "Reading",image: #imageLiteral(resourceName: "reading"))
         ]
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor.green.cgColor
@@ -43,7 +43,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let navBar = UINavigationBar(frame: CGRect(x: 0, y:0 , width: 270, height: 44+UIApplication.shared.statusBarFrame.height))
         
-        navBar.barTintColor = UIColor(red: 153/255, green: 0/255, blue: 102/255, alpha: 0.6)
+        navBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
         
         let navItem = UINavigationItem(title: "Menu")
         navBar.setItems([navItem], animated: false)

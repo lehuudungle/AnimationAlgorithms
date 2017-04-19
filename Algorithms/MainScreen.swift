@@ -7,21 +7,65 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class MainScreen: UITableViewController {
+enum TypeSection: String{
+    case Sort="Sort",Other = "Other"
+}
+
+
+class MainScreen: UITableViewController, GADBannerViewDelegate {
     //    var about: String!
     
     var menu: [MenuSection]!
-    
+    var bannerView = GADBannerView()
+    var viewcontroller: ViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewcontroller = ViewController()
         //        let barButoonItem = UIBarButtonItem(title: "About", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MainScreen.onAbout))
         //        self.navigationItem.rightBarButtonItem = barButoonItem
         
+        initAdMobBanner()
         self.tableView.contentInset = UIEdgeInsetsMake(20,0,0,0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
         
+    }
+    
+    func initAdMobBanner(){
+        bannerView.adSize = GADAdSizeFromCGSize(CGSize(width: 320, height: 50))
+        bannerView.frame = CGRect(x: 0, y: view.bounds.size.height, width: 320, height: 50)
+        bannerView.adUnitID = "ca-app-pub-7384215319654531/6555347808"
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        view.addSubview(bannerView)
+        let request = GADRequest()
+        bannerView.load(request)
+        
+    }
+    func hideBanner(_ banner: UIView) {
+        UIView.beginAnimations("hideBanner", context: nil)
+        banner.frame = CGRect(x: view.frame.size.width/2 - banner.frame.size.width/2, y: view.frame.size.height - banner.frame.size.height, width: banner.frame.size.width, height: banner.frame.size.height)
+        UIView.commitAnimations()
+        banner.isHidden = true
+    }
+    
+    // Show the banner
+    func showBanner(_ banner: UIView) {
+        UIView.beginAnimations("showBanner", context: nil)
+        banner.frame = CGRect(x: view.frame.size.width/2 - banner.frame.size.width/2, y: view.frame.size.height - banner.frame.size.height, width: banner.frame.size.width, height: banner.frame.size.height)
+        UIView.commitAnimations()
+        banner.isHidden = false
+    }
+    
+    // AdMob banner available
+    func adViewDidReceiveAd(_ view: GADBannerView) {
+        showBanner(bannerView)
+    }
+    
+    // NO AdMob banner available
+    func adView(_ view: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        hideBanner(bannerView)
     }
     
     //    func onAbout(){
@@ -100,10 +144,20 @@ class MainScreen: UITableViewController {
             
             detailScreen.title = item.title
             DETAIL = detailScreen
-            
-            
-            let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-            detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
+
+            let typeSection = menuSection.section
+
+            switch typeSection {
+            case TypeSection.Other.rawValue: break
+
+            case TypeSection.Sort.rawValue:
+                let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+                detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
+
+            default:
+                break
+            }
+
             let img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             

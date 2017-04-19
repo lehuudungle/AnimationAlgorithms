@@ -13,12 +13,12 @@ class TextStudy: UIBorderedLabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.3)
-        self.layer.borderColor = BUTTON_COLOR.cgColor
+        self.backgroundColor = UIColor.white
+
         self.layer.cornerRadius = 10
         self.numberOfLines = 6
-        self.layer.borderWidth = 2
         self.layer.masksToBounds = true
+        self.font = UIFont.boldSystemFont(ofSize:16)
         
     }
     

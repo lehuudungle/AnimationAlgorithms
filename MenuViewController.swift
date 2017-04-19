@@ -44,7 +44,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let navBar = UINavigationBar(frame: CGRect(x: 0, y:0 , width: 270, height: 44+UIApplication.shared.statusBarFrame.height))
         
-        navBar.barTintColor = UIColor(red: 153/255, green: 0/255, blue: 102/255, alpha: 0.6)
+        navBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
         
         let navItem = UINavigationItem(title: "Menu")
         navBar.setItems([navItem], animated: false)

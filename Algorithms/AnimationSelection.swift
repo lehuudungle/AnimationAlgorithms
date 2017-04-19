@@ -12,7 +12,7 @@ class AnimationSelection {
     var arrayAction: [Step]!
     var colSolution = 0
     var currentStep = Step()
-    var timeAnimation = 1
+    var timeAnimation = 0.5
     
     var arrayLabel: [SortingLabel]!
     var arrayLabelAbove: [SortingLabel]!

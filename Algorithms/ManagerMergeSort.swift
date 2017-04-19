@@ -90,10 +90,10 @@ class ManagerMergeSort {
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))
-            textStudy.backgroundColor = UIColor.yellow
+
             viewcontroller.view.addSubview(textStudy)
             
-            textStudy.text = " Merge Sort is an arrangement algorithm for sorting lists (or any data structure that can be accessed sequentially, eg. the file stream) in a certain order."
+            textStudy.text = "Merge Sort is an arrangement algorithm for sorting lists (or any data structure that can be accessed sequentially, eg. the file stream) in a certain order."
             var path: String = ""
             path = Bundle.main.path(forResource:"MergeSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

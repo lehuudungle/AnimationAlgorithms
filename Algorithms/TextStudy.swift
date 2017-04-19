@@ -14,11 +14,9 @@ class TextStudy: UIBorderedLabel {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.white
-//        self.textAlignment = .center
-//        self.layer.borderColor = BUTTON_COLOR.cgColor
+
         self.layer.cornerRadius = 10
         self.numberOfLines = 6
-//        self.layer.borderWidth = 2
         self.layer.masksToBounds = true
         self.font = UIFont.boldSystemFont(ofSize:16)
         

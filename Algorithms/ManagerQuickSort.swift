@@ -56,12 +56,14 @@ class ManagerQuickSort{
         }
         
         quickGraph = QuickGraph(frame: CGRect(x: 0,
-                                              y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 6,
+                                              y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 10,
                                               width: viewcontroller.view.bounds.size.width,
-                                              height: viewcontroller.view.bounds.size.height/2),
+                                              height: viewcontroller.view.bounds.size.height*0.35),
                                 arrayDisplay: self.arrayDisplay,
                                 colors: self.arrayColor)
-        
+//        quickGraph.backgroundColor = UIColor.yellow
+//        quickGraph.backgroundColor = UIColor.blue
+
         viewcontroller.view.addSubview(quickGraph)
         
         
@@ -81,10 +83,9 @@ class ManagerQuickSort{
                                                 y: quickGraph.frame.origin.y+quickGraph.frame.height,
                                                 width: quickGraph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(quickGraph.frame.origin.y+quickGraph.frame.height)))
-            textStudy.backgroundColor = UIColor.yellow
             viewcontroller.view.addSubview(textStudy)
         
-            textStudy.text = " Quicksort, also known as part sort, is a sorting algorithm that needs to be sorted into two equally sized sub-lists, with indexes standing in the middle of the list."
+            textStudy.text = "Quicksort, also known as part sort, is a sorting algorithm that needs to be sorted into two equally sized sub-lists, with indexes standing in the middle of the list."
             var path: String = ""
             path = Bundle.main.path(forResource:"QuickSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

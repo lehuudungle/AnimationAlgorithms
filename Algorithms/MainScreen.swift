@@ -24,7 +24,7 @@ class MainScreen: UITableViewController {
         //        self.navigationItem.rightBarButtonItem = barButoonItem
         
         self.tableView.contentInset = UIEdgeInsetsMake(20,0,0,0)
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = LIME_COLOR
         
     }
     
@@ -118,14 +118,18 @@ class MainScreen: UITableViewController {
                 break
             }
 
-            let img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            let img = UIImage(named: "home")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             detailScreen.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             
             let navDetail = UINavigationController(rootViewController: detailScreen)
-            
-            navDetail.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+
+            navDetail.navigationBar.barTintColor = LIME_COLOR
             let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
             revel?.rightViewController = menuVC
+            revel?.view.addGestureRecognizer((revel?.panGestureRecognizer())!)
+//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+
+
             
             present(revel!, animated: true, completion: nil)
             revel?.rightViewRevealWidth = 180

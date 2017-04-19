@@ -58,10 +58,11 @@ class ManagerQuickSort{
         quickGraph = QuickGraph(frame: CGRect(x: 0,
                                               y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 6,
                                               width: viewcontroller.view.bounds.size.width,
-                                              height: viewcontroller.view.bounds.size.height/2),
+                                              height: viewcontroller.view.bounds.size.height*0.35),
                                 arrayDisplay: self.arrayDisplay,
                                 colors: self.arrayColor)
-        
+//        quickGraph.backgroundColor = UIColor.yellow
+
         viewcontroller.view.addSubview(quickGraph)
         
         

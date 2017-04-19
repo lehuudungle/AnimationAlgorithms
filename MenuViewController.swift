@@ -39,11 +39,11 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let nib = UINib(nibName: "MenuCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "MenuCell")
-        viewMenu.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 0.8)
+        viewMenu.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
         
         let navBar = UINavigationBar(frame: CGRect(x: 0, y:0 , width: 270, height: 44+UIApplication.shared.statusBarFrame.height))
         
-        navBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+        navBar.barTintColor = LIME_COLOR
         
         let navItem = UINavigationItem(title: "Menu")
         navBar.setItems([navItem], animated: false)
@@ -67,7 +67,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.imgCell.image = arrayCellData[indexPath.row].image
         cell.titleCell.text = arrayCellData[indexPath.row].nameText
         cell.titleCell.font = UIFont(name: "Helvetica Neue", size: 18)
-        cell.titleCell.textColor = UIColor.orange
+        cell.titleCell.textColor = UIColor.black
         
         return cell
         
@@ -78,8 +78,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if (indexPath.row == 0){
             
             let newFontController = UINavigationController.init(rootViewController: DETAIL)
-            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+            newFontController.navigationBar.barTintColor = LIME_COLOR
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
+//            revealviewcontroller.view.addGestureRecognizer((revealviewcontroller.panGestureRecognizer())!)
             _ = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             VIEW_CHOSEN = "study"
             
@@ -88,7 +89,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }else if(indexPath.row == 1){
             let newFontController = UINavigationController.init(rootViewController: INPUT_XIB_CLASS)
             
-            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+            newFontController.navigationBar.barTintColor = LIME_COLOR
             
             
             INPUT_XIB_CLASS.title = DETAIL.title
@@ -96,7 +97,8 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))
             
-            img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            img = UIImage(named: "home")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            
             INPUT_XIB_CLASS.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             VIEW_CHOSEN = "input"
 
@@ -109,7 +111,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             let newFontController = UINavigationController.init(rootViewController: pdfVC)
             
-            newFontController.navigationBar.barTintColor = UIColor(red: 204/255, green: 102/255, blue: 102/255, alpha: 1)
+            newFontController.navigationBar.barTintColor = LIME_COLOR
             
             
             PDF_INFO.title = DETAIL.title
@@ -117,7 +119,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             PDF_INFO.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))
             
-            img = UIImage(named: "house")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            img = UIImage(named: "home")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             PDF_INFO.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             VIEW_CHOSEN = "Info"
             

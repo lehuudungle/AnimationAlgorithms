@@ -3,51 +3,53 @@
 <plist version="1.0">
 <dict>
 	<key>00.1</key>
-	<string>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list</string>
+	<string>Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.</string>
 	<key>00.2</key>
-	<string>Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there</string>
+	<string>Each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.</string>
 	<key>00.3</key>
 	<string>It repeats until no input elements remain.</string>
 	<key>00.4</key>
-	<string>Consider the values ​​in pairs from left to right</string>
+	<string>To begin, the first number is considered fully sorted and is placed in the sorted list.</string>
 	<key>01</key>
-	<string>Compare numerical values ​​in first place and second place </string>
+	<string>The first number of the remaining list (unsorted list) is taken out,...</string>
+	<key>01.1</key>
+	<string>and compared to the number to its left.</string>
 	<key>02</key>
-	<string>The first digit is less than the second</string>
+	<string>&quot;9&quot; is greater than &quot;4&quot;,...</string>
 	<key>02.1</key>
-	<string>Keep the position of two numbers</string>
+	<string>so &quot;9&quot; is inserted behind &quot;4&quot; in the sorted list.</string>
 	<key>03</key>
-	<string>Continue to compare the numbers in the array from left to right</string>
+	<string>Again, the first number of the unsorted list, which is &quot;1&quot;, is taken out,...</string>
 	<key>04</key>
-	<string>The second digit is greater than the third</string>
+	<string>and compared to the number to its left.</string>
 	<key>05</key>
-	<string>Swap positions between the two numbers</string>
+	<string>&quot;1&quot; is less than &quot;9&quot;, so &quot;1&quot; moves to the left of &quot;9&quot;.</string>
 	<key>06</key>
-	<string>Continue to compare with the number behind</string>
+	<string>Now, &quot;1&quot; is compared to &quot;4&quot;,...</string>
 	<key>07</key>
-	<string>If the value is less than that, it will change the position of the two numbers</string>
+	<string>since &quot;1&quot; is less than &quot;4&quot;, &quot;1&quot; is inserted to the left of &quot;4&quot; in the sorted list.</string>
 	<key>08</key>
-	<string>Continue to compare for until there are no valid numbers smaller than it</string>
+	<string>The same operations is repeated.</string>
 	<key>09</key>
-	<string>Then, compare the numerical values ​​from the fourth position</string>
+	<string>The same operations is repeated.</string>
 	<key>10</key>
-	<string>If the value is less than that, it will change the position of the two numbers</string>
+	<string>The same operations is repeated.</string>
 	<key>11</key>
-	<string>Continue to compare with values number behind</string>
+	<string>The same operations is repeated.</string>
 	<key>12</key>
-	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>The same operations is repeated.</string>
 	<key>13</key>
-	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>The same operations is repeated.</string>
 	<key>14</key>
-	<string>Then, compare the numerical values ​​from the fiveth position</string>
+	<string>The same operations is repeated.</string>
 	<key>15</key>
-	<string>If the value is less than that, it will change the position of the two numbers</string>
+	<string>The same operations is repeated.</string>
 	<key>16</key>
-	<string>Continue to compare with values number behind</string>
+	<string>The same operations is repeated.</string>
 	<key>17</key>
-	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>The same operations is repeated.</string>
 	<key>18</key>
-	<string>That number will be inserted ahead of numeric values ​​greater than it</string>
+	<string>The same operations is repeated.</string>
 	<key>end</key>
 	<string></string>
 </dict>

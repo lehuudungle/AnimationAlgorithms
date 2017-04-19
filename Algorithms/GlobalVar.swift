@@ -35,7 +35,8 @@ var RECTSIZE: CGFloat = 0
 
 var yMax: CGFloat = 0
 
-
+var btnSizeBoardTmp: UIButton!
+var textInPutBoard: UITextField!
 var btnStepTmp: UIButton!
 var btnBackTmp: UIButton!
 var btnRunTmp: UIButton!

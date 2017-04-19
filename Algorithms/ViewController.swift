@@ -39,23 +39,51 @@ class ViewController: UIViewController {
 
     }
     
-   
+    func addAlert(message: String){
+        let alert = UIAlertController.init(title: "Warning",
+                                           message: message,
+                                           preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
+    }
     
     @objc func draw(sender: UIButton){
-        self.gamemanager.btnNext.isUserInteractionEnabled = true
-        self.gamemanager.boardView.removeFromSuperview()
-        self.gamemanager.btnStart.isHidden = true
-        self.gamemanager.lblSolutionFound.isHidden = true
-        self.gamemanager.rowTotal = Int(self.sizeBoard.text!)!
-        self.gamemanager.colTotal = Int(self.sizeBoard.text!)!
-        self.gamemanager.initGameWith(viewcontroller: self, size: self.view.bounds.size.width)
+          if(sizeBoard.text != "" && sizeBoard.text != nil){
+            if (Int(sizeBoard.text!)! <= 10){
+                if (Int(sizeBoard.text!)! >= 4 ){
+                    self.gamemanager.btnNext.isUserInteractionEnabled = true
+                    self.gamemanager.boardView.removeFromSuperview()
+                    self.gamemanager.btnStart.isHidden = true
+                    self.gamemanager.lblSolutionFound.isHidden = true
+                    self.gamemanager.rowTotal = Int(self.sizeBoard.text!)!
+                    self.gamemanager.colTotal = Int(self.sizeBoard.text!)!
+                    self.gamemanager.initGameWith(viewcontroller: self, size: self.view.bounds.size.width)
+                }else{
+                    
+                addAlert(message: "Can not enter less than 10 digits")
+                }
+            }else{
+                
+                addAlert(message: "Can not enter more than 4 digits")
+            }
+        }
+          else{
+            addAlert(message: "Please enter a number")
+        }
+        sizeBoard.text = ""
+
+       
 
 
     }
     
     func btnSizeBoard(){
         let btn = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-2*spacing-2*btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-        btn.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnSizeBoardTmp = btn
+        btn.layer.backgroundColor = LIME_COLOR.cgColor
         btn.setTitleColor(UIColor.white, for: UIControlState.normal)
         btn.setTitle("\u{23CE}", for: .normal)
         btn.titleLabel?.font = UIFont.fontAwesome(ofSize: btn.fontoFitHeight())
@@ -76,6 +104,7 @@ class ViewController: UIViewController {
 
     func addSizeBoard(){
         sizeBoard = UITextField(frame: CGRect(x: x, y: view.bounds.size.height-2*spacing-2*btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        textInPutBoard = sizeBoard
         sizeBoard.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
         sizeBoard.textColor = UIColor.white
         sizeBoard.placeholder = "Size"

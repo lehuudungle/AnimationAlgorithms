@@ -127,6 +127,7 @@ class MainScreen: UITableViewController {
             let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
             revel?.rightViewController = menuVC
             revel?.view.addGestureRecognizer((revel?.panGestureRecognizer())!)
+            revel?.view.addGestureRecognizer((revel?.tapGestureRecognizer())!)
 //            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
 

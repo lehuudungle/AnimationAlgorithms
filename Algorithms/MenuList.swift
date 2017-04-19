@@ -45,6 +45,7 @@ class MenuList: NSObject {
         //            ])
         
         let advance = MenuSection(section: "Other", menus:[
+             Menu(title: "Queen", viewClass: "ViewController",inputClass: SelectionSortIVC(), infoTitle: "A" ),
             Menu(title: "About", viewClass: "ClassVC",inputClass: SelectionSortIVC(), infoTitle: "A" ),
             Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC(), infoTitle: "A" )
             ])

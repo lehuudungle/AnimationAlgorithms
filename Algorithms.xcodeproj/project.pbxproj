@@ -77,6 +77,27 @@
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
 		C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */; };
 		C7CBF4911EA5216300FBE5B3 /* MergeSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */; };
+		C7E429DD1EA5BFF5004C49DD /* Bishop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429C31EA5BFF5004C49DD /* Bishop.swift */; };
+		C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429C41EA5BFF5004C49DD /* Board.swift */; };
+		C7E429E41EA5BFF5004C49DD /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CA1EA5BFF5004C49DD /* King.swift */; };
+		C7E429E51EA5BFF5004C49DD /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CB1EA5BFF5004C49DD /* Knight.swift */; };
+		C7E429E61EA5BFF5004C49DD /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CC1EA5BFF5004C49DD /* Move.swift */; };
+		C7E429E71EA5BFF5004C49DD /* MoveDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CD1EA5BFF5004C49DD /* MoveDirection.swift */; };
+		C7E429E81EA5BFF5004C49DD /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CE1EA5BFF5004C49DD /* Pawn.swift */; };
+		C7E429E91EA5BFF5004C49DD /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CF1EA5BFF5004C49DD /* Piece.swift */; };
+		C7E429EA1EA5BFF5004C49DD /* PieceColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D01EA5BFF5004C49DD /* PieceColor.swift */; };
+		C7E429EB1EA5BFF5004C49DD /* PieceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D11EA5BFF5004C49DD /* PieceController.swift */; };
+		C7E429ED1EA5BFF5004C49DD /* PieceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D31EA5BFF5004C49DD /* PieceType.swift */; };
+		C7E429EE1EA5BFF5004C49DD /* PieceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D41EA5BFF5004C49DD /* PieceView.swift */; };
+		C7E429EF1EA5BFF5004C49DD /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D51EA5BFF5004C49DD /* Player.swift */; };
+		C7E429F01EA5BFF5004C49DD /* Queen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D61EA5BFF5004C49DD /* Queen.swift */; };
+		C7E429F21EA5BFF5004C49DD /* Rook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D81EA5BFF5004C49DD /* Rook.swift */; };
+		C7E429F31EA5BFF5004C49DD /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429D91EA5BFF5004C49DD /* Square.swift */; };
+		C7E429F51EA5BFF5004C49DD /* ViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429DB1EA5BFF5004C49DD /* ViewAnimation.swift */; };
+		C7E429F61EA5BFF5004C49DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429DC1EA5BFF5004C49DD /* ViewController.swift */; };
+		C7E429F81EA5C2CD004C49DD /* PieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429F71EA5C2CD004C49DD /* PieceSet.swift */; };
+		C7E429FA1EA5C2EC004C49DD /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429F91EA5C2EC004C49DD /* GameManager.swift */; };
+		C7E429FC1EA5C30F004C49DD /* EightQueen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429FB1EA5C30F004C49DD /* EightQueen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +178,27 @@
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuickSort.plist; sourceTree = "<group>"; };
 		C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MergeSort.plist; sourceTree = "<group>"; };
+		C7E429C31EA5BFF5004C49DD /* Bishop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bishop.swift; sourceTree = "<group>"; };
+		C7E429C41EA5BFF5004C49DD /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		C7E429CA1EA5BFF5004C49DD /* King.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		C7E429CB1EA5BFF5004C49DD /* Knight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
+		C7E429CC1EA5BFF5004C49DD /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		C7E429CD1EA5BFF5004C49DD /* MoveDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveDirection.swift; sourceTree = "<group>"; };
+		C7E429CE1EA5BFF5004C49DD /* Pawn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
+		C7E429CF1EA5BFF5004C49DD /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		C7E429D01EA5BFF5004C49DD /* PieceColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceColor.swift; sourceTree = "<group>"; };
+		C7E429D11EA5BFF5004C49DD /* PieceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceController.swift; sourceTree = "<group>"; };
+		C7E429D31EA5BFF5004C49DD /* PieceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceType.swift; sourceTree = "<group>"; };
+		C7E429D41EA5BFF5004C49DD /* PieceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceView.swift; sourceTree = "<group>"; };
+		C7E429D51EA5BFF5004C49DD /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C7E429D61EA5BFF5004C49DD /* Queen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queen.swift; sourceTree = "<group>"; };
+		C7E429D81EA5BFF5004C49DD /* Rook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rook.swift; sourceTree = "<group>"; };
+		C7E429D91EA5BFF5004C49DD /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		C7E429DB1EA5BFF5004C49DD /* ViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
+		C7E429DC1EA5BFF5004C49DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7E429F71EA5C2CD004C49DD /* PieceSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceSet.swift; sourceTree = "<group>"; };
+		C7E429F91EA5C2EC004C49DD /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameManager.swift; path = Algorithms/GameManager.swift; sourceTree = "<group>"; };
+		C7E429FB1EA5C30F004C49DD /* EightQueen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightQueen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +262,7 @@
 		05BEA8CB1E9DC8D200B2F04C /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				C7E429F91EA5C2EC004C49DD /* GameManager.swift */,
 				05BEA8D41E9DC9C800B2F04C /* StudyVC.swift */,
 				05BEA8E01E9DCAAE00B2F04C /* BubbleSortSVC.swift */,
 				05BEA8D31E9DC9C800B2F04C /* SelectionSortSVC.swift */,
@@ -317,6 +360,7 @@
 				193E45A11E8A4A7B00A6395C /* Manager */,
 				0572FF4B1EA1278300B36562 /* DataSource */,
 				193E459A1E8A01BA00A6395C /* Animation */,
+				C7E429C21EA5BFBA004C49DD /* NQueens */,
 				19C253F91E8962E8008C614C /* Graph */,
 				1962B2301E84FE6400012936 /* Sort */,
 				059876231E99EE8B00DEDA21 /* FontAwesome */,
@@ -381,6 +425,33 @@
 			);
 			name = ViewControllers;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C7E429C21EA5BFBA004C49DD /* NQueens */ = {
+			isa = PBXGroup;
+			children = (
+				C7E429C31EA5BFF5004C49DD /* Bishop.swift */,
+				C7E429C41EA5BFF5004C49DD /* Board.swift */,
+				C7E429CA1EA5BFF5004C49DD /* King.swift */,
+				C7E429FB1EA5C30F004C49DD /* EightQueen.swift */,
+				C7E429CB1EA5BFF5004C49DD /* Knight.swift */,
+				C7E429CC1EA5BFF5004C49DD /* Move.swift */,
+				C7E429CD1EA5BFF5004C49DD /* MoveDirection.swift */,
+				C7E429CE1EA5BFF5004C49DD /* Pawn.swift */,
+				C7E429CF1EA5BFF5004C49DD /* Piece.swift */,
+				C7E429D01EA5BFF5004C49DD /* PieceColor.swift */,
+				C7E429D11EA5BFF5004C49DD /* PieceController.swift */,
+				C7E429D31EA5BFF5004C49DD /* PieceType.swift */,
+				C7E429D41EA5BFF5004C49DD /* PieceView.swift */,
+				C7E429F71EA5C2CD004C49DD /* PieceSet.swift */,
+				C7E429D51EA5BFF5004C49DD /* Player.swift */,
+				C7E429D61EA5BFF5004C49DD /* Queen.swift */,
+				C7E429D81EA5BFF5004C49DD /* Rook.swift */,
+				C7E429D91EA5BFF5004C49DD /* Square.swift */,
+				C7E429DB1EA5BFF5004C49DD /* ViewAnimation.swift */,
+				C7E429DC1EA5BFF5004C49DD /* ViewController.swift */,
+			);
+			name = NQueens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,33 +594,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				1962B22F1E84FE5E00012936 /* SelectionSort.swift in Sources */,
+				C7E429E61EA5BFF5004C49DD /* Move.swift in Sources */,
 				193E45A71E8A5CDA00A6395C /* ManagerSelectionSort.swift in Sources */,
 				198A34931E8176AC009E2B96 /* Graph.swift in Sources */,
 				19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */,
 				1987C65E1E963205005795B8 /* HeapSort.swift in Sources */,
 				19304DFE1E9F624600C0AC02 /* QuickSortIVC.swift in Sources */,
+				C7E429F81EA5C2CD004C49DD /* PieceSet.swift in Sources */,
 				19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */,
 				1987C6601E963CAA005795B8 /* AnimationHeap.swift in Sources */,
 				1987C6541E95EA4A005795B8 /* ManagerQuickSort.swift in Sources */,
+				C7E429F01EA5BFF5004C49DD /* Queen.swift in Sources */,
 				1987C6501E95E6A3005795B8 /* AppDelegate.swift in Sources */,
 				197A66BF1E8B66AB00CA17F6 /* AnimationSelection.swift in Sources */,
 				198A34BA1E828A5D009E2B96 /* ManagerInsertionSort.swift in Sources */,
+				C7E429E41EA5BFF5004C49DD /* King.swift in Sources */,
 				05BEA8D51E9DC9C800B2F04C /* HeapSortSVC.swift in Sources */,
 				0507FA4A1E9C987200E00354 /* MenuViewController.swift in Sources */,
 				0507FA4E1E9CC2EE00E00354 /* MenuCell.swift in Sources */,
 				1987C6561E95EA85005795B8 /* AnimationQuick.swift in Sources */,
 				05BEA8DA1E9DC9C800B2F04C /* QuickSortSVC.swift in Sources */,
 				193E45A31E8A5AFD00A6395C /* MergeSort.swift in Sources */,
+				C7E429FA1EA5C2EC004C49DD /* GameManager.swift in Sources */,
 				05A2AC531E9F2DF2005C9310 /* InputVC.swift in Sources */,
 				05A2AC551E9F2DF2005C9310 /* SelectionSortIVC.swift in Sources */,
 				19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */,
 				198A348F1E810906009E2B96 /* AnimationBubble.swift in Sources */,
+				C7E429F51EA5BFF5004C49DD /* ViewAnimation.swift in Sources */,
 				05A2AC571E9F2DF2005C9310 /* MergeSortIVC.swift in Sources */,
+				C7E429EB1EA5BFF5004C49DD /* PieceController.swift in Sources */,
 				198A34951E822A13009E2B96 /* GlobalVar.swift in Sources */,
+				C7E429EA1EA5BFF5004C49DD /* PieceColor.swift in Sources */,
 				19304E001E9F62B200C0AC02 /* HeapSortIVC.swift in Sources */,
 				19EAC29D1EA4CB190060C6B8 /* UIBorderedLabel.swift in Sources */,
+				C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */,
+				C7E429EF1EA5BFF5004C49DD /* Player.swift in Sources */,
 				05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */,
 				192C75831E8CFCFD00EE8027 /* MergeGraph.swift in Sources */,
+				C7E429E51EA5BFF5004C49DD /* Knight.swift in Sources */,
 				1987C6521E95EA11005795B8 /* QuickSort.swift in Sources */,
 				C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */,
 				C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */,
@@ -560,19 +642,29 @@
 				05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */,
 				0507FA431E9C973100E00354 /* SWRevealViewController.m in Sources */,
 				1987C6621E963DDE005795B8 /* ManagerHeapSort.swift in Sources */,
+				C7E429FC1EA5C30F004C49DD /* EightQueen.swift in Sources */,
+				C7E429E71EA5BFF5004C49DD /* MoveDirection.swift in Sources */,
 				0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */,
+				C7E429E91EA5BFF5004C49DD /* Piece.swift in Sources */,
 				192C75851E8D057A00EE8027 /* ManagerMergeSort.swift in Sources */,
 				1962B22D1E841F3400012936 /* SortingLabel.swift in Sources */,
 				193E45A51E8A5C1200A6395C /* ManagerBubbleSort.swift in Sources */,
 				05A2AC561E9F2DF2005C9310 /* InsertionSortIVC.swift in Sources */,
+				C7E429F61EA5BFF5004C49DD /* ViewController.swift in Sources */,
 				05BEA8D91E9DC9C800B2F04C /* MergeSortSVC.swift in Sources */,
 				1987C6581E95EAA0005795B8 /* QuickGraph.swift in Sources */,
+				C7E429F31EA5BFF5004C49DD /* Square.swift in Sources */,
 				1962B2321E850BBE00012936 /* InsertionSort.swift in Sources */,
 				059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */,
 				198A34821E80D9DF009E2B96 /* Algorithms.xcdatamodeld in Sources */,
 				05A2AC541E9F2DF2005C9310 /* BubbleSortIVC.swift in Sources */,
+				C7E429F21EA5BFF5004C49DD /* Rook.swift in Sources */,
 				198A34971E826619009E2B96 /* BubbleSort.swift in Sources */,
 				05BEA8DC1E9DC9C800B2F04C /* SelectionSortSVC.swift in Sources */,
+				C7E429E81EA5BFF5004C49DD /* Pawn.swift in Sources */,
+				C7E429ED1EA5BFF5004C49DD /* PieceType.swift in Sources */,
+				C7E429EE1EA5BFF5004C49DD /* PieceView.swift in Sources */,
+				C7E429DD1EA5BFF5004C49DD /* Bishop.swift in Sources */,
 				193E45A01E8A207B00A6395C /* Step.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

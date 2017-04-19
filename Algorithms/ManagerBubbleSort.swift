@@ -85,6 +85,7 @@ class ManagerBubbleSort {
             viewcontroller.view.addSubview(textStudy)
             
             textStudy.text = "Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order."
+            textStudy.font = UIFont.boldSystemFont(ofSize: 16)
             var path: String = ""
             
             path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!

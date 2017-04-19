@@ -46,7 +46,7 @@ class StudyVC: UIViewController {
     func addBtnReset() {
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
 //        btnReset.layer.backgroundColor = UIColor(red: 154/255, green: 205/255, blue: 50/255, alpha: 1).cgColor
-        btnReset.layer.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1).cgColor
+        btnReset.layer.backgroundColor = LIME_COLOR.cgColor
         btnReset.setTitle("\u{f021}", for: .normal)
         btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
@@ -74,7 +74,7 @@ class StudyVC: UIViewController {
         btnStepTmp = btnStep
         
 //        btnStep.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
-        btnStep.layer.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1).cgColor
+        btnStep.layer.backgroundColor = LIME_COLOR.cgColor
         btnStep.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnStep.setTitle("\u{f051}", for: .normal)
         
@@ -105,7 +105,7 @@ class StudyVC: UIViewController {
         btnRunTmp = btnRun
         
 //        btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
-        btnRun.layer.backgroundColor = UIColor(red: 255/255, green: 182/255, blue: 193/255, alpha: 1).cgColor
+        btnRun.layer.backgroundColor = LIME_COLOR.cgColor
         btnRun.setTitleColor(UIColor.white, for: UIControlState.normal)
         btnRun.setTitle("\u{f144}", for: .normal)
         btnRun.setTitleColor(BUTTON_COLOR, for: .normal)

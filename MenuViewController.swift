@@ -31,6 +31,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                          cellData(nameText: "Customize",image: #imageLiteral(resourceName: "pencils")),
                          cellData(nameText: "Reading",image: #imageLiteral(resourceName: "reading"))
         ]
+        
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1).cgColor
         imgProfile.layer.cornerRadius = 20

@@ -7,6 +7,7 @@
 //
 import UIKit
 class AnimationMerge:NSObject {
+    
     var color: UIColor!
     var colors: [UIColor]!
     var arrayLabel: [SortingLabel]!
@@ -359,7 +360,7 @@ class AnimationMerge:NSObject {
         Slayer.lineWidth = 4
         let view = UIView(frame: drect)
         view.layer.addSublayer(Slayer)
-        self.graphMerge.insertSubview(view, at: 3)
+        self.graphMerge.insertSubview(view, at: 2)
         self.bodyRect?.append(view)
         if(fistDraw){
             self.bodyLine?.append(straightLine(bearingPoint: originPoint, widtRectangle: widthRect))

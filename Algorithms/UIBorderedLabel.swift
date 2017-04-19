@@ -14,7 +14,7 @@ class UIBorderedLabel: UILabel {
     var topInset:       CGFloat = 0
     var rightInset:     CGFloat = 4
     var bottomInset:    CGFloat = 0
-    var leftInset:      CGFloat = 12
+    var leftInset:      CGFloat = 5
     
     override func drawText(in rect: CGRect) {
         let insets: UIEdgeInsets = UIEdgeInsets(top: self.topInset, left: self.leftInset, bottom: self.bottomInset, right: self.rightInset)

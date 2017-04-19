@@ -126,7 +126,8 @@ class MainScreen: UITableViewController {
             navDetail.navigationBar.barTintColor = LIME_COLOR
             let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
             revel?.rightViewController = menuVC
-            revel?.view.addGestureRecognizer((revel?.tapGestureRecognizer())!)
+
+//            revel?.view.addGestureRecognizer((revel?.tapGestureRecognizer())!)
 //            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
 

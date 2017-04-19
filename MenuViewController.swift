@@ -32,7 +32,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                          cellData(nameText: "Reading",image: #imageLiteral(resourceName: "reading"))
         ]
         imgProfile.layer.borderWidth = 2
-        imgProfile.layer.borderColor = UIColor.green.cgColor
+        imgProfile.layer.borderColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1).cgColor
         imgProfile.layer.cornerRadius = 50
         
         imgProfile.layer.masksToBounds = false
@@ -81,7 +81,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             let newFontController = UINavigationController.init(rootViewController: DETAIL)
             newFontController.navigationBar.barTintColor = LIME_COLOR
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
-            revealviewcontroller.view.addGestureRecognizer((revealviewcontroller.tapGestureRecognizer())!)
+//            revealviewcontroller.view.addGestureRecognizer((revealviewcontroller.tapGestureRecognizer())!)
             _ = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             VIEW_CHOSEN = "study"
             
@@ -98,7 +98,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))
-            revealviewcontroller.view.addGestureRecognizer((revealviewcontroller.tapGestureRecognizer())!)
+//            revealviewcontroller.view.addGestureRecognizer((revealviewcontroller.tapGestureRecognizer())!)
             
             img = UIImage(named: "home")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             
@@ -121,7 +121,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             PDF_INFO.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))
-            revealviewcontroller.view.addGestureRecognizer((revealviewcontroller.tapGestureRecognizer())!)
+//            revealviewcontroller.view.addGestureRecognizer((revealviewcontroller.tapGestureRecognizer())!)
             
             img = UIImage(named: "home")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             PDF_INFO.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))

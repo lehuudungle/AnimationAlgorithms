@@ -30,8 +30,8 @@ class QuickSortSVC: StudyVC {
         
         btnRun.isUserInteractionEnabled = true
         btnStep.isUserInteractionEnabled = true
-        btnRun.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
-        btnStep.layer.backgroundColor = UIColor(red: 204/255, green: 256/255, blue: 204/255, alpha: 1).cgColor
+        btnRun.layer.backgroundColor = LIME_COLOR.cgColor
+        btnStep.layer.backgroundColor = LIME_COLOR.cgColor
         btnRun.setNeedsDisplay()
         btnStep.setNeedsDisplay()
         managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,3,2,5,6])

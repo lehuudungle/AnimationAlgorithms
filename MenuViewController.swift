@@ -33,7 +33,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         ]
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1).cgColor
-        imgProfile.layer.cornerRadius = 50
+        imgProfile.layer.cornerRadius = 20
         
         imgProfile.layer.masksToBounds = false
         imgProfile.clipsToBounds = true

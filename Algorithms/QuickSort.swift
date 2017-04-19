@@ -76,12 +76,14 @@ class QuickSort {
                     actionArray.append(QuickStep(act: "swap", left: i, right: j, pivot: pivotLocation, array: arr))
                     
                 }
+                
                 tmp = arr[i]
                 arr[i] = arr[j]
                 arr[j] = tmp
                 
                 i = i+1
                 j = j-1
+                
                 if(j<0){
                     actionArray.append(QuickStep(act: "outLeft", left: i, right: j, pivot: pivotLocation, array: arr))
                 }else if(i>self.arrayInput.count-1){

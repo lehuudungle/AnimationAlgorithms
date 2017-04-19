@@ -14,7 +14,6 @@ class TextStudy: UIBorderedLabel {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor(red: 204/255, green: 204/255, blue: 255/255, alpha: 0.3)
-//        self.textAlignment = .center
         self.layer.borderColor = BUTTON_COLOR.cgColor
         self.layer.cornerRadius = 10
         self.numberOfLines = 6

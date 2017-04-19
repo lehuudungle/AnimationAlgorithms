@@ -303,7 +303,6 @@ class AnimationMerge:NSObject {
     
     func next(){
         self.currentStep = self.arrayAction[self.colSolution]
-        print("gia tri : \(fistDraw)")
         self.borderRect(bearingPoint: (self.arrayLabelOne.first?.frame.origin)!, countCell: self.arrayLabel.count)
         self.animationStep()
     }
@@ -360,13 +359,14 @@ class AnimationMerge:NSObject {
         Slayer.lineWidth = 4
         let view = UIView(frame: drect)
         view.layer.addSublayer(Slayer)
-        self.graphMerge.insertSubview(view, at: 1)
+        self.graphMerge.insertSubview(view, at: 3)
         self.bodyRect?.append(view)
         if(fistDraw){
             self.bodyLine?.append(straightLine(bearingPoint: originPoint, widtRectangle: widthRect))
         }
         fistDraw = true
     }
+    
     func straightLine(bearingPoint: CGPoint,widtRectangle: CGFloat)->CAShapeLayer{
         DISTANCEROW = 3*SPACING-2*PADDING
         let start = CGPoint(x: bearingPoint.x + widtRectangle/2, y: bearingPoint.y)

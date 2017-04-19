@@ -3,44 +3,44 @@
 <plist version="1.0">
 <dict>
 	<key>01</key>
-	<string>    The heapsort algorithm involves preparing the list by first turning it into a max heap.</string>
+	<string>Heap sort involves preparing the list by first turning it into a max heap.</string>
 	<key>01.1</key>
-	<string>    The algorithm then repeatedly swaps the first value of the list with the last value, decreasing the range of values considered in the heap operation by one, and sifting the new first value into its position in the heap. </string>
+	<string>The algorithm then repeatedly swaps the first value of the list with the last value, decreasing the range of values considered in the heap operation by one, and sifting the new first value into its position in the heap. </string>
 	<key>01.2</key>
-	<string>    This repeats until the range of considered values is one value in length.</string>
+	<string>This repeats until the range of considered values is one value in length.</string>
 	<key>02</key>
-	<string>    Compare the element with its parent; if they are in the correct order, stop.</string>
+	<string>Compare the element with its parent; if they are in the correct order, stop.</string>
 	<key>03</key>
-	<string>    If not, swap the element with its parent</string>
+	<string>If not, swap the element with its parent</string>
 	<key>04</key>
-	<string>    Add the element to the bottom level of the heap.
+	<string>Add the element to the bottom level of the heap.
 </string>
 	<key>05</key>
-	<string>    Transfer that element to the standard array</string>
+	<string>Transfer that element to the standard array</string>
 	<key>06</key>
-	<string>    Continue compare the element with its parent</string>
+	<string>Continue compare the element with its parent</string>
 	<key>07</key>
-	<string>    if they are in the correct order, stop. If not, swap the element with its parent</string>
+	<string>If they are in the correct order, stop. If not, swap the element with its parent</string>
 	<key>08</key>
-	<string>    Add the element to the bottom level of the heap.</string>
+	<string>Add the element to the bottom level of the heap.</string>
 	<key>09</key>
-	<string>    Transfer that element to the standard array</string>
+	<string>Transfer that element to the standard array</string>
 	<key>10</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>11</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>12</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>13</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>14</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>15</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>16</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>17</key>
-	<string>    The same operations are repeated until all of the numbers are fully sorted</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>end</key>
 	<string></string>
 </dict>

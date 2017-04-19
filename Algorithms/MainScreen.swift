@@ -80,6 +80,7 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
     //    }
     
     
+
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -167,7 +168,7 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
             let revel = SWRevealViewController(rearViewController: menuVC, frontViewController: navDetail)
             revel?.rightViewController = menuVC
 
-//            revel?.view.addGestureRecognizer((revel?.tapGestureRecognizer())!)
+            navDetail.view.addGestureRecognizer((revel?.tapGestureRecognizer())!)
 //            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
 

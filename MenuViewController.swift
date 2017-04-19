@@ -94,6 +94,7 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             
             INPUT_XIB_CLASS.title = DETAIL.title
+            print("input_xib: \(INPUT_XIB_CLASS)")
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))

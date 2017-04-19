@@ -45,7 +45,7 @@ class QuickGraph: UIView {
         for index in 0..<ptu {
             
             if(index > 0 && index < ptu-1){
-                let sortingLabel = SortingLabel(frame: CGRect(x: x, y: 0,
+                let sortingLabel = SortingLabel(frame: CGRect(x: x, y: rectSize + spacing,
                                                               width: rectSize, height: rectSize),
                                                 color: colors[index-1],
                                                 value: String(arrayDisplay[index-1]))
@@ -55,19 +55,19 @@ class QuickGraph: UIView {
             }
             
             
-            let labelMiddle = SortingLabel(frame: CGRect(x: x, y: 0,
+            let labelMiddle = SortingLabel(frame: CGRect(x: x, y: rectSize + spacing,
                                                          width: rectSize, height: rectSize),
                                            color: SWAP_COLOR,
                                            value: "0")
             labelMiddle.isHidden = true
             
-            let labelAbove = SortingLabel(frame: CGRect(x: x, y: 0 - rectSize - spacing,
+            let labelAbove = SortingLabel(frame: CGRect(x: x, y: 0,
                                                         width: rectSize, height: rectSize),
                                           color: DEFAULT_COLOR,
                                           value: "0")
             labelAbove.isHidden = true
             
-            let labelMark = SortingLabel(frame: CGRect(x: x, y: rectSize + 6,
+            let labelMark = SortingLabel(frame: CGRect(x: x, y: 2*rectSize+spacing + 6,
                                                        width: rectSize, height: rectSize),
                                          color: DEFAULT_COLOR,
                                          value: "0")

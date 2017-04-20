@@ -7,83 +7,105 @@
 	<key>01.1</key>
 	<string>This time, for convenience, the middle number is chosen as the pivot.</string>
 	<key>01.2</key>
-	<string>A left marker is placed on the leftmost number, and a right marker is placed on the right most number of the list.</string>
-	<key>01.3</key>
-	<string>The left marker keeps moving to the right until it reaches a number greater than or equal to the pivot number.</string>
+	<string>A left marker is placed on the leftmost number, and a right marker is placed on the rightmost number of the list.</string>
 	<key>02</key>
-	<string>In this case, the left marker is already pointed at number &quot;4&quot; which is greater than the pivot &quot;3&quot;, so it stops moving.</string>
+	<string>The left marker keeps moving to the right until it reaches a number greater than or equal to the pivot number.</string>
 	<key>03</key>
-	<string>Then, it is the turn for the right marker to move left. </string>
+	<string>Now, it reaches number &quot;3&quot; which is equal to the pivot number, so it stops moving.</string>
 	<key>04</key>
-	<string>It also keep moving until it reaches a number less than the pivot number.</string>
+	<string>Then, it is the turn for the right marker to move left. </string>
 	<key>05</key>
-	<string>Since the right marker reaches number &quot;2&quot; which is less than the pivot number, it stops moving.</string>
-	<key>05.1</key>
-	<string>Now, both left and right markers have stopped moving.</string>
+	<string>It also keep moving until it reaches a number less than or equal to the pivot number.</string>
 	<key>06</key>
-	<string>The two numbers, that are pointed by the left and right markers, are swapped.</string>
+	<string>Since it reaches number &quot;1&quot; which is less than the pivot number, it stops moving.</string>
+	<key>06.1</key>
+	<string>Now, both left and right markers have stopped moving.</string>
 	<key>07</key>
-	<string>After swapping, the left marker moves to the next right number, and the right marker moves to the next left number.</string>
+	<string>The two numbers, that are pointed by left and right markers, are swapped.</string>
 	<key>08</key>
+	<string>After swapping, the left marker moves to the next right number, and the right marker moves to the next left number.</string>
+	<key>08.1</key>
 	<string>Then, the left marker starts moving again to the right to find the number greater than or equal to the pivot number.</string>
 	<key>09</key>
-	<string>&quot;3&quot;</string>
+	<string>The left marker already pointed at number &quot;5&quot; which is greater than &quot;3&quot;, so it stops moving.</string>
+	<key>09.1</key>
+	<string>Now, the right marker has the turn to move left.</string>
 	<key>10</key>
-	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<string>In this case, the right marker is pointing at the pivot. </string>
+	<key>10.1</key>
+	<string>That means no comparision is needed and the right marker doesn&apos;t need to move. </string>
+	<key>10.2</key>
+	<string>Both left and right markers have stopped moving.</string>
 	<key>11</key>
-	<string>Continue to get the pivot position and split the array in both the front and back of the pivot position</string>
+	<string>Again, the left marker&apos;s number is swapped with the right marker&apos;s number.</string>
 	<key>12</key>
-	<string>Continue to get the pivot position and split the array in both the front and back of the pivot position</string>
+	<string>After swapping, the left marker moves to the next right number, and the right marker moves to the next left number.</string>
+	<key>12.1</key>
+	<string>This time, left and right markers move passing each other. That means the original list is dividided into two sub-lists. </string>
+	<key>12.2</key>
+	<string>The left sub-list is the group of numbers less than or equal to the pivot number &quot;3&quot;.</string>
+	<key>12.3</key>
+	<string>The right sub-list is the group of number greater than or equal to the pivot number &quot;3&quot;.</string>
 	<key>13</key>
-	<string>Continue to get the pivot position and split the array in both the front and back of the pivot position</string>
+	<string>Now, the left sub-list is targeted. Again, the middle number is chosen as the pivot number.</string>
+	<key>13.1</key>
+	<string>The left marker points at the leftmost number which is &quot;2&quot;, and the right marker points at the rightmost number of the sub-list which is &quot;3&quot;.</string>
 	<key>14</key>
-	<string>Elements smaller than or equal to the latch element are moved forward and in the first child list</string>
+	<string>The operation, that was used for the entire list, is used again for this sub-list.</string>
 	<key>15</key>
-	<string>Larger pieces of latch are brought back and are on the list behind</string>
+	<string>The same operation is repeated until the number of elements in the sub-list is one.</string>
 	<key>16</key>
-	<string>Elements smaller than or equal to the latch element are moved forward and in the first child list</string>
+	<string>The same operation is repeated until the number of elements in the sub-list is one.</string>
 	<key>17</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operation is repeated until the number of elements in the sub-list is one.</string>
 	<key>18</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operation is repeated until the number of elements in the sub-list is one.</string>
 	<key>19</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>Then, the same operations is used again for the next sub-list.</string>
 	<key>20</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>21</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>22</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>23</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>24</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>25</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>26</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>27</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>28</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>29</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>30</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>31</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>32</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>33</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>34</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>35</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>36</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>37</key>
-	<string>Continue dividing the same until the child lists are of the same length.</string>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>38</key>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>39</key>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>40</key>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>41</key>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>end</key>
 	<string></string>
 </dict>

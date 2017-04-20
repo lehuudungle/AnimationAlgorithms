@@ -39,6 +39,7 @@ class GameManager: UIView
     var x:CGFloat!
     var count = 0
     var countM: Int!
+    var end = false
     var isPause: Bool!
     var pause: Bool = false{
         didSet {
@@ -126,6 +127,7 @@ class GameManager: UIView
         lblSolutionText.isHidden = true
         lblSolutionFound.isHidden = true
         btnNextTmp.isUserInteractionEnabled = true
+        btnPauseActionTmp.isUserInteractionEnabled = true
         btnPauseActionTmp.isHidden = true
         removeAllPieces()
         btnStartTmp.isHidden = false
@@ -143,9 +145,11 @@ class GameManager: UIView
         self.rowSolution = 0
         self.colSolution = 0
         self.dem = 0
+        if end == false {
         count = 1
+        }
         self.lblSolutionFound.text = "0"
-        
+        end = false
         
     }
     
@@ -344,7 +348,7 @@ class GameManager: UIView
                 btnPauseActionTmp.isUserInteractionEnabled = false
                 btnResetTmp.layer.backgroundColor = LIME_COLOR.cgColor
                 btnResetTmp.setNeedsDisplay()
-
+                self.end = true
                 }
             }
             

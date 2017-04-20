@@ -49,7 +49,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         btnSizeHeight = btnSizeWidth*3/5
         x = 2*spacing + btnSizeWidth
 
-        view.backgroundColor = UIColor(red: 245/255, green: 222/255, blue: 179/255, alpha: 1)
+        view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+
         super.viewDidLoad()
         self.gamemanager = GameManager()
         btnSizeBoard()

@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mergeSortSVC: MergeSortSVC = MergeSortSVC()
         let selectionSortIVC: SelectionSortIVC = SelectionSortIVC()
         
-        self.navController!.pushViewController(bubbleSortSVC, animated: false)
+        self.navController!.pushViewController(bubbleSortSVC, animated: true)
         self.navController!.pushViewController(selectionSortSVC, animated: false)
         self.navController!.pushViewController(insertionSortSVC, animated: false)
         self.navController!.pushViewController(mergeSortSVC, animated: false)

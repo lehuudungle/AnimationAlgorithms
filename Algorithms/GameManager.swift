@@ -31,10 +31,6 @@ class GameManager: UIView
     var dem = 0
     var lblSolutionFound:UILabel!
     var lblSolutionText:UILabel!
-//    var btnStart:UIButton!
-//    var btnNext:UIButton!
-//    var btnPauseAction: UIButton!
-//    var btnReset:UIButton!
     
     var spacing:CGFloat!
     var widthRatio = 3
@@ -102,26 +98,6 @@ class GameManager: UIView
     }
     
     
-//    func addBtnMove(toView view: UIView)
-//    {
-//        btnStart = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-//        btnStart.layer.backgroundColor = LIME_COLOR.cgColor
-//        btnStart.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        btnStart.setTitle("\u{f144}", for: .normal)
-//        btnStart.titleLabel?.font = UIFont.fontAwesome(ofSize: btnStart.fontoFitHeight())
-//        btnStart.setTitleColor(BUTTON_COLOR, for: .normal)
-//        btnStart.titleLabel?.adjustsFontSizeToFitWidth = true
-//        btnStart.titleLabel?.numberOfLines = 0
-//        btnStart.titleLabel?.minimumScaleFactor = 0.2
-//        btnStart.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-//        btnStart.titleLabel?.baselineAdjustment = .alignCenters
-//        btnStart.titleLabel?.textAlignment = .center
-//        btnStart.layer.borderWidth = 2
-//        btnStart.layer.borderColor = BUTTON_COLOR.cgColor
-//        btnStart.layer.cornerRadius = 10
-//        btnStart.addTarget(self, action: #selector(move(sender:)), for: .touchUpInside)
-//        view.addSubview(btnStart)
-//    }
     @objc func move(sender: UIButton)
     {
         
@@ -143,26 +119,7 @@ class GameManager: UIView
         
         
     }
-//    func addReset(toView view: UIView){
-//        btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-//        btnReset.layer.backgroundColor = LIME_COLOR.cgColor
-//        btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        btnReset.setTitle("\u{f021}", for: .normal)
-//        btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
-//        btnReset.setTitleColor(BUTTON_COLOR, for: .normal)
-//        btnReset.titleLabel?.adjustsFontSizeToFitWidth = true
-//        btnReset.titleLabel?.numberOfLines = 0
-//        btnReset.titleLabel?.minimumScaleFactor = 0.2
-//        btnReset.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-//        btnReset.titleLabel?.baselineAdjustment = .alignCenters
-//        btnReset.titleLabel?.textAlignment = .center
-//        btnReset.layer.borderWidth = 2
-//        btnReset.layer.borderColor = BUTTON_COLOR.cgColor
-//        btnReset.layer.cornerRadius = 10
-//        
-//        btnReset.addTarget(self, action: #selector(reset(sender:)), for: .touchUpInside)
-//        view.addSubview(btnReset)
-//    }
+
     @objc func reset(sender: UIButton){
         textInPutBoard.isHidden = false
         btnSizeBoardTmp.isHidden = false
@@ -192,30 +149,6 @@ class GameManager: UIView
         
     }
     
-//    func btnPause(toView view: UIView){
-//        
-//        btnPauseAction = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-//        btnPauseAction.layer.backgroundColor = LIME_COLOR.cgColor
-//        btnPauseAction.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        btnPauseAction.setTitle("\u{f04c}", for: .normal)
-//        
-//        btnPauseAction.setTitleColor(BUTTON_COLOR, for: .normal)
-//        btnPauseAction.titleLabel?.font = UIFont.fontAwesome(ofSize: btnPauseAction.fontoFitHeight())
-//        btnPauseAction.titleLabel?.adjustsFontSizeToFitWidth = true
-//        btnPauseAction.titleLabel?.numberOfLines = 0
-//        btnPauseAction.titleLabel?.minimumScaleFactor = 0.2
-//        btnPauseAction.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-//        btnPauseAction.titleLabel?.baselineAdjustment = .alignCenters
-//        btnPauseAction.titleLabel?.textAlignment = .center
-//        
-//        btnPauseAction.layer.borderWidth = 2
-//        btnPauseAction.layer.borderColor = BUTTON_COLOR.cgColor
-//        btnPauseAction.layer.cornerRadius = 10
-//        
-//        btnPauseAction.addTarget(self, action: #selector(action_Pause(_:)), for: .touchUpInside)
-//        view.addSubview(btnPauseAction)
-//        
-//    }
     
     
     @IBAction func action_Pause(_ sender: UIButton) {
@@ -237,29 +170,6 @@ class GameManager: UIView
             isPause = false
         }
     }
-    
-    
-//    func addBtnNext(toView view: UIView){
-//        btnNext = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-//        btnNext.layer.backgroundColor = LIME_COLOR.cgColor
-//        btnNext.setTitleColor(UIColor.white, for: UIControlState.normal)
-//        btnNext.setTitle("\u{f051}", for: .normal)
-//        btnNext.setTitleColor(BUTTON_COLOR, for: .normal)
-//        btnNext.titleLabel?.font = UIFont.fontAwesome(ofSize: btnNext.fontoFitHeight())
-//        btnNext.titleLabel?.adjustsFontSizeToFitWidth = true
-//        btnNext.titleLabel?.numberOfLines = 0
-//        btnNext.titleLabel?.minimumScaleFactor = 0.2
-//        btnNext.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-//        btnNext.titleLabel?.baselineAdjustment = .alignCenters
-//        btnNext.titleLabel?.textAlignment = .center
-//        
-//        btnNext.layer.borderWidth = 2
-//        btnNext.layer.borderColor = BUTTON_COLOR.cgColor
-//        btnNext.layer.cornerRadius = 10
-//        
-//        btnNext.addTarget(self, action: #selector(next(sender:)), for: .touchUpInside)
-//        view.addSubview(btnNext)
-//    }
     
     
     @objc func next(sender: UIButton){

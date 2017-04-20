@@ -20,6 +20,20 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
     var menu: [MenuSection]!
     var bannerView = GADBannerView()
     var viewcontroller: ViewController!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewcontroller = ViewController()
@@ -104,6 +118,9 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("chay vao day")
+        
         let menuSection: MenuSection = self.menu[indexPath.section]
         let menuItems = menuSection.menus
         

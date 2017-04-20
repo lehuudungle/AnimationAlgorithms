@@ -39,20 +39,17 @@ class MenuList: NSObject {
             
             ])
         
-        //        let inter = MenuSection(section: "inter", menus:[
-        //            Menu(title: "Rock", viewClass: "ClassVC",inputClass: SelectionSortIVC()),
-        //            Menu(title: "Home", viewClass: "ClassVC",inputClass: SelectionSortIVC())
-        //            ])
+        let inter = MenuSection(section: "N-Queen ", menus:[
+            Menu(title: "N-Queen Problem", viewClass: "ViewController",inputClass: SelectionSortIVC(), infoTitle: "A" )
+            ])
         
         let advance = MenuSection(section: "Other", menus:[
-             Menu(title: "NQueen Problem", viewClass: "ViewController",inputClass: SelectionSortIVC(), infoTitle: "A" ),
-            
             Menu(title: "About", viewClass: "AboutVC",inputClass: SelectionSortIVC(), infoTitle: "A" ),
             Menu(title: "Share", viewClass: "ShareVC",inputClass: ShareVC(), infoTitle: "A" )
             ])
         
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)
-        mainScreen.menu = [basic,advance]
+        mainScreen.menu = [basic,inter,advance]
         mainScreen.title = "Algorithms"
         
         let nav = UINavigationController(rootViewController: mainScreen)

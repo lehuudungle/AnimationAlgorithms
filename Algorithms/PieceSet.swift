@@ -42,7 +42,7 @@ class PieceSet
     func getAllVisible() -> [VisibleOnBoard]{
         var visibleOnBoards = [VisibleOnBoard]()
         for pieceController in pieceControllers{
-           let  visibleOnBoard = VisibleOnBoard(type: pieceController.pieceModel.type, position: pieceController.pieceModel.placeAt)
+            let  visibleOnBoard = VisibleOnBoard(type: pieceController.pieceModel.type, position: pieceController.pieceModel.placeAt)
             visibleOnBoards.append(visibleOnBoard)
         }
         return visibleOnBoards
@@ -239,7 +239,7 @@ class PieceSet
                 let currentPiece: Piece!
                 if(isFirst == false)
                 {
-                    currentPiece = Pawn(pieceColor: color, at: position)
+                    currentPiece = Queen(pieceColor: color, at: position)
                     
                 }
                 else
@@ -256,18 +256,13 @@ class PieceSet
     {
         let currentPiece: Piece!
         switch type {
-        case .King:
-            currentPiece = King(pieceColor: color, at: position)
-            break
+            
         case .Queen:
             currentPiece = Queen(pieceColor: color, at: position)
             break
-        case .Rook:
-            currentPiece = Rook(pieceColor: color, at: position)
-            break
-        
-        
         default:
+            currentPiece = Queen(pieceColor: color, at: position)
+            
             break
         }
         return currentPiece
@@ -277,6 +272,7 @@ class PieceSet
         
     }
 }
+
 extension Array where Element: AnyObject {
     mutating func remove(object: Element) {
         if let index = index(where: { $0 === object }) {

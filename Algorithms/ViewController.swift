@@ -22,8 +22,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var btnSizeHeight:CGFloat!
     var x:CGFloat!
     var btn: UIButton!
+    var btnReset: UIButton!
+    var btnPauseAction: UIButton!
+    var btnStart: UIButton!
+    var btnNext: UIButton!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
+
 
     override func viewDidLoad() {
+        
+        self.hideKeyboardWhenTappedAround()
         
         spacing = view.bounds.size.width/CGFloat(widthRatio*3 + 4)
         btnSizeWidth = spacing*CGFloat(widthRatio)
@@ -34,9 +53,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.gamemanager = GameManager()
         btnSizeBoard()
-        self.gamemanager.initGameWith(viewcontroller: self, size: self.view.bounds.size.width)
         addSizeBoard()
+        addReset()
+        btnPause()
+        addBtnNext()
+        addBtnMove()
         
+        btnStart.isUserInteractionEnabled = false
+        btnReset.isUserInteractionEnabled = false
+        
+//        self.gamemanager.initGameWith(viewcontroller: self, size: self.view.bounds.size.width)
+
         sizeBoard.delegate = self
         
     }
@@ -74,13 +101,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
           if(sizeBoard.text != "" && sizeBoard.text != nil){
             if (Int(sizeBoard.text!)! <= 10){
                 if (Int(sizeBoard.text!)! >= 4 ){
-                    self.gamemanager.btnNext.isUserInteractionEnabled = true
-                    self.gamemanager.boardView.removeFromSuperview()
-                    self.gamemanager.btnStart.isHidden = true
-                    self.gamemanager.lblSolutionFound.isHidden = true
+                    self.btnNext.isUserInteractionEnabled = true
+                    self.btnStart.isUserInteractionEnabled = true
+//                    self.gamemanager.boardView.removeFromSuperview()
+//                    self.btnStart.isHidden = true
+//                    self.gamemanager.lblSolutionFound.isHidden = true
                     self.gamemanager.rowTotal = Int(self.sizeBoard.text!)!
                     self.gamemanager.colTotal = Int(self.sizeBoard.text!)!
                     self.gamemanager.initGameWith(viewcontroller: self, size: self.view.bounds.size.width)
+                    btn.isHidden = true
+                    sizeBoard.isHidden = true
+                    btnReset.isUserInteractionEnabled = true
                 }else{
                     
                 addAlert(message: "Can not enter less than 10 digits")
@@ -97,7 +128,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func btnSizeBoard(){
-        btn = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-2*spacing-2*btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btn = KDPulseButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         btnSizeBoardTmp = btn
         btn.layer.backgroundColor = LIME_COLOR.cgColor
         btn.setTitleColor(UIColor.white, for: UIControlState.normal)
@@ -119,12 +150,120 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     func addSizeBoard(){
-        sizeBoard = UITextField(frame: CGRect(x: x, y: view.bounds.size.height-2*spacing-2*btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        sizeBoard = UITextField(frame: CGRect(x: view.bounds.size.width/2 - spacing/2 - btnSizeWidth, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         textInPutBoard = sizeBoard
-        sizeBoard.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
-        sizeBoard.textColor = UIColor.white
-        sizeBoard.placeholder = "Size"
+        
+        
+        sizeBoard.placeholder = "........................."
+        sizeBoard.font = UIFont.boldSystemFont(ofSize: 15)
+        sizeBoard.borderStyle = UITextBorderStyle.roundedRect
+        sizeBoard.autocorrectionType = UITextAutocorrectionType.no
+        sizeBoard.keyboardType = UIKeyboardType.numberPad
+        sizeBoard.returnKeyType = UIReturnKeyType.done
+        sizeBoard.clearButtonMode = UITextFieldViewMode.whileEditing
+        sizeBoard.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        sizeBoard.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        sizeBoard.layer.cornerRadius = 10
+        sizeBoard.layer.borderWidth = 2
+        sizeBoard.layer.borderColor = UIColor.black.cgColor
+        sizeBoard.layer.masksToBounds = true
+        
         view.addSubview(sizeBoard)
+    }
+    
+    func addReset(){
+        btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btnResetTmp = btnReset
+        btnReset.layer.backgroundColor = LIME_COLOR.cgColor
+        btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnReset.setTitle("\u{f021}", for: .normal)
+        btnReset.titleLabel?.font = UIFont.fontAwesome(ofSize: btnReset.fontoFitHeight())
+        btnReset.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnReset.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnReset.titleLabel?.numberOfLines = 0
+        btnReset.titleLabel?.minimumScaleFactor = 0.2
+        btnReset.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        btnReset.titleLabel?.baselineAdjustment = .alignCenters
+        btnReset.titleLabel?.textAlignment = .center
+        btnReset.layer.borderWidth = 2
+        btnReset.layer.borderColor = BUTTON_COLOR.cgColor
+        btnReset.layer.cornerRadius = 10
+        
+        btnReset.addTarget(self.gamemanager, action: #selector(self.gamemanager.reset(sender:)), for: .touchUpInside)
+        view.addSubview(btnReset)
+    }
+    
+    func btnPause(){
+        
+        btnPauseAction = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        
+        btnPauseActionTmp = btnPauseAction
+        
+        btnPauseAction.layer.backgroundColor = LIME_COLOR.cgColor
+        btnPauseAction.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnPauseAction.setTitle("\u{f04c}", for: .normal)
+        
+        btnPauseAction.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnPauseAction.titleLabel?.font = UIFont.fontAwesome(ofSize: btnPauseAction.fontoFitHeight())
+        btnPauseAction.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnPauseAction.titleLabel?.numberOfLines = 0
+        btnPauseAction.titleLabel?.minimumScaleFactor = 0.2
+        btnPauseAction.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        btnPauseAction.titleLabel?.baselineAdjustment = .alignCenters
+        btnPauseAction.titleLabel?.textAlignment = .center
+        
+        btnPauseAction.layer.borderWidth = 2
+        btnPauseAction.layer.borderColor = BUTTON_COLOR.cgColor
+        btnPauseAction.layer.cornerRadius = 10
+        
+        btnPauseAction.addTarget(self.gamemanager, action: #selector(self.gamemanager.action_Pause(_:)), for: .touchUpInside)
+        view.addSubview(btnPauseAction)
+        
+    }
+    
+    func addBtnMove()
+    {
+        btnStart = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btnStartTmp = btnStart
+        btnStart.layer.backgroundColor = LIME_COLOR.cgColor
+        btnStart.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnStart.setTitle("\u{f144}", for: .normal)
+        btnStart.titleLabel?.font = UIFont.fontAwesome(ofSize: btnStart.fontoFitHeight())
+        btnStart.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnStart.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnStart.titleLabel?.numberOfLines = 0
+        btnStart.titleLabel?.minimumScaleFactor = 0.2
+        btnStart.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        btnStart.titleLabel?.baselineAdjustment = .alignCenters
+        btnStart.titleLabel?.textAlignment = .center
+        btnStart.layer.borderWidth = 2
+        btnStart.layer.borderColor = BUTTON_COLOR.cgColor
+        btnStart.layer.cornerRadius = 10
+        btnStart.addTarget(self.gamemanager, action: #selector(self.gamemanager.move(sender:)), for: .touchUpInside)
+        view.addSubview(btnStart)
+    }
+    
+    func addBtnNext(){
+        btnNext = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btnNextTmp = btnNext
+        btnNext.layer.backgroundColor = LIME_COLOR.cgColor
+        btnNext.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnNext.setTitle("\u{f051}", for: .normal)
+        btnNext.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnNext.titleLabel?.font = UIFont.fontAwesome(ofSize: btnNext.fontoFitHeight())
+        btnNext.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnNext.titleLabel?.numberOfLines = 0
+        btnNext.titleLabel?.minimumScaleFactor = 0.2
+        btnNext.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        btnNext.titleLabel?.baselineAdjustment = .alignCenters
+        btnNext.titleLabel?.textAlignment = .center
+        
+        btnNext.layer.borderWidth = 2
+        btnNext.layer.borderColor = BUTTON_COLOR.cgColor
+        btnNext.layer.cornerRadius = 10
+        
+        btnNext.addTarget(self.gamemanager, action: #selector(self.gamemanager.next(sender:)), for: .touchUpInside)
+        view.addSubview(btnNext)
     }
     
     
@@ -136,4 +275,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 
 }
+
 

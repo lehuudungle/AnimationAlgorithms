@@ -19,7 +19,7 @@ class ShareVC: UIViewController {
     
     func addShare(){
         btnShare = KDPulseButton(frame: CGRect(x: view.bounds.size.width/5, y: view.bounds.size.height-200, width: view.bounds.size.width*3/5, height: 50))
-        btnShare.backgroundColor = UIColor.green
+        btnShare.layer.backgroundColor = LIME_COLOR.cgColor
         btnShare.setTitle("Share", for: .normal)
         btnShare.layer.cornerRadius = 10
         btnShare.addTarget(self, action: #selector(share(sender:)), for: .touchUpInside )

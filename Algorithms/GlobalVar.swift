@@ -55,4 +55,9 @@ var INPUT_XIB_CLASS: UIViewController!
 var VIEW_CHOSEN: String!
 var PDF_TITLE: String!
 
+var btnStartTmp:UIButton!
+var btnNextTmp:UIButton!
+var btnPauseActionTmp: UIButton!
+var btnResetTmp:UIButton!
+
 

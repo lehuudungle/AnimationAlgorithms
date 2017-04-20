@@ -41,7 +41,8 @@ class GameManager: UIView
     var btnSizeWidth:CGFloat!
     var btnSizeHeight:CGFloat!
     var x:CGFloat!
-    var count:Int!
+    var count = 0
+    var countM: Int!
     var isPause: Bool!
     var pause: Bool = false{
         didSet {
@@ -54,7 +55,6 @@ class GameManager: UIView
     
     func initGameWith(viewcontroller: UIViewController, size: CGFloat)
     {
-        count = 0
         spacing = viewcontroller.view.bounds.size.width/CGFloat(widthRatio*3 + 4)
         btnSizeWidth = spacing*CGFloat(widthRatio)
         btnSizeHeight = btnSizeWidth*3/5
@@ -124,6 +124,7 @@ class GameManager: UIView
 //    }
     @objc func move(sender: UIButton)
     {
+        
         btnNextTmp.isUserInteractionEnabled = false
         btnResetTmp.isUserInteractionEnabled = false
         btnStartTmp.isHidden = true
@@ -167,12 +168,11 @@ class GameManager: UIView
         btnSizeBoardTmp.isHidden = false
         lblSolutionText.isHidden = true
         lblSolutionFound.isHidden = true
-
         btnNextTmp.isUserInteractionEnabled = true
         btnPauseActionTmp.isHidden = true
         removeAllPieces()
-        btnStartTmp.isUserInteractionEnabled = false
         btnStartTmp.isHidden = false
+        btnStartTmp.isUserInteractionEnabled = false
         btnResetTmp.layer.backgroundColor = LIME_COLOR.cgColor
         btnNextTmp.layer.backgroundColor = LIME_COLOR.cgColor
         btnStartTmp.layer.backgroundColor = LIME_COLOR.cgColor
@@ -182,12 +182,11 @@ class GameManager: UIView
         btnNextTmp.setNeedsDisplay()
         btnStartTmp.setNeedsDisplay()
         boardView.removeFromSuperview()
-        
         self.currentIndexQueen = 0
         self.rowSolution = 0
         self.colSolution = 0
         self.dem = 0
-        count = 0
+        count = 1
         self.lblSolutionFound.text = "0"
         
         
@@ -230,9 +229,6 @@ class GameManager: UIView
             isPause = true
         }else{
             btnPauseActionTmp.setTitle("\u{f04c}", for: .normal)
-            btnSizeBoardTmp.isUserInteractionEnabled = false
-            btnSizeBoardTmp.layer.backgroundColor = UIColor.gray.cgColor
-            btnSizeBoardTmp.setNeedsDisplay()
             btnResetTmp.layer.backgroundColor = UIColor.gray.cgColor
             btnResetTmp.setNeedsDisplay()
             btnResetTmp.isUserInteractionEnabled = false
@@ -406,7 +402,7 @@ class GameManager: UIView
         }
         
         UIView.setAnimationsEnabled(true)
-        UIView.animate(withDuration: 0.005, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             //Nếu bước đi mà là backtrack thì sẽ xoá các dòng và quay lại root của piece hiện tại
             if(self.currentSolition[self.colSolution].backtrack > 0)
             {
@@ -431,10 +427,15 @@ class GameManager: UIView
                 self.dem = self.dem + 1
                 self.lblSolutionFound.text = String(self.dem)
             }
-            if (self.currentSolition[self.colSolution].position.row == 2 && self.currentSolition[self.colSolution].position.col == self.colTotal && self.currentSolition[self.colSolution].isTrue == false){
+            if ( (self.currentSolition[self.colSolution].position.row == 2 && self.currentSolition[self.colSolution].position.col == self.colTotal && self.currentSolition[self.colSolution].isTrue == false)){
+                if self.colTotal == 4{
                 btnNextTmp.isUserInteractionEnabled = false
-                btnStartTmp.isUserInteractionEnabled = false
-                self.count = 0
+                btnResetTmp.isUserInteractionEnabled = true
+                btnPauseActionTmp.isUserInteractionEnabled = false
+                btnResetTmp.layer.backgroundColor = LIME_COLOR.cgColor
+                btnResetTmp.setNeedsDisplay()
+
+                }
             }
             
             

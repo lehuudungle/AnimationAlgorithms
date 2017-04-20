@@ -83,7 +83,7 @@ class ManagerQuickSort{
             
             viewcontroller.view.addSubview(textStudy)
         
-            textStudy.text = "Quicksort is a popular sorting algorithm that is often faster in practice compared to other sorting algorithms."
+            textStudy.text = "Quicksort is a popular sorting algorithm that is often faster in practice compared to other sorting algorithms. It utilizes a divide-and-conquer strategy to quickly sort data items by dividing a large array into two smaller arrays."
             var path: String = ""
             path = Bundle.main.path(forResource:"QuickSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

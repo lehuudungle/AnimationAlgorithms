@@ -265,14 +265,9 @@ class PieceSet
         case .Rook:
             currentPiece = Rook(pieceColor: color, at: position)
             break
-        case .Bishop:
-            currentPiece = Bishop(pieceColor: color, at: position)
-            break
-        case .Knight:
-            currentPiece = Knight(pieceColor: color, at: position)
-            break
+        
+        
         default:
-            currentPiece = Pawn(pieceColor: color, at: position)
             break
         }
         return currentPiece

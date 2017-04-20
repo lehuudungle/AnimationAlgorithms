@@ -17,7 +17,6 @@ class GameManager: UIView
     var boardView: Board!
     var playedMoves: [Move]!
     var turn: PieceColor!
-    var players: [Player]!
     var pieceSets:[PieceSet]! // 1-->2
     var pieceSetOnTop: PieceColor!
     var delegate: PieceSetDelegate!
@@ -181,7 +180,7 @@ class GameManager: UIView
         self.dem = 0
         count = 0
         self.lblSolutionFound.text = "0"
-       
+        
         
     }
     
@@ -397,22 +396,10 @@ class GameManager: UIView
                 }
                 self.pieceSets.first?.addnewQueenAt(position: i.position, isTrue: isQueen)
             }
-            //            }
-            //            else{
-            //                self.pieceSets.first?.removePieceController(pieceController: (self.pieceSets.first?.getPieceControllerAt(position: Position(row: self.currentSolition[self.colSolution].position.row-1, col: self.currentSolition[self.colSolution].position.col-1)))!)
-            //
-            //            }
-            //            self.pieceSets.first?.addnewQueenAt(position: (self.pieceSets.first?.prePiece.placeAt)!, isTrue: self.pieceSets.first?.prePiece.type)
-            //            self.colSolution = self.colSolution - 1
-            //
-            //            self.pieceSets.first?.removePieceController(pieceController: (self.pieceSets.first?.getPieceControllerAt(position: Position(row: self.currentSolition[self.colSolution].position.row-1, col: self.currentSolition[self.colSolution].position.col-1)))!)
             
-            
-            //            self.pieceSets.first?.setPreviousControllers()
             
         }) { (finished) in
             
-            //            self.colSolution = self.colSolution - 1
             _ = self.pieceSets.first?.getPieceControllerAt(position: Position(row: self.currentSolition[self.colSolution].position.row-1, col: self.currentSolition[self.colSolution].position.col-1))
         }
     }
@@ -471,7 +458,7 @@ class GameManager: UIView
                 self.loop()
                 return
             }
-
+            
             self.autoAnimation()
         }
     }
@@ -527,8 +514,7 @@ class GameManager: UIView
     func operation()
     {}
     func isCheckMated()
-    {
-    }
+    {}
     
 }
 extension GameManager: PieceSetDelegate

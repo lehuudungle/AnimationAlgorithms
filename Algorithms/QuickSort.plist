@@ -3,8 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>01</key>
-	<string>It utilizes a divide-and-conquer strategy to quickly sort data items by dividing a large array into two smaller arrays.</string>
-	<key>01.1</key>
 	<string>To begin, the entire list is targeted. A number in the list is randomly chosen. This number is called the &quot;pivot&quot;.</string>
 	<key>01.2</key>
 	<string>This time, for convenience, the middle number is chosen as the pivot.</string>

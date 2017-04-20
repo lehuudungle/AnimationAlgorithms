@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import KDPulseButton
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
   
 
     var gamemanager: GameManager!
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var btnSizeWidth:CGFloat!
     var btnSizeHeight:CGFloat!
     var x:CGFloat!
+    var btn: UIButton!
 
     override func viewDidLoad() {
         
@@ -35,8 +36,27 @@ class ViewController: UIViewController {
         btnSizeBoard()
         self.gamemanager.initGameWith(viewcontroller: self, size: self.view.bounds.size.width)
         addSizeBoard()
-
-
+        
+        sizeBoard.delegate = self
+        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Find out what the text field will be after adding the current edit
+        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        
+        if Int(text) != nil {
+            
+            // Text field converted to an Int
+            
+            btn.isEnabled = true
+        } else {
+            // Text field is not an Int
+            btn.isEnabled = false
+        }
+        
+        // Return true so the text field will be changed
+        return true
     }
     
     func addAlert(message: String){
@@ -81,7 +101,7 @@ class ViewController: UIViewController {
     }
     
     func btnSizeBoard(){
-        let btn = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-2*spacing-2*btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
+        btn = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-2*spacing-2*btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
         btnSizeBoardTmp = btn
         btn.layer.backgroundColor = LIME_COLOR.cgColor
         btn.setTitleColor(UIColor.white, for: UIControlState.normal)

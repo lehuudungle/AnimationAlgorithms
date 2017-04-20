@@ -190,8 +190,6 @@ class PieceSet
         currentPiece.state = self.getAllVisible()
         prePiece = currentPiece
         
-        print(currentPiece.state)
-        print(currentPiece.state.count)
         currentPiece.root = self.rootPiece
         //Khi piece ở dòng mới thì mới đổi rootPiece
         if(currentPiece.type != .None)

@@ -3,10 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>01</key>
-	<string>To begin, the entire list is targeted. A number in the list is randomly chosen. This number is called the &quot;pivot&quot;.</string>
+	<string>It utilizes a divide-and-conquer strategy to quickly sort data items by dividing a large array into two smaller arrays.</string>
 	<key>01.1</key>
-	<string>This time, for convenience, the middle number is chosen as the pivot.</string>
+	<string>To begin, the entire list is targeted. A number in the list is randomly chosen. This number is called the &quot;pivot&quot;.</string>
 	<key>01.2</key>
+	<string>This time, for convenience, the middle number is chosen as the pivot.</string>
+	<key>01.3</key>
 	<string>A left marker is placed on the leftmost number, and a right marker is placed on the rightmost number of the list.</string>
 	<key>02</key>
 	<string>The left marker keeps moving to the right until it reaches a number greater than or equal to the pivot number.</string>
@@ -105,6 +107,8 @@
 	<key>40</key>
 	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>41</key>
+	<string>The same operations are repeated until all of the numbers are fully sorted</string>
+	<key>42</key>
 	<string>The same operations are repeated until all of the numbers are fully sorted</string>
 	<key>end</key>
 	<string></string>

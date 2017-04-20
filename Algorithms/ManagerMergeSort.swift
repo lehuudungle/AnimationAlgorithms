@@ -57,7 +57,7 @@ class ManagerMergeSort {
         
         for index in 0..<self.arrayInput.count {
             self.arrayDisplay.append(arrayInput[index])
-            self.arrayColor.append(SWAP_COLOR)
+            self.arrayColor.append(DEFAULT_COLOR)
         }
         
         graph = MergeGraph(frame: CGRect(x: 0,

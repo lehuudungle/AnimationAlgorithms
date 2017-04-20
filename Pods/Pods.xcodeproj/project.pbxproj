@@ -7,18 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22813514C5C9E81F045C23D201D9EB7A /* KDPulseButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1944C654003245033F1D8774C4CCA6C2 /* KDPulseButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B50EFBE93D198EBC6CE06D27010E98C /* KDPulseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = D46FF15658E806C2CDEC7E9B1F0F5A03 /* KDPulseButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22813514C5C9E81F045C23D201D9EB7A /* KDPulseButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DBDE233F4CF659EC88C4BADA7F27C7 /* KDPulseButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B50EFBE93D198EBC6CE06D27010E98C /* KDPulseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 6261767F385DF4E207AA4458BC88FC08 /* KDPulseButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35753FBDDED4571B6D575BFE73DB4ABF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3E9E4C9B5F61C14E7E5867A6EAF1CFEF /* KDPulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E69BD9EB201B90D5B52A691CB3114E /* KDPulseButton.swift */; };
-		577956327277AE23E7918EF8F1D2CA88 /* Pods-Algorithms-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFA758167571F5E8D5F881CE0C1EA686 /* Pods-Algorithms-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		723AFBED3BDC36B15DE9416FA165DA84 /* KDPulseButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 638C5D5A1F1354DA6A8E61D54CFC54F7 /* KDPulseButton-dummy.m */; };
-		A0A7230FDC79DF20D3A7B8E143BE0163 /* Pods-Algorithms-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB649684BA2390107E4CCE4CAA5652E /* Pods-Algorithms-dummy.m */; };
-		A6C73B963B8CC8493672EC829C40DFB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3E9E4C9B5F61C14E7E5867A6EAF1CFEF /* KDPulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2C301575DDCB34B44AA973F3936877 /* KDPulseButton.swift */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 48223722DFDC8156510A4F59B35B9B35 /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D2356FDCB262994F5850EF6D8EB7E49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		723AFBED3BDC36B15DE9416FA165DA84 /* KDPulseButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9853FAF8FE2D4BD23FA8983BB44B8B36 /* KDPulseButton-dummy.m */; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10665BF8B9768C63F711E095B4F69529 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93D51748565CFEB9490FBA7DA993C5C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B727FE9F011B886EABB9BA9E10321CB /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFB35DEE1BA95C0FC47DB044FC9DA791 /* Pods-Algorithms-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB649684BA2390107E4CCE4CAA5652E /* Pods-Algorithms-dummy.m */; };
+		F088926ADEA971DFE9E5087DC59C28CF /* Pods-Algorithms-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFA758167571F5E8D5F881CE0C1EA686 /* Pods-Algorithms-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 435E3505F4706621AB1B43A4E4B4E1A2 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F668F2986805A21CB3154F3E046E808 /* GoogleToolboxForMac-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E8C577774F6D85D830A6A92EC85C23E5 /* PBXContainerItemProxy */ = {
+		3B577B93043870EB103D60E72900A502 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		E9D1BCFCABECE7E810639552E6D8ACCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -28,28 +41,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EE6097170CAA2CF3E9629FAF9022B6A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		136CD6EB6453B6078DE1EC49EE0A2210 /* KDPulseButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KDPulseButton.modulemap; sourceTree = "<group>"; };
-		1944C654003245033F1D8774C4CCA6C2 /* KDPulseButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDPulseButton-umbrella.h"; sourceTree = "<group>"; };
-		218425B7A61F1488C750C5958D06EBC9 /* KDPulseButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KDPulseButton.xcconfig; sourceTree = "<group>"; };
+		01ECB063024E1CB3A9D9E54E479DE636 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		06BDCFCC870B6A101DB6A1F6E3A8D191 /* KDPulseButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KDPulseButton.modulemap; sourceTree = "<group>"; };
+		10665BF8B9768C63F711E095B4F69529 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		198391334DBCDE021736C45DDA5FF970 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
 		21F95C492533075105757E8F2B6D39F0 /* Pods-Algorithms-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Algorithms-resources.sh"; sourceTree = "<group>"; };
+		2875323A82BBB1FD415E4D9775821978 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		2B727FE9F011B886EABB9BA9E10321CB /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
 		30BB691AD38533987737BFBF219B7157 /* Pods-Algorithms-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Algorithms-frameworks.sh"; sourceTree = "<group>"; };
+		3F668F2986805A21CB3154F3E046E808 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		435E3505F4706621AB1B43A4E4B4E1A2 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
 		4535408D1CE4A9799FDCAB759A57EC33 /* Pods-Algorithms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Algorithms.release.xcconfig"; sourceTree = "<group>"; };
-		638C5D5A1F1354DA6A8E61D54CFC54F7 /* KDPulseButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KDPulseButton-dummy.m"; sourceTree = "<group>"; };
+		48223722DFDC8156510A4F59B35B9B35 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		58DBDE233F4CF659EC88C4BADA7F27C7 /* KDPulseButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDPulseButton-umbrella.h"; sourceTree = "<group>"; };
+		5F9622C3C5042B14261B600DB39E8C18 /* KDPulseButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KDPulseButton.xcconfig; sourceTree = "<group>"; };
+		6261767F385DF4E207AA4458BC88FC08 /* KDPulseButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KDPulseButton.h; path = KDPulseButton/KDPulseButton.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67C906CB961F72A6A03CB4445D8D443D /* Pods_Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Algorithms.framework; path = "Pods-Algorithms.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3D7B4A54C7714C352AD2696FA015AF /* Pods-Algorithms-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Algorithms-acknowledgements.plist"; sourceTree = "<group>"; };
+		74E7632091A42979B799BF07D73AD09E /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
 		7D68CDD631C16659D7445DF6EAA0ECEE /* Pods-Algorithms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Algorithms.debug.xcconfig"; sourceTree = "<group>"; };
+		7E1446711F36590ECD7011744F34DAFF /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
 		8EC41C4B0E48C7FA9564A1ABA1281352 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EE8C0EAEEC22D7337028A121DE7D631 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909B23D0076D92BE0865B32EC4F12DCD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9D29EE02BA59FD979EE653661E477952 /* Pods_Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Algorithms.framework; path = "Pods-Algorithms.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB73D6EDDC0D70BF55DBFD9D4EF1D8CD /* KDPulseButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDPulseButton-prefix.pch"; sourceTree = "<group>"; };
+		95B00210C9B232E10128FF0F40BF68AF /* KDPulseButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDPulseButton-prefix.pch"; sourceTree = "<group>"; };
+		9853FAF8FE2D4BD23FA8983BB44B8B36 /* KDPulseButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KDPulseButton-dummy.m"; sourceTree = "<group>"; };
+		A1529CC4F862615C99DE624FAB12B1AF /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		ADCF244E3150DFC05845450AC78EF477 /* Pods-Algorithms.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Algorithms.modulemap"; sourceTree = "<group>"; };
-		B6BAC80868F1EF804AD93499CBC8CDDF /* KDPulseButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KDPulseButton.framework; path = KDPulseButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD529ECC6AFD163FF8798F47BE00E5A /* Pods-Algorithms-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Algorithms-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BFA758167571F5E8D5F881CE0C1EA686 /* Pods-Algorithms-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Algorithms-umbrella.h"; sourceTree = "<group>"; };
-		C4E69BD9EB201B90D5B52A691CB3114E /* KDPulseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDPulseButton.swift; path = KDPulseButton/KDPulseButton.swift; sourceTree = "<group>"; };
-		D46FF15658E806C2CDEC7E9B1F0F5A03 /* KDPulseButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KDPulseButton.h; path = KDPulseButton/KDPulseButton.h; sourceTree = "<group>"; };
+		C05123C4638C484E50C93722A007D064 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E914B251E2B9977BF2F96139476053A8 /* KDPulseButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KDPulseButton.framework; path = KDPulseButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB649684BA2390107E4CCE4CAA5652E /* Pods-Algorithms-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Algorithms-dummy.m"; sourceTree = "<group>"; };
+		F543F4A93288A80AF4B06DBDD2BD75DA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC690651E47E44136A310029B3269E4D /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		FD2C301575DDCB34B44AA973F3936877 /* KDPulseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDPulseButton.swift; path = KDPulseButton/KDPulseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,26 +89,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89D5FADA1EE2010182DCC9A5E91E9797 /* Frameworks */ = {
+		BCB668C0F823D402226F3048AA836011 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6C73B963B8CC8493672EC829C40DFB0 /* Foundation.framework in Frameworks */,
+				5D2356FDCB262994F5850EF6D8EB7E49 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93D51748565CFEB9490FBA7DA993C5C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58D42E8A04350861969B3F72932F0DBD /* KDPulseButton */ = {
+		023383BF7483E62E7B02FEA76B934885 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D46FF15658E806C2CDEC7E9B1F0F5A03 /* KDPulseButton.h */,
-				C4E69BD9EB201B90D5B52A691CB3114E /* KDPulseButton.swift */,
-				F17CFADBD8E9BB00D9BDF3A027AF094C /* Support Files */,
+				CED27A946E4E0FD8D9C6E767A90C772A /* Firebase */,
+				F18C211EF78401AEB30E81541BA170B1 /* FirebaseAnalytics */,
+				CF024FCA898AF5B1446B35618221341E /* FirebaseCore */,
+				9C1342DF4D220CA3F0545AB286DEA8D6 /* FirebaseInstanceID */,
+				989D69D94D972C956013FF983C4AF384 /* Google-Mobile-Ads-SDK */,
+				9ED4DB760F2DA50EA1FD2A9CE9C407D9 /* GoogleToolboxForMac */,
+				F72B26C3A968074BF7E67AAACC366548 /* KDPulseButton */,
 			);
-			name = KDPulseButton;
-			path = KDPulseButton;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		057D928C0B336AEF084411E4DD85EF37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC690651E47E44136A310029B3269E4D /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		231E587F8B7CEEA2CFCC9733A0F15DA0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2875323A82BBB1FD415E4D9775821978 /* GoogleToolboxForMac.modulemap */,
+				7E1446711F36590ECD7011744F34DAFF /* GoogleToolboxForMac.xcconfig */,
+				3F668F2986805A21CB3154F3E046E808 /* GoogleToolboxForMac-dummy.m */,
+				198391334DBCDE021736C45DDA5FF970 /* GoogleToolboxForMac-prefix.pch */,
+				10665BF8B9768C63F711E095B4F69529 /* GoogleToolboxForMac-umbrella.h */,
+				F543F4A93288A80AF4B06DBDD2BD75DA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
 			sourceTree = "<group>";
 		};
 		73FA754457CA4D93DB540614542E934D /* Pods-Algorithms */ = {
@@ -101,32 +162,67 @@
 			path = "Target Support Files/Pods-Algorithms";
 			sourceTree = "<group>";
 		};
+		7D71167EC3018A2835821E8ED5AB9669 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C05123C4638C484E50C93722A007D064 /* Info.plist */,
+				06BDCFCC870B6A101DB6A1F6E3A8D191 /* KDPulseButton.modulemap */,
+				5F9622C3C5042B14261B600DB39E8C18 /* KDPulseButton.xcconfig */,
+				9853FAF8FE2D4BD23FA8983BB44B8B36 /* KDPulseButton-dummy.m */,
+				95B00210C9B232E10128FF0F40BF68AF /* KDPulseButton-prefix.pch */,
+				58DBDE233F4CF659EC88C4BADA7F27C7 /* KDPulseButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KDPulseButton";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8BE9B0248E0E880F6B8822CD7A397245 /* Pods */,
-				7DC500B5DDC6470891C2D706FB45E52E /* Products */,
+				023383BF7483E62E7B02FEA76B934885 /* Pods */,
+				CDF74014D2DF759A5A553C6F6DBC6E13 /* Products */,
 				CC7918FE70EFC8D8CE8408EA99137BA5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7DC500B5DDC6470891C2D706FB45E52E /* Products */ = {
+		989D69D94D972C956013FF983C4AF384 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				B6BAC80868F1EF804AD93499CBC8CDDF /* KDPulseButton.framework */,
-				9D29EE02BA59FD979EE653661E477952 /* Pods_Algorithms.framework */,
+				D34DA52FA54534328EB2BED432A9F8B6 /* Frameworks */,
 			);
-			name = Products;
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
-		8BE9B0248E0E880F6B8822CD7A397245 /* Pods */ = {
+		9C1342DF4D220CA3F0545AB286DEA8D6 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				58D42E8A04350861969B3F72932F0DBD /* KDPulseButton */,
+				DE8D506ABD0D0ECC7739191170CBAC3B /* Frameworks */,
 			);
-			name = Pods;
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		9ED4DB760F2DA50EA1FD2A9CE9C407D9 /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				E3134FD45BA3E2C215E165A593247C6C /* Defines */,
+				AD3F4432D5FD961A64CBCC825685653B /* NSData+zlib */,
+				231E587F8B7CEEA2CFCC9733A0F15DA0 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		AD3F4432D5FD961A64CBCC825685653B /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				2B727FE9F011B886EABB9BA9E10321CB /* GTMNSData+zlib.h */,
+				435E3505F4706621AB1B43A4E4B4E1A2 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -137,12 +233,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB78A9836F65FF8338E7FF441B6E61D4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				74E7632091A42979B799BF07D73AD09E /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		CC7918FE70EFC8D8CE8408EA99137BA5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				73FA754457CA4D93DB540614542E934D /* Pods-Algorithms */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CDF74014D2DF759A5A553C6F6DBC6E13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EE8C0EAEEC22D7337028A121DE7D631 /* GoogleToolboxForMac.framework */,
+				E914B251E2B9977BF2F96139476053A8 /* KDPulseButton.framework */,
+				67C906CB961F72A6A03CB4445D8D443D /* Pods_Algorithms.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CED27A946E4E0FD8D9C6E767A90C772A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CB78A9836F65FF8338E7FF441B6E61D4 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CF024FCA898AF5B1446B35618221341E /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				DD8568A509BBD755547BD4677E3CF4CE /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		D34DA52FA54534328EB2BED432A9F8B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01ECB063024E1CB3A9D9E54E479DE636 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -153,23 +293,61 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F17CFADBD8E9BB00D9BDF3A027AF094C /* Support Files */ = {
+		DD8568A509BBD755547BD4677E3CF4CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0EE6097170CAA2CF3E9629FAF9022B6A /* Info.plist */,
-				136CD6EB6453B6078DE1EC49EE0A2210 /* KDPulseButton.modulemap */,
-				218425B7A61F1488C750C5958D06EBC9 /* KDPulseButton.xcconfig */,
-				638C5D5A1F1354DA6A8E61D54CFC54F7 /* KDPulseButton-dummy.m */,
-				AB73D6EDDC0D70BF55DBFD9D4EF1D8CD /* KDPulseButton-prefix.pch */,
-				1944C654003245033F1D8774C4CCA6C2 /* KDPulseButton-umbrella.h */,
+				A1529CC4F862615C99DE624FAB12B1AF /* FirebaseCore.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/KDPulseButton";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE8D506ABD0D0ECC7739191170CBAC3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				909B23D0076D92BE0865B32EC4F12DCD /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3134FD45BA3E2C215E165A593247C6C /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				48223722DFDC8156510A4F59B35B9B35 /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		F18C211EF78401AEB30E81541BA170B1 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				057D928C0B336AEF084411E4DD85EF37 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		F72B26C3A968074BF7E67AAACC366548 /* KDPulseButton */ = {
+			isa = PBXGroup;
+			children = (
+				6261767F385DF4E207AA4458BC88FC08 /* KDPulseButton.h */,
+				FD2C301575DDCB34B44AA973F3936877 /* KDPulseButton.swift */,
+				7D71167EC3018A2835821E8ED5AB9669 /* Support Files */,
+			);
+			name = KDPulseButton;
+			path = KDPulseButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3D8B5ACC7DAC8C6D4A42D651CC058BDB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F088926ADEA971DFE9E5087DC59C28CF /* Pods-Algorithms-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A78729814E9CA7A95DA44F453D0AD4C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,33 +357,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91E410F8EA0384C24416269467445C68 /* Headers */ = {
+		FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577956327277AE23E7918EF8F1D2CA88 /* Pods-Algorithms-umbrella.h in Headers */,
+				81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */,
+				DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		199FBBC72574BE64D0374B6FA8F1AD35 /* Pods-Algorithms */ = {
+		00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06238434568B0F2C0529E6D1B0A41CCF /* Build configuration list for PBXNativeTarget "Pods-Algorithms" */;
+			buildConfigurationList = C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
 			buildPhases = (
-				567EE04F17F928F1611F334B99A4A529 /* Sources */,
-				89D5FADA1EE2010182DCC9A5E91E9797 /* Frameworks */,
-				91E410F8EA0384C24416269467445C68 /* Headers */,
+				63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */,
+				F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */,
+				FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CD0D6B374FB4D7B810F2A3EE7EE5583E /* PBXTargetDependency */,
 			);
-			name = "Pods-Algorithms";
-			productName = "Pods-Algorithms";
-			productReference = 9D29EE02BA59FD979EE653661E477952 /* Pods_Algorithms.framework */;
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = 8EE8C0EAEEC22D7337028A121DE7D631 /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B81759B9B0A70CC783A8AD7D24E22A49 /* KDPulseButton */ = {
@@ -222,7 +401,26 @@
 			);
 			name = KDPulseButton;
 			productName = KDPulseButton;
-			productReference = B6BAC80868F1EF804AD93499CBC8CDDF /* KDPulseButton.framework */;
+			productReference = E914B251E2B9977BF2F96139476053A8 /* KDPulseButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EFEF29E3327D6C9DD94C3FDF2DE89801 /* Pods-Algorithms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6455473E70987C57F9473E0044C1560 /* Build configuration list for PBXNativeTarget "Pods-Algorithms" */;
+			buildPhases = (
+				6C703E211241DC0F5E86F07F9B59AAAC /* Sources */,
+				BCB668C0F823D402226F3048AA836011 /* Frameworks */,
+				3D8B5ACC7DAC8C6D4A42D651CC058BDB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1595085A71C82F9797FBCC9D6EB1DEDE /* PBXTargetDependency */,
+				005FE38F170BE208F74D051256787EF4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Algorithms";
+			productName = "Pods-Algorithms";
+			productReference = 67C906CB961F72A6A03CB4445D8D443D /* Pods_Algorithms.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -242,12 +440,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7DC500B5DDC6470891C2D706FB45E52E /* Products */;
+			productRefGroup = CDF74014D2DF759A5A553C6F6DBC6E13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
 				B81759B9B0A70CC783A8AD7D24E22A49 /* KDPulseButton */,
-				199FBBC72574BE64D0374B6FA8F1AD35 /* Pods-Algorithms */,
+				EFEF29E3327D6C9DD94C3FDF2DE89801 /* Pods-Algorithms */,
 			);
 		};
 /* End PBXProject section */
@@ -262,29 +461,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		567EE04F17F928F1611F334B99A4A529 /* Sources */ = {
+		63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A7230FDC79DF20D3A7B8E143BE0163 /* Pods-Algorithms-dummy.m in Sources */,
+				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
+				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C703E211241DC0F5E86F07F9B59AAAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFB35DEE1BA95C0FC47DB044FC9DA791 /* Pods-Algorithms-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CD0D6B374FB4D7B810F2A3EE7EE5583E /* PBXTargetDependency */ = {
+		005FE38F170BE208F74D051256787EF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KDPulseButton;
 			target = B81759B9B0A70CC783A8AD7D24E22A49 /* KDPulseButton */;
-			targetProxy = E8C577774F6D85D830A6A92EC85C23E5 /* PBXContainerItemProxy */;
+			targetProxy = E9D1BCFCABECE7E810639552E6D8ACCD /* PBXContainerItemProxy */;
+		};
+		1595085A71C82F9797FBCC9D6EB1DEDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = 3B577B93043870EB103D60E72900A502 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0ACF7451E998E0E2C5B57C44D34D0626 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 218425B7A61F1488C750C5958D06EBC9 /* KDPulseButton.xcconfig */;
+			baseConfigurationReference = 5F9622C3C5042B14261B600DB39E8C18 /* KDPulseButton.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -306,44 +520,6 @@
 				MODULEMAP_FILE = "Target Support Files/KDPulseButton/KDPulseButton.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = KDPulseButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0C3C69D1670810EF0FE9D230F9183030 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4535408D1CE4A9799FDCAB759A57EC33 /* Pods-Algorithms.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Algorithms/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Algorithms/Pods-Algorithms.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Algorithms;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -402,7 +578,40 @@
 			};
 			name = Debug;
 		};
-		7E136BEC7392E37293CF54BF9A5ED4A0 /* Debug */ = {
+		4E3BB37312E5D4518EDFAD78B7C89440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E1446711F36590ECD7011744F34DAFF /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		96C1DB46E44CC5E337957AABBDF18E61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D68CDD631C16659D7445DF6EAA0ECEE /* Pods-Algorithms.debug.xcconfig */;
 			buildSettings = {
@@ -485,9 +694,80 @@
 			};
 			name = Release;
 		};
+		BE9B55DCDA299EAE202F6DB76CAA485A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E1446711F36590ECD7011744F34DAFF /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC26790CA87F6CE58974A96AC270311D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4535408D1CE4A9799FDCAB759A57EC33 /* Pods-Algorithms.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Algorithms/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Algorithms/Pods-Algorithms.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Algorithms;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EEBBCFA77FA1159B1FFFA3FEE40BE119 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 218425B7A61F1488C750C5958D06EBC9 /* KDPulseButton.xcconfig */;
+			baseConfigurationReference = 5F9622C3C5042B14261B600DB39E8C18 /* KDPulseButton.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -523,15 +803,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06238434568B0F2C0529E6D1B0A41CCF /* Build configuration list for PBXNativeTarget "Pods-Algorithms" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E136BEC7392E37293CF54BF9A5ED4A0 /* Debug */,
-				0C3C69D1670810EF0FE9D230F9183030 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -541,11 +812,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A6455473E70987C57F9473E0044C1560 /* Build configuration list for PBXNativeTarget "Pods-Algorithms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96C1DB46E44CC5E337957AABBDF18E61 /* Debug */,
+				CC26790CA87F6CE58974A96AC270311D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B98F1B67103F25238DEE27670E2F4D6A /* Build configuration list for PBXNativeTarget "KDPulseButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EEBBCFA77FA1159B1FFFA3FEE40BE119 /* Debug */,
 				0ACF7451E998E0E2C5B57C44D34D0626 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE9B55DCDA299EAE202F6DB76CAA485A /* Debug */,
+				4E3BB37312E5D4518EDFAD78B7C89440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

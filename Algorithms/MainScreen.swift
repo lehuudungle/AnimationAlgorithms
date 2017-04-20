@@ -68,18 +68,6 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
         hideBanner(bannerView)
     }
     
-    //    func onAbout(){
-    //        let alert = UIAlertController.init(title: "Info",
-    //                                           message: about,
-    //                                           preferredStyle: .alert)
-    //
-    //        let defaultAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
-    //
-    //        alert.addAction(defaultAction)
-    //        self.present(alert, animated: true, completion: nil)
-    //    }
-    
-    
 
     
     // MARK: - Table view data source

@@ -58,11 +58,9 @@ class ManagerQuickSort{
         quickGraph = QuickGraph(frame: CGRect(x: 0,
                                               y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 10,
                                               width: viewcontroller.view.bounds.size.width,
-                                              height: viewcontroller.view.bounds.size.height*0.35),
+                                              height: viewcontroller.view.bounds.size.height*0.25),
                                 arrayDisplay: self.arrayDisplay,
                                 colors: self.arrayColor)
-//        quickGraph.backgroundColor = UIColor.yellow
-//        quickGraph.backgroundColor = UIColor.blue
 
         viewcontroller.view.addSubview(quickGraph)
         
@@ -75,17 +73,17 @@ class ManagerQuickSort{
         animationStep = AnimationQuick(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelMark: self.arrayLabelMark, arrayAction: self.arrayAction, graph: self.quickGraph)
         if(VIEW_CHOSEN=="study"){
             ele = 0
-            for a in arrayAction{
-                print("\(ele)__\(a)")
+            for _ in arrayAction{
                 ele = ele + 1
             }
             textStudy = TextStudy(frame: CGRect(x: quickGraph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: quickGraph.frame.origin.y+quickGraph.frame.height,
                                                 width: quickGraph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(quickGraph.frame.origin.y+quickGraph.frame.height)))
+            
             viewcontroller.view.addSubview(textStudy)
         
-            textStudy.text = "Quicksort, also known as part sort, is a sorting algorithm that needs to be sorted into two equally sized sub-lists, with indexes standing in the middle of the list."
+            textStudy.text = "Quicksort is a popular sorting algorithm that is often faster in practice compared to other sorting algorithms. It utilizes a divide-and-conquer strategy to quickly sort data items by dividing a large array into two smaller arrays."
             var path: String = ""
             path = Bundle.main.path(forResource:"QuickSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!

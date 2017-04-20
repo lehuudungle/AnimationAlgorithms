@@ -67,8 +67,7 @@ class ManagerHeapSort {
         
         if(VIEW_CHOSEN=="study"){
             ele = 0
-            for a in arrayAction{
-                print("\(ele)__\(a)")
+            for _ in arrayAction{
                 ele = ele + 1
             }
             textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,

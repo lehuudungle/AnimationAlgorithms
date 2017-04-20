@@ -42,7 +42,7 @@ class PieceSet
     func getAllVisible() -> [VisibleOnBoard]{
         var visibleOnBoards = [VisibleOnBoard]()
         for pieceController in pieceControllers{
-           let  visibleOnBoard = VisibleOnBoard(type: pieceController.pieceModel.type, position: pieceController.pieceModel.placeAt)
+            let  visibleOnBoard = VisibleOnBoard(type: pieceController.pieceModel.type, position: pieceController.pieceModel.placeAt)
             visibleOnBoards.append(visibleOnBoard)
         }
         return visibleOnBoards
@@ -190,8 +190,6 @@ class PieceSet
         currentPiece.state = self.getAllVisible()
         prePiece = currentPiece
         
-        print(currentPiece.state)
-        print(currentPiece.state.count)
         currentPiece.root = self.rootPiece
         //Khi piece ở dòng mới thì mới đổi rootPiece
         if(currentPiece.type != .None)
@@ -241,7 +239,7 @@ class PieceSet
                 let currentPiece: Piece!
                 if(isFirst == false)
                 {
-                    currentPiece = Pawn(pieceColor: color, at: position)
+                    currentPiece = Queen(pieceColor: color, at: position)
                     
                 }
                 else
@@ -258,23 +256,13 @@ class PieceSet
     {
         let currentPiece: Piece!
         switch type {
-        case .King:
-            currentPiece = King(pieceColor: color, at: position)
-            break
+            
         case .Queen:
             currentPiece = Queen(pieceColor: color, at: position)
             break
-        case .Rook:
-            currentPiece = Rook(pieceColor: color, at: position)
-            break
-        case .Bishop:
-            currentPiece = Bishop(pieceColor: color, at: position)
-            break
-        case .Knight:
-            currentPiece = Knight(pieceColor: color, at: position)
-            break
         default:
-            currentPiece = Pawn(pieceColor: color, at: position)
+            currentPiece = Queen(pieceColor: color, at: position)
+            
             break
         }
         return currentPiece
@@ -284,6 +272,7 @@ class PieceSet
         
     }
 }
+
 extension Array where Element: AnyObject {
     mutating func remove(object: Element) {
         if let index = index(where: { $0 === object }) {

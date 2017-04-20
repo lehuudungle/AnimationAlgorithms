@@ -7,6 +7,7 @@
 //
 import UIKit
 class AnimationMerge:NSObject {
+    
     var color: UIColor!
     var colors: [UIColor]!
     var arrayLabel: [SortingLabel]!
@@ -303,7 +304,6 @@ class AnimationMerge:NSObject {
     }
     
     func next(){
-        print("goi net")
         self.currentStep = self.arrayAction[self.colSolution]
         if(!fistDraw){
 
@@ -353,8 +353,7 @@ class AnimationMerge:NSObject {
         }
     }
     func borderRect(bearingPoint: CGPoint, countCell: Int){
-        // khoi tao diem ve rectangle
-//        print("goi khung: \(dem)")
+
         let originPoint = CGPoint(x: bearingPoint.x - PADDING/2, y: bearingPoint.y - PADDING/2)
         let widthRect: CGFloat = CGFloat(countCell)*2*SPACING + CGFloat((countCell-1))*SPACING + 2*PADDING/2
         let heightRect : CGFloat = 2*SPACING + 1*PADDING
@@ -366,20 +365,18 @@ class AnimationMerge:NSObject {
         Slayer.lineWidth = 4
         let view = UIView(frame: drect)
         view.layer.addSublayer(Slayer)
+
         self.graphMerge.insertSubview(view, at: 1)
         self.bodyRect?.append(view)
 
-//        print("firstDraw: \(fistDraw)")
         if(fistDraw){
-//            print("lan dau")
             self.bodyLine?.append(straightLine(bearingPoint: originPoint, widtRectangle: widthRect))
         }
         fistDraw = true
     }
     
     func straightLine(bearingPoint: CGPoint,widtRectangle: CGFloat)->CAShapeLayer{
-//        DISTANCEROW = 3*SPACING-2*PADDING
-//        print("goi duong thang: \(dem)")
+
         dem+=1
         DISTANCEROW = SPACING - PADDING
         let start = CGPoint(x: bearingPoint.x + widtRectangle/2, y: bearingPoint.y)

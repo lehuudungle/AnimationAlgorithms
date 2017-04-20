@@ -31,9 +31,11 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                          cellData(nameText: "Customize",image: #imageLiteral(resourceName: "pencils")),
                          cellData(nameText: "Reading",image: #imageLiteral(resourceName: "reading"))
         ]
+        
         imgProfile.layer.borderWidth = 2
         imgProfile.layer.borderColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1).cgColor
         imgProfile.layer.cornerRadius = 20
+        imgProfile.layer.backgroundColor = UIColor.black.cgColor
         
         imgProfile.layer.masksToBounds = false
         imgProfile.clipsToBounds = true
@@ -95,7 +97,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             
             INPUT_XIB_CLASS.title = DETAIL.title
-            print("input_xib: \(INPUT_XIB_CLASS)")
             revealviewcontroller.pushFrontViewController(newFontController, animated: true)
             var img = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             INPUT_XIB_CLASS.navigationItem.rightBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: revealviewcontroller, action: #selector(revealviewcontroller.rightRevealToggle(_:)))

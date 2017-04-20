@@ -91,7 +91,7 @@ class MergeGraph: UIView {
             self.addSubview(FloorTwo)
             self.addSubview(FloorThree)
             self.addSubview(FloorFour)
-            self.insertSubview(sortingLabel, at: 2)
+            self.insertSubview(sortingLabel, at: 3)
             
             x = x + spacing + rectSize
             

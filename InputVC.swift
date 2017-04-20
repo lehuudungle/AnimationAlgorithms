@@ -30,6 +30,18 @@ class InputVC: UIViewController, UITextFieldDelegate {
     
     var y: CGFloat!
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -62,15 +74,12 @@ class InputVC: UIViewController, UITextFieldDelegate {
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         
         if Int(text) != nil {
-            
             // Text field converted to an Int
-            
             btnAdd.isEnabled = true
         } else {
             // Text field is not an Int
             btnAdd.isEnabled = false
         }
-        
         // Return true so the text field will be changed
         return true
     }
@@ -193,10 +202,9 @@ class InputVC: UIViewController, UITextFieldDelegate {
     func addTextField(){
         textField = UITextField(frame: CGRect(x: view.bounds.size.width/2 - spacing/2 - btnSizeWidth, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         
+        
         textField.placeholder = "........................."
-        
         textField.font = UIFont.boldSystemFont(ofSize: 15)
-        
         textField.borderStyle = UITextBorderStyle.roundedRect
         textField.autocorrectionType = UITextAutocorrectionType.no
         textField.keyboardType = UIKeyboardType.numberPad
@@ -204,15 +212,13 @@ class InputVC: UIViewController, UITextFieldDelegate {
         textField.clearButtonMode = UITextFieldViewMode.whileEditing
         textField.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         textField.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
-        
         textField.layer.cornerRadius = 10
-        
         textField.layer.borderWidth = 2
         textField.layer.borderColor = UIColor.black.cgColor
         textField.layer.masksToBounds = true
         
         self.view.addSubview(textField)
-        //        textField.font = UIFont(name: "Helvetica Neue", size: textField.fontoFitHeight())
+
     }
     
     func addTextView() {
@@ -262,8 +268,6 @@ extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-    
     
     
 }

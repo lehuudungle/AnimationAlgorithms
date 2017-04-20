@@ -9,6 +9,24 @@
 //
 
 import UIKit
+struct AppUtility {
+
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            delegate.orientationLock = orientation
+        }
+    }
+
+    /// OPTIONAL Added method to adjust lock and rotate to the desired orientation
+    static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+
+        self.lockOrientation(orientation)
+
+        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+    }
+    
+}
 
 class AboutVC: UIViewController {
     
@@ -26,14 +44,24 @@ class AboutVC: UIViewController {
         view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
 
         addLabel()
+
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
+   
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
 
     func addLabel(){
         

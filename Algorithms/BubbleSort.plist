@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>10.1</key>
-	<string>The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. </string>
+	<string>The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted.</string>
 	<key>11</key>
 	<string>First, &quot;4&quot; and &quot;1&quot; are compared. &quot;4&quot; is greater than &quot;1&quot; </string>
 	<key>12</key>

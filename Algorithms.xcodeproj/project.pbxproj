@@ -199,7 +199,7 @@
 		C7E429DB1EA5BFF5004C49DD /* ViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimation.swift; sourceTree = "<group>"; };
 		C7E429DC1EA5BFF5004C49DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7E429F71EA5C2CD004C49DD /* PieceSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceSet.swift; sourceTree = "<group>"; };
-		C7E429F91EA5C2EC004C49DD /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameManager.swift; path = Algorithms/GameManager.swift; sourceTree = "<group>"; };
+		C7E429F91EA5C2EC004C49DD /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		C7E429FB1EA5C30F004C49DD /* EightQueen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightQueen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,7 +264,6 @@
 		05BEA8CB1E9DC8D200B2F04C /* Study */ = {
 			isa = PBXGroup;
 			children = (
-				C7E429F91EA5C2EC004C49DD /* GameManager.swift */,
 				05BEA8D41E9DC9C800B2F04C /* StudyVC.swift */,
 				05BEA8E01E9DCAAE00B2F04C /* BubbleSortSVC.swift */,
 				05BEA8D31E9DC9C800B2F04C /* SelectionSortSVC.swift */,
@@ -461,6 +460,7 @@
 				C7E429D91EA5BFF5004C49DD /* Square.swift */,
 				C7E429DB1EA5BFF5004C49DD /* ViewAnimation.swift */,
 				C7E429DC1EA5BFF5004C49DD /* ViewController.swift */,
+				C7E429F91EA5C2EC004C49DD /* GameManager.swift */,
 			);
 			name = NQueens;
 			sourceTree = "<group>";

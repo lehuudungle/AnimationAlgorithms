@@ -1,13 +1,15 @@
 import UIKit
+import KDPulseButton
 
 class ShareVC: UIViewController {
     
     var btnShare: UIButton!
-    
+    var imgLogo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         addShare()
+        addLogo()
         
     }
     
@@ -16,11 +18,18 @@ class ShareVC: UIViewController {
     }
     
     func addShare(){
-        btnShare = UIButton(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
+        btnShare = KDPulseButton(frame: CGRect(x: view.bounds.size.width/5, y: view.bounds.size.height-200, width: view.bounds.size.width*3/5, height: 50))
         btnShare.backgroundColor = UIColor.green
         btnShare.setTitle("Share", for: .normal)
+        btnShare.layer.cornerRadius = 10
         btnShare.addTarget(self, action: #selector(share(sender:)), for: .touchUpInside )
         view.addSubview(btnShare)
+    }
+    func addLogo(){
+        let image = UIImage(named: "Clouse")
+        imgLogo = UIImageView(image: image)
+        imgLogo.frame = CGRect(x: view.bounds.size.width/5, y: view.bounds.size.height/5, width: view.bounds.size.width*3/5, height: view.bounds.size.height/3)
+        view.addSubview(imgLogo)
     }
     
     func share(sender: UIButton){
@@ -29,5 +38,4 @@ class ShareVC: UIViewController {
         
         self.present(activityVC, animated: true, completion: nil)
     }
-    
 }

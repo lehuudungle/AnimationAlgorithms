@@ -94,10 +94,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             addAlert(message: "Please enter a number")
         }
         sizeBoard.text = ""
-
-       
-
-
     }
     
     func btnSizeBoard(){

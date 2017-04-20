@@ -189,7 +189,7 @@ class GameManager: UIView
         btnPauseAction = KDPulseButton(frame: CGRect(x: 2*x-spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
         btnPauseAction.layer.backgroundColor = LIME_COLOR.cgColor
         btnPauseAction.setTitleColor(UIColor.white, for: UIControlState.normal)
-        btnPauseAction.setTitle("Pause", for: .normal)
+        btnPauseAction.setTitle("\u{f04c}", for: .normal)
         
         btnPauseAction.setTitleColor(BUTTON_COLOR, for: .normal)
         btnPauseAction.titleLabel?.font = UIFont.fontAwesome(ofSize: btnPauseAction.fontoFitHeight())
@@ -220,7 +220,7 @@ class GameManager: UIView
             count = 1
             isPause = true
         }else{
-            btnPauseAction.setTitle("Pause", for: .normal)
+            btnPauseAction.setTitle("\u{f04c}", for: .normal)
             btnSizeBoardTmp.isUserInteractionEnabled = false
             btnSizeBoardTmp.layer.backgroundColor = UIColor.gray.cgColor
             btnSizeBoardTmp.setNeedsDisplay()

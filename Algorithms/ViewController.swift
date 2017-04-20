@@ -74,10 +74,6 @@ class ViewController: UIViewController {
             addAlert(message: "Please enter a number")
         }
         sizeBoard.text = ""
-
-       
-
-
     }
     
     func btnSizeBoard(){

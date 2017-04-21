@@ -62,6 +62,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         btnStart.isUserInteractionEnabled = false
         btnReset.isUserInteractionEnabled = false
+        btnNext.isUserInteractionEnabled = false
         
 //        self.gamemanager.initGameWith(viewcontroller: self, size: self.view.bounds.size.width)
 
@@ -104,6 +105,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if (Int(sizeBoard.text!)! >= 4 ){
                     self.btnNext.isUserInteractionEnabled = true
                     self.btnStart.isUserInteractionEnabled = true
+                    btnStart.isHidden = false
+                    btnPauseAction.isHidden = true
 //                    self.gamemanager.boardView.removeFromSuperview()
 //                    self.btnStart.isHidden = true
 //                    self.gamemanager.lblSolutionFound.isHidden = true

@@ -54,7 +54,7 @@ class ManagerMergeSort {
             ptu = arrayInput.count + 1
             
         }
-        
+        //
         for index in 0..<self.arrayInput.count {
             self.arrayDisplay.append(arrayInput[index])
             self.arrayColor.append(DEFAULT_COLOR)

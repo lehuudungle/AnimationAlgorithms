@@ -8,42 +8,44 @@
 import Foundation
 import UIKit
 class SortingLabel: UILabel {
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError(".....")
     }
-    
+
     override func layoutSubviews() {
         font = fontoFitHeight()
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        
+        self.textAlignment = NSTextAlignment.center
+        self.textColor = UIColor.red
+
+
     }
-    
-    
+
+
     init(frame: CGRect, color: UIColor, value: String) {
         super.init(frame: frame)
-        
+
         self.backgroundColor = color
         self.text = value
         self.textColor = UIColor.white
-        
+
         self.textAlignment = NSTextAlignment.center
         self.layer.cornerRadius = frame.width/2
         self.clipsToBounds = true
         self.alpha = DEFAULT_ALPHA
-        
+
         self.adjustsFontSizeToFitWidth = true
         self.numberOfLines = 0
         self.baselineAdjustment = .alignBaselines
         self.minimumScaleFactor = 0.2
-        
-        
+
+
     }
-    
+
     func fontoFitHeight()->UIFont{
         var minFontsize: CGFloat = DISPLAY_FONT_MIN
         var maxFontsize: CGFloat = DISPLAY_FONT_MAX
@@ -52,12 +54,16 @@ class SortingLabel: UILabel {
         while(minFontsize<=maxFontsize){
             fontSizeAverage = (maxFontsize-minFontsize)/2 + minFontsize
             let text = self.text
+            if text == nil{
+                break
+            }
+            print("text: \(text?.characters.count)")
             guard (text?.characters.count)!>0 else {
                 break
             }
             if let  labelText: NSString = text as NSString?{
                 let labelHeight = self.frame.height-5
-                
+
                 let textHeight = labelText.size(attributes: [NSFontAttributeName:self.font.withSize(fontSizeAverage)]).height
                 textandLabelHeight = labelHeight - textHeight
                 if(fontSizeAverage==minFontsize || fontSizeAverage==maxFontsize){
@@ -76,6 +82,6 @@ class SortingLabel: UILabel {
             }
         }
         return self.font.withSize(fontSizeAverage)
-        
+
     }
 }

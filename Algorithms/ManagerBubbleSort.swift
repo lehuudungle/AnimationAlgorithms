@@ -91,6 +91,7 @@ class ManagerBubbleSort {
             path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
+            print(dictData)
 
             ele = 0
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})
@@ -165,7 +166,18 @@ extension String {
     var isNumber:Bool{
         get{
             return !self.isEmpty && self.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
-            
+
         }
     }
+    struct NumberFormat {
+        static let instance = NumberFormatter()
+    }
+    var floatValue:Float? {
+
+        return NumberFormat.instance.number(from: self)?.floatValue
+    }
+    var integerValue:Int? {
+        return NumberFormat.instance.number(from: self)?.intValue
+    }
+
 }

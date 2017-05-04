@@ -56,7 +56,11 @@ struct HeapStep {
     var end: Int!
 }
 
-
+struct TowerStep {
+    var disk: Int!
+    var from: String!
+    var to: String!
+}
 
 
 

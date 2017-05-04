@@ -42,6 +42,9 @@ class MenuList: NSObject {
         let inter = MenuSection(section: "N-Queen ", menus:[
             Menu(title: "N-Queen Problem", viewClass: "ViewController",inputClass: SelectionSortIVC(), infoTitle: "A" )
             ])
+        let tower = MenuSection(section: "Tower Of HaNoi", menus:[
+            Menu(title: "Tower Of HaNoi", viewClass: "TowerOfHaNoiVC",inputClass: SelectionSortIVC(), infoTitle: "A" )
+            ])
         
         let advance = MenuSection(section: "Other", menus:[
             Menu(title: "About", viewClass: "AboutVC",inputClass: SelectionSortIVC(), infoTitle: "A" ),
@@ -49,7 +52,7 @@ class MenuList: NSObject {
             ])
         
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)
-        mainScreen.menu = [basic,inter,advance]
+        mainScreen.menu = [basic,inter,tower,advance]
         mainScreen.title = "Algorithms"
         
         let nav = UINavigationController(rootViewController: mainScreen)

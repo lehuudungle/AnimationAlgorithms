@@ -60,4 +60,7 @@ var btnNextTmp:UIButton!
 var btnPauseActionTmp: UIButton!
 var btnResetTmp:UIButton!
 
+var Spacing_Center:CGFloat!
+var yEnd_Tower: CGFloat!
+
 

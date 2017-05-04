@@ -126,7 +126,7 @@ class GameManager: UIView
         btnSizeBoardTmp.isHidden = false
         lblSolutionText.isHidden = true
         lblSolutionFound.isHidden = true
-        btnNextTmp.isUserInteractionEnabled = true
+        btnNextTmp.isUserInteractionEnabled = false
         btnPauseActionTmp.isUserInteractionEnabled = true
         btnPauseActionTmp.isHidden = true
         removeAllPieces()

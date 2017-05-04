@@ -37,8 +37,6 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewcontroller = ViewController()
-        //        let barButoonItem = UIBarButtonItem(title: "About", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MainScreen.onAbout))
-        //        self.navigationItem.rightBarButtonItem = barButoonItem
         
         initAdMobBanner()
         self.tableView.contentInset = UIEdgeInsetsMake(20,0,0,0)
@@ -174,9 +172,6 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
             revel?.rightViewController = menuVC
 
             navDetail.view.addGestureRecognizer((revel?.tapGestureRecognizer())!)
-//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-
-
             
             present(revel!, animated: true, completion: nil)
             revel?.rightViewRevealWidth = 180

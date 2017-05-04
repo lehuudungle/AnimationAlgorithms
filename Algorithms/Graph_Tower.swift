@@ -31,7 +31,6 @@ class Graph_Tower: UIView {
 
             draw_Tower()
             drawPlate()
-            self.backgroundColor  = UIColor.lightGray
     }
    
          func draw_Tower(){
@@ -67,7 +66,7 @@ class Graph_Tower: UIView {
 
             label.backgroundColor = colors[i]
             label.text = String(3-i)
-
+            label.textColor = UIColor.white
             label.layer.cornerRadius = 10
             arrayLabel.append(label)
             self.addSubview(label)
@@ -91,19 +90,17 @@ class Graph_Tower: UIView {
         arrayLabel.reverse()
         
     }
+    
     func resetGraph(){
         breakLabel.isHidden = true
         arrayLabel[0].isHidden = false
         arrayLabel.reverse()
 
         for i in 0...2{
-            print("gia tri i: \(i)")
             self.arrayLabel[i].frame.origin = CGPoint(x: spacing*1 + (spacing*0.5*CGFloat(i+1) - spacing*0.25), y: frame.height*CGFloat(7-i)/10)
             self.arrayLabel[i].text = String(3-i)
         }
         arrayLabel.reverse()
-         
-        
 
     }
     

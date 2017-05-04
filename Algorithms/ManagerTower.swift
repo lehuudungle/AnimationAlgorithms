@@ -24,7 +24,7 @@ class ManagerTower {
     var arrayKeys = [String]()
     var ele = 0
     func initSortWith(viewcontroller: UIViewController) {
-    
+        
         
         graph = Graph_Tower(frame: CGRect(x: 0,
                                           y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
@@ -36,44 +36,43 @@ class ManagerTower {
         self.arrayLabel = graph.arrayLabel
         
         animation = AnimationTower(arrayLabel: arrayLabel, arrayCenter: arrayCenter, arrayAction: arrayAction,graph: graph)
-        print("kiem tra 1 so: \(Int("d"))")
         if(VIEW_CHOSEN=="study"){
-
+            
             textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))
-
+            
             viewcontroller.view.addSubview(textStudy)
-
-
-
+            
+            
+            
             var path: String = ""
-
+            
             path = Bundle.main.path(forResource:"TowerofHanoi", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
-            print(dictData)
-
-
+            
+            
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})
             ele = 0
             animationStep = AnimationTower(arrayLabel: arrayLabel, arrayCenter: arrayCenter, arrayAction: arrayAction,graph: self.graph)
         }
-
+        
         
     }
     @objc func run(sender: UIButton) {
-
-
+        
+        
         animation = AnimationTower(arrayLabel: arrayLabel, arrayCenter: arrayCenter, arrayAction: arrayAction,graph: self.graph)
         btnRunTmp.isUserInteractionEnabled = false
         btnStepTmp.isUserInteractionEnabled = false
-
+        
         animation.loop()
     }
+    
     @objc func step(sender: UIButton) {
-
+        
         if(VIEW_CHOSEN=="study"){
             if(ele==arrayKeys.count){
                 textStudy.text = ""
@@ -83,19 +82,17 @@ class ManagerTower {
             btnRunTmp.isUserInteractionEnabled = false
             btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
             btnRunTmp.setNeedsDisplay()
-
+            
             if(arrayKeys[ele].integerValue==10){
                 btnStepTmp.isUserInteractionEnabled = true
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?
                 
             }else if(arrayKeys[ele].integerValue==11){
-                print("goi vao 11")
                 if(arrayKeys[ele].characters.count<5){
                     // thuc hien animation
-                    print("thuc hien animation")
                     btnStepTmp.isUserInteractionEnabled = false
-                    var _step  = String((arrayKeys[ele].floatValue!-11)*10)
+                    let _step  = String((arrayKeys[ele].floatValue!-11)*10)
                     animation.animationFirst(step: _step.integerValue!)
                     let data = dictData[arrayKeys[ele]]
                     textStudy.text = data as! String?
@@ -103,9 +100,9 @@ class ManagerTower {
                     let data = dictData[arrayKeys[ele]]
                     textStudy.text = data as! String?
                     self.graph.resetGraph()
-
+                    
                 }
-
+                
             }else if(arrayKeys[ele].integerValue==12){
                 self.graph.resetGraph()
             }else if (arrayKeys[ele].integerValue==13){
@@ -114,18 +111,16 @@ class ManagerTower {
                 btnStepTmp.isUserInteractionEnabled = false
                 btnRunTmp.isUserInteractionEnabled = false
                 animationStep.next()
-
+                
             }else{
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?
-
-
+                
+                
             }
-
+            
             ele = ele + 1
         }
-        
-        
     }
     
     func getArrayAction() -> [TowerStep]{

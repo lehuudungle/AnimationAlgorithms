@@ -42,8 +42,8 @@ class MenuList: NSObject {
         let inter = MenuSection(section: "N-Queen ", menus:[
             Menu(title: "N-Queen Problem", viewClass: "ViewController",inputClass: SelectionSortIVC(), infoTitle: "A" )
             ])
-        let tower = MenuSection(section: "Tower Of HaNoi", menus:[
-            Menu(title: "Tower Of HaNoi", viewClass: "TowerOfHaNoiVC",inputClass: SelectionSortIVC(), infoTitle: "A" )
+        let tower = MenuSection(section: "Tower Of Hanoi", menus:[
+            Menu(title: "Tower Of Hanoi", viewClass: "TowerOfHaNoiVC",inputClass: SelectionSortIVC(), infoTitle: "A" )
             ])
         
         let advance = MenuSection(section: "Other", menus:[

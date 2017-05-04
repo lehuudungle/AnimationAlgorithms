@@ -37,7 +37,6 @@ class AnimationTower {
     }
     func animationFirst(step: Int){
         self.graph.resetGraph()
-        print("gia tri step: \(step)")
         if(step==5){
             self.arrayLabel[0].center = CGPoint(x: self.arrayCenter[1].x, y: self.arrayCenter[1].y)
         }
@@ -47,7 +46,6 @@ class AnimationTower {
             if(step==1){
                 // di chuyen tu A->B
                 self.moveUp(lable: self.arrayLabel[0],valueTower: 0)
-                print("A-B")
 
             }else if(step==2){
                 self.arrayLabel[0].center = CGPoint(x: self.arrayCenter[0].x, y: yEnd_Tower-CGFloat(1.5)*Spacing_Center)
@@ -86,8 +84,8 @@ class AnimationTower {
                         self.movelDown(lable: self.arrayLabel[1], valueTower: 1, count: 0)
                     }){ _ in
 
-                        var img = UIImage(named: "nhan_32")
-                        var imgView = UIImageView(image: img)
+                        let img = UIImage(named: "nhan_32")
+                        let imgView = UIImageView(image: img)
 
                         imgView.frame = CGRect(x: 0, y: 0, width: self.graph.spacing, height: self.graph.frame.height/20)
 

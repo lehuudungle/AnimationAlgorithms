@@ -117,7 +117,6 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("chay vao day")
         
         let menuSection: MenuSection = self.menu[indexPath.section]
         let menuItems = menuSection.menus

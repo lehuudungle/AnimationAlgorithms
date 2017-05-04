@@ -14,7 +14,7 @@ class TowerOfHaNoiVC: StudyVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+//        view.backgroundColor = UIColor.white
         manager = ManagerTower()
         manager.initSortWith(viewcontroller: self)
         btnRun.addTarget(self.manager, action: #selector(manager.run(sender:)), for: .touchUpInside)
@@ -23,6 +23,7 @@ class TowerOfHaNoiVC: StudyVC {
 
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
     }
+    
     func reset(sender:UIButton){
         self.manager.graph.removeFromSuperview()
         self.manager.textStudy.removeFromSuperview()

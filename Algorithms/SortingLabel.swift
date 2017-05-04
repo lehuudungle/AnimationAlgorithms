@@ -52,6 +52,9 @@ class SortingLabel: UILabel {
         while(minFontsize<=maxFontsize){
             fontSizeAverage = (maxFontsize-minFontsize)/2 + minFontsize
             let text = self.text
+            if text == nil{
+                break
+            }
             guard (text?.characters.count)!>0 else {
                 break
             }

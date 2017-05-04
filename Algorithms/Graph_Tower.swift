@@ -54,8 +54,14 @@ class Graph_Tower: UIView {
         
         let colors: [UIColor] = [UIColor.blue, UIColor.orange, UIColor.green]
         for i in 0...2{
-            let label = UILabel(frame: CGRect(x: spacing*1 + (spacing*0.5*CGFloat(i+1) - spacing*0.25), y: frame.height*CGFloat(7-i)/10, width: spacing*CGFloat(3-i) + spacing*0.5, height: frame.height/10))
+            let label = SortingLabel(frame: CGRect(x: spacing*1 + (spacing*0.5*CGFloat(i+1) - spacing*0.25), y: frame.height*CGFloat(7-i)/10, width: spacing*CGFloat(3-i) + spacing*0.5, height: frame.height/10))
             label.backgroundColor = colors[i]
+            let attachment = NSTextAttachment()
+            attachment.image = UIImage(named: "bolt")
+            attachment.bounds = CGRect(x: 0, y: 0, width: frame.width/10, height: frame.height/10)
+            let attachmentString = NSAttributedString(attachment: attachment)
+            label.attributedText = attachmentString
+            label.textAlignment = .center
             arrayLabel.append(label as! SortingLabel)
             self.addSubview(label)
         }

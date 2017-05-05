@@ -177,8 +177,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
         view.addSubview(btnRun)
     }
     
-    
-    
     func addBtnAdd() {
         btnAdd = KDPulseButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
         btnAdd.layer.backgroundColor = LIME_COLOR.cgColor

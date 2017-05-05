@@ -41,7 +41,9 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         imgProfile.clipsToBounds = true
         
         let nib = UINib(nibName: "MenuCell", bundle: nil)
+        
         tableView.register(nib, forCellReuseIdentifier: "MenuCell")
+        
         viewMenu.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
         
         let navBar = UINavigationBar(frame: CGRect(x: 0, y:0 , width: 270, height: 44+UIApplication.shared.statusBarFrame.height))

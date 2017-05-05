@@ -37,7 +37,6 @@ class AnimationTower {
     }
     func animationFirst(step: Int){
         self.graph.resetGraph()
-        print("gia tri step: \(step)")
         if(step==5){
             self.arrayLabel[0].center = CGPoint(x: self.arrayCenter[1].x, y: self.arrayCenter[1].y)
         }
@@ -47,7 +46,6 @@ class AnimationTower {
             if(step==1){
                 // di chuyen tu A->B
                 self.moveUp(lable: self.arrayLabel[0],valueTower: 0)
-                print("A-B")
 
             }else if(step==2){
                 self.arrayLabel[0].center = CGPoint(x: self.arrayCenter[0].x, y: yEnd_Tower-CGFloat(1.5)*Spacing_Center)

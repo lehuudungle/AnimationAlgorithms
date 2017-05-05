@@ -16,14 +16,12 @@ class TowerOfHaNoi {
     init(disk: Int!) {
         arrayAction = [TowerStep]()
         hanoi(n: disk, a: "A", b: "B", c: "C")
-        print(arrayAction)
     }
     
     
     func hanoi(n:Int, a:String, b:String, c:String) {
         if (n > 0) {
             hanoi(n: n - 1, a: a, b: c, c: b)
-            print("Move disk from \(a) to \(c) __:\(n)")
             arrayAction.append(TowerStep(disk: n, from: a, to: c ))
             
             hanoi(n: n - 1, a: b, b: a, c: c)

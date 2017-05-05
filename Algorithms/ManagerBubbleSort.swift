@@ -91,7 +91,6 @@ class ManagerBubbleSort {
             path = Bundle.main.path(forResource:"BubbleSort", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
-            print(dictData)
 
             ele = 0
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})

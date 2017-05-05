@@ -57,7 +57,6 @@ class SortingLabel: UILabel {
             if text == nil{
                 break
             }
-            print("text: \(text?.characters.count)")
             guard (text?.characters.count)!>0 else {
                 break
             }

@@ -22,6 +22,7 @@ class StudyVC: UIViewController {
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!
+    var btnStepBig: UIButton!
     
     
     var y: CGFloat!
@@ -52,6 +53,8 @@ class StudyVC: UIViewController {
         addBtnReset()
         addBtnStep()
         addBtnRun()
+        addBtnStepBig()
+        btnStepBig.isHidden = true
         
     }
     
@@ -136,6 +139,35 @@ class StudyVC: UIViewController {
         
         view.addSubview(btnRun)
     }
+    
+    func addBtnStepBig() {
+        
+        btnStepBig = KDPulseButton(frame: CGRect(x: x, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth*2 + spacing, height: btnSizeHeight))
+        
+        btnStepBigTmp = btnStepBig
+        btnStepBig.layer.backgroundColor = LIME_COLOR.cgColor
+        btnStepBig.setTitleColor(UIColor.white, for: UIControlState.normal)
+        btnStepBig.setTitle("\u{f051}", for: .normal)
+        btnStepBig.setTitleColor(BUTTON_COLOR, for: .normal)
+        btnStepBig.titleLabel?.font = UIFont.fontAwesome(ofSize: btnStepBig.fontoFitHeight())
+        btnStepBig.titleLabel?.adjustsFontSizeToFitWidth = true
+        btnStepBig.titleLabel?.numberOfLines = 0
+        btnStepBig.titleLabel?.minimumScaleFactor = 0.2
+        btnStepBig.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        btnStepBig.titleLabel?.baselineAdjustment = .alignCenters
+        btnStepBig.titleLabel?.textAlignment = .center
+        
+        btnStepBig.layer.borderWidth = 2
+        btnStepBig.layer.borderColor = BUTTON_COLOR.cgColor
+        btnStepBig.layer.cornerRadius = 10
+        
+        
+        view.addSubview(btnStepBig)
+
+
+    }
+    
+    
     
     
     

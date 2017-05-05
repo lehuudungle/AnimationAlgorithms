@@ -41,6 +41,10 @@ var btnStepTmp: UIButton!
 var btnBackTmp: UIButton!
 var btnRunTmp: UIButton!
 var arrayViewTmp: UILabel!
+var btnStepBigTmp: UIButton!
+var labelPushTmp: UILabel!
+var labelPopTmp: UILabel!
+var labelTopTmp: UILabel!
 
 var DISPLAY_FONT_MIN: CGFloat = 10
 var DISPLAY_FONT_MAX: CGFloat = 60
@@ -60,4 +64,8 @@ var btnNextTmp:UIButton!
 var btnPauseActionTmp: UIButton!
 var btnResetTmp:UIButton!
 
+var Spacing_Center:CGFloat!
+var yEnd_Tower: CGFloat!
 
+var xEndMove_Stacks: CGFloat!
+var yEndMove_Stacks: CGFloat!

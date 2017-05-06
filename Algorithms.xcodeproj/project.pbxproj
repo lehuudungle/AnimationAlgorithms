@@ -88,6 +88,10 @@
 		C70115881EB9DEE9008ACB52 /* TowerOfHaNoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70115871EB9DEE9008ACB52 /* TowerOfHaNoi.swift */; };
 		C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415B1E8ABC3B008472E6 /* MenuList.swift */; };
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
+		C759D8D01EBBA1F700A6C10A /* AnimationStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */; };
+		C7C1C2091EBB417600CEE029 /* GraphStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C2081EBB417600CEE029 /* GraphStacks.swift */; };
+		C7C1C20B1EBB450B00CEE029 /* ManagerStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */; };
+		C7C1C20F1EBB462000CEE029 /* StacksSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */; };
 		C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */; };
 		C7CBF4911EA5216300FBE5B3 /* MergeSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */; };
 		C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429C41EA5BFF5004C49DD /* Board.swift */; };
@@ -105,6 +109,7 @@
 		C7E429F81EA5C2CD004C49DD /* PieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429F71EA5C2CD004C49DD /* PieceSet.swift */; };
 		C7E429FA1EA5C2EC004C49DD /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429F91EA5C2EC004C49DD /* GameManager.swift */; };
 		C7E429FC1EA5C30F004C49DD /* EightQueen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429FB1EA5C30F004C49DD /* EightQueen.swift */; };
+		C7ED2D4A1EBC25EE00C0E8E2 /* Stacks.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +201,10 @@
 		C70115871EB9DEE9008ACB52 /* TowerOfHaNoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerOfHaNoi.swift; sourceTree = "<group>"; };
 		C714415B1E8ABC3B008472E6 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationStacks.swift; sourceTree = "<group>"; };
+		C7C1C2081EBB417600CEE029 /* GraphStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphStacks.swift; sourceTree = "<group>"; };
+		C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerStacks.swift; sourceTree = "<group>"; };
+		C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StacksSVC.swift; sourceTree = "<group>"; };
 		C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuickSort.plist; sourceTree = "<group>"; };
 		C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MergeSort.plist; sourceTree = "<group>"; };
 		C7E429C41EA5BFF5004C49DD /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -213,6 +222,7 @@
 		C7E429F71EA5C2CD004C49DD /* PieceSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceSet.swift; sourceTree = "<group>"; };
 		C7E429F91EA5C2EC004C49DD /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		C7E429FB1EA5C30F004C49DD /* EightQueen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightQueen.swift; sourceTree = "<group>"; };
+		C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stacks.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +256,7 @@
 				C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */,
 				198AEC241EA4A93F006DE4D4 /* HeapSort.plist */,
 				05D002561EBB22D70077C10F /* TowerofHanoi.plist */,
+				C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -285,6 +296,7 @@
 				05BEA8D11E9DC9C800B2F04C /* QuickSortSVC.swift */,
 				05BEA8CC1E9DC9C800B2F04C /* HeapSortSVC.swift */,
 				05D0024E1EBB21190077C10F /* TowerOfHaNoiVC.swift */,
+				C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */,
 			);
 			name = Study;
 			sourceTree = "<group>";
@@ -310,6 +322,7 @@
 				1987C6551E95EA85005795B8 /* AnimationQuick.swift */,
 				1987C65F1E963CAA005795B8 /* AnimationHeap.swift */,
 				05D002501EBB213A0077C10F /* AnimationTower.swift */,
+				C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -324,6 +337,7 @@
 				1987C6531E95EA4A005795B8 /* ManagerQuickSort.swift */,
 				1987C6611E963DDE005795B8 /* ManagerHeapSort.swift */,
 				05D002521EBB21680077C10F /* ManagerTower.swift */,
+				C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -339,7 +353,6 @@
 				1987C6511E95EA11005795B8 /* QuickSort.swift */,
 				1987C65D1E963205005795B8 /* HeapSort.swift */,
 				C70115871EB9DEE9008ACB52 /* TowerOfHaNoi.swift */,
-				05D002581EBB23A20077C10F /* Assets.xcassets */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -403,6 +416,7 @@
 				0507FA401E9C973000E00354 /* Algorithms-Bridging-Header.h */,
 				0507FA4C1E9CC2EE00E00354 /* MenuCell.swift */,
 				0507FA4D1E9CC2EE00E00354 /* MenuCell.xib */,
+				05D002581EBB23A20077C10F /* Assets.xcassets */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -417,6 +431,7 @@
 				1987C6571E95EAA0005795B8 /* QuickGraph.swift */,
 				05A2AC581E9F2E36005C9310 /* HeapGraph.swift */,
 				05D002541EBB21800077C10F /* Graph_Tower.swift */,
+				C7C1C2081EBB417600CEE029 /* GraphStacks.swift */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -568,6 +583,7 @@
 				059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */,
 				051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */,
 				1916EDF61EA5AF9200FF239A /* BubbleSortDocument.pdf in Resources */,
+				C7ED2D4A1EBC25EE00C0E8E2 /* Stacks.plist in Resources */,
 				C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */,
 				05D002591EBB23A20077C10F /* Assets.xcassets in Resources */,
 				198A347F1E80D9DF009E2B96 /* Main.storyboard in Resources */,
@@ -632,6 +648,8 @@
 				1962B22F1E84FE5E00012936 /* SelectionSort.swift in Sources */,
 				C7E429E61EA5BFF5004C49DD /* Move.swift in Sources */,
 				193E45A71E8A5CDA00A6395C /* ManagerSelectionSort.swift in Sources */,
+				C7C1C20B1EBB450B00CEE029 /* ManagerStacks.swift in Sources */,
+				C7C1C2091EBB417600CEE029 /* GraphStacks.swift in Sources */,
 				198A34931E8176AC009E2B96 /* Graph.swift in Sources */,
 				05D002551EBB21800077C10F /* Graph_Tower.swift in Sources */,
 				19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */,
@@ -674,6 +692,7 @@
 				0598762A1E99F03F00DEDA21 /* CustomButton.swift in Sources */,
 				05A2AC591E9F2E36005C9310 /* HeapGraph.swift in Sources */,
 				05BEA8D81E9DC9C800B2F04C /* InsertionSortSVC.swift in Sources */,
+				C7C1C20F1EBB462000CEE029 /* StacksSVC.swift in Sources */,
 				05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */,
 				0507FA431E9C973100E00354 /* SWRevealViewController.m in Sources */,
 				1987C6621E963DDE005795B8 /* ManagerHeapSort.swift in Sources */,
@@ -689,6 +708,7 @@
 				05A2AC561E9F2DF2005C9310 /* InsertionSortIVC.swift in Sources */,
 				C7E429F61EA5BFF5004C49DD /* ViewController.swift in Sources */,
 				C70115881EB9DEE9008ACB52 /* TowerOfHaNoi.swift in Sources */,
+				C759D8D01EBBA1F700A6C10A /* AnimationStacks.swift in Sources */,
 				05BEA8D91E9DC9C800B2F04C /* MergeSortSVC.swift in Sources */,
 				1987C6581E95EAA0005795B8 /* QuickGraph.swift in Sources */,
 				C7E429F31EA5BFF5004C49DD /* Square.swift in Sources */,

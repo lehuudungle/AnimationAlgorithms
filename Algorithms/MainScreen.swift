@@ -46,7 +46,7 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
     
     func initAdMobBanner(){
         bannerView.adSize = GADAdSizeFromCGSize(CGSize(width: 320, height: 50))
-        bannerView.frame = CGRect(x: 0, y: view.bounds.size.height, width: 320, height: 50)
+        bannerView.frame = CGRect(x: 0, y: view.bounds.size.height+300, width: 320, height: 50)
         bannerView.adUnitID = "ca-app-pub-7384215319654531/6555347808"
         bannerView.rootViewController = self
         bannerView.delegate = self

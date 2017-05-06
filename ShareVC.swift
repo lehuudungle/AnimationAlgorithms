@@ -38,6 +38,7 @@ class ShareVC: UIViewController {
         btnShare.addTarget(self, action: #selector(share(sender:)), for: .touchUpInside )
         view.addSubview(btnShare)
     }
+    
     func addLogo(){
         let image = UIImage(named: "Clouse")
         imgLogo = UIImageView(image: image)

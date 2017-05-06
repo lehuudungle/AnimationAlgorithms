@@ -22,7 +22,6 @@ class InputVC: UIViewController, UITextFieldDelegate {
     var btnStep:UIButton!
     var btnStepCheck:UIButton!
     
-    
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!

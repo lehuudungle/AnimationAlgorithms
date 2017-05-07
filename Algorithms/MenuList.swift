@@ -46,7 +46,8 @@ class MenuList: NSObject {
             Menu(title: "Tower Of Hanoi", viewClass: "TowerOfHaNoiVC",inputClass: SelectionSortIVC(), infoTitle: "A" )
             ])
         let dataStructs = MenuSection(section: "Data Structures", menus:[
-            Menu(title: "Stacks", viewClass: "StacksSVC",inputClass: StacksSVC(), infoTitle: "A" )
+            Menu(title: "Stacks", viewClass: "StacksSVC",inputClass: StacksSVC(), infoTitle: "A" ),
+            Menu(title: "Queues", viewClass: "QueuesSVC",inputClass: QueuesSVC(), infoTitle: "A" )
             ])
 
         

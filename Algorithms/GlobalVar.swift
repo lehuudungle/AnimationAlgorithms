@@ -45,6 +45,10 @@ var btnStepBigTmp: UIButton!
 var labelPushTmp: UILabel!
 var labelPopTmp: UILabel!
 var labelTopTmp: UILabel!
+var labelEnqueuesTmp: SortingLabel!
+var labelDequeuesTmp: SortingLabel!
+var labelRearTmp: SortingLabel!
+var labelFrontTmp: SortingLabel!
 
 var DISPLAY_FONT_MIN: CGFloat = 10
 var DISPLAY_FONT_MAX: CGFloat = 60
@@ -69,3 +73,5 @@ var yEnd_Tower: CGFloat!
 
 var xEndMove_Stacks: CGFloat!
 var yEndMove_Stacks: CGFloat!
+var y_Queues: CGFloat!
+var y_nav: CGFloat!

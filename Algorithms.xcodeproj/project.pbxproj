@@ -109,6 +109,11 @@
 		C7E429F81EA5C2CD004C49DD /* PieceSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429F71EA5C2CD004C49DD /* PieceSet.swift */; };
 		C7E429FA1EA5C2EC004C49DD /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429F91EA5C2EC004C49DD /* GameManager.swift */; };
 		C7E429FC1EA5C30F004C49DD /* EightQueen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429FB1EA5C30F004C49DD /* EightQueen.swift */; };
+		C7E7B91F1EBD80E7006CEF95 /* GraphQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E7B91E1EBD80E7006CEF95 /* GraphQueues.swift */; };
+		C7E7B9211EBDB911006CEF95 /* AnimationQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E7B9201EBDB910006CEF95 /* AnimationQueues.swift */; };
+		C7E7B9231EBDB927006CEF95 /* Queues.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E7B9221EBDB927006CEF95 /* Queues.plist */; };
+		C7E7B9251EBDB943006CEF95 /* ManagerQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E7B9241EBDB943006CEF95 /* ManagerQueues.swift */; };
+		C7E7B9271EBDB9A2006CEF95 /* QueuesSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E7B9261EBDB9A2006CEF95 /* QueuesSVC.swift */; };
 		C7ED2D4A1EBC25EE00C0E8E2 /* Stacks.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */; };
 /* End PBXBuildFile section */
 
@@ -222,6 +227,11 @@
 		C7E429F71EA5C2CD004C49DD /* PieceSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieceSet.swift; sourceTree = "<group>"; };
 		C7E429F91EA5C2EC004C49DD /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		C7E429FB1EA5C30F004C49DD /* EightQueen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EightQueen.swift; sourceTree = "<group>"; };
+		C7E7B91E1EBD80E7006CEF95 /* GraphQueues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQueues.swift; sourceTree = "<group>"; };
+		C7E7B9201EBDB910006CEF95 /* AnimationQueues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationQueues.swift; sourceTree = "<group>"; };
+		C7E7B9221EBDB927006CEF95 /* Queues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Queues.plist; sourceTree = "<group>"; };
+		C7E7B9241EBDB943006CEF95 /* ManagerQueues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerQueues.swift; sourceTree = "<group>"; };
+		C7E7B9261EBDB9A2006CEF95 /* QueuesSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuesSVC.swift; sourceTree = "<group>"; };
 		C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stacks.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +267,7 @@
 				198AEC241EA4A93F006DE4D4 /* HeapSort.plist */,
 				05D002561EBB22D70077C10F /* TowerofHanoi.plist */,
 				C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */,
+				C7E7B9221EBDB927006CEF95 /* Queues.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -297,6 +308,7 @@
 				05BEA8CC1E9DC9C800B2F04C /* HeapSortSVC.swift */,
 				05D0024E1EBB21190077C10F /* TowerOfHaNoiVC.swift */,
 				C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */,
+				C7E7B9261EBDB9A2006CEF95 /* QueuesSVC.swift */,
 			);
 			name = Study;
 			sourceTree = "<group>";
@@ -323,6 +335,7 @@
 				1987C65F1E963CAA005795B8 /* AnimationHeap.swift */,
 				05D002501EBB213A0077C10F /* AnimationTower.swift */,
 				C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */,
+				C7E7B9201EBDB910006CEF95 /* AnimationQueues.swift */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -338,6 +351,7 @@
 				1987C6611E963DDE005795B8 /* ManagerHeapSort.swift */,
 				05D002521EBB21680077C10F /* ManagerTower.swift */,
 				C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */,
+				C7E7B9241EBDB943006CEF95 /* ManagerQueues.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -432,6 +446,7 @@
 				05A2AC581E9F2E36005C9310 /* HeapGraph.swift */,
 				05D002541EBB21800077C10F /* Graph_Tower.swift */,
 				C7C1C2081EBB417600CEE029 /* GraphStacks.swift */,
+				C7E7B91E1EBD80E7006CEF95 /* GraphQueues.swift */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -582,6 +597,7 @@
 				1916EDFB1EA5AF9200FF239A /* SelectionSortDocument.pdf in Resources */,
 				059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */,
 				051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */,
+				C7E7B9231EBDB927006CEF95 /* Queues.plist in Resources */,
 				1916EDF61EA5AF9200FF239A /* BubbleSortDocument.pdf in Resources */,
 				C7ED2D4A1EBC25EE00C0E8E2 /* Stacks.plist in Resources */,
 				C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */,
@@ -662,17 +678,20 @@
 				C7E429F01EA5BFF5004C49DD /* Queen.swift in Sources */,
 				1987C6501E95E6A3005795B8 /* AppDelegate.swift in Sources */,
 				197A66BF1E8B66AB00CA17F6 /* AnimationSelection.swift in Sources */,
+				C7E7B9251EBDB943006CEF95 /* ManagerQueues.swift in Sources */,
 				198A34BA1E828A5D009E2B96 /* ManagerInsertionSort.swift in Sources */,
 				05BEA8D51E9DC9C800B2F04C /* HeapSortSVC.swift in Sources */,
 				0507FA4A1E9C987200E00354 /* MenuViewController.swift in Sources */,
 				0507FA4E1E9CC2EE00E00354 /* MenuCell.swift in Sources */,
 				1987C6561E95EA85005795B8 /* AnimationQuick.swift in Sources */,
+				C7E7B91F1EBD80E7006CEF95 /* GraphQueues.swift in Sources */,
 				05BEA8DA1E9DC9C800B2F04C /* QuickSortSVC.swift in Sources */,
 				193E45A31E8A5AFD00A6395C /* MergeSort.swift in Sources */,
 				C7E429FA1EA5C2EC004C49DD /* GameManager.swift in Sources */,
 				05A2AC531E9F2DF2005C9310 /* InputVC.swift in Sources */,
 				05A2AC551E9F2DF2005C9310 /* SelectionSortIVC.swift in Sources */,
 				19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */,
+				C7E7B9211EBDB911006CEF95 /* AnimationQueues.swift in Sources */,
 				198A348F1E810906009E2B96 /* AnimationBubble.swift in Sources */,
 				C7E429F51EA5BFF5004C49DD /* ViewAnimation.swift in Sources */,
 				05A2AC571E9F2DF2005C9310 /* MergeSortIVC.swift in Sources */,
@@ -696,6 +715,7 @@
 				05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */,
 				0507FA431E9C973100E00354 /* SWRevealViewController.m in Sources */,
 				1987C6621E963DDE005795B8 /* ManagerHeapSort.swift in Sources */,
+				C7E7B9271EBDB9A2006CEF95 /* QueuesSVC.swift in Sources */,
 				C7E429FC1EA5C30F004C49DD /* EightQueen.swift in Sources */,
 				05D0024F1EBB21190077C10F /* TowerOfHaNoiVC.swift in Sources */,
 				C7E429E71EA5BFF5004C49DD /* MoveDirection.swift in Sources */,
@@ -848,7 +868,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7MRXJH2RYW;
 				INFOPLIST_FILE = Algorithms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmaster.Algorithms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -866,7 +886,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7MRXJH2RYW;
 				INFOPLIST_FILE = Algorithms/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.techmaster.Algorithms;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -70,7 +70,7 @@ class Graph_Tower: UIView {
             label.layer.cornerRadius = 10
             arrayLabel.append(label)
             self.addSubview(label)
-
+// 0,1,2
         }
 
         breakLabel = SortingLabel(frame:CGRect(x: 0, y: 0, width: spacing*CGFloat(1) + spacing*0.5, height: frame.height/10))

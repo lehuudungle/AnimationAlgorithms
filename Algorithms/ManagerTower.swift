@@ -19,7 +19,8 @@ class ManagerTower {
     var animationStep: AnimationTower!
     var arrayCenter: [CGPoint]!
     var arrayLabel: [SortingLabel]!
-    var textStudy: TextStudy!
+    
+    var textStudy: DetailTxtView!
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele = 0
@@ -38,7 +39,7 @@ class ManagerTower {
         animation = AnimationTower(arrayLabel: arrayLabel, arrayCenter: arrayCenter, arrayAction: arrayAction,graph: graph)
         if(VIEW_CHOSEN=="study"){
             
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+            textStudy = DetailTxtView(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))
@@ -46,6 +47,7 @@ class ManagerTower {
             viewcontroller.view.addSubview(textStudy)
             
             
+            textStudy.text = "The Tower of Hanoi is a mathematical puzzle. It consists of three rods and a number of disks of different sizes, which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top. The objective of the puzzle is to move the entire stack to another rod."
             
             var path: String = ""
             
@@ -104,6 +106,7 @@ class ManagerTower {
                 }
                 
             }else if(arrayKeys[ele].integerValue==12){
+                textStudy.text = "Now. let's begin:" 
                 self.graph.resetGraph()
             }else if (arrayKeys[ele].integerValue==13){
                 let data = dictData[arrayKeys[ele]]

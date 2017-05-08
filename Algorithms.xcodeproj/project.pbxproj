@@ -15,7 +15,6 @@
 		051085471EA1F8F0007CDEC6 /* BubbleSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051085461EA1F8F0007CDEC6 /* BubbleSort.plist */; };
 		0521162A1EA5D3D0006ED15C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052116291EA5D3D0006ED15C /* AboutVC.swift */; };
 		0521162C1EA5D4DC006ED15C /* AboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0521162B1EA5D4DC006ED15C /* AboutVC.xib */; };
-		0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572FF491EA123AB00B36562 /* TextStudy.swift */; };
 		059876271E99EEB800DEDA21 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 059876251E99EEB800DEDA21 /* FontAwesome.otf */; };
 		059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876261E99EEB800DEDA21 /* FontAwesome.swift */; };
 		0598762A1E99F03F00DEDA21 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059876291E99F03F00DEDA21 /* CustomButton.swift */; };
@@ -48,6 +47,7 @@
 		1916EE0B1EA5C7A900FF239A /* dung.png in Resources */ = {isa = PBXBuildFile; fileRef = 1916EE071EA5C7A900FF239A /* dung.png */; };
 		1916EE0C1EA5C7A900FF239A /* loc.png in Resources */ = {isa = PBXBuildFile; fileRef = 1916EE081EA5C7A900FF239A /* loc.png */; };
 		1916EE0D1EA5C7A900FF239A /* tung.png in Resources */ = {isa = PBXBuildFile; fileRef = 1916EE091EA5C7A900FF239A /* tung.png */; };
+		191A40031EC0156B0014378C /* DetailTxtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191A40021EC0156B0014378C /* DetailTxtView.swift */; };
 		192C75831E8CFCFD00EE8027 /* MergeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C75821E8CFCFD00EE8027 /* MergeGraph.swift */; };
 		192C75851E8D057A00EE8027 /* ManagerMergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C75841E8D057A00EE8027 /* ManagerMergeSort.swift */; };
 		19304DFE1E9F624600C0AC02 /* QuickSortIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19304DFD1E9F624600C0AC02 /* QuickSortIVC.swift */; };
@@ -82,7 +82,6 @@
 		19BAAA5D1E914A0000FDB729 /* AnimationMerge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */; };
 		19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D41EF51EA087B000C8CE4D /* ShareVC.swift */; };
 		19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EAC29A1EA4BF130060C6B8 /* PDFViewController.swift */; };
-		19EAC29D1EA4CB190060C6B8 /* UIBorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EAC29C1EA4CB190060C6B8 /* UIBorderedLabel.swift */; };
 		19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */; };
 		AEE519CEA9558464871E3E2A /* Pods_Algorithms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */; };
 		C70115881EB9DEE9008ACB52 /* TowerOfHaNoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70115871EB9DEE9008ACB52 /* TowerOfHaNoi.swift */; };
@@ -130,7 +129,6 @@
 		051085461EA1F8F0007CDEC6 /* BubbleSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BubbleSort.plist; sourceTree = "<group>"; };
 		052116291EA5D3D0006ED15C /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutVC.swift; path = Algorithms/AboutVC.swift; sourceTree = "<group>"; };
 		0521162B1EA5D4DC006ED15C /* AboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AboutVC.xib; path = Algorithms/AboutVC.xib; sourceTree = "<group>"; };
-		0572FF491EA123AB00B36562 /* TextStudy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStudy.swift; sourceTree = "<group>"; };
 		059876241E99EEB800DEDA21 /* FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAwesome.h; sourceTree = "<group>"; };
 		059876251E99EEB800DEDA21 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		059876261E99EEB800DEDA21 /* FontAwesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesome.swift; sourceTree = "<group>"; };
@@ -164,6 +162,7 @@
 		1916EE071EA5C7A900FF239A /* dung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dung.png; sourceTree = "<group>"; };
 		1916EE081EA5C7A900FF239A /* loc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loc.png; sourceTree = "<group>"; };
 		1916EE091EA5C7A900FF239A /* tung.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tung.png; sourceTree = "<group>"; };
+		191A40021EC0156B0014378C /* DetailTxtView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTxtView.swift; sourceTree = "<group>"; };
 		192C75821E8CFCFD00EE8027 /* MergeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeGraph.swift; sourceTree = "<group>"; };
 		192C75841E8D057A00EE8027 /* ManagerMergeSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerMergeSort.swift; sourceTree = "<group>"; };
 		19304DFD1E9F624600C0AC02 /* QuickSortIVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSortIVC.swift; sourceTree = "<group>"; };
@@ -200,7 +199,6 @@
 		19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationMerge.swift; sourceTree = "<group>"; };
 		19D41EF51EA087B000C8CE4D /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		19EAC29A1EA4BF130060C6B8 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
-		19EAC29C1EA4CB190060C6B8 /* UIBorderedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBorderedLabel.swift; sourceTree = "<group>"; };
 		19EEC0801EA1C4C300C095B2 /* SelectionSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SelectionSort.plist; sourceTree = "<group>"; };
 		9EFEAA5216F7A5BC89F47ABC /* Pods-Algorithms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algorithms.release.xcconfig"; path = "Pods/Target Support Files/Pods-Algorithms/Pods-Algorithms.release.xcconfig"; sourceTree = "<group>"; };
 		BC5F55E670A41669F8D44294 /* Pods_Algorithms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,8 +250,7 @@
 		0572FF481EA1227300B36562 /* TextStudty */ = {
 			isa = PBXGroup;
 			children = (
-				0572FF491EA123AB00B36562 /* TextStudy.swift */,
-				19EAC29C1EA4CB190060C6B8 /* UIBorderedLabel.swift */,
+				191A40021EC0156B0014378C /* DetailTxtView.swift */,
 			);
 			name = TextStudty;
 			sourceTree = "<group>";
@@ -419,11 +416,11 @@
 				C71441611E8ABE4E008472E6 /* ViewControllers */,
 				C714415A1E8ABBFD008472E6 /* MenuList */,
 				193E45A11E8A4A7B00A6395C /* Manager */,
-				0572FF4B1EA1278300B36562 /* DataSource */,
 				193E459A1E8A01BA00A6395C /* Animation */,
 				C7E429C21EA5BFBA004C49DD /* NQueens */,
 				19C253F91E8962E8008C614C /* Graph */,
 				1962B2301E84FE6400012936 /* Algorithms */,
+				0572FF4B1EA1278300B36562 /* DataSource */,
 				059876231E99EE8B00DEDA21 /* FontAwesome */,
 				198A347D1E80D9DF009E2B96 /* Main.storyboard */,
 				198A34851E80D9DF009E2B96 /* LaunchScreen.storyboard */,
@@ -551,7 +548,7 @@
 				TargetAttributes = {
 					198A34751E80D9DE009E2B96 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7MRXJH2RYW;
+						DevelopmentTeam = D6F4345AL3;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -703,9 +700,9 @@
 				C7E429EA1EA5BFF5004C49DD /* PieceColor.swift in Sources */,
 				05D002531EBB21680077C10F /* ManagerTower.swift in Sources */,
 				19304E001E9F62B200C0AC02 /* HeapSortIVC.swift in Sources */,
-				19EAC29D1EA4CB190060C6B8 /* UIBorderedLabel.swift in Sources */,
 				C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */,
 				05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */,
+				191A40031EC0156B0014378C /* DetailTxtView.swift in Sources */,
 				192C75831E8CFCFD00EE8027 /* MergeGraph.swift in Sources */,
 				1987C6521E95EA11005795B8 /* QuickSort.swift in Sources */,
 				C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */,
@@ -722,7 +719,6 @@
 				C7E429FC1EA5C30F004C49DD /* EightQueen.swift in Sources */,
 				05D0024F1EBB21190077C10F /* TowerOfHaNoiVC.swift in Sources */,
 				C7E429E71EA5BFF5004C49DD /* MoveDirection.swift in Sources */,
-				0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */,
 				C7E429E91EA5BFF5004C49DD /* Piece.swift in Sources */,
 				05D002511EBB213A0077C10F /* AnimationTower.swift in Sources */,
 				C7C1B5AF1EC06EC000BC80D0 /* GraphLinear.swift in Sources */,
@@ -870,7 +866,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7MRXJH2RYW;
+				DEVELOPMENT_TEAM = D6F4345AL3;
 				INFOPLIST_FILE = Algorithms/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -888,7 +884,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7MRXJH2RYW;
+				DEVELOPMENT_TEAM = D6F4345AL3;
 				INFOPLIST_FILE = Algorithms/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

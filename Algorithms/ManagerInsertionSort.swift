@@ -29,7 +29,7 @@ class ManagerInsertionSort {
     var graph: Graph!
     var sort: InsertionSort!
     
-    var textStudy: TextStudy!
+    var textStudy: DetailTxtView!
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele: Int!
@@ -73,7 +73,7 @@ class ManagerInsertionSort {
         if(VIEW_CHOSEN=="study"){
             ele = 0
             
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+            textStudy = DetailTxtView(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))

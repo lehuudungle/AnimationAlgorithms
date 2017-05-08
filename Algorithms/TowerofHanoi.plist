@@ -3,40 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>10.1</key>
-	<string>Bài toán Tháp Hà Nội (Tower of Hanoi) là một trò chơi toán học bao gồm 3 cột và với số đĩa nhiều hơn 1</string>
-	<key>10.2</key>
-	<string>Các đĩa có kích cỡ khác nhau và xếp theo tự tự tăng dần về kích cỡ từ trên xuống: đĩa nhỏ hơn ở trên đĩa lớn hơn.</string>
-	<key>10.3</key>
-	<string>Nhiệm vụ của trò chơi là di chuyển các đĩa có kích cỡ khác nhau sang cột khác sao cho vẫn đảm bảo thứ tự ban đầu của các đĩa: đĩa nhỏ nằm trên đĩa lớn.</string>
-	<key>10.4</key>
-	<string>một số qui tắc cho trò chơi toán học Tháp Hà Nội (Tower of Hanoi):</string>
+	<string>Obeying the following simple rules:</string>
 	<key>11.1</key>
-	<string>Mỗi lần chỉ có thể di chuyển một đĩa từ cột này sang cột khác.</string>
+	<string>- Disk can only be moved if it is the uppermost disk on a stack.</string>
 	<key>11.2</key>
-	<string>Nhưng Không thể di chuyển nhiều hơn 1 đĩa cùng lúc</string>
-	<key>11.32</key>
-	<string>Chỉ được di chuyển đĩa nằm trên cùng (không được di chuyển các đĩa nằm giữa)</string>
-	<key>11.4</key>
-	<string>Đĩa có kích thước lớn hơn không thể được đặt trên đĩa có kích thước nhỏ hơn </string>
-	<key>11.5</key>
-	<string>Đĩa có kích thước lớn hơn không thể được đặt trên đĩa có kích thước nhỏ hơn </string>
+	<string>- Only one disk can be moved at a time.</string>
+	<key>11.3</key>
+	<string>- No large disk can sit over a small disk.</string>
 	<key>12</key>
-	<string>end</string>
+	<string></string>
 	<key>13.1</key>
-	<string>Move disk from A to C</string>
+	<string>Step 1: Move disk 1 from rod A to rod C. </string>
 	<key>13.2</key>
-	<string>Move disk from A to B</string>
+	<string>Step 2: Move disk 2 from rod A to rod B.</string>
 	<key>13.3</key>
-	<string>Move disk from C to B</string>
+	<string>Step 3: Move disk 1 from rod C to rod B.</string>
 	<key>13.4</key>
-	<string>Move disk from A to C</string>
+	<string>Step 4: Move disk 3 from rod A to rod C.</string>
 	<key>13.5</key>
-	<string>Move disk from B to A</string>
+	<string>Step 5: Move disk 1 from rod B to rod A.</string>
 	<key>13.6</key>
-	<string>Move disk from B to C</string>
+	<string>Step 6: Move disk 2 from rod B to rod C.</string>
 	<key>13.7</key>
-	<string>Move disk from A to C</string>
+	<string>Step 7: Move disk 1 from rod A to rod C.</string>
 	<key>14.1</key>
-	<string>Tháp đã được sắp xếp</string>
+	<string>After 7 steps, the goal of this puzzle is reached.</string>
 </dict>
 </plist>

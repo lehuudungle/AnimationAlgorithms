@@ -60,7 +60,7 @@ class StudyVC: UIViewController {
     
     func addBtnReset() {
         btnReset = KDPulseButton(frame: CGRect(x: spacing, y: view.bounds.size.height-spacing-btnSizeHeight, width: btnSizeWidth, height: btnSizeHeight))
-//        btnReset.layer.backgroundColor = UIColor(red: 154/255, green: 205/255, blue: 50/255, alpha: 1).cgColor
+
         btnReset.layer.backgroundColor = LIME_COLOR.cgColor
         btnReset.setTitle("\u{f021}", for: .normal)
         btnReset.setTitleColor(UIColor.white, for: UIControlState.normal)

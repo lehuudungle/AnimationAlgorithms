@@ -32,7 +32,7 @@ class ManagerBubbleSort {
     var graph: Graph!
     var sort: BubbleSort!
     
-    var textStudy: TextStudy!
+    var textStudy: DetailTxtView!
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele: Int!
@@ -57,6 +57,7 @@ class ManagerBubbleSort {
         }
         
         
+        
         graph = Graph(frame: CGRect(x: 0,
                                     y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
                                     width: viewcontroller.view.bounds.size.width,
@@ -77,10 +78,11 @@ class ManagerBubbleSort {
         
         if(VIEW_CHOSEN=="study"){
             ele = 0
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
-                                                y: graph.frame.origin.y+graph.frame.height,
-                                                width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
-                                                height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            
+            textStudy = DetailTxtView(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                        y: graph.frame.origin.y+graph.frame.height,
+                                                        width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                        height: yMax-(graph.frame.origin.y+graph.frame.height)), textContainer: nil)
             
             viewcontroller.view.addSubview(textStudy)
             
@@ -133,6 +135,7 @@ class ManagerBubbleSort {
                 btnStepTmp.isUserInteractionEnabled = false
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?
+                
                 animateStep.next()
             }else if(arrayKeys[ele]=="end"){
                 textStudy.text = "The list is fully sorted"
@@ -143,7 +146,7 @@ class ManagerBubbleSort {
             }else{
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?
-                
+                                
                 btnStepTmp.isUserInteractionEnabled = true
                 
             }

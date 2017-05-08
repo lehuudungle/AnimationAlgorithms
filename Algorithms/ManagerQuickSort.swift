@@ -28,7 +28,7 @@ class ManagerQuickSort{
     var sort: QuickSort!
     var quickGraph: QuickGraph!
     
-    var textStudy: TextStudy!
+    var textStudy: DetailTxtView!
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele: Int!
@@ -76,7 +76,7 @@ class ManagerQuickSort{
             for _ in arrayAction{
                 ele = ele + 1
             }
-            textStudy = TextStudy(frame: CGRect(x: quickGraph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+            textStudy = DetailTxtView(frame: CGRect(x: quickGraph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: quickGraph.frame.origin.y+quickGraph.frame.height,
                                                 width: quickGraph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(quickGraph.frame.origin.y+quickGraph.frame.height)))

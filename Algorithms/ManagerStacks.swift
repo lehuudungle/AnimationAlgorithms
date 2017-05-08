@@ -14,7 +14,8 @@ class ManagerStacks {
     var viewcontroller: UIViewController!
     var animation: AnimationStacks!
     var arrayLabel: [SortingLabel]!
-    var textStudy: TextStudy!
+    
+    var textStudy: DetailTxtView!
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele = 0
@@ -32,7 +33,7 @@ class ManagerStacks {
         
         if(VIEW_CHOSEN=="study"){
             
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+            textStudy = DetailTxtView(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))
@@ -41,6 +42,7 @@ class ManagerStacks {
             
             
             textStudy.text = "  Stack is an abstract data type that serves as a collection of elements. "
+            
             var path: String = ""
             
             path = Bundle.main.path(forResource:"Stacks", ofType: "plist")!

@@ -8,29 +8,25 @@
 	<string>- Disk can only be moved if it is the uppermost disk on a stack.</string>
 	<key>11.2</key>
 	<string>- Only one disk can be moved at a time.</string>
-	<key>11.32</key>
-	<string>And...</string>
-	<key>11.4</key>
-	<string>- No large disk can sit over a small disk.</string>
-	<key>11.5</key>
+	<key>11.3</key>
 	<string>- No large disk can sit over a small disk.</string>
 	<key>12</key>
-	<string>Now, let&apos;s begin: </string>
+	<string></string>
 	<key>13.1</key>
-	<string>2</string>
+	<string>Step 1: Move disk 1 from rod A to rod C. </string>
 	<key>13.2</key>
-	<string>3</string>
+	<string>Step 2: Move disk 2 from rod A to rod B.</string>
 	<key>13.3</key>
-	<string>4</string>
+	<string>Step 3: Move disk 1 from rod C to rod B.</string>
 	<key>13.4</key>
-	<string>5</string>
+	<string>Step 4: Move disk 3 from rod A to rod C.</string>
 	<key>13.5</key>
-	<string>6</string>
+	<string>Step 5: Move disk 1 from rod B to rod A.</string>
 	<key>13.6</key>
-	<string>Move disk from B to C</string>
+	<string>Step 6: Move disk 2 from rod B to rod C.</string>
 	<key>13.7</key>
-	<string>Move disk from A to C</string>
+	<string>Step 7: Move disk 1 from rod A to rod C.</string>
 	<key>14.1</key>
-	<string>Tháp đã được sắp xếp</string>
+	<string>After 7 steps, the goal of this puzzle is reached.</string>
 </dict>
 </plist>

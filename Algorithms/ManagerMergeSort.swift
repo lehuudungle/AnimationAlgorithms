@@ -30,7 +30,7 @@ class ManagerMergeSort {
     
     var ptu:Int!
     
-    var textStudy: TextStudy!
+    var textStudy: DetailTxtView!
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele: Int!
@@ -85,7 +85,7 @@ class ManagerMergeSort {
             for _ in arrayAction{
                 ele = ele + 1
             }
-            textStudy = TextStudy(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+            textStudy = DetailTxtView(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
                                                 y: graph.frame.origin.y+graph.frame.height,
                                                 width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
                                                 height: yMax-(graph.frame.origin.y+graph.frame.height)))

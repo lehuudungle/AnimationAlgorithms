@@ -22,7 +22,6 @@ class ManagerStacks {
     
     
     func initStacks(viewcontroller: UIViewController){
-        
         graph = GraphStacks(frame: CGRect(x: 0,
                                           y:(viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2,
                                           width: viewcontroller.view.bounds.size.width,

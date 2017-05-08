@@ -35,6 +35,10 @@ class StacksSVC: StudyVC {
         self.manager.textStudy.removeFromSuperview()
         btnStepBig.isUserInteractionEnabled = true
         manager.initStacks(viewcontroller: self)
+        labelTop.isHidden = false
+        labelTop.frame = CGRect(x: view.bounds.size.width/10, y: yEndMove_Stacks*7+CGFloat(12), width: 70, height: 30)
+        labelPop.isHidden = true
+        labelPush.isHidden = true
     }
     
     func addLabelPush(){

@@ -89,6 +89,7 @@
 		C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415B1E8ABC3B008472E6 /* MenuList.swift */; };
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
 		C759D8D01EBBA1F700A6C10A /* AnimationStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */; };
+		C7C1B5AF1EC06EC000BC80D0 /* GraphLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */; };
 		C7C1C2091EBB417600CEE029 /* GraphStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C2081EBB417600CEE029 /* GraphStacks.swift */; };
 		C7C1C20B1EBB450B00CEE029 /* ManagerStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */; };
 		C7C1C20F1EBB462000CEE029 /* StacksSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */; };
@@ -207,6 +208,7 @@
 		C714415B1E8ABC3B008472E6 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationStacks.swift; sourceTree = "<group>"; };
+		C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphLinear.swift; sourceTree = "<group>"; };
 		C7C1C2081EBB417600CEE029 /* GraphStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphStacks.swift; sourceTree = "<group>"; };
 		C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerStacks.swift; sourceTree = "<group>"; };
 		C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StacksSVC.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				05D002541EBB21800077C10F /* Graph_Tower.swift */,
 				C7C1C2081EBB417600CEE029 /* GraphStacks.swift */,
 				C7E7B91E1EBD80E7006CEF95 /* GraphQueues.swift */,
+				C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 				0572FF4A1EA123AB00B36562 /* TextStudy.swift in Sources */,
 				C7E429E91EA5BFF5004C49DD /* Piece.swift in Sources */,
 				05D002511EBB213A0077C10F /* AnimationTower.swift in Sources */,
+				C7C1B5AF1EC06EC000BC80D0 /* GraphLinear.swift in Sources */,
 				192C75851E8D057A00EE8027 /* ManagerMergeSort.swift in Sources */,
 				1962B22D1E841F3400012936 /* SortingLabel.swift in Sources */,
 				193E45A51E8A5C1200A6395C /* ManagerBubbleSort.swift in Sources */,

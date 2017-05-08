@@ -50,7 +50,6 @@ class StacksSVC: StudyVC {
         labelPush.layer.masksToBounds = true
         labelPush.layer.borderWidth = 2
         labelPush.layer.borderColor = UIColor.black.cgColor
-        labelPush.layer.cornerRadius = 10
         view.addSubview(labelPush)
     }
     

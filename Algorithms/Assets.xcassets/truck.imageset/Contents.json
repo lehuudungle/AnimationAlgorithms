@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "cubeBluex24.png",
+      "filename" : "truckx32.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "cubeBluex32.png",
+      "filename" : "truckx64.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "cubeBluex64.png",
+      "filename" : "truckx128.png",
       "scale" : "3x"
     }
   ],

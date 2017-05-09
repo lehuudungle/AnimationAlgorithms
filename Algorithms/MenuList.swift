@@ -49,6 +49,9 @@ class MenuList: NSObject {
             Menu(title: "Stacks", viewClass: "StacksSVC",inputClass: StacksSVC(), infoTitle: "A" ),
             Menu(title: "Queues", viewClass: "QueuesSVC",inputClass: QueuesSVC(), infoTitle: "A" )
             ])
+        let search = MenuSection(section: "Search", menus:[
+            Menu(title: "Linear Search", viewClass: "LinearSVC",inputClass: LinearSVC(), infoTitle: "A" )
+            ])
 
         
         let advance = MenuSection(section: "Other", menus:[
@@ -57,7 +60,7 @@ class MenuList: NSObject {
             ])
         
         let mainScreen = MainScreen(style: UITableViewStyle.grouped)
-        mainScreen.menu = [basic,inter,tower,dataStructs,advance]
+        mainScreen.menu = [basic,search,inter,tower,dataStructs,advance]
         mainScreen.title = "Algorithms"
         
         let nav = UINavigationController(rootViewController: mainScreen)

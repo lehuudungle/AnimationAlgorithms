@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 
 enum TypeSection: String{
-    case Sort="Sort",Other = "Other"
+    case Sort="Sort",Other = "Other",DataStructer="Data Structures"
 }
 
 
@@ -38,23 +38,23 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
         super.viewDidLoad()
         viewcontroller = ViewController()
         
-        initAdMobBanner()
+//        initAdMobBanner()
         self.tableView.contentInset = UIEdgeInsetsMake(20,0,0,0)
         self.navigationController?.navigationBar.barTintColor = LIME_COLOR
         
     }
-    
-    func initAdMobBanner(){
-        bannerView.adSize = GADAdSizeFromCGSize(CGSize(width: 320, height: 50))
-        bannerView.frame = CGRect(x: 0, y: view.bounds.size.height+300, width: 320, height: 50)
-        bannerView.adUnitID = "ca-app-pub-7384215319654531/6555347808"
-        bannerView.rootViewController = self
-        bannerView.delegate = self
-        view.addSubview(bannerView)
-        let request = GADRequest()
-        bannerView.load(request)
-        
-    }
+    /*
+//    func initAdMobBanner(){
+//        bannerView.adSize = GADAdSizeFromCGSize(CGSize(width: 320, height: 50))
+//        bannerView.frame = CGRect(x: 0, y: view.bounds.size.height+300, width: 320, height: 50)
+//        bannerView.adUnitID = "ca-app-pub-7384215319654531/6555347808"
+//        bannerView.rootViewController = self
+//        bannerView.delegate = self
+//        view.addSubview(bannerView)
+//        let request = GADRequest()
+//        bannerView.load(request)
+
+//    }
     func hideBanner(_ banner: UIView) {
         UIView.beginAnimations("hideBanner", context: nil)
         banner.frame = CGRect(x: view.frame.size.width/2 - banner.frame.size.width/2, y: view.frame.size.height - banner.frame.size.height, width: banner.frame.size.width, height: banner.frame.size.height)
@@ -80,7 +80,7 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
         hideBanner(bannerView)
     }
     
-
+*/
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -153,7 +153,7 @@ class MainScreen: UITableViewController, GADBannerViewDelegate {
             switch typeSection {
             case TypeSection.Other.rawValue: break
 
-            case TypeSection.Sort.rawValue:
+            case TypeSection.Sort.rawValue,TypeSection.DataStructer.rawValue:
                 let list = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
                 detailScreen.navigationItem.rightBarButtonItem = UIBarButtonItem(image: list, style: .plain, target: revealViewController(), action: #selector(self.revealViewController().rightRevealToggle(_:)))
 

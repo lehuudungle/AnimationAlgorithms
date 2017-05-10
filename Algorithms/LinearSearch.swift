@@ -9,7 +9,7 @@
 import Foundation
 
 class LinearSearch {
-    var act: String!
+    var arrayAction = [LinearStep]()
     var arrayInput = [Int]()
     
     init(arrayInput: [Int], search: Int) {
@@ -26,11 +26,12 @@ class LinearSearch {
             
             
             if obj == object{
-                act = "true"
-                print(index)
+                self.arrayAction.append(LinearStep(act: "true"))
+//                print(index)
             }
             else {
-                act = "false"
+                self.arrayAction.append(LinearStep(act: "false"))
+//                print("false")
             }
         }
     }

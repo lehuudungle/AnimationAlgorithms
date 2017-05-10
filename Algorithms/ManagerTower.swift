@@ -109,17 +109,20 @@ class ManagerTower {
                 textStudy.text = "Now. let's begin:" 
                 self.graph.resetGraph()
             }else if (arrayKeys[ele].integerValue==13){
+                
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?
                 btnStepTmp.isUserInteractionEnabled = false
                 btnRunTmp.isUserInteractionEnabled = false
                 animationStep.next()
                 
-            }else{
-                let data = dictData[arrayKeys[ele]]
-                textStudy.text = data as! String?
+            }else if (arrayKeys[ele] == "end"){
                 
+                textStudy.text = "After 7 steps, the goal of this puzzle is now reached"
                 
+                btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
+                btnStepTmp.setNeedsDisplay()
+                btnStepTmp.isUserInteractionEnabled = false
             }
             
             ele = ele + 1

@@ -8,7 +8,7 @@
 	<string>- Disk can only be moved if it is the uppermost disk on a stack.</string>
 	<key>11.2</key>
 	<string>- Only one disk can be moved at a time.</string>
-	<key>11.3</key>
+	<key>11.4</key>
 	<string>- No large disk can sit over a small disk.</string>
 	<key>12</key>
 	<string></string>
@@ -25,8 +25,8 @@
 	<key>13.6</key>
 	<string>Step 6: Move disk 2 from rod B to rod C.</string>
 	<key>13.7</key>
-	<string>Step 7: Move disk 1 from rod A to rod C.</string>
-	<key>14.1</key>
-	<string>After 7 steps, the goal of this puzzle is reached.</string>
+	<string>Step 7: Move disk 1 from tower A to tower C.</string>
+	<key>end</key>
+	<string></string>
 </dict>
 </plist>

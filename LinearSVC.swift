@@ -9,14 +9,16 @@
 import UIKit
 
 class LinearSVC: StudyVC {
-
+  
+    var search: Int!
     var manager: ManagerLinear!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         manager = ManagerLinear()
-        manager.initLinear(viewcontroller: self)
-
+        
+        search = Int(arc4random_uniform(88)) + 11
+        manager.initLinear(viewcontroller: self, search: search)
+        btnRun.addTarget(self.manager, action: #selector(manager.run(sender:)), for: .touchUpInside)
     }
-
-
 }

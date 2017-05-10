@@ -57,12 +57,6 @@ class AnimationTower {
                 
             }
             
-//            else if (step == 5){
-//                self.moveUp(lable: self.arrayLabel[1], valueTower: 0)
-//                
-//                
-//            }
-            
         }){_ in
             if(step==1){
                 UIView.animate(withDuration: 0.5, animations: {
@@ -110,7 +104,6 @@ class AnimationTower {
                     UIView.animate(withDuration: 0.5, animations: {
                         self.moveDown(lable: self.arrayLabel[0], valueTower: 1, count: 0)
                     }){_ in
-//                        btnStepTmp.isUserInteractionEnabled = true
                         UIView.animate(withDuration: 0.5, animations: {
                             self.moveUp(lable: self.arrayLabel[1], valueTower: 0)
                         }){_ in
@@ -130,21 +123,6 @@ class AnimationTower {
                     
                 }
             }
-//            else if (step r== 5){
-//                UIView.animate(withDuration: 0.5, animations: {
-//                    self.moveCross(lable: self.arrayLabel[1], valueTower: 1)
-//                }){ _ in
-//                    UIView.animate(withDuration: 0.5, animations: {
-//                        self.moveDown(lable: self.arrayLabel[1], valueTower: 1, count: 1)
-//                    }){_ in
-//                        self.arrayLabel[0].isHidden = true
-//                        self.graph.breakLabel.isHidden = false
-//                        btnStepTmp.isUserInteractionEnabled = true
-//                        
-//                    }
-//                }
-//            }
-            
         }
     }
     
@@ -202,6 +180,7 @@ class AnimationTower {
         }
         
     }
+    
     func animationStep(){
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 0.5, animations: {

@@ -62,6 +62,11 @@ struct TowerStep {
     var to: String!
 }
 
+struct LinearStep {
+    var act: String!
+}
+
+
 
 
 

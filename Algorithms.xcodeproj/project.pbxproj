@@ -32,10 +32,7 @@
 		05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8D41E9DC9C800B2F04C /* StudyVC.swift */; };
 		05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8E01E9DCAAE00B2F04C /* BubbleSortSVC.swift */; };
 		05D0024F1EBB21190077C10F /* TowerOfHaNoiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0024E1EBB21190077C10F /* TowerOfHaNoiVC.swift */; };
-		05D002511EBB213A0077C10F /* AnimationTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D002501EBB213A0077C10F /* AnimationTower.swift */; };
-		05D002531EBB21680077C10F /* ManagerTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D002521EBB21680077C10F /* ManagerTower.swift */; };
 		05D002551EBB21800077C10F /* Graph_Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D002541EBB21800077C10F /* Graph_Tower.swift */; };
-		05D002571EBB22D70077C10F /* TowerofHanoi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D002561EBB22D70077C10F /* TowerofHanoi.plist */; };
 		05D002591EBB23A20077C10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D002581EBB23A20077C10F /* Assets.xcassets */; };
 		1916EDF61EA5AF9200FF239A /* BubbleSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1916EDF01EA5AF9200FF239A /* BubbleSortDocument.pdf */; };
 		1916EDF71EA5AF9200FF239A /* HeapSortDocument.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1916EDF11EA5AF9200FF239A /* HeapSortDocument.pdf */; };
@@ -91,11 +88,15 @@
 		C7C1B5AF1EC06EC000BC80D0 /* GraphLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */; };
 		C7C1B5B11EC0878800BC80D0 /* ManagerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5B01EC0878800BC80D0 /* ManagerLinear.swift */; };
 		C7C1B5B31EC08BF300BC80D0 /* LinearSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5B21EC08BF300BC80D0 /* LinearSVC.swift */; };
-		C7C1C2091EBB417600CEE029 /* GraphStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C2081EBB417600CEE029 /* GraphStacks.swift */; };
 		C7C1C20B1EBB450B00CEE029 /* ManagerStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */; };
 		C7C1C20F1EBB462000CEE029 /* StacksSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */; };
 		C7CBF48F1EA4C38800FBE5B3 /* QuickSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */; };
 		C7CBF4911EA5216300FBE5B3 /* MergeSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */; };
+		C7D4D68B1EC1B42600F427D0 /* AnimationLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D68A1EC1B42600F427D0 /* AnimationLinear.swift */; };
+		C7D4D68D1EC1BE4800F427D0 /* ManagerTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D68C1EC1BE4800F427D0 /* ManagerTower.swift */; };
+		C7D4D68F1EC1BE5800F427D0 /* TowerofHanoi.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D4D68E1EC1BE5800F427D0 /* TowerofHanoi.plist */; };
+		C7D4D6911EC1BE6A00F427D0 /* GraphStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D6901EC1BE6A00F427D0 /* GraphStacks.swift */; };
+		C7D4D6931EC1BE7D00F427D0 /* AnimationTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D6921EC1BE7D00F427D0 /* AnimationTower.swift */; };
 		C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429C41EA5BFF5004C49DD /* Board.swift */; };
 		C7E429E61EA5BFF5004C49DD /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CC1EA5BFF5004C49DD /* Move.swift */; };
 		C7E429E71EA5BFF5004C49DD /* MoveDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E429CD1EA5BFF5004C49DD /* MoveDirection.swift */; };
@@ -150,10 +151,7 @@
 		05BEA8D41E9DC9C800B2F04C /* StudyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyVC.swift; sourceTree = "<group>"; };
 		05BEA8E01E9DCAAE00B2F04C /* BubbleSortSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleSortSVC.swift; sourceTree = "<group>"; };
 		05D0024E1EBB21190077C10F /* TowerOfHaNoiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerOfHaNoiVC.swift; sourceTree = "<group>"; };
-		05D002501EBB213A0077C10F /* AnimationTower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTower.swift; sourceTree = "<group>"; };
-		05D002521EBB21680077C10F /* ManagerTower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerTower.swift; sourceTree = "<group>"; };
 		05D002541EBB21800077C10F /* Graph_Tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph_Tower.swift; sourceTree = "<group>"; };
-		05D002561EBB22D70077C10F /* TowerofHanoi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TowerofHanoi.plist; sourceTree = "<group>"; };
 		05D002581EBB23A20077C10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1916EDF01EA5AF9200FF239A /* BubbleSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = BubbleSortDocument.pdf; sourceTree = "<group>"; };
 		1916EDF11EA5AF9200FF239A /* HeapSortDocument.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = HeapSortDocument.pdf; sourceTree = "<group>"; };
@@ -212,11 +210,15 @@
 		C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphLinear.swift; sourceTree = "<group>"; };
 		C7C1B5B01EC0878800BC80D0 /* ManagerLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLinear.swift; sourceTree = "<group>"; };
 		C7C1B5B21EC08BF300BC80D0 /* LinearSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearSVC.swift; sourceTree = "<group>"; };
-		C7C1C2081EBB417600CEE029 /* GraphStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphStacks.swift; sourceTree = "<group>"; };
 		C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerStacks.swift; sourceTree = "<group>"; };
 		C7C1C20E1EBB462000CEE029 /* StacksSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StacksSVC.swift; sourceTree = "<group>"; };
 		C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuickSort.plist; sourceTree = "<group>"; };
 		C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MergeSort.plist; sourceTree = "<group>"; };
+		C7D4D68A1EC1B42600F427D0 /* AnimationLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLinear.swift; sourceTree = "<group>"; };
+		C7D4D68C1EC1BE4800F427D0 /* ManagerTower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerTower.swift; sourceTree = "<group>"; };
+		C7D4D68E1EC1BE5800F427D0 /* TowerofHanoi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TowerofHanoi.plist; sourceTree = "<group>"; };
+		C7D4D6901EC1BE6A00F427D0 /* GraphStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphStacks.swift; sourceTree = "<group>"; };
+		C7D4D6921EC1BE7D00F427D0 /* AnimationTower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTower.swift; sourceTree = "<group>"; };
 		C7E429C41EA5BFF5004C49DD /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		C7E429CC1EA5BFF5004C49DD /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		C7E429CD1EA5BFF5004C49DD /* MoveDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveDirection.swift; sourceTree = "<group>"; };
@@ -269,8 +271,8 @@
 				198AEC261EA4A94A006DE4D4 /* InsertionSort.plist */,
 				C7CBF4901EA5216300FBE5B3 /* MergeSort.plist */,
 				C7CBF48E1EA4C38800FBE5B3 /* QuickSort.plist */,
+				C7D4D68E1EC1BE5800F427D0 /* TowerofHanoi.plist */,
 				198AEC241EA4A93F006DE4D4 /* HeapSort.plist */,
-				05D002561EBB22D70077C10F /* TowerofHanoi.plist */,
 				C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */,
 				C7E7B9221EBDB927006CEF95 /* Queues.plist */,
 			);
@@ -339,9 +341,10 @@
 				19BAAA5C1E914A0000FDB729 /* AnimationMerge.swift */,
 				1987C6551E95EA85005795B8 /* AnimationQuick.swift */,
 				1987C65F1E963CAA005795B8 /* AnimationHeap.swift */,
-				05D002501EBB213A0077C10F /* AnimationTower.swift */,
+				C7D4D6921EC1BE7D00F427D0 /* AnimationTower.swift */,
 				C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */,
 				C7E7B9201EBDB910006CEF95 /* AnimationQueues.swift */,
+				C7D4D68A1EC1B42600F427D0 /* AnimationLinear.swift */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -355,7 +358,7 @@
 				192C75841E8D057A00EE8027 /* ManagerMergeSort.swift */,
 				1987C6531E95EA4A005795B8 /* ManagerQuickSort.swift */,
 				1987C6611E963DDE005795B8 /* ManagerHeapSort.swift */,
-				05D002521EBB21680077C10F /* ManagerTower.swift */,
+				C7D4D68C1EC1BE4800F427D0 /* ManagerTower.swift */,
 				C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */,
 				C7E7B9241EBDB943006CEF95 /* ManagerQueues.swift */,
 				C7C1B5B01EC0878800BC80D0 /* ManagerLinear.swift */,
@@ -453,7 +456,7 @@
 				1987C6571E95EAA0005795B8 /* QuickGraph.swift */,
 				05A2AC581E9F2E36005C9310 /* HeapGraph.swift */,
 				05D002541EBB21800077C10F /* Graph_Tower.swift */,
-				C7C1C2081EBB417600CEE029 /* GraphStacks.swift */,
+				C7D4D6901EC1BE6A00F427D0 /* GraphStacks.swift */,
 				C7E7B91E1EBD80E7006CEF95 /* GraphQueues.swift */,
 				C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */,
 			);
@@ -587,7 +590,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				198AEC271EA4A94A006DE4D4 /* InsertionSort.plist in Resources */,
-				05D002571EBB22D70077C10F /* TowerofHanoi.plist in Resources */,
 				0521162C1EA5D4DC006ED15C /* AboutVC.xib in Resources */,
 				1916EDF81EA5AF9200FF239A /* InsertionSortDocument.pdf in Resources */,
 				1916EE0D1EA5C7A900FF239A /* tung.png in Resources */,
@@ -600,6 +602,7 @@
 				1916EDF91EA5AF9200FF239A /* MergeSortDocument.pdf in Resources */,
 				C7CBF4911EA5216300FBE5B3 /* MergeSort.plist in Resources */,
 				19EEC0811EA1C4C300C095B2 /* SelectionSort.plist in Resources */,
+				C7D4D68F1EC1BE5800F427D0 /* TowerofHanoi.plist in Resources */,
 				198AEC251EA4A93F006DE4D4 /* HeapSort.plist in Resources */,
 				1916EDFA1EA5AF9200FF239A /* QuickSortDocument.pdf in Resources */,
 				0507FA4B1E9C987200E00354 /* MenuViewController.xib in Resources */,
@@ -674,7 +677,6 @@
 				C7E429E61EA5BFF5004C49DD /* Move.swift in Sources */,
 				193E45A71E8A5CDA00A6395C /* ManagerSelectionSort.swift in Sources */,
 				C7C1C20B1EBB450B00CEE029 /* ManagerStacks.swift in Sources */,
-				C7C1C2091EBB417600CEE029 /* GraphStacks.swift in Sources */,
 				198A34931E8176AC009E2B96 /* Graph.swift in Sources */,
 				05D002551EBB21800077C10F /* Graph_Tower.swift in Sources */,
 				19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */,
@@ -696,6 +698,7 @@
 				C7E7B91F1EBD80E7006CEF95 /* GraphQueues.swift in Sources */,
 				05BEA8DA1E9DC9C800B2F04C /* QuickSortSVC.swift in Sources */,
 				193E45A31E8A5AFD00A6395C /* MergeSort.swift in Sources */,
+				C7D4D68B1EC1B42600F427D0 /* AnimationLinear.swift in Sources */,
 				C7E429FA1EA5C2EC004C49DD /* GameManager.swift in Sources */,
 				05A2AC531E9F2DF2005C9310 /* InputVC.swift in Sources */,
 				05A2AC551E9F2DF2005C9310 /* SelectionSortIVC.swift in Sources */,
@@ -704,11 +707,12 @@
 				C7E7B9211EBDB911006CEF95 /* AnimationQueues.swift in Sources */,
 				198A348F1E810906009E2B96 /* AnimationBubble.swift in Sources */,
 				C7E429F51EA5BFF5004C49DD /* ViewAnimation.swift in Sources */,
+				C7D4D6931EC1BE7D00F427D0 /* AnimationTower.swift in Sources */,
 				05A2AC571E9F2DF2005C9310 /* MergeSortIVC.swift in Sources */,
+				C7D4D68D1EC1BE4800F427D0 /* ManagerTower.swift in Sources */,
 				C7E429EB1EA5BFF5004C49DD /* PieceController.swift in Sources */,
 				198A34951E822A13009E2B96 /* GlobalVar.swift in Sources */,
 				C7E429EA1EA5BFF5004C49DD /* PieceColor.swift in Sources */,
-				05D002531EBB21680077C10F /* ManagerTower.swift in Sources */,
 				19304E001E9F62B200C0AC02 /* HeapSortIVC.swift in Sources */,
 				C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */,
 				05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */,
@@ -731,7 +735,6 @@
 				05D0024F1EBB21190077C10F /* TowerOfHaNoiVC.swift in Sources */,
 				C7E429E71EA5BFF5004C49DD /* MoveDirection.swift in Sources */,
 				C7E429E91EA5BFF5004C49DD /* Piece.swift in Sources */,
-				05D002511EBB213A0077C10F /* AnimationTower.swift in Sources */,
 				C7C1B5AF1EC06EC000BC80D0 /* GraphLinear.swift in Sources */,
 				192C75851E8D057A00EE8027 /* ManagerMergeSort.swift in Sources */,
 				1962B22D1E841F3400012936 /* SortingLabel.swift in Sources */,
@@ -741,6 +744,7 @@
 				C7E429F61EA5BFF5004C49DD /* ViewController.swift in Sources */,
 				C70115881EB9DEE9008ACB52 /* TowerOfHaNoi.swift in Sources */,
 				C759D8D01EBBA1F700A6C10A /* AnimationStacks.swift in Sources */,
+				C7D4D6911EC1BE6A00F427D0 /* GraphStacks.swift in Sources */,
 				05BEA8D91E9DC9C800B2F04C /* MergeSortSVC.swift in Sources */,
 				1987C6581E95EAA0005795B8 /* QuickGraph.swift in Sources */,
 				C7E429F31EA5BFF5004C49DD /* Square.swift in Sources */,

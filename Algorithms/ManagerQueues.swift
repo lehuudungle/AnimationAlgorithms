@@ -48,7 +48,6 @@ class ManagerQueues {
             path = Bundle.main.path(forResource:"Queues", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
-            print(dictData)
             
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})
             ele = 0

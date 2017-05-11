@@ -39,14 +39,14 @@ class AnimationLinkList{
             }else if(step==4){
                 self.graph.arrowDown.isHidden = false
                 self.graph.dotDown.isHidden = false
-                var label = self.graph.arrNodes[0].viewWithTag(12) as! UILabel
+                let label = self.graph.arrNodes[0].viewWithTag(12) as! UILabel
                 label.text = "0x35"
                 
             }else if(step==5){
                 self.graph.arrDots[3].isHidden = false
                 self.graph.arrowCurved[0].isHidden = false
                 self.graph.arrowCurved[1].isHidden = false
-                var label = self.graph.addLable.viewWithTag(42) as! UILabel
+                let label = self.graph.addLable.viewWithTag(42) as! UILabel
                 label.text = "0x15"
 
             

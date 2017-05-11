@@ -227,8 +227,8 @@ class Graph_LinkList: UIView {
         // draw arrow curved
         var arrCgPath = [UIBezierPath]()
         arrCgPath = UIBezierPath.bezierPathArrowUpward(startPoint: CGPoint(x:addLable.frame.maxX,y: addLable.center.y), endPoint: CGPoint(x:arrNodes[1].center.x,y: arrNodes[1].frame.maxY), headLength: 6, headWith: 20)
-        var p1 = CAShapeLayer()
-        var p2 = CAShapeLayer()
+        let p1 = CAShapeLayer()
+        let p2 = CAShapeLayer()
 
         p1.path = arrCgPath[0].cgPath
         p2.path = arrCgPath[1].cgPath
@@ -297,9 +297,9 @@ extension UIBezierPath {
         var points = [CGPoint]()
         self.getAxisAlignedArrowPoints(points: &points, forLength: CGFloat(length), tailWidth: tailWidth, headWidth: headWidth, headLength: headLength)
 
-        var transform: CGAffineTransform = self.transformForStartPoint(startPoint: startPoint, endPoint: endPoint, length:  CGFloat(length))
+        let transform: CGAffineTransform = self.transformForStartPoint(startPoint: startPoint, endPoint: endPoint, length:  CGFloat(length))
 
-        var cgPath: CGMutablePath = CGMutablePath()
+        let cgPath: CGMutablePath = CGMutablePath()
 
         cgPath.addLines(between: points, transform: transform)
         //        cgPath.addLines(between: points)
@@ -309,11 +309,11 @@ extension UIBezierPath {
         return uiPath
     }
     class func bezierPathArrowUpward(startPoint: CGPoint,endPoint: CGPoint,headLength: CGFloat,headWith:CGFloat)->[UIBezierPath]{
-        var cgPath: CGMutablePath = CGMutablePath()
+        let cgPath: CGMutablePath = CGMutablePath()
         cgPath.move(to: startPoint)
         let bearingPoint = CGPoint(x: endPoint.x, y: endPoint.y + headLength)
         cgPath.addQuadCurve(to: bearingPoint, control: CGPoint(x: (bearingPoint.x-bearingPoint.x)/2+bearingPoint.x, y: startPoint.y))
-        var cg: CGMutablePath = CGMutablePath()
+        let cg: CGMutablePath = CGMutablePath()
         cg.move(to: bearingPoint)
         cg.addLine(to: CGPoint(x: bearingPoint.x-headWith/2, y: bearingPoint.y))
         cg.addLine(to: endPoint)

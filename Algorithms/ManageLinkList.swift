@@ -68,14 +68,14 @@ class ManagerLinkList{
                 
             }else if(arrayKeys[ele].integerValue==11){
                 btnStepTmp.isUserInteractionEnabled = false
-                var _step  = String((arrayKeys[ele].floatValue!-11)*10)
+                let _step  = String((arrayKeys[ele].floatValue!-11)*10)
                 animationStep.animationStep(step: _step.integerValue!)
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?
 
             }else if(arrayKeys[ele].integerValue==12){
                 btnStepTmp.isUserInteractionEnabled = false
-                var _step  = String((arrayKeys[ele].floatValue!-12)*10)
+                let _step  = String((arrayKeys[ele].floatValue!-12)*10)
                 animationStep.animationStep(step: _step.integerValue!)
                 let data = dictData[arrayKeys[ele]]
                 textStudy.text = data as! String?

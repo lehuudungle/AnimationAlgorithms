@@ -84,13 +84,18 @@
 		C70115881EB9DEE9008ACB52 /* TowerOfHaNoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70115871EB9DEE9008ACB52 /* TowerOfHaNoi.swift */; };
 		C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415B1E8ABC3B008472E6 /* MenuList.swift */; };
 		C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C714415D1E8ABD51008472E6 /* MainScreen.swift */; };
+		C717CA921EC40A35006E69BF /* ManagerBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717CA911EC40A35006E69BF /* ManagerBinary.swift */; };
+		C717CA941EC40B9A006E69BF /* BinarySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717CA931EC40B9A006E69BF /* BinarySVC.swift */; };
+		C717CA961EC40C2D006E69BF /* AnimationBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717CA951EC40C2D006E69BF /* AnimationBinary.swift */; };
 		C759D8D01EBBA1F700A6C10A /* AnimationStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */; };
 		C7870E891EC2C39200E6E8BB /* LinkListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7870E881EC2C39200E6E8BB /* LinkListVC.swift */; };
 		C7870E8B1EC2C3A500E6E8BB /* ManageLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7870E8A1EC2C3A500E6E8BB /* ManageLinkList.swift */; };
 		C7870E8D1EC2C3BC00E6E8BB /* LinkList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7870E8C1EC2C3BC00E6E8BB /* LinkList.plist */; };
 		C7870E8F1EC2C3D900E6E8BB /* Graph_LinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7870E8E1EC2C3D900E6E8BB /* Graph_LinkList.swift */; };
 		C7870E911EC2C41E00E6E8BB /* AnimationLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7870E901EC2C41E00E6E8BB /* AnimationLinkList.swift */; };
-		C7C1B5AF1EC06EC000BC80D0 /* GraphLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */; };
+		C7870E931EC30A3900E6E8BB /* Linear.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7870E921EC30A3900E6E8BB /* Linear.plist */; };
+		C7870E951EC3172300E6E8BB /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7870E941EC3172300E6E8BB /* BinarySearch.swift */; };
+		C7C1B5AF1EC06EC000BC80D0 /* GraphLinearBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5AE1EC06EC000BC80D0 /* GraphLinearBinary.swift */; };
 		C7C1B5B11EC0878800BC80D0 /* ManagerLinear.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5B01EC0878800BC80D0 /* ManagerLinear.swift */; };
 		C7C1B5B31EC08BF300BC80D0 /* LinearSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1B5B21EC08BF300BC80D0 /* LinearSVC.swift */; };
 		C7C1C20B1EBB450B00CEE029 /* ManagerStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */; };
@@ -211,13 +216,18 @@
 		C70115871EB9DEE9008ACB52 /* TowerOfHaNoi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerOfHaNoi.swift; sourceTree = "<group>"; };
 		C714415B1E8ABC3B008472E6 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		C714415D1E8ABD51008472E6 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		C717CA911EC40A35006E69BF /* ManagerBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerBinary.swift; sourceTree = "<group>"; };
+		C717CA931EC40B9A006E69BF /* BinarySVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySVC.swift; sourceTree = "<group>"; };
+		C717CA951EC40C2D006E69BF /* AnimationBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBinary.swift; sourceTree = "<group>"; };
 		C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationStacks.swift; sourceTree = "<group>"; };
 		C7870E881EC2C39200E6E8BB /* LinkListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkListVC.swift; sourceTree = "<group>"; };
 		C7870E8A1EC2C3A500E6E8BB /* ManageLinkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageLinkList.swift; sourceTree = "<group>"; };
 		C7870E8C1EC2C3BC00E6E8BB /* LinkList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LinkList.plist; sourceTree = "<group>"; };
 		C7870E8E1EC2C3D900E6E8BB /* Graph_LinkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph_LinkList.swift; sourceTree = "<group>"; };
 		C7870E901EC2C41E00E6E8BB /* AnimationLinkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLinkList.swift; sourceTree = "<group>"; };
-		C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphLinear.swift; sourceTree = "<group>"; };
+		C7870E921EC30A3900E6E8BB /* Linear.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Linear.plist; sourceTree = "<group>"; };
+		C7870E941EC3172300E6E8BB /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		C7C1B5AE1EC06EC000BC80D0 /* GraphLinearBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphLinearBinary.swift; sourceTree = "<group>"; };
 		C7C1B5B01EC0878800BC80D0 /* ManagerLinear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLinear.swift; sourceTree = "<group>"; };
 		C7C1B5B21EC08BF300BC80D0 /* LinearSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearSVC.swift; sourceTree = "<group>"; };
 		C7C1C20A1EBB450B00CEE029 /* ManagerStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerStacks.swift; sourceTree = "<group>"; };
@@ -286,6 +296,7 @@
 				C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */,
 				C7E7B9221EBDB927006CEF95 /* Queues.plist */,
 				C7870E8C1EC2C3BC00E6E8BB /* LinkList.plist */,
+				C7870E921EC30A3900E6E8BB /* Linear.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -329,6 +340,7 @@
 				C7E7B9261EBDB9A2006CEF95 /* QueuesSVC.swift */,
 				C7C1B5B21EC08BF300BC80D0 /* LinearSVC.swift */,
 				C7870E881EC2C39200E6E8BB /* LinkListVC.swift */,
+				C717CA931EC40B9A006E69BF /* BinarySVC.swift */,
 			);
 			name = Study;
 			sourceTree = "<group>";
@@ -358,6 +370,7 @@
 				C7E7B9201EBDB910006CEF95 /* AnimationQueues.swift */,
 				C7D4D68A1EC1B42600F427D0 /* AnimationLinear.swift */,
 				C7870E901EC2C41E00E6E8BB /* AnimationLinkList.swift */,
+				C717CA951EC40C2D006E69BF /* AnimationBinary.swift */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -376,6 +389,7 @@
 				C7E7B9241EBDB943006CEF95 /* ManagerQueues.swift */,
 				C7C1B5B01EC0878800BC80D0 /* ManagerLinear.swift */,
 				C7870E8A1EC2C3A500E6E8BB /* ManageLinkList.swift */,
+				C717CA911EC40A35006E69BF /* ManagerBinary.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -392,6 +406,7 @@
 				1987C65D1E963205005795B8 /* HeapSort.swift */,
 				C70115871EB9DEE9008ACB52 /* TowerOfHaNoi.swift */,
 				C7F7C3C21EC0CD9200659124 /* LinearSearch.swift */,
+				C7870E941EC3172300E6E8BB /* BinarySearch.swift */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -472,7 +487,7 @@
 				05D002541EBB21800077C10F /* Graph_Tower.swift */,
 				C7D4D6901EC1BE6A00F427D0 /* GraphStacks.swift */,
 				C7E7B91E1EBD80E7006CEF95 /* GraphQueues.swift */,
-				C7C1B5AE1EC06EC000BC80D0 /* GraphLinear.swift */,
+				C7C1B5AE1EC06EC000BC80D0 /* GraphLinearBinary.swift */,
 				C7870E8E1EC2C3D900E6E8BB /* Graph_LinkList.swift */,
 			);
 			name = Graph;
@@ -609,6 +624,7 @@
 				1916EDF81EA5AF9200FF239A /* InsertionSortDocument.pdf in Resources */,
 				1916EE0D1EA5C7A900FF239A /* tung.png in Resources */,
 				1916EE0B1EA5C7A900FF239A /* dung.png in Resources */,
+				C7870E931EC30A3900E6E8BB /* Linear.plist in Resources */,
 				1916EDF71EA5AF9200FF239A /* HeapSortDocument.pdf in Resources */,
 				1916EE0C1EA5C7A900FF239A /* loc.png in Resources */,
 				0507FA4F1E9CC2EE00E00354 /* MenuCell.xib in Resources */,
@@ -695,6 +711,7 @@
 				C7C1C20B1EBB450B00CEE029 /* ManagerStacks.swift in Sources */,
 				198A34931E8176AC009E2B96 /* Graph.swift in Sources */,
 				05D002551EBB21800077C10F /* Graph_Tower.swift in Sources */,
+				C717CA921EC40A35006E69BF /* ManagerBinary.swift in Sources */,
 				19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */,
 				1987C65E1E963205005795B8 /* HeapSort.swift in Sources */,
 				19304DFE1E9F624600C0AC02 /* QuickSortIVC.swift in Sources */,
@@ -714,6 +731,7 @@
 				C7E7B91F1EBD80E7006CEF95 /* GraphQueues.swift in Sources */,
 				05BEA8DA1E9DC9C800B2F04C /* QuickSortSVC.swift in Sources */,
 				193E45A31E8A5AFD00A6395C /* MergeSort.swift in Sources */,
+				C717CA961EC40C2D006E69BF /* AnimationBinary.swift in Sources */,
 				C7D4D68B1EC1B42600F427D0 /* AnimationLinear.swift in Sources */,
 				C7E429FA1EA5C2EC004C49DD /* GameManager.swift in Sources */,
 				05A2AC531E9F2DF2005C9310 /* InputVC.swift in Sources */,
@@ -735,6 +753,7 @@
 				05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */,
 				191A40031EC0156B0014378C /* DetailTxtView.swift in Sources */,
 				192C75831E8CFCFD00EE8027 /* MergeGraph.swift in Sources */,
+				C717CA941EC40B9A006E69BF /* BinarySVC.swift in Sources */,
 				1987C6521E95EA11005795B8 /* QuickSort.swift in Sources */,
 				C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */,
 				C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */,
@@ -754,7 +773,7 @@
 				05D0024F1EBB21190077C10F /* TowerOfHaNoiVC.swift in Sources */,
 				C7E429E71EA5BFF5004C49DD /* MoveDirection.swift in Sources */,
 				C7E429E91EA5BFF5004C49DD /* Piece.swift in Sources */,
-				C7C1B5AF1EC06EC000BC80D0 /* GraphLinear.swift in Sources */,
+				C7C1B5AF1EC06EC000BC80D0 /* GraphLinearBinary.swift in Sources */,
 				192C75851E8D057A00EE8027 /* ManagerMergeSort.swift in Sources */,
 				C7870E8B1EC2C3A500E6E8BB /* ManageLinkList.swift in Sources */,
 				1962B22D1E841F3400012936 /* SortingLabel.swift in Sources */,
@@ -763,6 +782,7 @@
 				05A2AC561E9F2DF2005C9310 /* InsertionSortIVC.swift in Sources */,
 				C7E429F61EA5BFF5004C49DD /* ViewController.swift in Sources */,
 				C70115881EB9DEE9008ACB52 /* TowerOfHaNoi.swift in Sources */,
+				C7870E951EC3172300E6E8BB /* BinarySearch.swift in Sources */,
 				C759D8D01EBBA1F700A6C10A /* AnimationStacks.swift in Sources */,
 				C7D4D6911EC1BE6A00F427D0 /* GraphStacks.swift in Sources */,
 				05BEA8D91E9DC9C800B2F04C /* MergeSortSVC.swift in Sources */,

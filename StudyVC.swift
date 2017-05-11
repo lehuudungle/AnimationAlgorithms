@@ -18,7 +18,7 @@ class StudyVC: UIViewController {
     var x:CGFloat!
     var btnReset:UIButton!
     var btnInfo:UIButton!
-    var btnStep:KDPulseButton!
+    var btnStep:UIButton!
     var btnRun:UIButton!
     var btnAdd:UIButton!
     var textField:UITextField!

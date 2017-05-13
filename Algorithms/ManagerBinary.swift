@@ -74,7 +74,7 @@ class ManagerBinary{
         btnStepTmp.setNeedsDisplay()
     }
     @objc func step(sender: UIButton){
-//        animate.next()
+        animate.next()
         btnRunTmp.isUserInteractionEnabled = false
         btnStepTmp.isUserInteractionEnabled = false
         btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor

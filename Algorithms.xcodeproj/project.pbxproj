@@ -87,6 +87,9 @@
 		C717CA921EC40A35006E69BF /* ManagerBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717CA911EC40A35006E69BF /* ManagerBinary.swift */; };
 		C717CA941EC40B9A006E69BF /* BinarySVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717CA931EC40B9A006E69BF /* BinarySVC.swift */; };
 		C717CA961EC40C2D006E69BF /* AnimationBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717CA951EC40C2D006E69BF /* AnimationBinary.swift */; };
+		C723F5801EC962E500193122 /* GraphBreadthDeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C723F57F1EC962E500193122 /* GraphBreadthDeap.swift */; };
+		C723F5821EC96B1200193122 /* ManagerBreadth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C723F5811EC96B1200193122 /* ManagerBreadth.swift */; };
+		C723F5841EC96BF400193122 /* BreadthSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C723F5831EC96BF400193122 /* BreadthSVC.swift */; };
 		C759D8D01EBBA1F700A6C10A /* AnimationStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */; };
 		C7870E891EC2C39200E6E8BB /* LinkListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7870E881EC2C39200E6E8BB /* LinkListVC.swift */; };
 		C7870E8B1EC2C3A500E6E8BB /* ManageLinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7870E8A1EC2C3A500E6E8BB /* ManageLinkList.swift */; };
@@ -219,6 +222,9 @@
 		C717CA911EC40A35006E69BF /* ManagerBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerBinary.swift; sourceTree = "<group>"; };
 		C717CA931EC40B9A006E69BF /* BinarySVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySVC.swift; sourceTree = "<group>"; };
 		C717CA951EC40C2D006E69BF /* AnimationBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBinary.swift; sourceTree = "<group>"; };
+		C723F57F1EC962E500193122 /* GraphBreadthDeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphBreadthDeap.swift; sourceTree = "<group>"; };
+		C723F5811EC96B1200193122 /* ManagerBreadth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerBreadth.swift; sourceTree = "<group>"; };
+		C723F5831EC96BF400193122 /* BreadthSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadthSVC.swift; sourceTree = "<group>"; };
 		C759D8CF1EBBA1F700A6C10A /* AnimationStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationStacks.swift; sourceTree = "<group>"; };
 		C7870E881EC2C39200E6E8BB /* LinkListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkListVC.swift; sourceTree = "<group>"; };
 		C7870E8A1EC2C3A500E6E8BB /* ManageLinkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageLinkList.swift; sourceTree = "<group>"; };
@@ -341,6 +347,7 @@
 				C7C1B5B21EC08BF300BC80D0 /* LinearSVC.swift */,
 				C7870E881EC2C39200E6E8BB /* LinkListVC.swift */,
 				C717CA931EC40B9A006E69BF /* BinarySVC.swift */,
+				C723F5831EC96BF400193122 /* BreadthSVC.swift */,
 			);
 			name = Study;
 			sourceTree = "<group>";
@@ -390,6 +397,7 @@
 				C7C1B5B01EC0878800BC80D0 /* ManagerLinear.swift */,
 				C7870E8A1EC2C3A500E6E8BB /* ManageLinkList.swift */,
 				C717CA911EC40A35006E69BF /* ManagerBinary.swift */,
+				C723F5811EC96B1200193122 /* ManagerBreadth.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -489,6 +497,7 @@
 				C7E7B91E1EBD80E7006CEF95 /* GraphQueues.swift */,
 				C7C1B5AE1EC06EC000BC80D0 /* GraphLinearBinary.swift */,
 				C7870E8E1EC2C3D900E6E8BB /* Graph_LinkList.swift */,
+				C723F57F1EC962E500193122 /* GraphBreadthDeap.swift */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -722,6 +731,7 @@
 				C7E429F01EA5BFF5004C49DD /* Queen.swift in Sources */,
 				1987C6501E95E6A3005795B8 /* AppDelegate.swift in Sources */,
 				197A66BF1E8B66AB00CA17F6 /* AnimationSelection.swift in Sources */,
+				C723F5841EC96BF400193122 /* BreadthSVC.swift in Sources */,
 				C7E7B9251EBDB943006CEF95 /* ManagerQueues.swift in Sources */,
 				198A34BA1E828A5D009E2B96 /* ManagerInsertionSort.swift in Sources */,
 				05BEA8D51E9DC9C800B2F04C /* HeapSortSVC.swift in Sources */,
@@ -748,6 +758,7 @@
 				198A34951E822A13009E2B96 /* GlobalVar.swift in Sources */,
 				C7E429EA1EA5BFF5004C49DD /* PieceColor.swift in Sources */,
 				19304E001E9F62B200C0AC02 /* HeapSortIVC.swift in Sources */,
+				C723F5801EC962E500193122 /* GraphBreadthDeap.swift in Sources */,
 				C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */,
 				C7870E8F1EC2C3D900E6E8BB /* Graph_LinkList.swift in Sources */,
 				05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */,
@@ -761,6 +772,7 @@
 				C7C1B5B31EC08BF300BC80D0 /* LinearSVC.swift in Sources */,
 				0598762A1E99F03F00DEDA21 /* CustomButton.swift in Sources */,
 				05A2AC591E9F2E36005C9310 /* HeapGraph.swift in Sources */,
+				C723F5821EC96B1200193122 /* ManagerBreadth.swift in Sources */,
 				05BEA8D81E9DC9C800B2F04C /* InsertionSortSVC.swift in Sources */,
 				C7C1C20F1EBB462000CEE029 /* StacksSVC.swift in Sources */,
 				C7870E911EC2C41E00E6E8BB /* AnimationLinkList.swift in Sources */,

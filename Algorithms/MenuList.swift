@@ -53,7 +53,8 @@ class MenuList: NSObject {
             ])
         let search = MenuSection(section: "Search", menus:[
             Menu(title: "Linear Search", viewClass: "LinearSVC",inputClass: LinearSVC(), infoTitle: "A" ),
-            Menu(title: "Binary Search", viewClass: "BinarySVC",inputClass: BinarySVC(), infoTitle: "A" )
+            Menu(title: "Binary Search", viewClass: "BinarySVC",inputClass: BinarySVC(), infoTitle: "A" ),
+            Menu(title: "Breadth-First Search", viewClass: "BreadthSVC",inputClass: BreadthSVC(), infoTitle: "A" )
             ])
 
         

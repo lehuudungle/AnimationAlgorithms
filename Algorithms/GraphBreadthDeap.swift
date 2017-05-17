@@ -30,7 +30,7 @@ class GraphBreadthDeap: UIView {
     
     func drawBoard(){
         
-        let labelMiner = SortingLabel(frame: CGRect(x: 2*spacing + rectSize, y: 0, width: rectSize, height: rectSize))
+        let labelMiner = SortingLabel(frame: CGRect(x: 2*spacing + rectSize, y: 0, width: rectSize, height: rectSize/2))
         let attachmentMiner = NSTextAttachment()
         attachmentMiner.image = UIImage(named: "knight")
         attachmentMiner.bounds = CGRect(x: 0, y: 0, width: rectSize, height: frame.height/10)
@@ -39,6 +39,7 @@ class GraphBreadthDeap: UIView {
         labelMiner.textAlignment = .center
         arrayLabel.append(labelMiner)
         self.addSubview(labelMiner)
+
         
         //0 
         
@@ -156,6 +157,31 @@ class GraphBreadthDeap: UIView {
         arrayArrow.append(arrowC)
         
         //6
+    }
+
+    func arrowCorresponding(value: Int) -> Int{
+
+        if value == 1{
+            return 0
+        }
+        else if value == 2{
+            return 1
+        }
+        else if value == 3{
+            return 2
+        }
+        else if value == 4{
+            return 4
+        }
+        else if value == 5{
+            return 5
+        }
+        else if value == 6{
+            return 6
+        }
+        else{
+            return 3
+        }
     }
     
 }

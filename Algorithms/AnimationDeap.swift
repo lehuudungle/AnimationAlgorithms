@@ -15,7 +15,8 @@ class AnimationDeap{
     var currentStep: DFS_Step!
     var arrayLabel:[SortingLabel]!
     var a: SortingLabel!
-    var value: Int = -1
+    var value: Int = 0
+    var lastValue = 0
     init(graph: GraphBreadthDeap,arrayAction:[DFS_Step],arrayLabel: [SortingLabel]!) {
         self.graph = graph
         self.arrayAction = arrayAction
@@ -32,32 +33,45 @@ class AnimationDeap{
             print("current Step : \(self.currentStep.act)")
             switch self.currentStep.to{
 
-            case "A":self.value = 1
+            case "A":
+                self.lastValue = self.value
+                self.value = 1
                     self.setColorLabel(change: true)
                     break
-            case "B":self.value = 4;
+            case "B":
+                self.lastValue = self.value
+                self.value = 4;
                 self.setColorLabel(change: false)
 
                     break;
-            case "C": self.value = 6;
+            case "C":
+                self.lastValue = self.value
+                self.value = 6;
                 self.setColorLabel(change: false);
 
                     break;
-            case "D":self.value = 2;
+            case "D":
+                self.lastValue = self.value
+                self.value = 2;
                 self.setColorLabel(change: true);
 
                     break;
             case "E":
+                self.lastValue = self.value
                 self.value = 7;
                 self.setColorLabel(change: false);
 
                     break;
-            case "F":self.value = 3;
+            case "F":
+                self.lastValue = self.value
+                self.value = 3;
                 self.setColorLabel(change: true);
 
                     break;
-            case "G":self.value = 5;
-            self.setColorLabel(change: false);
+            case "G":
+                self.lastValue = self.value
+                self.value = 5;
+                self.setColorLabel(change: false);
 
                     break;
             default: break
@@ -83,12 +97,21 @@ class AnimationDeap{
         self.arrayLabel[value].layer.backgroundColor = UIColor.green.cgColor
         self.arrayLabel[value].layer.borderColor = UIColor.red.cgColor
         self.arrayLabel[value].layer.setNeedsDisplay()
+        print("lastValue: \(lastValue)")
+        if(self.currentStep.act=="push"){
+
+            self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.cyan.cgColor
+        }
 
 
 
     }
     func resetColorLable(value: Int){
         self.arrayLabel[value].layer.borderColor = UIColor.black.cgColor
+        self.graph.arrayArrow[lastValue].fillColor = UIColor.black.cgColor
+        if(self.currentStep.act=="back"){
+            self.graph.arrayArrow[self.graph.arrowCorresponding(value: lastValue)].fillColor = UIColor.black.cgColor
+        }
     }
     func loop(){
         self.currentStep = arrayAction[countSolution]

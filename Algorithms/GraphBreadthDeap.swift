@@ -11,16 +11,18 @@ import UIKit
 class GraphBreadthDeap: UIView {
     
     var arrayLabel: [SortingLabel]!
+    var arrayArrow: [CAShapeLayer]!
     var spacing: CGFloat!
     var rectSize: CGFloat!
     override init(frame: CGRect){
         super.init(frame: frame)
         arrayLabel = [SortingLabel]()
+        arrayArrow = [CAShapeLayer]()
         spacing = frame.width/10
         rectSize = spacing*2
         
         drawBoard()
-   //     drawArrow()
+        drawArrow()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -64,8 +66,8 @@ class GraphBreadthDeap: UIView {
         for i in 0...1{
         let labelBG = SortingLabel(frame: CGRect(x: spacing, y: CGFloat(2+i)*frame.height/5, width: rectSize, height: rectSize/2))
         let attachmentChest = NSTextAttachment()
-        attachmentChest.image = UIImage(named: "fail")
-        attachmentChest.bounds = CGRect(x: 0, y: 0, width: rectSize/2, height: rectSize/2)
+        attachmentChest.image = UIImage(named: "stop")
+        attachmentChest.bounds = CGRect(x: 0, y: 0, width: rectSize/3, height: rectSize/3)
         let attachmentChestString = NSAttributedString(attachment: attachmentChest)
         labelBG.attributedText = attachmentChestString
         labelBG.textAlignment = .center
@@ -82,8 +84,8 @@ class GraphBreadthDeap: UIView {
         
         let labelC = SortingLabel(frame: CGRect(x: frame.width-spacing-rectSize, y:frame.height*2/5, width: rectSize, height: rectSize/2))
         let attachmentC = NSTextAttachment()
-        attachmentC.image = UIImage(named: "fail")
-        attachmentC.bounds = CGRect(x: 0, y: 0, width: rectSize/2, height: rectSize/2)
+        attachmentC.image = UIImage(named: "stop")
+        attachmentC.bounds = CGRect(x: 0, y: 0, width: rectSize/3, height: rectSize/3)
         let attachmentCString = NSAttributedString(attachment: attachmentC)
         labelC.attributedText = attachmentCString
         labelC.textAlignment = .center
@@ -117,35 +119,43 @@ class GraphBreadthDeap: UIView {
     
     func drawArrow(){
         
-        let arrowPath1 = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: frame.height/10), endPoint: CGPoint(x: spacing*5, y: frame.height*5 - 5), tailWidth: 4, headWidth: 15, headLength: 6)
+        let arrowPath1 = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: frame.height/10), endPoint: CGPoint(x: spacing*5, y: frame.height/5 - 5), tailWidth: 4, headWidth: 15, headLength: 6)
         let arrow1 = CAShapeLayer()
         
         arrow1.path = arrowPath1.cgPath
         self.layer.addSublayer(arrow1)
+        arrayArrow.append(arrow1)
+        // 0
         
-        
-        for i in 0..<3{
-            let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: frame.height/5 + rectSize/2), endPoint: CGPoint(x: CGFloat(3 + 3*i)*spacing, y: frame.height*3/10 - 5), tailWidth: 4, headWidth: 15, headLength: 6)
+        for i in 1...3{
+            let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: CGFloat(i)*frame.height/5 + rectSize/2 + 2), endPoint: CGPoint(x: spacing*5, y: CGFloat(i+1)*frame.height/5), tailWidth: 4, headWidth: 15, headLength: 6)
             let arrow = CAShapeLayer()
             
             arrow.path = arrowPath.cgPath
             self.layer.addSublayer(arrow)
+            arrayArrow.append(arrow)
         }
         
-        for i in 0..<3{
-            let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height/2), endPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height*3/5), tailWidth: 4, headWidth: 15, headLength: 6)
+        // 1,2,3
+        
+        for i in 1..<3{
+            let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: 4*spacing, y: CGFloat(i)*frame.height/5 + rectSize/2 + 2), endPoint: CGPoint(x: 3*spacing, y: CGFloat(i+1)*frame.height/5), tailWidth: 4, headWidth: 15, headLength: 6)
             let arrow = CAShapeLayer()
             
             arrow.path = arrowPath.cgPath
             self.layer.addSublayer(arrow)
+            arrayArrow.append(arrow)
         }
-        for i in 0..<3{
-        let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height*4/5), endPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height*9/10), tailWidth: 4, headWidth: 15, headLength: 6)
-        let arrow = CAShapeLayer()
+        // 4,5
         
-        arrow.path = arrowPath.cgPath
-        self.layer.addSublayer(arrow)
-        }
+        let arrowPathC = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: 6*spacing, y: frame.height/5 + rectSize/2 + 2), endPoint: CGPoint(x: 7*spacing, y: frame.height*2/5), tailWidth: 4, headWidth: 15, headLength: 6)
+        let arrowC = CAShapeLayer()
+        
+        arrowC.path = arrowPathC.cgPath
+        self.layer.addSublayer(arrowC)
+        arrayArrow.append(arrowC)
+        
+        //6
     }
     
 }

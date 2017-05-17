@@ -20,18 +20,14 @@ class LinearSearch {
     
     func linearSearch<T: Equatable>(_ array: [T], _ object: T) {
         
-        
-        
-        for (index, obj) in array.enumerated()  {
+        for (_, obj) in array.enumerated()  {
             
             
             if obj == object{
                 self.arrayAction.append(LinearStep(act: "true"))
-//                print(index)
             }
             else {
                 self.arrayAction.append(LinearStep(act: "false"))
-//                print("false")
             }
         }
     }

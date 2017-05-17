@@ -1,5 +1,5 @@
 //
-//  GraphLinear.swift
+//  GraphLinearBinary.swift
 //  Algorithms
 //
 //  Created by TTung on 5/8/17.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class GraphLinear: UIView {
+class GraphLinearBinary: UIView {
 
     var arrayLabel: [SortingLabel]!
     var arrayFind = [Int]()
     var arrayInt = [Int]()
-    var rowTotal = 8
-    var colTotal = 8
+    var arraySort = [Int]()
+    var rowTotal = 6
+    var colTotal = 6
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,15 +28,15 @@ class GraphLinear: UIView {
     }
     
     func drawBoard(){
-        let cellSize = self.frame.width/8
-        for i in 10..<100{
+        let cellSize = self.frame.width/6
+        for i in 1..<56{
             var int: Int!
             int = i
             arrayInt.append(int)
         }
-        var count:Int = 89
-        for indexCol in 0..<8{
-            for indexRow in 0..<8{
+        var count:Int = 45
+        for indexCol in 0..<6{
+            for indexRow in 0..<6{
                 
                 let label = SortingLabel(frame: CGRect(x: CGFloat(indexRow) * cellSize,
                                                        y: CGFloat(indexCol) * cellSize,
@@ -44,6 +45,7 @@ class GraphLinear: UIView {
                 
                 let pos = Int(arc4random_uniform(UInt32(count)))
                 label.text = String(arrayInt[pos])
+                label.textColor = UIColor.black
                 arrayFind.append(arrayInt[pos])
                 arrayInt.remove(at: pos)
                 count = count - 1
@@ -61,5 +63,6 @@ class GraphLinear: UIView {
                 
             }
         }
+        arraySort = arrayFind.sorted()
     }
 }

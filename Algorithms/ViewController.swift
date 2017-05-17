@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var btnPauseAction: UIButton!
     var btnStart: UIButton!
     var btnNext: UIButton!
+    var lblNoteText:UILabel!
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -59,6 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         btnPause()
         addBtnNext()
         addBtnMove()
+        addNoteStart()
         
         btnStart.isUserInteractionEnabled = false
         btnReset.isUserInteractionEnabled = false
@@ -105,6 +108,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if (Int(sizeBoard.text!)! >= 4 ){
                     self.btnNext.isUserInteractionEnabled = true
                     self.btnStart.isUserInteractionEnabled = true
+                    lblNoteText.isHidden = true
                     btnStart.isHidden = false
                     btnPauseAction.isHidden = true
 //                    self.gamemanager.boardView.removeFromSuperview()
@@ -130,6 +134,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         sizeBoard.text = ""
     }
+    func addNoteStart(){
+        lblNoteText = UILabel(frame: CGRect(x: view.bounds.size.width/2 - 100, y: view.bounds.size.height/2 - 50, width: 200, height: 30))
+        lblNoteStartTmp = lblNoteText
+        lblNoteText.text = "Enter the board size"
+        lblNoteText.textAlignment = .center
+        view.addSubview(lblNoteText)
+    }
+
     
     func btnSizeBoard(){
         btn = KDPulseButton(frame: CGRect(x: view.bounds.size.width/2 + spacing/2, y: view.bounds.size.height/2, width: btnSizeWidth, height: btnSizeHeight))
@@ -269,6 +281,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         btnNext.addTarget(self.gamemanager, action: #selector(self.gamemanager.next(sender:)), for: .touchUpInside)
         view.addSubview(btnNext)
     }
+    
+    
     
     
     override func didReceiveMemoryWarning() {

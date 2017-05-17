@@ -98,6 +98,7 @@ class GameManager: UIView
         view.addSubview(lblSolutionFound)
     }
     
+       
     
     @objc func move(sender: UIButton)
     {
@@ -122,6 +123,7 @@ class GameManager: UIView
     }
 
     @objc func reset(sender: UIButton){
+        lblNoteStartTmp.isHidden = false
         textInPutBoard.isHidden = false
         btnSizeBoardTmp.isHidden = false
         lblSolutionText.isHidden = true

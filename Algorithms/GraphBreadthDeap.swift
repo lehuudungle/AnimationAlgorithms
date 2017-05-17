@@ -1,0 +1,153 @@
+//
+//  GraphBreadthDeap.swift
+//  Algorithms
+//
+//  Created by TTung on 5/15/17.
+//  Copyright © 2017 LocTran. All rights reserved.
+//
+
+import UIKit
+
+class GraphBreadthDeap: UIView {
+    
+    var arrayLabel: [SortingLabel]!
+    var spacing: CGFloat!
+    var rectSize: CGFloat!
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        arrayLabel = [SortingLabel]()
+        spacing = frame.width/10
+        rectSize = spacing*2
+        
+        drawBoard()
+   //     drawArrow()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func drawBoard(){
+        
+        let labelMiner = SortingLabel(frame: CGRect(x: 2*spacing + rectSize, y: 0, width: rectSize, height: frame.height/10))
+        let attachmentMiner = NSTextAttachment()
+        attachmentMiner.image = UIImage(named: "knight")
+        attachmentMiner.bounds = CGRect(x: 0, y: 0, width: rectSize, height: frame.height/10)
+        let attachmentMinerString = NSAttributedString(attachment: attachmentMiner)
+        labelMiner.attributedText = attachmentMinerString
+        labelMiner.textAlignment = .center
+        arrayLabel.append(labelMiner)
+        self.addSubview(labelMiner)
+        
+        //0 
+        
+            for i in 1...3{
+                
+                let label = SortingLabel(frame: CGRect(x: 2*spacing + rectSize, y: frame.height/5*CGFloat(i), width: rectSize, height: rectSize/2))
+                
+                let attachment = NSTextAttachment()
+                attachment.image = UIImage(named: "monster2")
+                attachment.bounds = CGRect(x: 0, y: 0, width: rectSize/2, height: rectSize/2)
+                let attachmentString = NSAttributedString(attachment: attachment)
+                label.attributedText = attachmentString
+                label.textAlignment = .center
+                label.layer.masksToBounds = true
+                label.layer.cornerRadius = rectSize/4
+                label.clipsToBounds = true
+                label.layer.borderWidth = 1
+                label.layer.borderColor = UIColor.black.cgColor
+                arrayLabel.append(label)
+                self.addSubview(label)
+            
+        }
+        
+        // 1,2,3
+        for i in 0...1{
+        let labelBG = SortingLabel(frame: CGRect(x: spacing, y: CGFloat(2+i)*frame.height/5, width: rectSize, height: rectSize/2))
+        let attachmentChest = NSTextAttachment()
+        attachmentChest.image = UIImage(named: "fail")
+        attachmentChest.bounds = CGRect(x: 0, y: 0, width: rectSize/2, height: rectSize/2)
+        let attachmentChestString = NSAttributedString(attachment: attachmentChest)
+        labelBG.attributedText = attachmentChestString
+        labelBG.textAlignment = .center
+        labelBG.layer.masksToBounds = true
+        labelBG.layer.cornerRadius = rectSize/4
+        labelBG.clipsToBounds = true
+        labelBG.layer.borderWidth = 1
+        labelBG.layer.borderColor = UIColor.black.cgColor
+        arrayLabel.append(labelBG)
+        self.addSubview(labelBG)
+        }
+        
+        //4,5
+        
+        let labelC = SortingLabel(frame: CGRect(x: frame.width-spacing-rectSize, y:frame.height*2/5, width: rectSize, height: rectSize/2))
+        let attachmentC = NSTextAttachment()
+        attachmentC.image = UIImage(named: "fail")
+        attachmentC.bounds = CGRect(x: 0, y: 0, width: rectSize/2, height: rectSize/2)
+        let attachmentCString = NSAttributedString(attachment: attachmentC)
+        labelC.attributedText = attachmentCString
+        labelC.textAlignment = .center
+        labelC.layer.masksToBounds = true
+        labelC.layer.cornerRadius = rectSize/4
+        labelC.clipsToBounds = true
+        labelC.layer.borderWidth = 1
+        labelC.layer.borderColor = UIColor.black.cgColor
+        arrayLabel.append(labelC)
+        self.addSubview(labelC)
+
+     //6
+        
+        let labelE = SortingLabel(frame: CGRect(x: 2*spacing+rectSize, y:frame.height*4/5, width: rectSize, height: rectSize/2))
+        let attachmentChest = NSTextAttachment()
+        attachmentChest.image = UIImage(named: "chest")
+        attachmentChest.bounds = CGRect(x: 0, y: 0, width: rectSize/2, height: rectSize/2)
+        let attachmentChestString = NSAttributedString(attachment: attachmentChest)
+        labelE.attributedText = attachmentChestString
+        labelE.textAlignment = .center
+        labelE.layer.masksToBounds = true
+        labelE.layer.cornerRadius = rectSize/4
+        labelE.clipsToBounds = true
+        labelE.layer.borderWidth = 1
+        labelE.layer.borderColor = UIColor.black.cgColor
+        arrayLabel.append(labelE)
+        self.addSubview(labelE)
+
+        //7
+    }
+    
+    func drawArrow(){
+        
+        let arrowPath1 = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: frame.height/10), endPoint: CGPoint(x: spacing*5, y: frame.height*5 - 5), tailWidth: 4, headWidth: 15, headLength: 6)
+        let arrow1 = CAShapeLayer()
+        
+        arrow1.path = arrowPath1.cgPath
+        self.layer.addSublayer(arrow1)
+        
+        
+        for i in 0..<3{
+            let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: frame.height/5 + rectSize/2), endPoint: CGPoint(x: CGFloat(3 + 3*i)*spacing, y: frame.height*3/10 - 5), tailWidth: 4, headWidth: 15, headLength: 6)
+            let arrow = CAShapeLayer()
+            
+            arrow.path = arrowPath.cgPath
+            self.layer.addSublayer(arrow)
+        }
+        
+        for i in 0..<3{
+            let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height/2), endPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height*3/5), tailWidth: 4, headWidth: 15, headLength: 6)
+            let arrow = CAShapeLayer()
+            
+            arrow.path = arrowPath.cgPath
+            self.layer.addSublayer(arrow)
+        }
+        for i in 0..<3{
+        let arrowPath = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height*4/5), endPoint: CGPoint(x: CGFloat(2 + 4*i)*spacing, y: frame.height*9/10), tailWidth: 4, headWidth: 15, headLength: 6)
+        let arrow = CAShapeLayer()
+        
+        arrow.path = arrowPath.cgPath
+        self.layer.addSublayer(arrow)
+        }
+    }
+    
+}
+
+

@@ -66,6 +66,11 @@ struct LinearStep {
     var act: String!
 }
 
+struct BinaryStep {
+    var act: String!
+    var midIndex: Int!
+}
+
 
 
 

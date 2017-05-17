@@ -21,7 +21,6 @@ class LinkListVC:StudyVC{
 
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
 
-        
     }
     func reset(sender:UIButton){
         self.manager.graph.removeFromSuperview()

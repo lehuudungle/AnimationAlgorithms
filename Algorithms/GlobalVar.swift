@@ -45,6 +45,7 @@ var btnStepBigTmp: UIButton!
 var labelPushTmp: UILabel!
 var labelPopTmp: UILabel!
 var labelTopTmp: UILabel!
+var lblNoteStartTmp: UILabel!
 var labelEnqueuesTmp: SortingLabel!
 var labelDequeuesTmp: SortingLabel!
 var labelRearTmp: SortingLabel!

@@ -12,7 +12,7 @@ import UIKit
 class ManagerLinear {
     
     var animate: AnimationLiear!
-    var graph: GraphLinear!
+    var graph: GraphLinearBinary!
     var viewcontroller: UIViewController!
     var arrayLabel: [SortingLabel]!
     var arrayAction: [LinearStep]!
@@ -27,14 +27,36 @@ class ManagerLinear {
     func initLinear(viewcontroller: UIViewController, search: Int){
         
         
-        graph = GraphLinear(frame: CGRect(x: 16, y: (viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2, width: viewcontroller.view.bounds.size.width - CGFloat(32), height: viewcontroller.view.bounds.size.width - CGFloat(32)))
+        graph = GraphLinearBinary(frame: CGRect(x: 32, y: (viewcontroller.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.height * 2, width: viewcontroller.view.bounds.size.width - CGFloat(64), height: viewcontroller.view.bounds.size.width - CGFloat(64)))
         viewcontroller.view.addSubview(graph)
         
         self.search = search
         self.arrayAction = getAction(arr: graph.arrayFind)
-        print(arrayAction)
         print(search)
         animate = AnimationLiear(arrayLabel: graph.arrayLabel, graph: graph, arrayAction: arrayAction)
+        
+        if(VIEW_CHOSEN=="study"){
+            
+            textStudy = DetailTxtView(frame: CGRect(x: graph.frame.origin.x + UIApplication.shared.statusBarFrame.height,
+                                                    y: graph.frame.origin.y+graph.frame.height+CGFloat(8),
+                                                    width: graph.frame.width - 2*UIApplication.shared.statusBarFrame.height ,
+                                                    height: yMax-(graph.frame.origin.y+graph.frame.height)))
+            
+            viewcontroller.view.addSubview(textStudy)
+            
+            
+            
+            var path: String = ""
+            
+            path = Bundle.main.path(forResource:"Linear", ofType: "plist")!
+            dictData = NSDictionary(contentsOfFile: path)!
+            arrayKey = dictData.allKeys as! [String]            
+            
+            arrayKey = arrayKey.sorted(by: {$0 < $1})
+            ele = 0
+            animate = AnimationLiear(arrayLabel: graph.arrayLabel, graph: graph, arrayAction: arrayAction)
+        }
+
     }
     
     func getAction(arr: [Int]) -> [LinearStep] {
@@ -42,6 +64,22 @@ class ManagerLinear {
         return linear.arrayAction
     }
     @objc func run(sender: UIButton){
+        textStudy.text = "Tim kiem so: \(search!)"
         animate.loop()
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
+        btnStepTmp.layer.backgroundColor = UIColor.gray.cgColor
+        btnRunTmp.setNeedsDisplay()
+        btnStepTmp.setNeedsDisplay()
     }
+    @objc func step(sender: UIButton){
+        animate.next()
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
+        btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
+        btnRunTmp.setNeedsDisplay()
+        btnStepTmp.setNeedsDisplay()
+    }
+    
 }

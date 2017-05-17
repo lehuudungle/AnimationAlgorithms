@@ -35,7 +35,7 @@ class ManagerTower {
         self.arrayAction = getArrayAction()
         self.arrayCenter = graph.bearingCenterPoint
         self.arrayLabel = graph.arrayLabel
-        
+        print(arrayAction)
         animation = AnimationTower(arrayLabel: arrayLabel, arrayCenter: arrayCenter, arrayAction: arrayAction,graph: graph)
         if(VIEW_CHOSEN=="study"){
             

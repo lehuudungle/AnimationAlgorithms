@@ -211,8 +211,9 @@ class PieceSet
     }
     
     func addPieceQueenWith(startCoordinates: Position, endCoordinates: Position, color: PieceColor, width: CGFloat){
-        var isFirst = true // when isFirst == false, we just add pawns to the board
-        var startRow = 0, endRow = 0
+        _ = true // when isFirst == false, we just add pawns to the board
+        var startRow = 0
+        var endRow = 0
         let startCol = startCoordinates.col!
         let endCol = endCoordinates.col!
         startRow = startCoordinates.row

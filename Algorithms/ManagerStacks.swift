@@ -48,7 +48,6 @@ class ManagerStacks {
             path = Bundle.main.path(forResource:"Stacks", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
-            print(dictData)
         
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})
             ele = 0

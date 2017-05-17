@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AnimarionBinary {
+public class AnimarionBinary {
     
     var arrayLabel: [SortingLabel]!
     var binary: BinarySearch!
@@ -27,9 +27,7 @@ class AnimarionBinary {
         
         
     }
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+
     
     func animation(){
        

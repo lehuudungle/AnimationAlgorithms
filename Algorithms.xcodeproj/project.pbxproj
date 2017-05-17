@@ -24,6 +24,15 @@
 		05A2AC561E9F2DF2005C9310 /* InsertionSortIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2AC511E9F2DF2005C9310 /* InsertionSortIVC.swift */; };
 		05A2AC571E9F2DF2005C9310 /* MergeSortIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2AC521E9F2DF2005C9310 /* MergeSortIVC.swift */; };
 		05A2AC591E9F2E36005C9310 /* HeapGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A2AC581E9F2E36005C9310 /* HeapGraph.swift */; };
+		05AEDE391ECC0FA50014CE3E /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE381ECC0FA50014CE3E /* Vertex.swift */; };
+		05AEDE3C1ECC0FB70014CE3E /* AdjacencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE3A1ECC0FB70014CE3E /* AdjacencyList.swift */; };
+		05AEDE3D1ECC0FB70014CE3E /* Graphable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE3B1ECC0FB70014CE3E /* Graphable.swift */; };
+		05AEDE3F1ECC0FD40014CE3E /* DeapFirstSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE3E1ECC0FD40014CE3E /* DeapFirstSearch.swift */; };
+		05AEDE411ECC18C00014CE3E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE401ECC18C00014CE3E /* Stack.swift */; };
+		05AEDE431ECC190D0014CE3E /* ManagerDeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE421ECC190D0014CE3E /* ManagerDeap.swift */; };
+		05AEDE451ECC19B50014CE3E /* DeapSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE441ECC19B50014CE3E /* DeapSVC.swift */; };
+		05AEDE471ECC1BF70014CE3E /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE461ECC1BF70014CE3E /* Edge.swift */; };
+		05AEDE491ECC1DB10014CE3E /* AnimationDeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AEDE481ECC1DB10014CE3E /* AnimationDeap.swift */; };
 		05BEA8D51E9DC9C800B2F04C /* HeapSortSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8CC1E9DC9C800B2F04C /* HeapSortSVC.swift */; };
 		05BEA8D81E9DC9C800B2F04C /* InsertionSortSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8CF1E9DC9C800B2F04C /* InsertionSortSVC.swift */; };
 		05BEA8D91E9DC9C800B2F04C /* MergeSortSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8D01E9DC9C800B2F04C /* MergeSortSVC.swift */; };
@@ -156,6 +165,15 @@
 		05A2AC511E9F2DF2005C9310 /* InsertionSortIVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortIVC.swift; sourceTree = "<group>"; };
 		05A2AC521E9F2DF2005C9310 /* MergeSortIVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeSortIVC.swift; sourceTree = "<group>"; };
 		05A2AC581E9F2E36005C9310 /* HeapGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapGraph.swift; sourceTree = "<group>"; };
+		05AEDE381ECC0FA50014CE3E /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		05AEDE3A1ECC0FB70014CE3E /* AdjacencyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjacencyList.swift; sourceTree = "<group>"; };
+		05AEDE3B1ECC0FB70014CE3E /* Graphable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graphable.swift; sourceTree = "<group>"; };
+		05AEDE3E1ECC0FD40014CE3E /* DeapFirstSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeapFirstSearch.swift; sourceTree = "<group>"; };
+		05AEDE401ECC18C00014CE3E /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		05AEDE421ECC190D0014CE3E /* ManagerDeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerDeap.swift; sourceTree = "<group>"; };
+		05AEDE441ECC19B50014CE3E /* DeapSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeapSVC.swift; sourceTree = "<group>"; };
+		05AEDE461ECC1BF70014CE3E /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		05AEDE481ECC1DB10014CE3E /* AnimationDeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDeap.swift; sourceTree = "<group>"; };
 		05BEA8CC1E9DC9C800B2F04C /* HeapSortSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapSortSVC.swift; sourceTree = "<group>"; };
 		05BEA8CF1E9DC9C800B2F04C /* InsertionSortSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortSVC.swift; sourceTree = "<group>"; };
 		05BEA8D01E9DC9C800B2F04C /* MergeSortSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeSortSVC.swift; sourceTree = "<group>"; };
@@ -331,6 +349,19 @@
 			name = Input;
 			sourceTree = "<group>";
 		};
+		05AEDE371ECC0F770014CE3E /* DFS */ = {
+			isa = PBXGroup;
+			children = (
+				05AEDE401ECC18C00014CE3E /* Stack.swift */,
+				05AEDE3A1ECC0FB70014CE3E /* AdjacencyList.swift */,
+				05AEDE3B1ECC0FB70014CE3E /* Graphable.swift */,
+				05AEDE461ECC1BF70014CE3E /* Edge.swift */,
+				05AEDE381ECC0FA50014CE3E /* Vertex.swift */,
+				05AEDE3E1ECC0FD40014CE3E /* DeapFirstSearch.swift */,
+			);
+			name = DFS;
+			sourceTree = "<group>";
+		};
 		05BEA8CB1E9DC8D200B2F04C /* Study */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +379,7 @@
 				C7870E881EC2C39200E6E8BB /* LinkListVC.swift */,
 				C717CA931EC40B9A006E69BF /* BinarySVC.swift */,
 				C723F5831EC96BF400193122 /* BreadthSVC.swift */,
+				05AEDE441ECC19B50014CE3E /* DeapSVC.swift */,
 			);
 			name = Study;
 			sourceTree = "<group>";
@@ -378,6 +410,7 @@
 				C7D4D68A1EC1B42600F427D0 /* AnimationLinear.swift */,
 				C7870E901EC2C41E00E6E8BB /* AnimationLinkList.swift */,
 				C717CA951EC40C2D006E69BF /* AnimationBinary.swift */,
+				05AEDE481ECC1DB10014CE3E /* AnimationDeap.swift */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -398,6 +431,7 @@
 				C7870E8A1EC2C3A500E6E8BB /* ManageLinkList.swift */,
 				C717CA911EC40A35006E69BF /* ManagerBinary.swift */,
 				C723F5811EC96B1200193122 /* ManagerBreadth.swift */,
+				05AEDE421ECC190D0014CE3E /* ManagerDeap.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -405,6 +439,7 @@
 		1962B2301E84FE6400012936 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				05AEDE371ECC0F770014CE3E /* DFS */,
 				193E459F1E8A207B00A6395C /* Step.swift */,
 				198A34961E826619009E2B96 /* BubbleSort.swift */,
 				1962B22E1E84FE5E00012936 /* SelectionSort.swift */,
@@ -728,9 +763,11 @@
 				19D41EF61EA087B000C8CE4D /* ShareVC.swift in Sources */,
 				1987C6601E963CAA005795B8 /* AnimationHeap.swift in Sources */,
 				1987C6541E95EA4A005795B8 /* ManagerQuickSort.swift in Sources */,
+				05AEDE391ECC0FA50014CE3E /* Vertex.swift in Sources */,
 				C7E429F01EA5BFF5004C49DD /* Queen.swift in Sources */,
 				1987C6501E95E6A3005795B8 /* AppDelegate.swift in Sources */,
 				197A66BF1E8B66AB00CA17F6 /* AnimationSelection.swift in Sources */,
+				05AEDE471ECC1BF70014CE3E /* Edge.swift in Sources */,
 				C723F5841EC96BF400193122 /* BreadthSVC.swift in Sources */,
 				C7E7B9251EBDB943006CEF95 /* ManagerQueues.swift in Sources */,
 				198A34BA1E828A5D009E2B96 /* ManagerInsertionSort.swift in Sources */,
@@ -750,6 +787,7 @@
 				C7C1B5B11EC0878800BC80D0 /* ManagerLinear.swift in Sources */,
 				C7E7B9211EBDB911006CEF95 /* AnimationQueues.swift in Sources */,
 				198A348F1E810906009E2B96 /* AnimationBubble.swift in Sources */,
+				05AEDE431ECC190D0014CE3E /* ManagerDeap.swift in Sources */,
 				C7E429F51EA5BFF5004C49DD /* ViewAnimation.swift in Sources */,
 				C7D4D6931EC1BE7D00F427D0 /* AnimationTower.swift in Sources */,
 				05A2AC571E9F2DF2005C9310 /* MergeSortIVC.swift in Sources */,
@@ -761,6 +799,7 @@
 				C723F5801EC962E500193122 /* GraphBreadthDeap.swift in Sources */,
 				C7E429DE1EA5BFF5004C49DD /* Board.swift in Sources */,
 				C7870E8F1EC2C3D900E6E8BB /* Graph_LinkList.swift in Sources */,
+				05AEDE3F1ECC0FD40014CE3E /* DeapFirstSearch.swift in Sources */,
 				05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */,
 				191A40031EC0156B0014378C /* DetailTxtView.swift in Sources */,
 				192C75831E8CFCFD00EE8027 /* MergeGraph.swift in Sources */,
@@ -768,13 +807,17 @@
 				1987C6521E95EA11005795B8 /* QuickSort.swift in Sources */,
 				C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */,
 				C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */,
+				05AEDE491ECC1DB10014CE3E /* AnimationDeap.swift in Sources */,
 				193E459C1E8A020E00A6395C /* AnimationInsertion.swift in Sources */,
 				C7C1B5B31EC08BF300BC80D0 /* LinearSVC.swift in Sources */,
 				0598762A1E99F03F00DEDA21 /* CustomButton.swift in Sources */,
 				05A2AC591E9F2E36005C9310 /* HeapGraph.swift in Sources */,
 				C723F5821EC96B1200193122 /* ManagerBreadth.swift in Sources */,
+				05AEDE3C1ECC0FB70014CE3E /* AdjacencyList.swift in Sources */,
+				05AEDE451ECC19B50014CE3E /* DeapSVC.swift in Sources */,
 				05BEA8D81E9DC9C800B2F04C /* InsertionSortSVC.swift in Sources */,
 				C7C1C20F1EBB462000CEE029 /* StacksSVC.swift in Sources */,
+				05AEDE3D1ECC0FB70014CE3E /* Graphable.swift in Sources */,
 				C7870E911EC2C41E00E6E8BB /* AnimationLinkList.swift in Sources */,
 				05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */,
 				0507FA431E9C973100E00354 /* SWRevealViewController.m in Sources */,
@@ -802,6 +845,7 @@
 				C7E429F31EA5BFF5004C49DD /* Square.swift in Sources */,
 				1962B2321E850BBE00012936 /* InsertionSort.swift in Sources */,
 				059876281E99EEB800DEDA21 /* FontAwesome.swift in Sources */,
+				05AEDE411ECC18C00014CE3E /* Stack.swift in Sources */,
 				198A34821E80D9DF009E2B96 /* Algorithms.xcdatamodeld in Sources */,
 				0521162A1EA5D3D0006ED15C /* AboutVC.swift in Sources */,
 				05A2AC541E9F2DF2005C9310 /* BubbleSortIVC.swift in Sources */,

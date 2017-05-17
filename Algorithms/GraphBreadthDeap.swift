@@ -30,7 +30,7 @@ class GraphBreadthDeap: UIView {
     
     func drawBoard(){
         
-        let labelMiner = SortingLabel(frame: CGRect(x: 2*spacing + rectSize, y: 0, width: rectSize, height: frame.height/10))
+        let labelMiner = SortingLabel(frame: CGRect(x: 2*spacing + rectSize, y: 0, width: rectSize, height: rectSize))
         let attachmentMiner = NSTextAttachment()
         attachmentMiner.image = UIImage(named: "knight")
         attachmentMiner.bounds = CGRect(x: 0, y: 0, width: rectSize, height: frame.height/10)
@@ -55,7 +55,7 @@ class GraphBreadthDeap: UIView {
                 label.layer.masksToBounds = true
                 label.layer.cornerRadius = rectSize/4
                 label.clipsToBounds = true
-                label.layer.borderWidth = 1
+                label.layer.borderWidth = 2
                 label.layer.borderColor = UIColor.black.cgColor
                 arrayLabel.append(label)
                 self.addSubview(label)
@@ -74,7 +74,7 @@ class GraphBreadthDeap: UIView {
         labelBG.layer.masksToBounds = true
         labelBG.layer.cornerRadius = rectSize/4
         labelBG.clipsToBounds = true
-        labelBG.layer.borderWidth = 1
+        labelBG.layer.borderWidth = 2
         labelBG.layer.borderColor = UIColor.black.cgColor
         arrayLabel.append(labelBG)
         self.addSubview(labelBG)
@@ -92,7 +92,7 @@ class GraphBreadthDeap: UIView {
         labelC.layer.masksToBounds = true
         labelC.layer.cornerRadius = rectSize/4
         labelC.clipsToBounds = true
-        labelC.layer.borderWidth = 1
+        labelC.layer.borderWidth = 2
         labelC.layer.borderColor = UIColor.black.cgColor
         arrayLabel.append(labelC)
         self.addSubview(labelC)
@@ -109,7 +109,7 @@ class GraphBreadthDeap: UIView {
         labelE.layer.masksToBounds = true
         labelE.layer.cornerRadius = rectSize/4
         labelE.clipsToBounds = true
-        labelE.layer.borderWidth = 1
+        labelE.layer.borderWidth = 2
         labelE.layer.borderColor = UIColor.black.cgColor
         arrayLabel.append(labelE)
         self.addSubview(labelE)

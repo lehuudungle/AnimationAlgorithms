@@ -82,6 +82,7 @@ class AnimationDeap{
             if(self.countSolution==self.arrayAction.count){
                 return
             }
+
             self.currentStep = self.arrayAction[self.countSolution]
             self.animation()
 
@@ -163,10 +164,15 @@ class AnimationDeap{
 
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.green.cgColor
         }
-        else if(self.currentStep.act=="back"){
+        else{
+
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: lastValue)].fillColor = UIColor.black.cgColor
         }
+
+
+
     }
+
     func loop(){
         self.currentStep = arrayAction[countSolution]
         animation()

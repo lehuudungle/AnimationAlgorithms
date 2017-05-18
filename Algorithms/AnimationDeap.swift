@@ -30,6 +30,7 @@ class AnimationDeap{
     func animation(){
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 1, animations: {
+            print(self.countSolution)
             print("current Step : \(self.currentStep.act)")
             switch self.currentStep.to{
 

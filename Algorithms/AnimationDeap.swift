@@ -82,12 +82,73 @@ class AnimationDeap{
             if(self.countSolution==self.arrayAction.count){
                 return
             }
-            self.resetColorLable(value: self.value)
             self.currentStep = self.arrayAction[self.countSolution]
             self.animation()
 
         }
     }
+    
+    func animationStep(){
+        UIView.setAnimationsEnabled(true)
+        UIView.animate(withDuration: 1, animations: {
+            print("current Step : \(self.currentStep.act)")
+            switch self.currentStep.to{
+                
+            case "A":
+                self.lastValue = self.value
+                self.value = 1
+                self.setColorLabel(change: true)
+                break
+            case "B":
+                self.lastValue = self.value
+                self.value = 4;
+                self.setColorLabel(change: false)
+                
+                break;
+            case "C":
+                self.lastValue = self.value
+                self.value = 6;
+                self.setColorLabel(change: false);
+                
+                break;
+            case "D":
+                self.lastValue = self.value
+                self.value = 2;
+                self.setColorLabel(change: true);
+                
+                break;
+            case "E":
+                self.lastValue = self.value
+                self.value = 7;
+                self.setColorLabel(change: false);
+                
+                break;
+            case "F":
+                self.lastValue = self.value
+                self.value = 3;
+                self.setColorLabel(change: true);
+                
+                break;
+            case "G":
+                self.lastValue = self.value
+                self.value = 5;
+                self.setColorLabel(change: false);
+                
+                break;
+            default: break
+            }
+            
+        }){_ in
+            self.countSolution += 1
+            if(self.countSolution==self.arrayAction.count){
+                return
+            }
+            btnStepTmp.isUserInteractionEnabled = true
+            self.currentStep = self.arrayAction[self.countSolution]
+            
+        }
+    }
+
     func setColorLabel(change: Bool){
         print("set color")
         if(change){
@@ -100,22 +161,19 @@ class AnimationDeap{
         print("lastValue: \(lastValue)")
         if(self.currentStep.act=="push"){
 
-            self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.cyan.cgColor
+            self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.green.cgColor
         }
-
-
-
-    }
-    func resetColorLable(value: Int){
-        self.arrayLabel[value].layer.borderColor = UIColor.black.cgColor
-        self.graph.arrayArrow[lastValue].fillColor = UIColor.black.cgColor
-        if(self.currentStep.act=="back"){
+        else if(self.currentStep.act=="back"){
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: lastValue)].fillColor = UIColor.black.cgColor
         }
     }
     func loop(){
         self.currentStep = arrayAction[countSolution]
         animation()
+    }
+    func next(){
+        self.currentStep = arrayAction[countSolution]
+        animationStep()
     }
 
 }

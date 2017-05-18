@@ -33,10 +33,20 @@ class ManagerDeap {
         self.animation = AnimationDeap(graph: graph, arrayAction: self.arrayAction, arrayLabel:self.graph.arrayLabel)
         
     }
-    @objc func step(sender: UIButton){
+    @objc func run(sender: UIButton){
         self.animation.loop()
         btnRunTmp.isUserInteractionEnabled = false
         btnStepTmp.isUserInteractionEnabled = true
+        btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
+        btnRunTmp.setNeedsDisplay()
+        btnStepTmp.setNeedsDisplay()
+    }
+
+    
+    @objc func step(sender: UIButton){
+        self.animation.next()
+        btnRunTmp.isUserInteractionEnabled = false
+        btnStepTmp.isUserInteractionEnabled = false
         btnRunTmp.layer.backgroundColor = UIColor.gray.cgColor
         btnRunTmp.setNeedsDisplay()
         btnStepTmp.setNeedsDisplay()

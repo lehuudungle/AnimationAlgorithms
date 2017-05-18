@@ -29,7 +29,7 @@ class BreadthFirstSearch{
         let g = adjacencyList.createVertex(data: "G")
         let e = adjacencyList.createVertex(data: "E")
 
-        adjacencyList.add(.undirected, from: s, to: a)
+//        adjacencyList.add(.undirected, from: s, to: a)
         adjacencyList.add(.undirected, from: a, to: b)
         adjacencyList.add(.undirected, from: a, to: d)
         adjacencyList.add(.undirected, from: a, to: c)
@@ -38,7 +38,7 @@ class BreadthFirstSearch{
         adjacencyList.add(.undirected, from: d, to: f)
         adjacencyList.add(.undirected, from: f, to: e)
 //        adjacencyList.breadthFirstSearch(from: s, to: e)
-        print("chi so: \(adjacencyList.breadthFirstSearch(from: s, to: e))")
+        print("chi so: \(adjacencyList.breadthFirstSearch(from: a, to: e))")
     }
 
     

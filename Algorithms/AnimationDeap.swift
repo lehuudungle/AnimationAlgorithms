@@ -30,7 +30,7 @@ class AnimationDeap{
     func animation(){
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 1, animations: {
-            print("current Step : \(self.currentStep.act)")
+            print("current Step : \(self.currentStep.act)___\(self.currentStep.to)")
             switch self.currentStep.to{
 
             case "A":
@@ -82,6 +82,7 @@ class AnimationDeap{
             if(self.countSolution==self.arrayAction.count){
                 return
             }
+            self.arrayLabel[self.value].layer.borderColor = UIColor.black.cgColor
 
             self.currentStep = self.arrayAction[self.countSolution]
             self.animation()
@@ -92,9 +93,10 @@ class AnimationDeap{
     func animationStep(){
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 1, animations: {
-            print("current Step : \(self.currentStep.act)")
+
             switch self.currentStep.to{
-                
+
+
             case "A":
                 self.lastValue = self.value
                 self.value = 1
@@ -166,7 +168,10 @@ class AnimationDeap{
         }
         else{
 
+            self.graph.arrayLabel[lastValue].alpha = 0.5
+
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: lastValue)].fillColor = UIColor.black.cgColor
+
         }
 
 

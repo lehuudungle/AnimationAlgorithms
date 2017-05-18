@@ -28,16 +28,18 @@ class DeapFirstSearch{
         let f = adjacencyList.createVertex(data: "F")
         let g = adjacencyList.createVertex(data: "G")
         let e = adjacencyList.createVertex(data: "E")
+        let i = adjacencyList.createVertex(data: "I")
 
         adjacencyList.add(.undirected, from: s, to: a)
         adjacencyList.add(.undirected, from: a, to: b)
         adjacencyList.add(.undirected, from: a, to: d)
         adjacencyList.add(.undirected, from: a, to: c)
         //        adjacencyList.add(.undirected, from: b, to: d)
+        adjacencyList.add(.undirected, from: c, to: i)
         adjacencyList.add(.undirected, from: d, to: g)
         adjacencyList.add(.undirected, from: d, to: f)
         adjacencyList.add(.undirected, from: f, to: e)
-        print(depthFirstSearch(from: s, to: e, graph: adjacencyList))
+        print(depthFirstSearch(from: s, to: i, graph: adjacencyList))
     }
     func depthFirstSearch(from start: Vertex<String>, to end: Vertex<String>, graph: AdjacencyList<String>) -> Stack<Vertex<String>> {
         var visited = Set<Vertex<String>>()

@@ -18,6 +18,8 @@ class ManagerBreadth {
     var dictData = NSDictionary()
     var arrayKeys = [String]()
     var ele = 0
+    var arrayAction: [BFS_Step]!
+    var sort: BreadthFirstSearch!
     
     func initBreadth(viewcontroller: UIViewController){
         
@@ -26,5 +28,13 @@ class ManagerBreadth {
                                                width: viewcontroller.view.bounds.size.width,
                                                height: viewcontroller.view.bounds.size.height/2))
         viewcontroller.view.addSubview(graph)
+        self.arrayAction = self.getArrayAction()
+        
+    }
+    func getArrayAction() -> [BFS_Step] {
+
+        sort = BreadthFirstSearch()
+        return sort.arrayAction
+        
     }
 }

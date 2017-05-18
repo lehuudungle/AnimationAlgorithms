@@ -14,7 +14,6 @@ struct DFS_Step{
 class DeapFirstSearch{
     var arrayAction: [DFS_Step]!
     init() {
-        print("goi init deap firesh")
         self.arrayAction = [DFS_Step]()
 
         let adjacencyList = AdjacencyList<String>()

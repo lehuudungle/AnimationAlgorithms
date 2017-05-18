@@ -40,6 +40,9 @@
 		05BEA8DC1E9DC9C800B2F04C /* SelectionSortSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8D31E9DC9C800B2F04C /* SelectionSortSVC.swift */; };
 		05BEA8DD1E9DC9C800B2F04C /* StudyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8D41E9DC9C800B2F04C /* StudyVC.swift */; };
 		05BEA8E11E9DCAAE00B2F04C /* BubbleSortSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BEA8E01E9DCAAE00B2F04C /* BubbleSortSVC.swift */; };
+		05C8C32B1ECD82D4002963A1 /* LInkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C32A1ECD82D4002963A1 /* LInkList.swift */; };
+		05C8C32D1ECD82DB002963A1 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C32C1ECD82DB002963A1 /* Queue.swift */; };
+		05C8C32F1ECD833C002963A1 /* BreadthFirstSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C8C32E1ECD833C002963A1 /* BreadthFirstSearch.swift */; };
 		05D0024F1EBB21190077C10F /* TowerOfHaNoiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D0024E1EBB21190077C10F /* TowerOfHaNoiVC.swift */; };
 		05D002551EBB21800077C10F /* Graph_Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D002541EBB21800077C10F /* Graph_Tower.swift */; };
 		05D002591EBB23A20077C10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05D002581EBB23A20077C10F /* Assets.xcassets */; };
@@ -181,6 +184,9 @@
 		05BEA8D31E9DC9C800B2F04C /* SelectionSortSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionSortSVC.swift; sourceTree = "<group>"; };
 		05BEA8D41E9DC9C800B2F04C /* StudyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyVC.swift; sourceTree = "<group>"; };
 		05BEA8E01E9DCAAE00B2F04C /* BubbleSortSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleSortSVC.swift; sourceTree = "<group>"; };
+		05C8C32A1ECD82D4002963A1 /* LInkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LInkList.swift; sourceTree = "<group>"; };
+		05C8C32C1ECD82DB002963A1 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		05C8C32E1ECD833C002963A1 /* BreadthFirstSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadthFirstSearch.swift; sourceTree = "<group>"; };
 		05D0024E1EBB21190077C10F /* TowerOfHaNoiVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerOfHaNoiVC.swift; sourceTree = "<group>"; };
 		05D002541EBB21800077C10F /* Graph_Tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph_Tower.swift; sourceTree = "<group>"; };
 		05D002581EBB23A20077C10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -384,6 +390,16 @@
 			name = Study;
 			sourceTree = "<group>";
 		};
+		05C8C3291ECD82B6002963A1 /* BFS */ = {
+			isa = PBXGroup;
+			children = (
+				05C8C32C1ECD82DB002963A1 /* Queue.swift */,
+				05C8C32A1ECD82D4002963A1 /* LInkList.swift */,
+				05C8C32E1ECD833C002963A1 /* BreadthFirstSearch.swift */,
+			);
+			name = BFS;
+			sourceTree = "<group>";
+		};
 		1916EE0E1EA5C7B300FF239A /* ImageAbout */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +455,7 @@
 		1962B2301E84FE6400012936 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				05C8C3291ECD82B6002963A1 /* BFS */,
 				05AEDE371ECC0F770014CE3E /* DFS */,
 				193E459F1E8A207B00A6395C /* Step.swift */,
 				198A34961E826619009E2B96 /* BubbleSort.swift */,
@@ -756,6 +773,7 @@
 				198A34931E8176AC009E2B96 /* Graph.swift in Sources */,
 				05D002551EBB21800077C10F /* Graph_Tower.swift in Sources */,
 				C717CA921EC40A35006E69BF /* ManagerBinary.swift in Sources */,
+				05C8C32B1ECD82D4002963A1 /* LInkList.swift in Sources */,
 				19EAC29B1EA4BF130060C6B8 /* PDFViewController.swift in Sources */,
 				1987C65E1E963205005795B8 /* HeapSort.swift in Sources */,
 				19304DFE1E9F624600C0AC02 /* QuickSortIVC.swift in Sources */,
@@ -774,6 +792,7 @@
 				05BEA8D51E9DC9C800B2F04C /* HeapSortSVC.swift in Sources */,
 				0507FA4A1E9C987200E00354 /* MenuViewController.swift in Sources */,
 				0507FA4E1E9CC2EE00E00354 /* MenuCell.swift in Sources */,
+				05C8C32F1ECD833C002963A1 /* BreadthFirstSearch.swift in Sources */,
 				1987C6561E95EA85005795B8 /* AnimationQuick.swift in Sources */,
 				C7E7B91F1EBD80E7006CEF95 /* GraphQueues.swift in Sources */,
 				05BEA8DA1E9DC9C800B2F04C /* QuickSortSVC.swift in Sources */,
@@ -808,6 +827,7 @@
 				C714415C1E8ABC3B008472E6 /* MenuList.swift in Sources */,
 				C714415E1E8ABD51008472E6 /* MainScreen.swift in Sources */,
 				05AEDE491ECC1DB10014CE3E /* AnimationDeap.swift in Sources */,
+				05C8C32D1ECD82DB002963A1 /* Queue.swift in Sources */,
 				193E459C1E8A020E00A6395C /* AnimationInsertion.swift in Sources */,
 				C7C1B5B31EC08BF300BC80D0 /* LinearSVC.swift in Sources */,
 				0598762A1E99F03F00DEDA21 /* CustomButton.swift in Sources */,

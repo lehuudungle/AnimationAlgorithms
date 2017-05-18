@@ -7,6 +7,10 @@
 //
 
 import Foundation
+enum Visit<Element: Hashable> {
+    case source
+    case edge(Edge<Element>)
+}
 protocol Graphable {
     associatedtype Element: Hashable // 1
     var description: CustomStringConvertible { get } // 2

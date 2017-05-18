@@ -33,7 +33,7 @@ class GraphBreadthDeap: UIView {
         let labelMiner = SortingLabel(frame: CGRect(x: 2*spacing + rectSize, y: 0, width: rectSize, height: rectSize/2))
         let attachmentMiner = NSTextAttachment()
         attachmentMiner.image = UIImage(named: "knight")
-        attachmentMiner.bounds = CGRect(x: 0, y: 0, width: rectSize, height: frame.height/10)
+        attachmentMiner.bounds = CGRect(x: 0, y: 0, width: rectSize, height: rectSize/2)
         let attachmentMinerString = NSAttributedString(attachment: attachmentMiner)
         labelMiner.attributedText = attachmentMinerString
         labelMiner.textAlignment = .center
@@ -120,7 +120,7 @@ class GraphBreadthDeap: UIView {
     
     func drawArrow(){
         
-        let arrowPath1 = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: frame.height/10), endPoint: CGPoint(x: spacing*5, y: frame.height/5 - 5), tailWidth: 4, headWidth: 15, headLength: 6)
+        let arrowPath1 = UIBezierPath.bezierPathWithArrowFromPoint(startPoint: CGPoint(x: spacing*5, y: rectSize/2), endPoint: CGPoint(x: spacing*5, y: frame.height/5 - 5), tailWidth: 4, headWidth: 15, headLength: 6)
         let arrow1 = CAShapeLayer()
         
         arrow1.path = arrowPath1.cgPath

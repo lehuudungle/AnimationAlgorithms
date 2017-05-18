@@ -82,7 +82,7 @@ class AnimationDeap{
             if(self.countSolution==self.arrayAction.count){
                 return
             }
-            self.resetColorLable(value: self.value)
+//            self.resetColorLable(value: self.value)
             self.currentStep = self.arrayAction[self.countSolution]
             self.animation()
 
@@ -102,17 +102,21 @@ class AnimationDeap{
 
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.cyan.cgColor
         }
+         else {
 
-
-
-    }
-    func resetColorLable(value: Int){
-        self.arrayLabel[value].layer.borderColor = UIColor.black.cgColor
-        self.graph.arrayArrow[lastValue].fillColor = UIColor.black.cgColor
-        if(self.currentStep.act=="back"){
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: lastValue)].fillColor = UIColor.black.cgColor
         }
+
+
+
     }
+//    func resetColorLable(value: Int){
+//        self.arrayLabel[value].layer.borderColor = UIColor.black.cgColor
+//        self.graph.arrayArrow[lastValue].fillColor = UIColor.black.cgColor
+//        if(self.currentStep.act=="back"){
+//            self.graph.arrayArrow[self.graph.arrowCorresponding(value: lastValue)].fillColor = UIColor.black.cgColor
+//        }
+//    }
     func loop(){
         self.currentStep = arrayAction[countSolution]
         animation()

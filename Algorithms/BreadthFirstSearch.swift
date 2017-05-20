@@ -14,7 +14,7 @@ struct BFS_Step{
 class BreadthFirstSearch{
     var arrayAction: [BFS_Step]!
     init() {
-        self.arrayAction = [BFS_Step]()
+        
 
         var adjacencyList = AdjacencyList<String>()
 
@@ -39,6 +39,7 @@ class BreadthFirstSearch{
         adjacencyList.add(.undirected, from: f, to: e)
 //        adjacencyList.breadthFirstSearch(from: s, to: e)
         print("chi so: \(adjacencyList.breadthFirstSearch(from: s, to: e))")
+        self.arrayAction = adjacencyList.breadthFirstSearch(from: s, to: e)
     }
 
     
@@ -55,6 +56,7 @@ extension Graphable {
                 print("diem lay ra: \(visitedVertex)")
 //                var a = visitedVertex as! String
 
+
                 arrayAction.append(BFS_Step(act: "putOut", point: "\(visitedVertex)"))
                 // TODO: Replace this...
                 if visitedVertex == destination {
@@ -66,7 +68,8 @@ extension Graphable {
 
                             route = [edge] + route
                             vertex = edge.source // 4
-                            print(vertex)
+                            print("vertex: \(vertex)")
+
 
                     }
 
@@ -78,7 +81,8 @@ extension Graphable {
                     if visits[edge.destination] == nil { // 2
                         queue.enqueue(edge.destination)
                         print("diem den:\(edge.destination)")
-                        arrayAction.append(BFS_Step(act: "destination", point: "\(edge.destination)"))
+                    arrayAction.append(BFS_Step(act: "destination", point: "\(edge.destination)"))
+
                         visits[edge.destination] = .edge(edge) // 3
                     }
                 }

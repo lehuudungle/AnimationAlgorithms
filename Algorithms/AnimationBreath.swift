@@ -1,81 +1,87 @@
 //
-//  AnimationDeap.swift
+//  AnimationBreath.swift
 //  Algorithms
 //
-//  Created by Ledung95d on 5/17/17.
+//  Created by TTung on 5/19/17.
 //  Copyright © 2017 LocTran. All rights reserved.
 //
 
 import Foundation
 import UIKit
-class AnimationDeap{
+
+class AnimationBreath{
+    
     var graph: GraphBreadthDeap!
-    var arrayAction: [DFS_Step]!
+    var arrayAction: [BFS_Step]!
     var countSolution = 0
-    var currentStep: DFS_Step!
+    var currentStep: BFS_Step!
     var arrayLabel:[SortingLabel]!
-    var a: SortingLabel!
     var value: Int = 0
     var lastValue = 0
+    var nextSolution = true
     
-    init(graph: GraphBreadthDeap,arrayAction:[DFS_Step],arrayLabel: [SortingLabel]!) {
+    init(graph: GraphBreadthDeap,arrayAction:[BFS_Step],arrayLabel: [SortingLabel]!) {
         self.graph = graph
         self.arrayAction = arrayAction
         self.arrayLabel = arrayLabel
-        print(self.arrayAction)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-   
     func animation(){
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 1, animations: {
-
-            print("current Step : \(self.currentStep.act)___\(self.currentStep.to)")
-            switch self.currentStep.to{
-
+            
+            switch self.currentStep.point{
+                
             case "A":
                 self.lastValue = self.value
                 self.value = 1
-                    self.setColorLabel(change: true)
-                    break
+                self.setColorLabel(change: true)
+                self.nextSolution = true
+                break
             case "B":
                 self.lastValue = self.value
                 self.value = 4;
                 self.setColorLabel(change: false)
-
-                    break;
+                self.nextSolution = false
+                
+                break;
             case "C":
                 self.lastValue = self.value
                 self.value = 6;
                 self.setColorLabel(change: false);
-
-                    break;
+                self.nextSolution = false
+                
+                break;
             case "D":
                 self.lastValue = self.value
                 self.value = 2;
                 self.setColorLabel(change: true);
-
-                    break;
+                self.nextSolution = true
+                
+                break;
             case "E":
                 self.lastValue = self.value
                 self.value = 7;
+                self.nextSolution = true
                 self.setColorLabel(change: false);
-
-                    break;
+                
+                break;
             case "F":
                 self.lastValue = self.value
                 self.value = 3;
+                self.nextSolution = true
                 self.setColorLabel(change: true);
-
-                    break;
+                
+                break;
             case "G":
                 self.lastValue = self.value
                 self.value = 5;
+                self.nextSolution = false
                 self.setColorLabel(change: false);
-
-                    break;
+                
+                break;
             default: break
             }
             
@@ -84,59 +90,65 @@ class AnimationDeap{
             if(self.countSolution==self.arrayAction.count){
                 return
             }
-            self.arrayLabel[self.value].layer.borderColor = UIColor.black.cgColor
-
+            else if (self.currentStep.act == "putOut" && self.nextSolution == false){
+                self.graph.arrayArrow[self.graph.arrowCorresponding(value: self.value)].fillColor = UIColor.black.cgColor
+            }
             self.currentStep = self.arrayAction[self.countSolution]
             self.animation()
-
         }
     }
     
     func animationStep(){
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 1, animations: {
-
-            switch self.currentStep.to{
-
-
+            
+            switch self.currentStep.point{
+                
             case "A":
                 self.lastValue = self.value
                 self.value = 1
                 self.setColorLabel(change: true)
+                self.nextSolution = true
                 break
             case "B":
                 self.lastValue = self.value
                 self.value = 4;
                 self.setColorLabel(change: false)
+                self.nextSolution = false
                 
                 break;
             case "C":
                 self.lastValue = self.value
                 self.value = 6;
                 self.setColorLabel(change: false);
+                self.nextSolution = false
                 
                 break;
             case "D":
                 self.lastValue = self.value
                 self.value = 2;
                 self.setColorLabel(change: true);
+                self.nextSolution = true
                 
                 break;
             case "E":
                 self.lastValue = self.value
                 self.value = 7;
+                self.nextSolution = true
                 self.setColorLabel(change: false);
                 
                 break;
             case "F":
                 self.lastValue = self.value
                 self.value = 3;
+                self.nextSolution = true
                 self.setColorLabel(change: true);
                 
                 break;
             case "G":
                 self.lastValue = self.value
                 self.value = 5;
+                self.nextSolution = false
                 self.setColorLabel(change: false);
                 
                 break;
@@ -148,38 +160,33 @@ class AnimationDeap{
             if(self.countSolution==self.arrayAction.count){
                 return
             }
+            else if (self.currentStep.act == "putOut" && self.nextSolution == false){
+                self.graph.arrayArrow[self.graph.arrowCorresponding(value: self.value)].fillColor = UIColor.black.cgColor
+            }
             btnStepTmp.isUserInteractionEnabled = true
             self.currentStep = self.arrayAction[self.countSolution]
-            
         }
     }
-
+    
     func setColorLabel(change: Bool){
-        print("set color")
         if(change){
             self.arrayLabel[value].text = "\u{f00d}"
             self.arrayLabel[value].font = UIFont.fontAwesome(ofSize: 12)
         }
-        self.arrayLabel[value].layer.backgroundColor = UIColor.green.cgColor
-        self.arrayLabel[value].layer.borderColor = UIColor.red.cgColor
-        self.arrayLabel[value].layer.setNeedsDisplay()
-        print("lastValue: \(lastValue)")
-        if(self.currentStep.act=="push"){
-
-            self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.green.cgColor
+        
+        
+        if(self.currentStep.act=="putOut"){
+            
+            self.arrayLabel[value].layer.backgroundColor = UIColor.green.cgColor
+            self.arrayLabel[value].layer.borderColor = UIColor.red.cgColor
+            self.arrayLabel[value].layer.setNeedsDisplay()
         }
         else{
-
-            self.graph.arrayLabel[lastValue].alpha = 0.5
-
-            self.graph.arrayArrow[self.graph.arrowCorresponding(value: lastValue)].fillColor = UIColor.black.cgColor
-
+            self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.green.cgColor
+            
         }
-
-
-
     }
-
+    
     func loop(){
         self.currentStep = arrayAction[countSolution]
         animation()
@@ -188,5 +195,5 @@ class AnimationDeap{
         self.currentStep = arrayAction[countSolution]
         animationStep()
     }
-
+    
 }

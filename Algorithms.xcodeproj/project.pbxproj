@@ -144,6 +144,7 @@
 		C7E7B9271EBDB9A2006CEF95 /* QueuesSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E7B9261EBDB9A2006CEF95 /* QueuesSVC.swift */; };
 		C7ED2D4A1EBC25EE00C0E8E2 /* Stacks.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */; };
 		C7F7C3C31EC0CD9200659124 /* LinearSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F7C3C21EC0CD9200659124 /* LinearSearch.swift */; };
+		C7F9FD4B1ECE0AEB0013A3AC /* AnimationBreath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9FD4A1ECE0AEB0013A3AC /* AnimationBreath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -291,6 +292,7 @@
 		C7E7B9261EBDB9A2006CEF95 /* QueuesSVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuesSVC.swift; sourceTree = "<group>"; };
 		C7ED2D491EBC25EE00C0E8E2 /* Stacks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stacks.plist; sourceTree = "<group>"; };
 		C7F7C3C21EC0CD9200659124 /* LinearSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearSearch.swift; sourceTree = "<group>"; };
+		C7F9FD4A1ECE0AEB0013A3AC /* AnimationBreath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBreath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +429,7 @@
 				C7870E901EC2C41E00E6E8BB /* AnimationLinkList.swift */,
 				C717CA951EC40C2D006E69BF /* AnimationBinary.swift */,
 				05AEDE481ECC1DB10014CE3E /* AnimationDeap.swift */,
+				C7F9FD4A1ECE0AEB0013A3AC /* AnimationBreath.swift */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				0521162A1EA5D3D0006ED15C /* AboutVC.swift in Sources */,
 				05A2AC541E9F2DF2005C9310 /* BubbleSortIVC.swift in Sources */,
 				198A34971E826619009E2B96 /* BubbleSort.swift in Sources */,
+				C7F9FD4B1ECE0AEB0013A3AC /* AnimationBreath.swift in Sources */,
 				05BEA8DC1E9DC9C800B2F04C /* SelectionSortSVC.swift in Sources */,
 				C7E429ED1EA5BFF5004C49DD /* PieceType.swift in Sources */,
 				C7E429EE1EA5BFF5004C49DD /* PieceView.swift in Sources */,

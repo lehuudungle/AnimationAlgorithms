@@ -30,13 +30,13 @@ class DeapFirstSearch{
         let e = adjacencyList.createVertex(data: "E")
         let i = adjacencyList.createVertex(data: "I")
 
-
         adjacencyList.add(.undirected, from: s, to: a)
         adjacencyList.add(.undirected, from: a, to: b)
         adjacencyList.add(.undirected, from: a, to: d)
         adjacencyList.add(.undirected, from: a, to: c)
         adjacencyList.add(.undirected, from: c, to: i)
         //        adjacencyList.add(.undirected, from: b, to: d)
+        adjacencyList.add(.undirected, from: c, to: i)
         adjacencyList.add(.undirected, from: d, to: g)
         adjacencyList.add(.undirected, from: d, to: f)
         adjacencyList.add(.undirected, from: f, to: e)

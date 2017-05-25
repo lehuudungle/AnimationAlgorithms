@@ -91,6 +91,11 @@ class AnimationBreath{
                 return
             }
             else if (self.currentStep.act == "putOut" && self.nextSolution == false){
+                
+                self.arrayLabel[self.value].layer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
+                self.arrayLabel[self.value].layer.borderColor = UIColor.black.cgColor
+
+                self.arrayLabel[self.value].layer.setNeedsDisplay()
                 self.graph.arrayArrow[self.graph.arrowCorresponding(value: self.value)].fillColor = UIColor.black.cgColor
             }
             self.currentStep = self.arrayAction[self.countSolution]
@@ -161,6 +166,9 @@ class AnimationBreath{
                 return
             }
             else if (self.currentStep.act == "putOut" && self.nextSolution == false){
+                self.arrayLabel[self.value].layer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
+                 self.arrayLabel[self.value].layer.borderColor = UIColor.black.cgColor
+                self.arrayLabel[self.value].layer.setNeedsDisplay()
                 self.graph.arrayArrow[self.graph.arrowCorresponding(value: self.value)].fillColor = UIColor.black.cgColor
             }
             btnStepTmp.isUserInteractionEnabled = true
@@ -174,14 +182,18 @@ class AnimationBreath{
             self.arrayLabel[value].font = UIFont.fontAwesome(ofSize: 12)
         }
         
-        
         if(self.currentStep.act=="putOut"){
-            
-            self.arrayLabel[value].layer.backgroundColor = UIColor.green.cgColor
+            self.arrayLabel[value].layer.backgroundColor = UIColor.green.withAlphaComponent(1).cgColor
             self.arrayLabel[value].layer.borderColor = UIColor.red.cgColor
+
             self.arrayLabel[value].layer.setNeedsDisplay()
-        }
+
+                    }
         else{
+
+            self.arrayLabel[value].layer.backgroundColor = UIColor.green.withAlphaComponent(0.5).cgColor
+            self.arrayLabel[value].layer.setNeedsDisplay()
+
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.green.cgColor
             
         }

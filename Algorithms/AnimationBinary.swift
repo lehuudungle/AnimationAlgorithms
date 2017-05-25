@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 public class AnimarionBinary {
     
     var arrayLabel: [SortingLabel]!

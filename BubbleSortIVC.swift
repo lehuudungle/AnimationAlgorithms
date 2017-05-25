@@ -25,6 +25,7 @@ class BubbleSortIVC: InputVC{
         
         self.managerSort = ManagerBubbleSort()
         
+        
         self.hideKeyboardWhenTappedAround()
         
         btnRun.addTarget(self, action: #selector(run(sender:)), for: .touchUpInside)

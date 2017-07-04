@@ -90,8 +90,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             _ = UIImage(named: "list-1")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             VIEW_CHOSEN = "study"
             
-            
-            
         }else if(indexPath.row == 1){
             let newFontController = UINavigationController.init(rootViewController: INPUT_XIB_CLASS)
             
@@ -111,7 +109,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             INPUT_XIB_CLASS.navigationItem.leftBarButtonItem = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backHOME(sender:)))
             VIEW_CHOSEN = "input"
 
-            
         }else{
             
             
@@ -134,7 +131,6 @@ class MenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             VIEW_CHOSEN = "Info"
             
         }
-        
     }
     
     func backHOME(sender: UIBarButtonItem){

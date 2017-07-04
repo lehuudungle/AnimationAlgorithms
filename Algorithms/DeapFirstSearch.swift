@@ -34,6 +34,7 @@ class DeapFirstSearch{
         adjacencyList.add(.undirected, from: a, to: b)
         adjacencyList.add(.undirected, from: a, to: d)
         adjacencyList.add(.undirected, from: a, to: c)
+        adjacencyList.add(.undirected, from: c, to: i)
         //        adjacencyList.add(.undirected, from: b, to: d)
         adjacencyList.add(.undirected, from: c, to: i)
         adjacencyList.add(.undirected, from: d, to: g)

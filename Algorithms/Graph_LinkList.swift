@@ -200,10 +200,8 @@ class Graph_LinkList: UIView {
 
     }
     func drawArrows(){
-        print("count cell: \(arrNodes.count)")
         for i in 1...3{
             let pointArrows = arrNodes[i-1].center
-            print("bearingPoint: \(pointArrows)")
             let pathDot = UIBezierPath(ovalIn: CGRect.init(x: pointArrows.x+2.5*spacing-5, y: pointArrows.y-5, width: 10, height: 10))
             let dot = CAShapeLayer()
             dot.path = pathDot.cgPath
@@ -282,8 +280,6 @@ extension UIBezierPath {
     class func transformForStartPoint(startPoint: CGPoint, endPoint: CGPoint, length: CGFloat) -> CGAffineTransform{
         let cosine: CGFloat = (endPoint.x - startPoint.x)/length
         let sine: CGFloat = (endPoint.y - startPoint.y)/length
-        print("cosine: \(cosine)")
-        print("sine: \(sine)")
         return __CGAffineTransformMake(cosine, sine, -sine, cosine, startPoint.x, startPoint.y)
     }
 

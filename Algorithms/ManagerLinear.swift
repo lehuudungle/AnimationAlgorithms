@@ -32,7 +32,6 @@ class ManagerLinear {
         
         self.search = search
         self.arrayAction = getAction(arr: graph.arrayFind)
-        print(search)
         animate = AnimationLiear(arrayLabel: graph.arrayLabel, graph: graph, arrayAction: arrayAction)
         
         if(VIEW_CHOSEN=="study"){

@@ -16,7 +16,6 @@ class BubbleSortSVC: StudyVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
         self.managerSort = ManagerBubbleSort()
         
         
@@ -30,8 +29,17 @@ class BubbleSortSVC: StudyVC {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        resetApp()
+        
+    }
+    
 
     func reset(sender:UIButton){
+        resetApp()
+    }
+    
+    func resetApp(){
         self.managerSort.graph.removeFromSuperview()
         self.managerSort.textStudy.removeFromSuperview()
         btnRun.isUserInteractionEnabled = true
@@ -42,7 +50,6 @@ class BubbleSortSVC: StudyVC {
         btnStep.setNeedsDisplay()
         managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

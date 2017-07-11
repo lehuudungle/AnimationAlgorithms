@@ -21,7 +21,6 @@ public struct Edge<T: Hashable> {
 extension Edge: Hashable {
 
     public var hashValue: Int {
-        print("gia tri canh: \("\(source)\(destination)".hashValue)")
         return "\(source)\(destination)".hashValue
     }
 

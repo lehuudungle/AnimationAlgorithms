@@ -39,7 +39,6 @@ class ManagerLinkList{
             path = Bundle.main.path(forResource:"LinkList", ofType: "plist")!
             dictData = NSDictionary(contentsOfFile: path)!
             arrayKeys = dictData.allKeys as! [String]
-            print(dictData)
 
 
             arrayKeys = arrayKeys.sorted(by: {$0 < $1})

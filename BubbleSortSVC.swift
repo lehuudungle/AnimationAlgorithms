@@ -27,8 +27,22 @@ class BubbleSortSVC: StudyVC {
         btnStep.addTarget(self.managerSort, action: #selector(managerSort.step(sender:)), for: .touchUpInside)
         
         btnReset.addTarget(self, action:  #selector(reset(sender:)), for: .touchUpInside)
+        print(" view did load duoc thuc hien");
         
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.managerSort.graph.removeFromSuperview()
+        self.managerSort.textStudy.removeFromSuperview()
+        btnRun.isUserInteractionEnabled = true
+        btnStep.isUserInteractionEnabled = true
+        btnRun.layer.backgroundColor = LIME_COLOR.cgColor
+        btnStep.layer.backgroundColor = LIME_COLOR.cgColor
+        btnRun.setNeedsDisplay()
+        btnStep.setNeedsDisplay()
+        managerSort.initSortWith(viewcontroller: self, arrayInput: [4,1,9,2,5])
+        print("view will Appear duoc thuc hien")
     }
 
     func reset(sender:UIButton){

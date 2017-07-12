@@ -40,7 +40,6 @@ class DeapFirstSearch{
         adjacencyList.add(.undirected, from: d, to: g)
         adjacencyList.add(.undirected, from: d, to: f)
         adjacencyList.add(.undirected, from: f, to: e)
-        print(depthFirstSearch(from: s, to: i, graph: adjacencyList))
     }
     func depthFirstSearch(from start: Vertex<String>, to end: Vertex<String>, graph: AdjacencyList<String>) -> Stack<Vertex<String>> {
         var visited = Set<Vertex<String>>()
@@ -52,7 +51,6 @@ class DeapFirstSearch{
         outer: while let vertex = stack.peek(), vertex != end {
 
             guard let neighbours = graph.edges(from: vertex), neighbours.count > 0 else {
-                print("backtrack from \(vertex)")
                 stack.pop()
                 self.arrayAction.append(DFS_Step(act: "back", to: stack.peekString))
                 continue
@@ -61,19 +59,15 @@ class DeapFirstSearch{
             for edge in neighbours {
                 if !visited.contains(edge.destination) {
                     visited.insert(edge.destination)
-                    print("__\(edge.destination)")
                     stack.push(edge.destination)
                     self.arrayAction.append(DFS_Step(act: "push", to: stack.peekString))
                     stack.description
-                    print("peek:\(stack.peekString)")
 
-                    print(stack.description)
 
                     continue outer
                 }
             }
 
-            print("backtrack from \(vertex)")
             stack.pop()
             self.arrayAction.append(DFS_Step(act: "back", to: stack.peekString))
             

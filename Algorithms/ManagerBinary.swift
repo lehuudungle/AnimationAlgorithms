@@ -31,8 +31,7 @@ class ManagerBinary{
         
          self.search = search
         self.arrayAction = getAction(arr: graph.arraySort)
-        print(search)
-        print(arrayAction)
+   
         
         animate = AnimarionBinary(arrayLabel: graph.arrayLabel, graph: graph, arraySort: graph.arraySort, arrayAction: arrayAction)
         

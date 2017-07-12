@@ -22,7 +22,6 @@ class AnimationDeap{
         self.graph = graph
         self.arrayAction = arrayAction
         self.arrayLabel = arrayLabel
-        print(self.arrayAction)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -32,7 +31,6 @@ class AnimationDeap{
         UIView.setAnimationsEnabled(true)
         UIView.animate(withDuration: 1, animations: {
 
-            print("current Step : \(self.currentStep.act)___\(self.currentStep.to)")
             switch self.currentStep.to{
 
             case "A":
@@ -155,7 +153,6 @@ class AnimationDeap{
     }
 
     func setColorLabel(change: Bool){
-        print("set color")
         if(change){
             self.arrayLabel[value].text = "\u{f00d}"
             self.arrayLabel[value].font = UIFont.fontAwesome(ofSize: 12)
@@ -163,7 +160,6 @@ class AnimationDeap{
         self.arrayLabel[value].layer.backgroundColor = UIColor.green.cgColor
         self.arrayLabel[value].layer.borderColor = UIColor.red.cgColor
         self.arrayLabel[value].layer.setNeedsDisplay()
-        print("lastValue: \(lastValue)")
         if(self.currentStep.act=="push"){
 
             self.graph.arrayArrow[self.graph.arrowCorresponding(value: value)].fillColor = UIColor.green.cgColor

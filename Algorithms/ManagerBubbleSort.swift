@@ -75,7 +75,6 @@ class ManagerBubbleSort {
         
         animateStep = AnimationBubble(arrayLabel: self.arrayLabel, arrayLabelMiddle: self.arrayLabelMiddle, arrayLabelAbove: self.arrayLabelAbove, arrayLabelBelow: self.arrayLabelBelow, arrayAction: self.arrayAction)
         
-        
         if(VIEW_CHOSEN=="study"){
             ele = 0
             

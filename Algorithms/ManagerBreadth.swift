@@ -30,7 +30,6 @@ class ManagerBreadth {
                                                height: viewcontroller.view.bounds.size.height/2))
         viewcontroller.view.addSubview(graph)
         self.arrayAction = getArrayAction()
-        print("AAAAAAAAAAA: \(arrayAction)")
         self.animation = AnimationBreath(graph: graph, arrayAction: self.arrayAction, arrayLabel: self.graph.arrayLabel)
         
     }

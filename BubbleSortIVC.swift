@@ -18,6 +18,7 @@ class BubbleSortIVC: InputVC{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         MORE_THAN_ONE_ELE = false
@@ -40,10 +41,17 @@ class BubbleSortIVC: InputVC{
         
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        resetApp()
+
+    }
     
     func reset(sender:UIButton){
+        resetApp()
         
+    }
+    
+    func resetApp(){
         if HAVE_GRAPH == true{
             self.managerSort.graph.removeFromSuperview()
             HAVE_GRAPH = false
